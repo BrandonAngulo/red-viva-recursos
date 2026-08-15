@@ -405,3 +405,5 @@ img { max-width:100%; }
 @media (min-width: 768px) { .bottom-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; } .bottom-blocks .block { margin-bottom: 0; } }
 
 @media (min-width: 768px) { .section-sub { max-width: 100ch; } .hero p.lead { max-width: 80ch; } .doors { max-width: 100%; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); } .rc-nota { max-width: 100%; } .site-footer p { max-width: 100%; } }
+
+.propose-modal { padding: 24px; max-width: 500px; width: 90%; background: var(--bg); color: var(--fg); border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shadow-lg); } .propose-modal::backdrop { background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); } .form-group { margin-bottom: 12px; } .form-group label { font-weight: 600; font-size: 14px; display: block; margin-bottom: 4px; } .pm-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 24px; }

@@ -37,8 +37,10 @@
       </nav>
 
       <div class="header-actions">
-        <a class="btn-emergency" href="tel:123"><span class="dot" aria-hidden="true"></span> 123</a>
-        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar de tema">
+        <button type="button" class="btn-emergency" id="openLineasModal">
+          <span class="dot"></span> Líneas de atención ☎
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
         </button>
       </div>
@@ -102,6 +104,15 @@
 
     <!-- ============================ RECURSOS ============================ -->
     <section class="view" id="view-recursos" data-view="recursos" hidden>
+      <!-- Botones de audiencia -->
+    <div class="audiences">
+      <button class="aud-btn outline" id="btnAllGuides"><span class="k"></span> Ver todas las guías</button>
+      <button class="aud-btn need active" id="btnNeedHelp"><span class="k">SOS</span> Soy damnificado / Necesito ayuda</button>
+      <button class="aud-btn give" id="btnGiveHelp"><span class="k">🤝</span> Quiero ayudar / Donar</button>
+    </div>
+
+    <!-- Contenedor dinámico (React/DOM) -->
+    <div id="actuarList"></div>
       <div class="bleed">
         <div class="view-head">
           <h2 class="view-title">Recursos</h2>
@@ -200,14 +211,6 @@
           <button class="btn-ghost" id="openPrintModal" type="button">Imprimir / guardar PDF</button>
         </div>
         <p class="section-sub">Selecciona tu situación. Hemos separado las guías para que no te satures de información y veas exactamente lo que necesitas saber en este momento, con indicaciones especiales para <b>zonas sin señal</b>, <b>comunidades étnicas</b> y <b>personas mayores</b>.</p>
-
-        <!-- LÍNEAS ÚTILES EN BOTÓN DESPLEGABLE -->
-        <details class="ori" id="block-lineas" style="margin-top: 1.5rem; margin-bottom: 2rem;">
-          <summary style="font-size: 1.25rem; font-weight: bold; background: var(--bg-card); padding: 1rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-            <span class="ori-ic" aria-hidden="true" style="margin-right: 8px;">☎</span> Líneas de emergencia y atención
-          </summary>
-          <div class="lineas-table" id="lineasTable" style="margin-top: 1rem; padding: 0 1rem 1rem 1rem;"></div>
-        </details>
 
         <div class="fase-picker" id="fasePicker" role="group" aria-label="Elige tu perfil"></div>
         <p class="fase-intro" id="faseIntro"></p>
@@ -318,6 +321,17 @@
             <button type="submit" class="btn-primary" id="submitProposeBtn">Enviar propuesta</button>
           </div>
         </form>
+      </div>
+    </dialog>
+
+        <!-- Modal de Líneas -->
+    <dialog id="lineasModal" class="print-modal propose-modal">
+      <div class="pm-content">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+            <h2 style="margin:0;">Líneas de emergencia y atención</h2>
+            <button type="button" class="btn-ghost" id="closeLineasModal" style="padding:4px 8px;">✕</button>
+        </div>
+        <div id="lineasTable" style="display:grid; gap:12px; max-height:60vh; overflow-y:auto; padding-right:8px;"></div>
       </div>
     </dialog>
 

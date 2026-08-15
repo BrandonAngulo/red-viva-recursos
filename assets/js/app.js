@@ -323,6 +323,13 @@
       return '<a class="prep-link" href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer"><b>' + esc(f.label) + "</b><span>" + esc(f.desc || "") + "</span></a>";
     }).join("");
   }
+  function renderTimeline(timeline) {
+    var tc = $("#timelineList"); if (!tc) return;
+    tc.innerHTML = timeline.slice().reverse().map(function (ev) {
+      return '<div class="ev"><div class="ev-date">' + esc(ev.date) + '</div><div class="ev-content">' +
+        '<h4>' + esc(ev.title) + "</h4><p>" + esc(ev.description) + "</p></div></div>";
+    }).join("");
+  }
   function renderLineas() {
     var box = $("#lineasTable"); if (!box) return;
     box.innerHTML = (ORI.lineas || []).map(function (l) {
@@ -512,6 +519,26 @@
     var propModal = $("#proposeModal");
     byId("#openProposeModal", "click", function () { if (propModal) propModal.showModal(); });
     byId("#closeProposeModal", "click", function () { if (propModal) propModal.close(); });
+    
+    // Lineas Modal
+    var lineasModal = $("#lineasModal");
+    byId("#openLineasModal", "click", function () { if (lineasModal) lineasModal.showModal(); });
+    byId("#closeLineasModal", "click", function () { if (lineasModal) lineasModal.close(); });
+
+    // Close details and modals when clicking outside
+    document.addEventListener("click", function(e) {
+      // Close details if clicking outside
+      if (!e.target.closest("details")) {
+        document.querySelectorAll("details[open]").forEach(function(d) {
+          d.removeAttribute("open");
+        });
+      }
+      
+      // Close dialogs if clicking exactly on the backdrop
+      if (e.target.tagName === 'DIALOG') {
+        e.target.close();
+      }
+    });
     
     byId("#proposeForm", "submit", function (e) {
       e.preventDefault();
