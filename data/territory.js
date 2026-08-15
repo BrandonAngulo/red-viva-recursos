@@ -1,0 +1,103 @@
+/* Datos territoriales y guías (copia de respaldo / config).
+   Reales y con fuente al 2026-08-15. Los conteos exactos por municipio cambian a
+   diario; aquí se usa contexto cualitativo + enlace a la fuente oficial en vez de
+   cifras inventadas. Migrable a Supabase (tablas municipalities / map_points). */
+
+window.CRC_TERRITORY = {
+  // Foco del mapa (centro y zoom inicial sobre el occidente colombiano).
+  mapCenter: [4.6, -75.9],
+  mapZoom: 7,
+
+  // Puntos del mapa. type: epicentro | ciudad | incendio.
+  mapPoints: [
+    { id: "epicentro", type: "epicentro", name: "Epicentro — San José del Palmar", department: "Chocó",
+      coords: [4.896, -76.228], note: "Sismo de magnitud 7.4 del 10 de agosto de 2026, 07:34 hora local.",
+      source: "Servicio Geológico Colombiano", url: "https://www.sgc.gov.co/sismos" },
+    { id: "cali", type: "ciudad", name: "Cali", department: "Valle del Cauca",
+      coords: [3.4516, -76.532], note: "Derrumbes en edificaciones y afectaciones; alta concentración de reportes.",
+      source: "Asocapitales", url: "https://www.asocapitales.co/terremoto-colombia.html" },
+    { id: "pereira", type: "ciudad", name: "Pereira", department: "Risaralda",
+      coords: [4.814, -75.696], note: "Siete puntos de acopio habilitados por la Alcaldía (cafés de la ciudad).",
+      source: "Alcaldía de Pereira", url: "https://www.eltiempo.com/colombia/otras-ciudades/como-ayudar-tras-terremoto-de-7-4-en-colombia-estos-son-los-centros-de-acopio-bancos-de-sangre-y-alimentos-canales-oficiales-y-puntos-de-donacion-3577631" },
+    { id: "manizales", type: "ciudad", name: "Manizales", department: "Caldas",
+      coords: [5.068, -75.513], note: "Daños en edificaciones y vías; punto de reporte ante ciudades capitales.",
+      source: "Asocapitales", url: "https://www.asocapitales.co/terremoto-colombia.html" },
+    { id: "armenia", type: "ciudad", name: "Armenia", department: "Quindío",
+      coords: [4.533, -75.681], note: "Municipio del Eje Cafetero con afectaciones reportadas.",
+      source: "UNGRD", url: "https://portal.gestiondelriesgo.gov.co/" },
+    { id: "quibdo", type: "ciudad", name: "Quibdó", department: "Chocó",
+      coords: [5.694, -76.658], note: "Capital del Chocó, cercana al epicentro.",
+      source: "UNGRD", url: "https://portal.gestiondelriesgo.gov.co/" },
+    { id: "narino-incendios", type: "incendio", name: "Incendios forestales — Nariño", department: "Nariño",
+      coords: [1.3, -77.5], note: "12 incendios activos en 8 municipios; calamidad pública en 29. Santacruz, Los Andes y Policarpa entre los más afectados.",
+      source: "Gobernación de Nariño", url: "https://narino.gov.co/" },
+  ],
+
+  // Municipios afectados (contexto real; el estado detallado se consulta en la fuente).
+  municipalities: [
+    { name: "San José del Palmar", department: "Chocó", priority: "Epicentro",
+      note: "Epicentro del sismo 7.4. Zonas rurales con necesidades de agua y alimentos.",
+      url: "https://www.sgc.gov.co/sismos" },
+    { name: "Cali", department: "Valle del Cauca", priority: "Crítica",
+      note: "Derrumbes en edificaciones; alta concentración de reportes de personas y ayuda.",
+      url: "https://www.asocapitales.co/terremoto-colombia.html" },
+    { name: "Pereira", department: "Risaralda", priority: "Muy alta",
+      note: "Siete centros de acopio habilitados por la Alcaldía en cafés de la ciudad.",
+      url: "https://www.eltiempo.com/colombia/otras-ciudades/como-ayudar-tras-terremoto-de-7-4-en-colombia-estos-son-los-centros-de-acopio-bancos-de-sangre-y-alimentos-canales-oficiales-y-puntos-de-donacion-3577631" },
+    { name: "Manizales", department: "Caldas", priority: "Muy alta",
+      note: "Daños en edificaciones y vías intermunicipales del Eje Cafetero.",
+      url: "https://www.asocapitales.co/terremoto-colombia.html" },
+    { name: "Armenia", department: "Quindío", priority: "Alta",
+      note: "Municipio del Eje Cafetero con afectaciones y campañas de recolección.",
+      url: "https://portal.gestiondelriesgo.gov.co/" },
+    { name: "Quibdó", department: "Chocó", priority: "Alta",
+      note: "Capital del Chocó, cercana al epicentro; corredor de ayuda hacia el Pacífico.",
+      url: "https://portal.gestiondelriesgo.gov.co/" },
+  ],
+
+  // Guías prácticas "Cómo actuar" (información real y accionable).
+  guides: [
+    { id: "personas", icon: "🧍", title: "Buscar o reportar a una persona",
+      steps: [
+        "En emergencia inmediata, llama al 123.",
+        "Reporta o consulta en Colombia Te Busca (+5.000 registros) y en la herramienta de Asocapitales ante el PMU.",
+        "Línea de apoyo de Asocapitales: 300 761 6647.",
+        "No difundas datos personales sin consentimiento; usa siempre los portales oficiales.",
+      ],
+      links: [
+        { label: "Colombia Te Busca", url: "https://colombiatebusca.com/" },
+        { label: "Asocapitales — PMU", url: "https://www.asocapitales.co/terremoto-colombia.html" },
+      ] },
+    { id: "donar", icon: "💚", title: "Donar bien (qué sí y qué no)",
+      steps: [
+        "SÍ: agua embotellada, alimentos no perecederos, elementos de aseo, cobijas, colchonetas y toldillos.",
+        "NO: perecederos, ropa usada en mal estado, medicamentos vencidos o sin fórmula.",
+        "Dinero: únicamente por los canales oficiales publicados en el dominio de cada organización (p. ej. Cruz Roja).",
+        "Verifica titular y campaña antes de transferir.",
+      ],
+      links: [
+        { label: "Qué donar y qué no — Bogotá", url: "https://bogota.gov.co/mi-ciudad/ambiente/que-donar-y-no-donar-en-bogota-para-damnificados-terremoto-colombia" },
+        { label: "Cruz Roja Colombiana", url: "https://www.cruzrojacolombiana.org/" },
+      ] },
+    { id: "acopios", icon: "📦", title: "Llevar o recibir ayuda (acopios)",
+      steps: [
+        "Consulta el mapa oficial de acopios de tu ciudad antes de desplazarte.",
+        "En Bogotá, la Alcaldía mantiene un mapa interactivo actualizado por Ideca.",
+        "Confirma horario y tipo de insumos que recibe cada punto.",
+      ],
+      links: [
+        { label: "Acopios de Bogotá", url: "https://bogota.gov.co/mi-ciudad/hacienda/centros-de-acopio-para-donaciones-por-terremoto-en-bogota-2026" },
+        { label: "Colombia nos necesita", url: "https://www.economiaparalapipol.com/interactivos/mapa-ayuda-colombia/" },
+      ] },
+    { id: "voluntariado", icon: "🤝", title: "Ser voluntario",
+      steps: [
+        "Los cupos se llenan rápido: confirma disponibilidad antes de ir (varios centros en Bogotá alcanzaron su capacidad).",
+        "Súmate a iniciativas verificadas y sigue las indicaciones de los organismos de socorro.",
+        "Aporta según necesidades reales publicadas, no por suposición.",
+      ],
+      links: [
+        { label: "ConectaColombia 7.4", url: "https://www.conectacolombia.org/?view=mapa" },
+        { label: "Colombia Hub", url: "https://colombiahub.org/terremoto-colombia-2026-como-ayudar/" },
+      ] },
+  ],
+};
