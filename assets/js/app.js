@@ -209,9 +209,33 @@
     var nm = $("#navMuniCount"); if (nm) nm.textContent = list.length + " municipios con afectación";
   }
   function chip(label, value) { return '<span class="ori-chip"><b>' + esc(label) + "</b> " + esc(value) + "</span>"; }
+  var oriFase = "";
+  function orientacionesForFase() {
+    var all = ORI.orientaciones || [];
+    if (!oriFase) return all;
+    var m = ORI.fasesPorId || {};
+    return all.filter(function (o) { return (m[o.id] || []).indexOf(oriFase) !== -1; });
+  }
+  function renderFases() {
+    var box = $("#fasePicker"); if (!box) return;
+    var items = [{ id: "", icon: "•", label: "Todas las situaciones" }].concat(ORI.fases || []);
+    box.innerHTML = "";
+    items.forEach(function (f) {
+      var b = el("button", { "class": "fase-chip", type: "button", "aria-pressed": oriFase === f.id ? "true" : "false" });
+      b.innerHTML = (f.icon ? '<span aria-hidden="true">' + esc(f.icon) + "</span> " : "") + esc(f.label);
+      b.addEventListener("click", function () { oriFase = f.id; updateFaseIntro(); renderFases(); renderOrientaciones(); });
+      box.appendChild(b);
+    });
+  }
+  function updateFaseIntro() {
+    var p = $("#faseIntro"); if (!p) return;
+    var f = (ORI.fases || []).filter(function (x) { return x.id === oriFase; })[0];
+    p.textContent = f ? f.intro : "";
+    p.hidden = !f;
+  }
   function renderOrientaciones() {
     var box = $("#orientaciones"); if (!box) return;
-    box.innerHTML = (ORI.orientaciones || []).map(function (o) {
+    box.innerHTML = orientacionesForFase().map(function (o) {
       var pasos = (o.pasos || []).map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("");
       var acudir = (o.acudir || []).map(function (a) { return chip(a.who, a.channel); }).join("");
       var fuentes = (o.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(f.label) + " ↗</a>"; }).join("");
@@ -325,6 +349,8 @@
   bind();
   applyResources();
   renderMunicipios();
+  renderFases();
+  updateFaseIntro();
   renderOrientaciones();
   renderPreparacion();
   renderLineas();

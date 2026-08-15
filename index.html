@@ -52,15 +52,15 @@
         <div class="bleed">
           <p class="eyebrow" id="eqInfo">Sismo · respuesta ciudadana e institucional</p>
           <h1>¿Qué necesitas <em>hacer ahora?</em></h1>
-          <p class="lead">Una puerta de entrada a los recursos de respuesta al terremoto: buscar personas o mascotas, pedir ayuda oficial, donar de forma responsable, encontrar acopios, ser voluntario o consultar cifras. Enlazamos siempre al recurso original.</p>
+          <p class="lead">Reunimos en un solo lugar la ayuda que quedó dispersa tras el terremoto. Aquí puedes buscar a alguien, poner a salvo tu vivienda, pedir ayuda oficial, donar con confianza o prepararte para las réplicas. Cada enlace lleva a la fuente original y verificada.</p>
           <div class="doors">
             <a class="door need" href="#recursos" data-mode="ayuda">
               <span class="door-k">Necesito ayuda</span>
-              <span class="door-d">Personas, mascotas, ayuda oficial, albergue, daños, cifras.</span>
+              <span class="door-d">Buscar a alguien, poner a salvo mi vivienda, pedir ayuda oficial o registrarme como damnificado.</span>
             </a>
             <a class="door give" href="#recursos" data-mode="aportar">
               <span class="door-k">Quiero ayudar</span>
-              <span class="door-d">Donar, centros de acopio, voluntariado.</span>
+              <span class="door-d">Donar con seguridad, encontrar un centro de acopio o sumarme como voluntario.</span>
             </a>
           </div>
         </div>
@@ -78,16 +78,16 @@
             <span id="situationLive" class="live-state" hidden></span>
           </div>
           <div class="situation-list" id="situationList"></div>
-          <p class="muted-foot">Cifras y alertas de fuentes oficiales. Toca una tarjeta para ir a la fuente.</p>
+          <p class="muted-foot">El estado de la emergencia según fuentes oficiales, actualizado al día.</p>
         </section>
 
         <section class="block">
-          <h2>Explora la herramienta</h2>
+          <h2>¿Con qué necesitas empezar?</h2>
           <div class="nav-cards">
-            <a class="nav-card" href="#recursos"><b>Recursos</b><span id="navRecursosCount">Directorio verificado</span></a>
-            <a class="nav-card" href="#mapa"><b>Mapa</b><span>Occidente afectado y focos activos</span></a>
-            <a class="nav-card" href="#municipios"><b>Municipios</b><span id="navMuniCount">Zonas con mayor afectación</span></a>
-            <a class="nav-card" href="#actuar"><b>Cómo actuar</b><span>Guías para buscar, donar y ayudar</span></a>
+            <a class="nav-card" href="#recursos"><b>Recursos</b><span id="navRecursosCount">Directorio verificado de ayuda</span></a>
+            <a class="nav-card" href="#mapa"><b>Mapa</b><span>Dónde golpeó el sismo y los focos activos</span></a>
+            <a class="nav-card" href="#municipios"><b>Municipios</b><span id="navMuniCount">Zonas más afectadas y a quién acudir</span></a>
+            <a class="nav-card" href="#actuar"><b>Cómo actuar</b><span>Guías paso a paso según tu momento</span></a>
           </div>
         </section>
       </div>
@@ -104,7 +104,7 @@
             <button type="button" data-mode="aportar" aria-pressed="false">Quiero ayudar</button>
           </div>
         </div>
-        <p class="section-sub">Toca una necesidad para filtrar. La <b>confianza</b> (tipo) y la <b>vigencia</b> (estado y fecha) se muestran por separado.</p>
+        <p class="section-sub">Elige lo que necesitas resolver. De cada recurso te decimos quién lo respalda y qué tan al día está su información, porque un sitio puede ser confiable y aun así tener datos vencidos.</p>
         <div class="intents" id="intents" role="group" aria-label="¿Qué necesitas hacer?"></div>
 
         <div class="filters" role="search">
@@ -122,7 +122,7 @@
           <p class="results-count" id="count" aria-live="polite" role="status">Cargando recursos…</p>
           <div class="results-bar-right">
             <span id="liveState" class="live-state" hidden></span>
-            <p class="legend-note">Verificación y estado son independientes de la confianza.</p>
+            <p class="legend-note">Cada recurso muestra quién lo respalda y qué tan vigente está.</p>
           </div>
         </div>
         <div class="grid" id="grid"></div>
@@ -135,14 +135,14 @@
         <div id="map" class="map" role="application" aria-label="Mapa de la emergencia"></div>
         <aside class="map-legend" id="mapLegend">
           <h2>Mapa de la emergencia</h2>
-          <p class="muted-foot">Occidente colombiano. Toca un punto para ver el detalle y su fuente.</p>
+          <p class="muted-foot">Dónde ocurrió el sismo y las zonas afectadas del occidente colombiano.</p>
           <div class="legend-key">
             <span><i class="dot-ep"></i> Epicentro</span>
             <span><i class="dot-city"></i> Ciudad afectada</span>
             <span><i class="dot-fire"></i> Incendios</span>
           </div>
           <div class="legend-list" id="mapList"></div>
-          <p class="muted-foot">Ubicaciones de referencia con enlace a la fuente oficial. No reemplaza los mapas operativos de las autoridades.</p>
+          <p class="muted-foot">Son ubicaciones de referencia con su fuente oficial. Para operaciones de rescate, guíate siempre por las autoridades.</p>
         </aside>
       </div>
     </section>
@@ -151,7 +151,7 @@
     <section class="view" id="view-municipios" data-view="municipios" hidden>
       <div class="bleed">
         <div class="view-head"><h2 class="view-title">Municipios afectados</h2></div>
-        <p class="section-sub">Zonas con mayor afectación en el occidente. El detalle operativo se consulta en la fuente oficial de cada enlace.</p>
+        <p class="section-sub">Un vistazo a las zonas más golpeadas del occidente y qué está pasando en cada una. En cada municipio encuentras el enlace a la información oficial más reciente.</p>
         <div class="muni-grid" id="muniGrid"></div>
       </div>
     </section>
@@ -163,7 +163,10 @@
           <h2 class="view-title">Orientaciones para actuar</h2>
           <button class="btn-ghost" id="printGuide" type="button">Imprimir / guardar PDF</button>
         </div>
-        <p class="section-sub">Pasos claros para las situaciones más frecuentes tras el sismo. Lenguaje sencillo, con notas para <b>zona rural o sin señal</b>, <b>comunidades indígenas y afro</b>, y <b>personas mayores o con discapacidad</b>. Toca cada situación para abrirla.</p>
+        <p class="section-sub">Sabemos que es difícil pensar con calma en estos momentos. Aquí tienes pasos sencillos para cada situación, con indicaciones especiales si estás en <b>zona rural o sin señal</b>, en una <b>comunidad indígena o afro</b>, o si acompañas a <b>personas mayores o con discapacidad</b>.</p>
+
+        <div class="fase-picker" id="fasePicker" role="group" aria-label="¿En qué momento estás?"></div>
+        <p class="fase-intro" id="faseIntro"></p>
 
         <div class="orientaciones" id="orientaciones"></div>
 
@@ -182,13 +185,13 @@
         </section>
 
         <section class="block">
-          <h2>Comparte esta orientación</h2>
-          <p class="muted-foot" style="max-width:72ch">Escríbelo una vez, compártelo en muchos formatos: enlaza esta página, imprímela para carteleras y puntos de acopio, reenvíala por WhatsApp o léela en voz alta en la emisora comunitaria. En zonas sin datos, la radio y el voz a voz siguen siendo el mejor canal.</p>
+          <h2>Ayuda a que esto llegue a más gente</h2>
+          <p class="muted-foot" style="max-width:72ch">Muchas personas afectadas no tienen internet. Imprime esta guía para carteleras y puntos de acopio, reenvíala por WhatsApp o léela en voz alta en la emisora comunitaria. En zonas sin señal, la radio y el voz a voz siguen siendo el mejor canal.</p>
         </section>
 
         <section class="block method-block">
-          <h2>Cómo verificamos</h2>
-          <p class="muted-foot" style="max-width:72ch">Ningún recurso propuesto por la comunidad se publica automáticamente. Revisamos responsable y dominio, funcionamiento del enlace, cobertura y propósito, privacidad y datos sensibles, duplicados, y validación de canales de donación, con decisión humana y registro en bitácora. Para personas, menores y mascotas enlazamos al recurso original; no replicamos sus bases de datos.</p>
+          <h2>Por qué puedes confiar en esta información</h2>
+          <p class="muted-foot" style="max-width:72ch">Cada recurso pasa por una revisión humana antes de aparecer aquí: comprobamos quién responde por él, que el enlace funcione, su cobertura y el cuidado de los datos personales. Cuando buscas a una persona, un menor o una mascota, te llevamos al portal original; nunca copiamos ni exponemos esos datos.</p>
         </section>
       </div>
     </section>

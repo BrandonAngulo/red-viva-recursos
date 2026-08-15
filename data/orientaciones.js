@@ -4,6 +4,21 @@
    Migrable a Supabase. Cada orientación puede compartirse/imprimirse. */
 
 window.CRC_ORIENTA = {
+  // Momento o fase de la emergencia, para que cada quien encuentre lo suyo.
+  fases: [
+    { id: "ahora", icon: "⏱️", label: "En las primeras horas", intro: "Lo primero es tu seguridad y saber quiénes están contigo." },
+    { id: "dias", icon: "📆", label: "En los días siguientes", intro: "Es momento de registrarte, pedir las ayudas y sostener el ánimo." },
+    { id: "preparar", icon: "🎒", label: "Prepararme para lo que viene", intro: "Las réplicas seguirán: un plan y un kit hacen la diferencia." },
+  ],
+  fasesPorId: {
+    "buscar-persona": ["ahora", "dias"],
+    "vivienda": ["ahora", "dias"],
+    "rud": ["dias"],
+    "fallecimiento": ["ahora", "dias"],
+    "apoyo-emocional": ["ahora", "dias", "preparar"],
+    "prepararme": ["preparar"],
+  },
+
   orientaciones: [
     {
       id: "buscar-persona", icon: "🧍", title: "Buscar o reportar a una persona",
