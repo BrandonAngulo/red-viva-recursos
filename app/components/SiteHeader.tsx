@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type ModuleId = "mapa" | "municipios" | "recursos" | "logistica";
 
@@ -69,20 +69,23 @@ export function SiteHeader({ active = "mapa" }: { active?: string }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const selectedModule = modules.find((module) => module.id === openModule);
 
+  useEffect(() => {
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setOpenModule(null);
+        setMobileOpen(false);
+      }
+    }
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, []);
+
   function togglePreview(id: ModuleId) {
     setOpenModule((current) => current === id ? null : id);
   }
 
   return (
-    <header
-      className="site-header"
-      onKeyDown={(event) => {
-        if (event.key === "Escape") {
-          setOpenModule(null);
-          setMobileOpen(false);
-        }
-      }}
-    >
+    <header className="site-header">
       <Link className="brand" href="/" onClick={() => setMobileOpen(false)}>
         <span className="brand-mark" aria-hidden="true">●</span>
         <span><b>Central de Respuesta</b><small>Colombia · Red Viva</small></span>
