@@ -17,12 +17,16 @@ export function ResponseMap({ incidents, selectedId, onSelect }: { incidents: In
   const mapRef = useRef<MapLibreMap | null>(null);
   const markersRef = useRef<Map<string, MapLibreMarker>>(new Map());
   const selectedIdRef = useRef(selectedId);
-  selectedIdRef.current = selectedId;
+
+  useEffect(() => {
+    selectedIdRef.current = selectedId;
+  }, [selectedId]);
 
   useEffect(() => {
     if (!container.current || mapRef.current) return;
     let disposed = false;
     let createdMap: MapLibreMap | null = null;
+    const markerStore = markersRef.current;
 
     void import("maplibre-gl").then((maplibregl) => {
       if (disposed || !container.current) return;
@@ -53,13 +57,13 @@ export function ResponseMap({ incidents, selectedId, onSelect }: { incidents: In
         element.setAttribute("aria-label", `${incident.title}, ${incident.municipality}`);
         element.addEventListener("click", () => onSelect(incident.id));
         const marker = new maplibregl.Marker({ element }).setLngLat(incident.coordinates).addTo(map);
-        markersRef.current.set(incident.id, marker);
+        markerStore.set(incident.id, marker);
       });
     });
 
     return () => {
       disposed = true;
-      markersRef.current.clear();
+      markerStore.clear();
       createdMap?.remove();
       if (mapRef.current === createdMap) mapRef.current = null;
     };

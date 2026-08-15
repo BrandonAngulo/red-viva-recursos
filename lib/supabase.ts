@@ -2,10 +2,15 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 let client: SupabaseClient | null = null;
 
+export const supabaseUrl =
+  process.env.NEXT_PUBLIC_SUPABASE_URL ??
+  "https://afnwhdoqdwopvcsdgswi.supabase.co";
+
+export const supabasePublishableKey =
+  process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ??
+  "sb_publishable_1EcdaBYdh9GVIVTdqtWZoQ_anWOqq8a";
+
 export function getSupabaseClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
-  if (!url || !publishableKey) return null;
-  if (!client) client = createClient(url, publishableKey);
+  if (!client) client = createClient(supabaseUrl, supabasePublishableKey);
   return client;
 }

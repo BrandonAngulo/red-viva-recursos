@@ -18,7 +18,7 @@ export function SiteHeader({ active = "mapa" }: { active?: string }) {
         {links.map(([id, href, label]) => <Link key={id} className={active === id ? "active" : ""} href={href}>{label}</Link>)}
       </nav>
       <div className="header-actions">
-        <span className="prototype-pill">Prototipo · datos demostrativos</span>
+        <Link className="management-link" href="/gestion">Gestión</Link>
         <Link className="outline-button" href="/aportar">Aportar información</Link>
       </div>
     </header>
