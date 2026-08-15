@@ -1,8 +1,12 @@
 # Central de Recursos Digitales — Colombia
 
+**En vivo:** https://brandonangulo.github.io/red-viva-recursos/
+**Repositorio:** https://github.com/BrandonAngulo/red-viva-recursos
+**Base de datos:** Supabase — proyecto *Red Viva Respuesta Colombia* (`afnwhdoqdwopvcsdgswi`)
+
 Directorio verificado que **centraliza los recursos digitales dispersos** tras el
 terremoto (7.4, 10 de agosto de 2026). Su propósito: que cualquier persona sepa
-**qué herramienta usar en cada situación**, sin tener que rastrear enlaces sueltos.
+**qué herramienta usar en cada situación**, sin rastrear enlaces sueltos.
 
 Empieza por una pregunta práctica — **¿Qué necesitas hacer?** — y separa siempre
 dos cosas que suelen confundirse:
@@ -15,37 +19,66 @@ dos cosas que suelen confundirse:
 
 ---
 
-## Cómo se ve y cómo se usa
+## Cómo está montado
 
-- Dos entradas destacadas: **Necesito ayuda** y **Quiero ayudar** (+ "Ver todo").
-- Chips de necesidad: personas, mascotas, ayuda oficial, daños en vivienda,
-  albergue/salud/conectividad, cifras, donar, acopios, voluntariado, emergencia.
-- Filtros por **tipo**, **territorio** y **verificación**, más búsqueda de texto.
-- Cada tarjeta muestra: acción principal, descripción, cobertura, responsable,
-  actualización declarada, última revisión, manejo de datos sensibles y botones
-  **Abrir recurso** / **Reportar**.
-- El estado de los filtros se guarda en la URL (`#modo=aportar&necesidad=donar`),
-  así que cualquier vista es **compartible**.
-- Tema claro/oscuro (respeta el sistema, con interruptor manual) y accesibilidad
-  (navegación por teclado, foco visible, `aria-live`, movimiento reducido).
+| Capa | Tecnología | Rol |
+|------|------------|-----|
+| Hosting | **GitHub Pages** (rama `master`) | Sirve el sitio estático. Cada `git push` lo actualiza. |
+| Contenido | **Supabase** (tabla `digital_resources`) | Los recursos se leen **en vivo**: editar una fila se refleja al instante, sin re-desplegar. |
+| Resiliencia | `data/resources.js` | Copia local incrustada: si Supabase falla, el sitio sigue mostrando los recursos. |
+
+El sitio no tiene servidor propio: el frontend estático llama a la API REST de
+Supabase con la clave *publishable* (pública por diseño; el acceso lo restringe
+RLS, que solo permite **leer filas publicadas**).
+
+El indicador **“Datos en vivo / Copia local”** (junto al conteo) muestra de dónde
+salieron los datos en cada carga.
 
 ---
 
-## Estructura del proyecto
+## Actualizar el contenido (lo que harás a diario)
 
-```
-central-recursos-colombia/
-├─ index.html              Estructura y contenido estático
-├─ assets/
-│  ├─ css/styles.css       Estilos, tokens de diseño, claro/oscuro
-│  └─ js/app.js            Render, filtros, búsqueda, tema, estado en URL
-├─ data/
-│  └─ resources.js         ← FUENTE ÚNICA DE DATOS (editar aquí)
-└─ README.md
+**No necesitas tocar código ni re-desplegar.** Edita la tabla en Supabase:
+
+1. Entra al proyecto *Red Viva Respuesta Colombia* → **Table Editor** → `digital_resources`.
+2. Añade, edita o despublica filas (`is_published = false` la oculta sin borrarla).
+3. Recarga el sitio: el cambio ya está.
+
+Campos de cada recurso:
+
+| Campo | Qué es |
+|-------|--------|
+| `id` | Identificador único (kebab-case). |
+| `name`, `org` | Nombre visible y organización responsable. |
+| `action` | Acción principal ("Buscar persona", "Donar", …). |
+| `description` | Qué resuelve, en una frase. |
+| `intents` | Necesidades que cubre (arreglo de texto; ver lista en `data/resources.js`). |
+| `type` | `oficial` · `institucional` · `ciudadano` → **Confianza**. |
+| `coverage` | Cobertura territorial. |
+| `url` | Enlace al recurso original (o `tel:` para líneas). |
+| `status` | `activo` · `desactualizado` · `caido` · `cerrado` → **Vigencia**. |
+| `verification` | `verificado` · `en-revision` · `por-verificar`. |
+| `declared_update` | Fecha/corte que declara el propio recurso. |
+| `last_review` | Cuándo lo revisó por última vez este directorio. |
+| `sensitive` | `true` si maneja datos personales (se enlaza al original). |
+| `warn` / `note` | Advertencia visible / nota informativa. |
+| `is_published` | `false` lo oculta del sitio. |
+| `sort_order` | Orden de aparición (menor primero). |
+
+> Los reportes ciudadanos se guardan en la tabla `resource_reports` (inserción
+> anónima permitida; sin lectura pública).
+
+---
+
+## Actualizar el diseño o la lógica (código)
+
+```bash
+git add -A
+git commit -m "descripción del cambio"
+git push
 ```
 
-No hay backend ni dependencias externas. Funciona abriendo `index.html` con doble
-clic o servido en cualquier hosting estático.
+GitHub Pages reconstruye el sitio en ~1 minuto.
 
 ### Ver en local
 
@@ -53,39 +86,34 @@ clic o servido en cualquier hosting estático.
 python -m http.server 4599
 ```
 
-Luego abre `http://localhost:4599/`. (También funciona con doble clic, porque los
-datos se cargan como `<script>` y no por `fetch`.)
-
-### Publicar
-
-Sube la carpeta tal cual a **Vercel**, **Netlify** o **GitHub Pages**. Es estático.
+Abre `http://localhost:4599/`.
 
 ---
 
-## Editar los recursos
+## Estructura
 
-Todo vive en [`data/resources.js`](data/resources.js) dentro de `window.CRC_DATA`.
-Para añadir un recurso, copia una tarjeta existente y ajusta los campos:
+```
+red-viva-recursos/
+├─ index.html              Estructura y contenido
+├─ assets/
+│  ├─ css/styles.css       Estilos, tokens, claro/oscuro
+│  └─ js/app.js            Render, filtros, búsqueda, tema, lectura en vivo
+├─ data/resources.js       Config (intenciones, tipos…) + copia local de respaldo
+├─ .nojekyll               Evita el procesamiento Jekyll en Pages
+└─ README.md
+```
 
-| Campo            | Qué es                                                              |
-|------------------|--------------------------------------------------------------------|
-| `id`             | Identificador único (kebab-case).                                  |
-| `name`, `org`    | Nombre visible y organización responsable.                         |
-| `action`         | Acción principal ("Buscar persona", "Donar", …).                   |
-| `description`    | Qué resuelve, en una frase.                                        |
-| `intents`        | Una o más necesidades (ver lista `intents`).                       |
-| `type`           | `oficial` · `institucional` · `ciudadano`  → **Confianza**.        |
-| `coverage`       | Cobertura territorial.                                              |
-| `url`            | Enlace al recurso original (o `tel:` para líneas).                 |
-| `status`         | `activo` · `desactualizado` · `caido` · `cerrado`  → **Vigencia**. |
-| `verification`   | `verificado` · `en-revision` · `por-verificar`.                    |
-| `declaredUpdate` | Fecha/corte que declara el propio recurso.                         |
-| `lastReview`     | Cuándo lo revisó por última vez este directorio.                   |
-| `sensitive`      | `true` si maneja datos personales (se enlaza al original).         |
-| `warn` / `note`  | Advertencia visible / nota informativa.                            |
+---
 
-Antes de publicar, cambia `meta.contactEmail` por el canal real de reportes
-(evita exponer correos personales) y actualiza `meta.lastReview`.
+## Dominio propio (subdominio de Andanzas Centro Cultural)
+
+Para servirlo en, por ejemplo, `recursos.tudominio.com`:
+
+1. En tu proveedor de DNS, crea un registro **CNAME**
+   `recursos` → `brandonangulo.github.io`.
+2. En GitHub → repo → **Settings › Pages › Custom domain**, escribe
+   `recursos.tudominio.com` y guarda (crea un archivo `CNAME` en el repo).
+3. Espera la verificación y activa **Enforce HTTPS**.
 
 ---
 
@@ -118,33 +146,28 @@ Mapa del Terremoto.
 
 ### Pendientes de verificación (aún NO publicados)
 
-Se mantienen fuera del directorio hasta comprobar responsable, dominio y trazabilidad:
-
 - **cuiDAMOS (Pereira / Eje Cafetero)** — mencionado, pero no se confirmó una
-  plataforma con dominio propio. Existen canales oficiales de la Alcaldía de
-  Pereira y de *La Patria* para acopios en Risaralda que podrían reemplazarlo.
-- **OnePay, GoFundMe Colombia** y otras campañas — canales financieros: requieren
-  comprobación adicional de titular, beneficiarios, trazabilidad y vigencia antes
-  de recibir la etiqueta de recomendados.
+  plataforma con dominio propio. Hay canales oficiales de la Alcaldía de Pereira
+  para acopios en Risaralda que podrían reemplazarlo.
+- **OnePay, GoFundMe Colombia** y campañas — canales financieros: requieren
+  comprobación adicional de titular, beneficiarios, trazabilidad y vigencia.
 
 ---
 
 ## Hoja de ruta
 
-- **Fase 1 (esta versión):** enlaces verificados, confianza y vigencia separadas,
-  reportes por correo. ✔
-- **Fase 2:** monitoreo de enlaces caídos y de fechas vencidas; tablas de soporte
-  `digital_resources`, `resource_checks`, `resource_reports`; formulario privado
-  de propuestas con bitácora.
-- **Integraciones / sincronización** solo cuando exista autorización, API o acuerdo
-  con la plataforma responsable (evitar duplicar, p. ej., *Mapa del Terremoto*).
+- **Fase 1 (hecha):** enlaces verificados, confianza y vigencia separadas,
+  contenido en vivo desde Supabase, reportes por correo. ✔
+- **Fase 2:** monitoreo automático de enlaces caídos y fechas vencidas; panel de
+  administración sobre `digital_resources` / `resource_reports`; formulario de
+  propuestas con bitácora en base de datos.
+- **Integraciones / sincronización** solo con autorización, API o acuerdo de la
+  plataforma responsable (evitar duplicar, p. ej., *Mapa del Terremoto*).
 
 ### Integración al Mapa Vivo
 
-Pensado para incorporarse como el módulo **`/recursos`**: además de mostrar
-afectaciones, necesidades y ayuda recibida, el Mapa Vivo gana la puerta de entrada
-para saber qué herramienta usar en cada situación. Esta versión es portable, así
-que puede vivir por separado o trasladarse a ese proyecto sin reescribir los datos.
+Pensado para incorporarse como el módulo **`/recursos`**. Como el contenido ya vive
+en Supabase, migrarlo al Mapa Vivo es reapuntar el frontend a la misma tabla.
 
 ---
 
