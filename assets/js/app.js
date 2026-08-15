@@ -21,8 +21,10 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   };
+  var NL = String.fromCharCode(10);
+  var reDiacritics = new RegExp("[" + String.fromCharCode(0x300) + "-" + String.fromCharCode(0x36f) + "]", "g");
   var norm = function (s) {
-    return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return String(s || "").toLowerCase().normalize("NFD").replace(reDiacritics, "");
   };
 
   /* ---------- Estado ------------------------------------------------------- */
@@ -173,9 +175,16 @@
     var open = '<a class="open" href="' + esc(r.url) + '"' + (isTel ? "" : ' target="_blank" rel="noopener noreferrer"') + '>' +
       esc(openLabel) + ' <span aria-hidden="true">' + (isTel ? "☎" : "↗") + "</span></a>";
 
+    var reportBody = [
+      "Recurso: " + r.name,
+      "Enlace: " + r.url,
+      "",
+      "Describe el problema (enlace caído, información desactualizada, dato sensible, etc.):",
+      "",
+    ].join(NL);
     var mailto = "mailto:" + encodeURIComponent(DATA.meta.contactEmail) +
       "?subject=" + encodeURIComponent("Reporte sobre recurso: " + r.name) +
-      "&body=" + encodeURIComponent("Recurso: " + r.name + "\nEnlace: " + r.url + "\n\nDescribe el problema (enlace caído, información desactualizada, dato sensible, etc.):\n");
+      "&body=" + encodeURIComponent(reportBody);
     var report = '<a class="report" href="' + mailto + '" title="Reportar un problema con este recurso">Reportar</a>';
 
     var c = el("article", { "class": "card" });
@@ -279,9 +288,18 @@
     // CTA proponer recurso
     var cta = $("#proposeCta");
     if (cta) {
+      var proposeBody = [
+        "Nombre del recurso:",
+        "Enlace (URL):",
+        "Organización responsable:",
+        "¿Qué resuelve?:",
+        "Cobertura territorial:",
+        "¿Maneja datos personales?:",
+        "",
+      ].join(NL);
       cta.href = "mailto:" + encodeURIComponent(DATA.meta.contactEmail) +
         "?subject=" + encodeURIComponent("Propuesta de recurso para el directorio") +
-        "&body=" + encodeURIComponent("Nombre del recurso:\nEnlace (URL):\nOrganización responsable:\n¿Qué resuelve?:\nCobertura territorial:\n¿Maneja datos personales?:\n");
+        "&body=" + encodeURIComponent(proposeBody);
     }
     var mail = $("#contactMail");
     if (mail) { mail.textContent = DATA.meta.contactEmail; mail.href = "mailto:" + DATA.meta.contactEmail; }
@@ -313,7 +331,8 @@
   function loadLiveResources() {
     var sb = DATA.meta && DATA.meta.supabase;
     if (!sb || !sb.url || !sb.anonKey) return; // sin config -> se queda con datos locales
-    var endpoint = sb.url.replace(/\/$/, "") +
+    var baseUrl = sb.url.charAt(sb.url.length - 1) === "/" ? sb.url.slice(0, -1) : sb.url;
+    var endpoint = baseUrl +
       "/rest/v1/digital_resources?select=*&is_published=eq.true&order=sort_order.asc,name.asc";
     fetch(endpoint, { headers: { apikey: sb.anonKey, Authorization: "Bearer " + sb.anonKey } })
       .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
