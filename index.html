@@ -159,13 +159,36 @@
     <!-- ============================ ACTUAR ============================= -->
     <section class="view" id="view-actuar" data-view="actuar" hidden>
       <div class="bleed">
-        <div class="view-head"><h2 class="view-title">Cómo actuar</h2></div>
-        <p class="section-sub">Guías prácticas con pasos concretos y enlaces oficiales.</p>
-        <div class="guides" id="guides"></div>
+        <div class="view-head">
+          <h2 class="view-title">Orientaciones para actuar</h2>
+          <button class="btn-ghost" id="printGuide" type="button">Imprimir / guardar PDF</button>
+        </div>
+        <p class="section-sub">Pasos claros para las situaciones más frecuentes tras el sismo. Lenguaje sencillo, con notas para <b>zona rural o sin señal</b>, <b>comunidades indígenas y afro</b>, y <b>personas mayores o con discapacidad</b>. Toca cada situación para abrirla.</p>
+
+        <div class="orientaciones" id="orientaciones"></div>
+
+        <section class="block">
+          <h2>Prepararse: kit, plan y capacitación</h2>
+          <div class="prep-grid">
+            <div class="prep-card"><h3>Kit de emergencia</h3><ul id="prepKit"></ul></div>
+            <div class="prep-card"><h3>Plan familiar</h3><ol id="prepPlan"></ol></div>
+            <div class="prep-card"><h3>Formación gratuita</h3><div id="prepFormacion" class="prep-links"></div></div>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2>Líneas útiles</h2>
+          <div class="lineas-table" id="lineasTable"></div>
+        </section>
+
+        <section class="block">
+          <h2>Comparte esta orientación</h2>
+          <p class="muted-foot" style="max-width:72ch">Escríbelo una vez, compártelo en muchos formatos: enlaza esta página, imprímela para carteleras y puntos de acopio, reenvíala por WhatsApp o léela en voz alta en la emisora comunitaria. En zonas sin datos, la radio y el voz a voz siguen siendo el mejor canal.</p>
+        </section>
 
         <section class="block method-block">
           <h2>Cómo verificamos</h2>
-          <p class="muted-foot" style="max-width:70ch">Ningún recurso propuesto por la comunidad se publica automáticamente. Revisamos responsable y dominio, funcionamiento del enlace, cobertura y propósito, privacidad y datos sensibles, duplicados, y validación de canales de donación, con decisión humana y registro en bitácora. Para personas, menores y mascotas enlazamos al recurso original; no replicamos sus bases de datos.</p>
+          <p class="muted-foot" style="max-width:72ch">Ningún recurso propuesto por la comunidad se publica automáticamente. Revisamos responsable y dominio, funcionamiento del enlace, cobertura y propósito, privacidad y datos sensibles, duplicados, y validación de canales de donación, con decisión humana y registro en bitácora. Para personas, menores y mascotas enlazamos al recurso original; no replicamos sus bases de datos.</p>
         </section>
       </div>
     </section>
@@ -189,6 +212,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="data/resources.js"></script>
   <script src="data/territory.js"></script>
+  <script src="data/orientaciones.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

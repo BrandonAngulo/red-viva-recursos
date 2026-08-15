@@ -4,6 +4,7 @@
 
   var DATA = window.CRC_DATA;
   var TERR = window.CRC_TERRITORY || {};
+  var ORI = window.CRC_ORIENTA || {};
   if (!DATA) { console.error("No se cargó data/resources.js"); return; }
 
   var $ = function (s, c) { return (c || document).querySelector(s); };
@@ -207,13 +208,44 @@
     }).join("");
     var nm = $("#navMuniCount"); if (nm) nm.textContent = list.length + " municipios con afectación";
   }
-  function renderGuides() {
-    var box = $("#guides"); if (!box) return;
-    box.innerHTML = (TERR.guides || []).map(function (g) {
-      var steps = (g.steps || []).map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("");
-      var links = (g.links || []).map(function (l) { return '<a href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label) + "</a>"; }).join("");
-      return '<section class="guide"><div class="guide-head"><span class="gi" aria-hidden="true">' + esc(g.icon || "•") + "</span><h3>" + esc(g.title) + "</h3></div>" +
-        "<ol>" + steps + "</ol>" + '<div class="guide-links">' + links + "</div></section>";
+  function chip(label, value) { return '<span class="ori-chip"><b>' + esc(label) + "</b> " + esc(value) + "</span>"; }
+  function renderOrientaciones() {
+    var box = $("#orientaciones"); if (!box) return;
+    box.innerHTML = (ORI.orientaciones || []).map(function (o) {
+      var pasos = (o.pasos || []).map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("");
+      var acudir = (o.acudir || []).map(function (a) { return chip(a.who, a.channel); }).join("");
+      var fuentes = (o.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(f.label) + " ↗</a>"; }).join("");
+      var dif = o.diferencial || {};
+      var difBlock = '<div class="ori-dif"><h4>Según tu situación</h4>' +
+        (dif.rural ? '<p><b>Rural o sin señal.</b> ' + esc(dif.rural) + "</p>" : "") +
+        (dif.etnico ? '<p><b>Comunidades indígenas y afro.</b> ' + esc(dif.etnico) + "</p>" : "") +
+        (dif.mayores ? '<p><b>Personas mayores o con discapacidad.</b> ' + esc(dif.mayores) + "</p>" : "") + "</div>";
+      return '<details class="ori" id="ori-' + esc(o.id) + '">' +
+        '<summary><span class="ori-ic" aria-hidden="true">' + esc(o.icon || "•") + '</span><span class="ori-sum"><span class="ori-t">' + esc(o.title) + '</span><span class="ori-q">' + esc(o.quePasa || "") + "</span></span></summary>" +
+        '<div class="ori-body">' +
+          "<ol class=\"ori-pasos\">" + pasos + "</ol>" +
+          (acudir ? '<div class="ori-row"><h4>A quién acudir</h4><div class="ori-chips">' + acudir + "</div></div>" : "") +
+          (o.estafa ? '<p class="ori-warn"><span aria-hidden="true">⚠️</span> ' + esc(o.estafa) + "</p>" : "") +
+          (o.linea ? '<p class="ori-line"><span aria-hidden="true">☎</span> <b>Línea:</b> ' + esc(o.linea) + "</p>" : "") +
+          difBlock +
+          (fuentes ? '<p class="ori-src">Fuentes: ' + fuentes + "</p>" : "") +
+        "</div></details>";
+    }).join("");
+  }
+  function renderPreparacion() {
+    var p = ORI.preparacion || {};
+    var kit = $("#prepKit"); if (kit) kit.innerHTML = (p.kit || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
+    var plan = $("#prepPlan"); if (plan) plan.innerHTML = (p.plan || []).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
+    var fm = $("#prepFormacion");
+    if (fm) fm.innerHTML = (p.formacion || []).map(function (f) {
+      return '<a class="prep-link" href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer"><b>' + esc(f.label) + "</b><span>" + esc(f.desc || "") + "</span></a>";
+    }).join("");
+  }
+  function renderLineas() {
+    var box = $("#lineasTable"); if (!box) return;
+    box.innerHTML = (ORI.lineas || []).map(function (l) {
+      var tel = /^[0-9]/.test(l.num) ? '<a href="tel:' + esc(l.num.replace(/\s/g, "")) + '">' + esc(l.num) + "</a>" : esc(l.num);
+      return '<div class="linea"><span class="linea-num">' + tel + '</span><span class="linea-lb">' + esc(l.label) + '</span><span class="linea-nt">' + esc(l.note || "") + "</span></div>";
     }).join("");
   }
 
@@ -281,6 +313,10 @@
     var timer; byId("#search", "input", function (e) { clearTimeout(timer); var v = e.target.value; timer = setTimeout(function () { state.q = v; applyResources(); }, 160); });
     byId("#resetFilters", "click", resetAll);
     byId("#themeToggle", "click", function () { setTheme(currentTheme() === "dark" ? "light" : "dark"); });
+    byId("#printGuide", "click", function () {
+      Array.prototype.forEach.call(document.querySelectorAll("#orientaciones details"), function (d) { d.open = true; });
+      window.print();
+    });
     window.addEventListener("hashchange", route);
   }
 
@@ -289,7 +325,9 @@
   bind();
   applyResources();
   renderMunicipios();
-  renderGuides();
+  renderOrientaciones();
+  renderPreparacion();
+  renderLineas();
   renderSituation(DATA.situation || []);
   route();              // muestra la vista según el hash (o Inicio)
   loadSituation();      // en vivo
