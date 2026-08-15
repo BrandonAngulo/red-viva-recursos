@@ -61,6 +61,8 @@ img { max-width:100%; }
 .tab:hover { color:var(--fg); background:var(--surface-2); }
 .tab.active { color:var(--fg); background:var(--surface-2); border-color:var(--line); }
 :root[data-theme="dark"] .tab.active, :root:not([data-theme="light"]) .tab.active { color:#0d3b2c; background:var(--lime); border-color:var(--lime); }
+.tab-featured::before { content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--coral); margin-right:6px; vertical-align:middle; box-shadow:0 0 0 0 rgba(230,96,63,.5); animation:tabPulse 2.6s ease-in-out infinite; }
+@keyframes tabPulse { 0%,100%{ box-shadow:0 0 0 0 rgba(230,96,63,.5); } 55%{ box-shadow:0 0 0 5px rgba(230,96,63,0); } }
 
 .header-actions { margin-left:auto; display:flex; align-items:center; gap:9px; flex:none; }
 .btn-emergency { display:inline-flex; align-items:center; gap:7px; padding:8px 13px; border-radius:999px; background:var(--coral); color:#fff; text-decoration:none; font-weight:800; font-size:13.5px; border:0; }
@@ -220,6 +222,21 @@ img { max-width:100%; }
 .muni-note { font-size:13px; color:var(--fg-muted); line-height:1.45; margin:0 0 12px; }
 .muni-card .open { margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:9px 12px; border-radius:var(--radius-sm); text-decoration:none; background:transparent; border:1px solid var(--line); color:var(--fg); font-weight:650; font-size:12.5px; }
 .muni-card .open:hover { border-color:var(--green); }
+
+/* ===== Leer más (inline) y conectores ===== */
+.more { margin:0 0 10px; }
+.more > summary { display:inline-flex; align-items:center; gap:5px; cursor:pointer; list-style:none; font-size:12.5px; font-weight:700; color:var(--green); padding:3px 0; }
+.more > summary::-webkit-details-marker { display:none; }
+.more > summary::after { content:"▾"; font-size:10px; }
+.more[open] > summary::after { content:"▴"; }
+.more[open] > summary { margin-bottom:7px; }
+.more-body p { font-size:13px; color:var(--fg-muted); line-height:1.5; margin:0 0 8px; }
+.more-body p:last-child { margin-bottom:0; }
+.hero-more { margin:16px 0 0; font-size:14px; color:#cfe0d6; }
+.hero-more a { color:var(--lime); text-decoration:none; font-weight:700; }
+.hero-more a:hover { text-decoration:underline; }
+.block-cta { display:inline-flex; align-items:center; gap:6px; margin-top:12px; padding:9px 16px; border-radius:999px; text-decoration:none; background:var(--surface-2); border:1px solid var(--line); color:var(--fg); font-weight:700; font-size:13px; }
+.block-cta:hover { border-color:var(--green); color:var(--green); }
 
 /* ===== Entender qué pasó ===== */
 .resumen-card { background:var(--surface); border:1px solid var(--line); border-top:4px solid var(--coral); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); }

@@ -318,10 +318,15 @@
       rc.innerHTML = '<dl class="rc-stats">' + stat("Magnitud", r.magnitud) + stat("Fecha", r.fecha) + stat("Hora", r.hora) + stat("Epicentro", r.epicentro) + stat("Profundidad", r.profundidad) + "</dl>" +
         (r.nota ? '<p class="rc-nota">' + esc(r.nota) + "</p>" : "") + src;
     }
+    var moreBlock = function (paras) {
+      if (!paras || !paras.length) return "";
+      var ps = paras.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
+      return '<details class="more"><summary>Leer más</summary><div class="more-body">' + ps + "</div></details>";
+    };
     var eg = $("#explicaGrid");
     if (eg) eg.innerHTML = (COMP.explicacion || []).map(function (e) {
       var link = e.link ? '<a class="explica-link" href="' + esc(e.link.url) + '"' + (/^#/.test(e.link.url) ? "" : ' target="_blank" rel="noopener noreferrer"') + ">" + esc(e.link.label) + " →</a>" : "";
-      return '<article class="explica-card"><div class="ex-ic" aria-hidden="true">' + esc(e.icon || "•") + "</div><h3>" + esc(e.title) + "</h3><p>" + esc(e.body) + "</p>" + link + "</article>";
+      return '<article class="explica-card"><div class="ex-ic" aria-hidden="true">' + esc(e.icon || "•") + "</div><h3>" + esc(e.title) + "</h3><p>" + esc(e.body) + "</p>" + moreBlock(e.mas) + link + "</article>";
     }).join("");
     var hi = $("#historiaIntro"); if (hi) hi.textContent = COMP.historiaIntro || "";
     var hg = $("#historiaGrid");
@@ -334,7 +339,7 @@
       var items = (d.items || []).map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("");
       var fuentes = (d.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(f.label) + " ↗</a>"; }).join("");
       return '<div class="crono-item"><div class="crono-when"><span class="crono-dia">' + esc(d.dia) + '</span><span class="crono-fecha">' + esc(d.fecha) + "</span></div>" +
-        '<div class="crono-card"><h3>' + esc(d.titulo) + "</h3><ul>" + items + "</ul>" + (fuentes ? '<p class="crono-src">Fuentes: ' + fuentes + "</p>" : "") + "</div></div>";
+        '<div class="crono-card"><h3>' + esc(d.titulo) + "</h3><ul>" + items + "</ul>" + (d.detalle ? moreBlock([d.detalle]) : "") + (fuentes ? '<p class="crono-src">Fuentes: ' + fuentes + "</p>" : "") + "</div></div>";
     }).join("");
   }
 
