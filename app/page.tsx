@@ -78,12 +78,6 @@ function readable(value: string) {
   return value.replaceAll("-", " ").replace(/^./, (letter) => letter.toUpperCase());
 }
 
-function projectedPosition([longitude, latitude]: [number, number]) {
-  const x = 33 + ((longitude + 79) / 13) * 31;
-  const y = 20 + ((13 - latitude) / 17) * 64;
-  return { left: `${x}%`, top: `${y}%` };
-}
-
 export default function Home() {
   const [activePanel, setActivePanel] = useState<WorkspacePanel>("mapa");
   const [mode, setMode] = useState<ResponseMode>("necesito");
@@ -280,21 +274,6 @@ export default function Home() {
 
         <div className="console-map-panel">
           <ResponseMap incidents={modeIncidents} selectedId={selected.id} onSelect={selectIncident} />
-          <div className="console-map-points" aria-label="Puntos de la capa territorial">
-            {modeIncidents.map((incident) => (
-              <button
-                type="button"
-                key={incident.id}
-                className={`projected-point ${selected.id === incident.id ? "selected" : ""}`}
-                style={projectedPosition(incident.coordinates)}
-                aria-label={`${incident.title}, ${incident.municipality}`}
-                onClick={() => selectIncident(incident.id)}
-              >
-                <i className={`dot ${incident.severity === "Crítica" ? "critical" : incident.severity === "Alta" ? "high" : incident.severity === "Media" ? "medium" : "operative"}`} />
-                <span>{incident.id} · {incident.municipality}</span>
-              </button>
-            ))}
-          </div>
           <div className="map-operational-label"><span>Territorio en desarrollo</span><b>4 fichas demostrativas · recursos reales separados</b></div>
 
           {activePanel === "mapa" && detailOpen && (
