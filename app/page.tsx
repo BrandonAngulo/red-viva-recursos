@@ -55,23 +55,23 @@ export default function Home() {
   return (
     <main className={`app-shell mode-${mode}`}>
       <SiteHeader />
-      <section className="status-bar" aria-label="Resumen de la plataforma">
-        <div><span className="live-dot" /> <b>Plataforma unificada</b><small>Red Viva ahora alimenta esta central</small></div>
-        <dl><div><dt>Municipios del consolidado</dt><dd>448</dd></div><div><dt>Recursos curados</dt><dd>14</dd></div><div><dt>Fichas demostrativas</dt><dd>6</dd></div></dl>
-        <a href="tel:123" className="emergency-link">Emergencias 123</a>
-      </section>
-
       <section className="mode-band">
-        <ModeSwitch mode={mode} onChange={changeMode} />
         <div className="mode-copy">
-          <p className="eyebrow">{content.eyebrow}</p>
-          <h1>{content.title}</h1>
+          <p className="eyebrow">Sismo 7.4 · respuesta territorial · Colombia</p>
+          <h1>{mode === "necesito" ? <>Encuentra <em>ayuda cerca de ti.</em></> : <>Conecta tu ayuda con una <em>necesidad real.</em></>}</h1>
           <p>{content.description}</p>
         </div>
+        <ModeSwitch mode={mode} onChange={changeMode} compact />
         <div className="mode-actions">
           <Link className="primary-button" href={content.primary[1]}>{content.primary[0]} →</Link>
           <Link className="quiet-link" href={content.secondary[1]}>{content.secondary[0]}</Link>
         </div>
+      </section>
+
+      <section className="status-bar" aria-label="Resumen de la plataforma">
+        <div><span className="live-dot" /> <b>Datos integrados</b><small>Red Viva alimenta esta central</small></div>
+        <dl><div><dt>Municipios del consolidado</dt><dd>448</dd></div><div><dt>Recursos curados</dt><dd>14</dd></div><div><dt>Fichas demostrativas</dt><dd>6</dd></div></dl>
+        <span className="status-source">Corte editorial · 14 ago 2026</span>
       </section>
 
       <section className="map-workspace">

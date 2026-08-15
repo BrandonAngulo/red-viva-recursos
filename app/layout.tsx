@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { DM_Serif_Display, Inter, Manrope } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
 
 const inter = Inter({ variable: "--font-body", subsets: ["latin"] });
 const manrope = Manrope({ variable: "--font-display", subsets: ["latin"] });
+const dmSerif = DM_Serif_Display({ variable: "--font-editorial", subsets: ["latin"], weight: "400" });
 
 export async function generateMetadata(): Promise<Metadata> {
   const incomingHeaders = await headers();
@@ -23,5 +24,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="es"><body className={`${inter.variable} ${manrope.variable}`}>{children}</body></html>;
+  return <html lang="es"><body className={`${inter.variable} ${manrope.variable} ${dmSerif.variable}`}>{children}</body></html>;
 }

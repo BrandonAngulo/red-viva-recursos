@@ -42,7 +42,7 @@ export function ResponseMap({ incidents, selectedId, onSelect }: { incidents: In
           sources: {
             osm: { type: "raster", tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"], tileSize: 256, attribution: "© OpenStreetMap" },
           },
-          layers: [{ id: "osm", type: "raster", source: "osm", paint: { "raster-saturation": -0.72, "raster-contrast": 0.08, "raster-brightness-max": 0.93 } }],
+          layers: [{ id: "osm", type: "raster", source: "osm", paint: { "raster-saturation": -0.88, "raster-contrast": 0.18, "raster-brightness-min": 0.16, "raster-brightness-max": 0.62 } }],
         },
       });
       createdMap = map;
