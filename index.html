@@ -197,9 +197,15 @@
       <div class="bleed">
         <div class="view-head">
           <h2 class="view-title">Orientaciones para actuar</h2>
-          <button class="btn-ghost" id="printGuide" type="button">Imprimir / guardar PDF</button>
+          <button class="btn-ghost" id="openPrintModal" type="button">Imprimir / guardar PDF</button>
         </div>
         <p class="section-sub">Selecciona tu situación. Hemos separado las guías para que no te satures de información y veas exactamente lo que necesitas saber en este momento, con indicaciones especiales para <b>zonas sin señal</b>, <b>comunidades étnicas</b> y <b>personas mayores</b>.</p>
+
+        <!-- LÍNEAS ÚTILES MOVED HIGHER -->
+        <section class="block" id="block-lineas" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+          <h2 style="font-size: 1.25rem;">Líneas útiles de emergencia</h2>
+          <div class="lineas-table" id="lineasTable"></div>
+        </section>
 
         <div class="fase-picker" id="fasePicker" role="group" aria-label="Elige tu perfil"></div>
         <p class="fase-intro" id="faseIntro"></p>
@@ -219,12 +225,7 @@
           </div>
         </section>
 
-        <section class="block">
-          <h2>Líneas útiles</h2>
-          <div class="lineas-table" id="lineasTable"></div>
-        </section>
-
-        <section class="block">
+        <section class="block" id="block-prep">
           <h2>Ayuda a que esto llegue a más gente</h2>
           <p class="muted-foot" style="max-width:72ch">Muchas personas afectadas no tienen internet. Imprime esta guía para carteleras y puntos de acopio, reenvíala por WhatsApp o léela en voz alta en la emisora comunitaria. En zonas sin señal, la radio y el voz a voz siguen siendo el mejor canal.</p>
         </section>
@@ -235,6 +236,24 @@
         </section>
       </div>
     </section>
+
+    <!-- Modal de Impresión -->
+    <dialog id="printModal" class="print-modal">
+      <div class="pm-content">
+        <h2>¿Qué información deseas imprimir/guardar?</h2>
+        <p>Selecciona las categorías que necesitas. Las opciones seleccionadas se expandirán automáticamente para el PDF.</p>
+        <form id="printForm">
+          <label><input type="checkbox" name="p_ayuda" checked> Guías para Damnificados / Necesito Ayuda</label>
+          <label><input type="checkbox" name="p_aportar" checked> Guías para Donar / Quiero Ayudar</label>
+          <label><input type="checkbox" name="p_lineas" checked> Líneas Útiles de Emergencia</label>
+          <label><input type="checkbox" name="p_prep" checked> Prepararse: Kit, Plan y Capacitación</label>
+          <div class="pm-actions">
+            <button type="button" class="btn-ghost" id="closePrintModal">Cancelar</button>
+            <button type="submit" class="btn-primary">Imprimir seleccionados</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
 
   </main>
 

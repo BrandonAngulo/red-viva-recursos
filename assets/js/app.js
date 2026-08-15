@@ -487,9 +487,59 @@
     var timer; byId("#search", "input", function (e) { clearTimeout(timer); var v = e.target.value; timer = setTimeout(function () { state.q = v; applyResources(); }, 160); });
     byId("#resetFilters", "click", resetAll);
     byId("#themeToggle", "click", function () { setTheme(currentTheme() === "dark" ? "light" : "dark"); });
-    byId("#printGuide", "click", function () {
+    var pm = $("#printModal");
+    byId("#openPrintModal", "click", function () { if (pm) pm.showModal(); });
+    byId("#closePrintModal", "click", function () { if (pm) pm.close(); });
+    byId("#printForm", "submit", function (e) {
+      e.preventDefault();
+      if (pm) pm.close();
+      
+      var pAyuda = e.target.elements["p_ayuda"].checked;
+      var pAportar = e.target.elements["p_aportar"].checked;
+      var pLineas = e.target.elements["p_lineas"].checked;
+      var pPrep = e.target.elements["p_prep"].checked;
+
+      // Temporarily render all guides so we can print what's selected
+      var oldFase = oriFase;
+      oriFase = ""; 
+      renderOrientaciones();
+      
+      // Open all details to print
       Array.prototype.forEach.call(document.querySelectorAll("#orientaciones details"), function (d) { d.open = true; });
+
+      // Apply no-print classes
+      Array.prototype.forEach.call(document.querySelectorAll("#orientaciones details"), function (d) {
+        var id = d.id.replace("ori-", "");
+        var fases = ORI.fasesPorId[id] || [];
+        var isAyuda = fases.indexOf("ayuda") !== -1;
+        var isAportar = fases.indexOf("aportar") !== -1;
+        
+        var keep = false;
+        if (pAyuda && isAyuda) keep = true;
+        if (pAportar && isAportar) keep = true;
+        
+        if (!keep) d.classList.add("no-print");
+      });
+
+      var blockLineas = $("#block-lineas");
+      if (blockLineas) {
+        if (!pLineas) blockLineas.classList.add("no-print");
+        else blockLineas.classList.remove("no-print");
+      }
+
+      var blockPrep = $("#block-prep");
+      if (blockPrep) {
+        if (!pPrep) blockPrep.classList.add("no-print");
+        else blockPrep.classList.remove("no-print");
+      }
+
       window.print();
+
+      // Restore state
+      oriFase = oldFase;
+      renderOrientaciones();
+      if (blockLineas) blockLineas.classList.remove("no-print");
+      if (blockPrep) blockPrep.classList.remove("no-print");
     });
     window.addEventListener("hashchange", route);
   }
