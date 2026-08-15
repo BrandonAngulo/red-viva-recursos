@@ -401,3 +401,5 @@ img { max-width:100%; }
 .pm-content label { display: flex; align-items: center; gap: 8px; font-weight: 500; cursor: pointer; }
 .pm-actions { margin-top: 16px; display: flex; justify-content: flex-end; gap: 12px; }
 @media print { .no-print, .no-print * { display: none !important; } }
+
+@media (min-width: 768px) { .bottom-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; } .bottom-blocks .block { margin-bottom: 0; } }

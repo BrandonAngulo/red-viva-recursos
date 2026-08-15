@@ -487,6 +487,20 @@
     var timer; byId("#search", "input", function (e) { clearTimeout(timer); var v = e.target.value; timer = setTimeout(function () { state.q = v; applyResources(); }, 160); });
     byId("#resetFilters", "click", resetAll);
     byId("#themeToggle", "click", function () { setTheme(currentTheme() === "dark" ? "light" : "dark"); });
+    
+    // Share button
+    byId("#shareBtn", "click", function () {
+      if (navigator.share) {
+        navigator.share({
+          title: document.title,
+          text: 'Central de Recursos Digitales - Respuesta al sismo',
+          url: window.location.href
+        }).catch(function(e){});
+      } else {
+        alert("Copia y comparte este enlace: " + window.location.href);
+      }
+    });
+
     var pm = $("#printModal");
     byId("#openPrintModal", "click", function () { if (pm) pm.showModal(); });
     byId("#closePrintModal", "click", function () { if (pm) pm.close(); });

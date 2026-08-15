@@ -201,11 +201,13 @@
         </div>
         <p class="section-sub">Selecciona tu situación. Hemos separado las guías para que no te satures de información y veas exactamente lo que necesitas saber en este momento, con indicaciones especiales para <b>zonas sin señal</b>, <b>comunidades étnicas</b> y <b>personas mayores</b>.</p>
 
-        <!-- LÍNEAS ÚTILES MOVED HIGHER -->
-        <section class="block" id="block-lineas" style="margin-top: 1.5rem; margin-bottom: 2rem;">
-          <h2 style="font-size: 1.25rem;">Líneas útiles de emergencia</h2>
-          <div class="lineas-table" id="lineasTable"></div>
-        </section>
+        <!-- LÍNEAS ÚTILES EN BOTÓN DESPLEGABLE -->
+        <details class="ori" id="block-lineas" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+          <summary style="font-size: 1.25rem; font-weight: bold; background: var(--bg-card); padding: 1rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <span class="ori-ic" aria-hidden="true" style="margin-right: 8px;">☎</span> Líneas de emergencia y atención
+          </summary>
+          <div class="lineas-table" id="lineasTable" style="margin-top: 1rem; padding: 0 1rem 1rem 1rem;"></div>
+        </details>
 
         <div class="fase-picker" id="fasePicker" role="group" aria-label="Elige tu perfil"></div>
         <p class="fase-intro" id="faseIntro"></p>
@@ -225,15 +227,18 @@
           </div>
         </section>
 
-        <section class="block" id="block-prep">
-          <h2>Ayuda a que esto llegue a más gente</h2>
-          <p class="muted-foot" style="max-width:72ch">Muchas personas afectadas no tienen internet. Imprime esta guía para carteleras y puntos de acopio, reenvíala por WhatsApp o léela en voz alta en la emisora comunitaria. En zonas sin señal, la radio y el voz a voz siguen siendo el mejor canal.</p>
-        </section>
+        <div class="bottom-blocks">
+          <section class="block" id="block-share">
+            <h2>Ayuda a que esto llegue a más gente</h2>
+            <p class="muted-foot">Muchas personas afectadas no tienen internet. Imprime esta guía para carteleras y puntos de acopio, reenvíala por WhatsApp o léela en voz alta en la emisora comunitaria. En zonas sin señal, la radio y el voz a voz siguen siendo el mejor canal.</p>
+            <button class="btn-ghost" id="shareBtn" style="margin-top: 1rem;" type="button"><span aria-hidden="true">↗</span> Compartir esta página</button>
+          </section>
 
-        <section class="block method-block">
-          <h2>Por qué puedes confiar en esta información</h2>
-          <p class="muted-foot" style="max-width:72ch">Cada recurso pasa por una revisión humana antes de aparecer aquí: comprobamos quién responde por él, que el enlace funcione, su cobertura y el cuidado de los datos personales. Cuando buscas a una persona, un menor o una mascota, te llevamos al portal original; nunca copiamos ni exponemos esos datos.</p>
-        </section>
+          <section class="block method-block">
+            <h2>Por qué puedes confiar en esta información</h2>
+            <p class="muted-foot">Cada recurso pasa por una revisión humana antes de aparecer aquí: comprobamos quién responde por él, que el enlace funcione, su cobertura y el cuidado de los datos personales. Cuando buscas a una persona, un menor o una mascota, te llevamos al portal original; nunca copiamos ni exponemos esos datos.</p>
+          </section>
+        </div>
       </div>
     </section>
 
