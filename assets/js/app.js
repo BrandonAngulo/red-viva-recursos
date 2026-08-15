@@ -489,21 +489,78 @@
     byId("#themeToggle", "click", function () { setTheme(currentTheme() === "dark" ? "light" : "dark"); });
     
     // Share button
-    byId("#shareBtn", "click", function () {
-      if (navigator.share) {
-        navigator.share({
-          title: document.title,
-          text: 'Central de Recursos Digitales - Respuesta al sismo',
-          url: window.location.href
-        }).catch(function(e){});
-      } else {
-        alert("Copia y comparte este enlace: " + window.location.href);
-      }
-    });
+    var shareBtn = $("#shareBtn");
+    if (shareBtn) {
+      shareBtn.addEventListener("click", function () {
+        if (navigator.share) {
+          navigator.share({
+            title: document.title,
+            text: 'Central de Recursos Digitales - Respuesta al sismo',
+            url: window.location.href
+          }).catch(function(e){});
+        } else {
+          alert("Copia y comparte este enlace: " + window.location.href);
+        }
+      });
+    }
 
     var pm = $("#printModal");
     byId("#openPrintModal", "click", function () { if (pm) pm.showModal(); });
     byId("#closePrintModal", "click", function () { if (pm) pm.close(); });
+    
+    // Propose Resource Modal
+    var propModal = $("#proposeModal");
+    byId("#openProposeModal", "click", function () { if (propModal) propModal.showModal(); });
+    byId("#closeProposeModal", "click", function () { if (propModal) propModal.close(); });
+    
+    byId("#proposeForm", "submit", function (e) {
+      e.preventDefault();
+      var msgBox = $("#proposeMsg");
+      var btn = $("#submitProposeBtn");
+      if (msgBox) { msgBox.textContent = "Enviando..."; msgBox.style.color = "var(--fg-muted)"; }
+      if (btn) btn.disabled = true;
+      
+      var data = {
+        intent: $("#prop_intent").value,
+        kind: $("#prop_kind").value,
+        territory: $("#prop_territory").value,
+        description: $("#prop_desc").value,
+        source_url: $("#prop_url").value,
+        organization: $("#prop_org").value,
+        contact_email: $("#prop_email").value,
+        status: "pendiente"
+      };
+      
+      var sb = DATA.meta && DATA.meta.supabase;
+      if (!sb || !sb.url || !sb.anonKey) {
+        if (msgBox) { msgBox.textContent = "Error: Configuración no encontrada."; msgBox.style.color = "var(--bad)"; }
+        if (btn) btn.disabled = false;
+        return;
+      }
+      
+      var base = sb.url.charAt(sb.url.length - 1) === "/" ? sb.url.slice(0, -1) : sb.url;
+      fetch(base + "/rest/v1/contributions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": sb.anonKey,
+          "Authorization": "Bearer " + sb.anonKey,
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify(data)
+      }).then(function(res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        if (msgBox) { msgBox.textContent = "¡Propuesta enviada! Gracias por tu aporte. La revisaremos pronto."; msgBox.style.color = "var(--ok)"; }
+        e.target.reset();
+        setTimeout(function() { if (propModal) propModal.close(); if(msgBox) msgBox.textContent = ""; }, 3000);
+      }).catch(function(err) {
+        if (msgBox) { msgBox.textContent = "Error al enviar. Intenta de nuevo más tarde."; msgBox.style.color = "var(--bad)"; }
+        console.error(err);
+      }).finally(function() {
+        if (btn) btn.disabled = false;
+      });
+    });
+
     byId("#printForm", "submit", function (e) {
       e.preventDefault();
       if (pm) pm.close();
