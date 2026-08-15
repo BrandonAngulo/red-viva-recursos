@@ -4,7 +4,7 @@
 window.CRC_DATA = {
   meta: {
     lastReview: "2026-08-15",
-    contactEmail: "contacto@ejemplo.org", // cambiar por el canal real antes de difundir
+    contactEmail: "gruesobrandon@gmail.com", // cambiado al canal real
     earthquake: {
       date: "2026-08-10",
       magnitude: "7.4",
@@ -19,8 +19,10 @@ window.CRC_DATA = {
   // Panel de situación (copia de respaldo; en vivo desde la tabla situation_updates).
   situation: [
     { id: "terremoto-nacional", title: "Terremoto 7.4 — balance nacional", metric: "294 fallecidos · 3.935 heridos", summary: "320 desaparecidos y 353 rescatados. 81.506 viviendas averiadas y 14.493 destruidas en 448 municipios de 15 departamentos. 115.461 personas afectadas.", region: "Nacional", severity: "critical", source_name: "UNGRD", url: "https://portal.gestiondelriesgo.gov.co/", as_of: "2026-08-15" },
+    { id: "medicina-legal-boletin-10", title: "Reporte de víctimas identificadas", metric: "270 cuerpos identificados", summary: "Boletín No. 10: 277 cuerpos recibidos, 270 identificados (20 menores), 254 entregados a familias.", region: "Nacional", severity: "critical", source_name: "Medicina Legal", url: "https://medicinalegal.gov.co", as_of: "2026-08-14 19:00:00" },
+    { id: "buenaventura-afectaciones", title: "Afectaciones en Buenaventura", metric: "10.148 familias afectadas", summary: "Balance preliminar: 26 fallecidos, 433 lesionados, 954 viviendas destruidas y 9.194 averiadas.", region: "Valle del Cauca", severity: "critical", source_name: "Alcaldía Distrital de Buenaventura", url: "#", as_of: "2026-08-14" },
     { id: "replicas-choco", title: "Réplicas en curso", metric: "Chocó y occidente", summary: "El Servicio Geológico Colombiano advierte que las réplicas continuarán; consulta el monitoreo en tiempo real.", region: "Occidente", severity: "warning", source_name: "SGC", url: "https://www.sgc.gov.co/sismos", as_of: "2026-08-15" },
-    { id: "incendios-narino", title: "Incendios forestales en Nariño", metric: "12 activos · ~2.000 ha", summary: "Calamidad pública en 29 municipios. Santacruz, Los Andes y Policarpa entre los más afectados.", region: "Nariño", severity: "warning", source_name: "Gobernación de Nariño", url: "https://narino.gov.co/", as_of: "2026-08-13" },
+    { id: "incendios-narino", title: "Incendios forestales en Nariño", metric: "12 activos · ~2.000 ha", summary: "Calamidad pública en 29 municipios. Gobernación logró aprobación de 30 horas de apoyo aéreo para priorizar incendios en Los Andes, La Llanada y Santacruz.", region: "Nariño", severity: "warning", source_name: "Gobernación de Nariño", url: "https://narino.gov.co/", as_of: "2026-08-13" },
   ],
 
   // Líneas oficiales para emergencia inmediata.
@@ -250,7 +252,7 @@ window.CRC_DATA = {
       type: "ciudadano",
       coverage: "Colombia",
       url: "https://www.economiaparalapipol.com/interactivos/mapa-ayuda-colombia/",
-      status: "desactualizado",
+      status: "activo",
       verification: "verificado",
       declaredUpdate: "Corte declarado 12/08/2026",
       lastReview: "2026-08-14",
@@ -286,6 +288,21 @@ window.CRC_DATA = {
       verification: "verificado",
       declaredUpdate: "Enlace operativo 14/08/2026",
       lastReview: "2026-08-14",
+    },
+    {
+      id: "red-apoyo-emocional",
+      name: "Se lo explico con plastilina (Apoyo)",
+      org: "Iniciativa ciudadana",
+      action: "Recibir apoyo psicológico",
+      description: "Iniciativa de apoyo psicológico totalmente gratuito por profesionales con experiencia en crisis.",
+      intents: ["albergue-salud"],
+      type: "ciudadano",
+      coverage: "Nacional",
+      url: "https://redapoyoemocional.com/",
+      status: "activo",
+      verification: "verificado",
+      declaredUpdate: "Enlace operativo 14/08/2026",
+      lastReview: "2026-08-15",
     },
   ],
 };
