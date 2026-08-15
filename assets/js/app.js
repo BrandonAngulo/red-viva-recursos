@@ -5,6 +5,7 @@
   var DATA = window.CRC_DATA;
   var TERR = window.CRC_TERRITORY || {};
   var ORI = window.CRC_ORIENTA || {};
+  var COMP = window.CRC_COMPRENDER || {};
   if (!DATA) { console.error("No se cargó data/resources.js"); return; }
 
   var $ = function (s, c) { return (c || document).querySelector(s); };
@@ -34,7 +35,7 @@
   (function () { var s; try { s = localStorage.getItem("crc-theme"); } catch (e) {} if (s) root.setAttribute("data-theme", s); })();
 
   /* ---------- Enrutado de vistas ---------- */
-  var VIEWS = ["inicio", "recursos", "mapa", "municipios", "actuar"];
+  var VIEWS = ["inicio", "recursos", "mapa", "municipios", "entender", "actuar"];
   var mapReady = false;
 
   function showView(name) {
@@ -307,6 +308,36 @@
     });
   }
 
+  /* ---------- Entender qué pasó ---------- */
+  function renderComprender() {
+    var r = COMP.resumen || {};
+    var rc = $("#resumenCard");
+    if (rc && r.magnitud) {
+      var stat = function (k, v) { return v ? '<div class="rc-stat"><dt>' + esc(k) + "</dt><dd>" + esc(v) + "</dd></div>" : ""; };
+      var src = r.fuente ? '<a class="rc-src" href="' + esc(r.fuente.url) + '" target="_blank" rel="noopener noreferrer">' + esc(r.fuente.label) + " ↗</a>" : "";
+      rc.innerHTML = '<dl class="rc-stats">' + stat("Magnitud", r.magnitud) + stat("Fecha", r.fecha) + stat("Hora", r.hora) + stat("Epicentro", r.epicentro) + stat("Profundidad", r.profundidad) + "</dl>" +
+        (r.nota ? '<p class="rc-nota">' + esc(r.nota) + "</p>" : "") + src;
+    }
+    var eg = $("#explicaGrid");
+    if (eg) eg.innerHTML = (COMP.explicacion || []).map(function (e) {
+      var link = e.link ? '<a class="explica-link" href="' + esc(e.link.url) + '"' + (/^#/.test(e.link.url) ? "" : ' target="_blank" rel="noopener noreferrer"') + ">" + esc(e.link.label) + " →</a>" : "";
+      return '<article class="explica-card"><div class="ex-ic" aria-hidden="true">' + esc(e.icon || "•") + "</div><h3>" + esc(e.title) + "</h3><p>" + esc(e.body) + "</p>" + link + "</article>";
+    }).join("");
+    var hi = $("#historiaIntro"); if (hi) hi.textContent = COMP.historiaIntro || "";
+    var hg = $("#historiaGrid");
+    if (hg) hg.innerHTML = (COMP.historia || []).map(function (h) {
+      return '<article class="hist-card"><div class="hist-year">' + esc(h.year) + '</div><div class="hist-body"><b>' + esc(h.place) + '</b> <span class="hist-mag">M ' + esc(h.mag) + "</span><p>" + esc(h.note) + "</p></div></article>";
+    }).join("");
+    var cu = $("#cronoUpdated"); if (cu) cu.textContent = COMP.actualizado ? "Actualizado el " + COMP.actualizado + ". Se ampliará con los días." : "";
+    var cl = $("#cronoList");
+    if (cl) cl.innerHTML = (COMP.cronologia || []).map(function (d) {
+      var items = (d.items || []).map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("");
+      var fuentes = (d.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(f.label) + " ↗</a>"; }).join("");
+      return '<div class="crono-item"><div class="crono-when"><span class="crono-dia">' + esc(d.dia) + '</span><span class="crono-fecha">' + esc(d.fecha) + "</span></div>" +
+        '<div class="crono-card"><h3>' + esc(d.titulo) + "</h3><ul>" + items + "</ul>" + (fuentes ? '<p class="crono-src">Fuentes: ' + fuentes + "</p>" : "") + "</div></div>";
+    }).join("");
+  }
+
   /* ---------- Contenido estático ---------- */
   function fillStatic() {
     var eq = DATA.meta.earthquake, e = $("#eqInfo");
@@ -354,6 +385,7 @@
   renderOrientaciones();
   renderPreparacion();
   renderLineas();
+  renderComprender();
   renderSituation(DATA.situation || []);
   route();              // muestra la vista según el hash (o Inicio)
   loadSituation();      // en vivo

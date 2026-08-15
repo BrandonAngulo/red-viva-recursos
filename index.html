@@ -32,6 +32,7 @@
         <a class="tab" href="#recursos"   data-view="recursos">Recursos</a>
         <a class="tab" href="#mapa"        data-view="mapa">Mapa</a>
         <a class="tab" href="#municipios"  data-view="municipios">Municipios</a>
+        <a class="tab" href="#entender"    data-view="entender">Qué pasó</a>
         <a class="tab" href="#actuar"      data-view="actuar">Cómo actuar</a>
       </nav>
 
@@ -87,6 +88,7 @@
             <a class="nav-card" href="#recursos"><b>Recursos</b><span id="navRecursosCount">Directorio verificado de ayuda</span></a>
             <a class="nav-card" href="#mapa"><b>Mapa</b><span>Dónde golpeó el sismo y los focos activos</span></a>
             <a class="nav-card" href="#municipios"><b>Municipios</b><span id="navMuniCount">Zonas más afectadas y a quién acudir</span></a>
+            <a class="nav-card" href="#entender"><b>Qué pasó</b><span>El sismo explicado y el día a día</span></a>
             <a class="nav-card" href="#actuar"><b>Cómo actuar</b><span>Guías paso a paso según tu momento</span></a>
           </div>
         </section>
@@ -156,6 +158,33 @@
       </div>
     </section>
 
+    <!-- ============================ ENTENDER =========================== -->
+    <section class="view" id="view-entender" data-view="entender" hidden>
+      <div class="bleed">
+        <div class="view-head"><h2 class="view-title">Entender qué pasó</h2></div>
+        <p class="section-sub">El terremoto explicado con calma: por qué ocurrió, qué esperar de las réplicas y cómo se ha movido la situación en el país, día a día.</p>
+
+        <div class="resumen-card" id="resumenCard"></div>
+
+        <section class="block">
+          <h2>Por qué tembló</h2>
+          <div class="explica" id="explicaGrid"></div>
+        </section>
+
+        <section class="block">
+          <h2>Colombia, un país sísmico</h2>
+          <p class="section-sub" id="historiaIntro"></p>
+          <div class="historia" id="historiaGrid"></div>
+        </section>
+
+        <section class="block">
+          <h2>Cronología día a día</h2>
+          <p class="muted-foot" id="cronoUpdated"></p>
+          <div class="crono" id="cronoList"></div>
+        </section>
+      </div>
+    </section>
+
     <!-- ============================ ACTUAR ============================= -->
     <section class="view" id="view-actuar" data-view="actuar" hidden>
       <div class="bleed">
@@ -216,6 +245,7 @@
   <script src="data/resources.js"></script>
   <script src="data/territory.js"></script>
   <script src="data/orientaciones.js"></script>
+  <script src="data/comprender.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

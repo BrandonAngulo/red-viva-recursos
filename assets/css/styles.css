@@ -221,6 +221,44 @@ img { max-width:100%; }
 .muni-card .open { margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:9px 12px; border-radius:var(--radius-sm); text-decoration:none; background:transparent; border:1px solid var(--line); color:var(--fg); font-weight:650; font-size:12.5px; }
 .muni-card .open:hover { border-color:var(--green); }
 
+/* ===== Entender qué pasó ===== */
+.resumen-card { background:var(--surface); border:1px solid var(--line); border-top:4px solid var(--coral); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); }
+.rc-stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:14px; margin:0 0 12px; }
+.rc-stat dt { font-size:10.5px; font-weight:800; letter-spacing:.05em; text-transform:uppercase; color:var(--fg-faint); }
+.rc-stat dd { margin:2px 0 0; font-family:var(--font-serif); font-size:19px; font-weight:600; color:var(--fg); }
+.rc-nota { margin:0 0 10px; font-size:14px; color:var(--fg-muted); line-height:1.5; max-width:82ch; }
+.rc-src { font-size:12.5px; color:var(--green); text-decoration:none; font-weight:650; }
+.rc-src:hover { text-decoration:underline; }
+
+.explica { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:13px; }
+.explica-card { padding:18px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); box-shadow:var(--shadow); }
+.ex-ic { font-size:24px; margin-bottom:8px; }
+.explica-card h3 { font-size:16.5px; margin:0 0 7px; }
+.explica-card p { font-size:13.5px; color:var(--fg-muted); line-height:1.5; margin:0 0 10px; }
+.explica-link { font-size:12.5px; font-weight:700; color:var(--green); text-decoration:none; }
+.explica-link:hover { text-decoration:underline; }
+
+.historia { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; }
+.hist-card { display:flex; gap:12px; padding:14px 16px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); }
+.hist-year { font-family:var(--font-serif); font-size:26px; font-weight:600; color:var(--green); line-height:1; flex:none; }
+.hist-body b { font-size:13.5px; }
+.hist-mag { font-size:11.5px; color:var(--fg-faint); font-weight:700; }
+.hist-body p { margin:5px 0 0; font-size:12.5px; color:var(--fg-muted); line-height:1.4; }
+
+.crono { display:flex; flex-direction:column; }
+.crono-item { display:grid; grid-template-columns:118px 1fr; gap:18px; }
+.crono-when { text-align:right; padding:2px 18px 18px 0; border-right:2px solid var(--line); }
+.crono-dia { display:block; font-family:var(--font-serif); font-size:16px; font-weight:600; color:var(--fg); }
+.crono-fecha { display:block; font-size:12px; color:var(--fg-faint); margin-top:2px; }
+.crono-card { position:relative; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); padding:15px 16px; box-shadow:var(--shadow); margin-bottom:16px; }
+.crono-card::before { content:""; position:absolute; left:-28px; top:15px; width:11px; height:11px; border-radius:50%; background:var(--coral); box-shadow:0 0 0 3px var(--bg); }
+.crono-card h3 { font-size:16px; margin:0 0 9px; }
+.crono-card ul { margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px; }
+.crono-card li { font-size:13.5px; color:var(--fg-muted); line-height:1.45; }
+.crono-src { font-size:11.5px; color:var(--fg-faint); margin:11px 0 0; }
+.crono-src a { color:var(--green); text-decoration:none; margin-right:10px; }
+.crono-src a:hover { text-decoration:underline; }
+
 /* ===== Orientaciones (acordeón) ===== */
 .fase-picker { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 4px; }
 .fase-chip { display:inline-flex; align-items:center; gap:6px; padding:9px 15px; border-radius:999px; cursor:pointer; border:1px solid var(--line); background:var(--surface); color:var(--fg); font-family:inherit; font-size:13.5px; font-weight:650; }
@@ -308,6 +346,9 @@ img { max-width:100%; }
   .site-header .wrap { gap:10px; }
   .card { padding:14px; }
   .site-footer .bleed { flex-direction:column; gap:14px; }
+  .crono-item { grid-template-columns:1fr; gap:4px; }
+  .crono-when { text-align:left; border-right:0; padding:0 0 6px; }
+  .crono-card::before { display:none; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior:auto !important; transition:none !important; animation:none !important; }
