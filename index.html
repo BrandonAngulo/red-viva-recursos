@@ -104,15 +104,6 @@
 
     <!-- ============================ RECURSOS ============================ -->
     <section class="view" id="view-recursos" data-view="recursos" hidden>
-      <!-- Botones de audiencia -->
-    <div class="audiences">
-      <button class="aud-btn outline" id="btnAllGuides"><span class="k"></span> Ver todas las guías</button>
-      <button class="aud-btn need active" id="btnNeedHelp"><span class="k">SOS</span> Soy damnificado / Necesito ayuda</button>
-      <button class="aud-btn give" id="btnGiveHelp"><span class="k">🤝</span> Quiero ayudar / Donar</button>
-    </div>
-
-    <!-- Contenedor dinámico (React/DOM) -->
-    <div id="actuarList"></div>
       <div class="bleed">
         <div class="view-head">
           <h2 class="view-title">Recursos</h2>
@@ -212,7 +203,16 @@
         </div>
         <p class="section-sub">Selecciona tu situación. Hemos separado las guías para que no te satures de información y veas exactamente lo que necesitas saber en este momento, con indicaciones especiales para <b>zonas sin señal</b>, <b>comunidades étnicas</b> y <b>personas mayores</b>.</p>
 
-        <div class="fase-picker" id="fasePicker" role="group" aria-label="Elige tu perfil"></div>
+        <!-- Botones de audiencia -->
+        <div class="audiences" style="margin-top:20px;">
+          <button class="aud-btn outline" id="btnAllGuides"><span class="k"></span> Ver todas las guías</button>
+          <button class="aud-btn need active" id="btnNeedHelp"><span class="k">SOS</span> Soy damnificado / Necesito ayuda</button>
+          <button class="aud-btn give" id="btnGiveHelp"><span class="k">🤝</span> Quiero ayudar / Donar</button>
+        </div>
+
+        <div id="actuarList"></div>
+
+        <div class="fase-picker" id="fasePicker" role="group" aria-label="Elige tu perfil" style="margin-top: 16px;"></div>
         <p class="fase-intro" id="faseIntro"></p>
 
         <div class="orientaciones" id="orientaciones"></div>
