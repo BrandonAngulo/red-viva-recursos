@@ -196,6 +196,24 @@
       .then(function (rows) { if (Array.isArray(rows) && rows.length) { DATA.resources = rows.map(mapRow); applyResources(); markLiveBadge("#liveState", true); } })
       .catch(function () { markLiveBadge("#liveState", false); });
   }
+  function loadTerritory() {
+    fetchTable("municipalities", "sort_order.asc")
+      .then(function (rows) { if (Array.isArray(rows) && rows.length) { TERR.municipalities = rows; renderMunicipios(); } })
+      .catch(function () {});
+    fetchTable("map_points", "sort_order.asc")
+      .then(function (rows) {
+        if (Array.isArray(rows) && rows.length) {
+          TERR.mapPoints = rows.map(function (p) { return { id: p.id, type: p.type, name: p.name, department: p.department, coords: [p.lat, p.lng], note: p.note, source: p.source_name, url: p.url }; });
+          if (mapReady) addMapMarkers(); else renderMapList();
+        }
+      })
+      .catch(function () {});
+  }
+  function loadTimeline() {
+    fetchTable("timeline", "sort_order.asc")
+      .then(function (rows) { if (Array.isArray(rows) && rows.length) { COMP.cronologia = rows; renderComprender(); renderHeroFacts(); } })
+      .catch(function () {});
+  }
 
   /* ---------- Territorio: municipios + guías + mapa ---------- */
   function renderMunicipios() {
@@ -276,6 +294,19 @@
 
   var mapMarkers = {};
   function markerColor(type) { return type === "epicentro" ? "#e6603f" : type === "incendio" ? "#e0a11a" : "#2f7de1"; }
+  function addMapMarkers() {
+    var map = window._crcMap; if (!map || !window.L) return;
+    Object.keys(mapMarkers).forEach(function (k) { map.removeLayer(mapMarkers[k]); });
+    mapMarkers = {};
+    (TERR.mapPoints || []).forEach(function (p) {
+      if (!p.coords) return;
+      var m = L.circleMarker(p.coords, { radius: p.type === "epicentro" ? 11 : 8, color: "#fff", weight: 2, fillColor: markerColor(p.type), fillOpacity: .9 }).addTo(map);
+      var src = p.url ? '<br><a href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer">' + esc(p.source || "Fuente") + " ↗</a>" : "";
+      m.bindPopup("<b>" + esc(p.name) + "</b><br>" + esc(p.department || "") + "<br>" + esc(p.note || "") + src);
+      mapMarkers[p.id] = m;
+    });
+    renderMapList();
+  }
   function initMap() {
     var node = $("#map"); if (!node) return;
     if (!window.L) { node.innerHTML = '<p style="padding:20px;color:var(--fg-muted)">No se pudo cargar el mapa (sin conexión). Los puntos siguen listados a la derecha.</p>'; renderMapList(); return; }
@@ -284,15 +315,8 @@
     var map = L.map(node, { scrollWheelZoom: true }).setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7);
     window._crcMap = map;
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "&copy; OpenStreetMap" }).addTo(map);
-    (TERR.mapPoints || []).forEach(function (p) {
-      if (!p.coords) return;
-      var m = L.circleMarker(p.coords, { radius: p.type === "epicentro" ? 11 : 8, color: "#fff", weight: 2, fillColor: markerColor(p.type), fillOpacity: .9 }).addTo(map);
-      var src = p.url ? '<br><a href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer">' + esc(p.source || "Fuente") + " ↗</a>" : "";
-      m.bindPopup("<b>" + esc(p.name) + "</b><br>" + esc(p.department || "") + "<br>" + esc(p.note || "") + src);
-      mapMarkers[p.id] = m;
-    });
+    addMapMarkers();
     setTimeout(function () { map.invalidateSize(); }, 60);
-    renderMapList();
   }
   function renderMapList() {
     var box = $("#mapList"); if (!box) return;
@@ -343,6 +367,15 @@
     }).join("");
   }
 
+  function renderHeroFacts() {
+    var r = COMP.resumen || {}; var box = $("#heroFacts"); if (!box || !r.magnitud) return;
+    var mag = String(r.magnitud).split(" ")[0];
+    var row = function (k, v) { return v ? "<div><dt>" + esc(k) + "</dt><dd>" + esc(v) + "</dd></div>" : ""; };
+    box.innerHTML = '<div class="hf-card"><div class="hf-mag">' + esc(mag) + ' <span>Mw</span></div>' +
+      "<dl>" + row("Fecha", r.fecha) + row("Epicentro", r.epicentro) + row("Profundidad", r.profundidad) + "</dl>" +
+      '<a class="hf-link" href="#entender">Entender qué pasó →</a></div>';
+  }
+
   /* ---------- Contenido estático ---------- */
   function fillStatic() {
     var eq = DATA.meta.earthquake, e = $("#eqInfo");
@@ -391,8 +424,11 @@
   renderPreparacion();
   renderLineas();
   renderComprender();
+  renderHeroFacts();
   renderSituation(DATA.situation || []);
   route();              // muestra la vista según el hash (o Inicio)
   loadSituation();      // en vivo
-  loadLiveResources();  // en vivo
+  loadLiveResources();  // recursos en vivo
+  loadTerritory();      // municipios + mapa en vivo
+  loadTimeline();       // cronología en vivo
 })();
