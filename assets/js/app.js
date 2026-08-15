@@ -214,6 +214,34 @@
       .then(function (rows) { if (Array.isArray(rows) && rows.length) { COMP.cronologia = rows; renderComprender(); renderHeroFacts(); } })
       .catch(function () {});
   }
+  function loadExplicaciones() {
+    fetchTable("explicaciones", "sort_order.asc")
+      .then(function (rows) {
+        if (Array.isArray(rows) && rows.length) {
+          COMP.explicacion = rows.map(function (e) {
+            return { icon: e.icon, title: e.title, body: e.body, mas: e.mas || [],
+              link: e.link_label ? { label: e.link_label, url: e.link_url } : undefined };
+          });
+          renderComprender();
+        }
+      })
+      .catch(function () {});
+  }
+  function loadOrientaciones() {
+    fetchTable("orientaciones", "sort_order.asc")
+      .then(function (rows) {
+        if (Array.isArray(rows) && rows.length) {
+          ORI.orientaciones = rows.map(function (o) {
+            return { id: o.id, icon: o.icon, title: o.title, quePasa: o.que_pasa,
+              pasos: o.pasos || [], acudir: o.acudir || [], estafa: o.estafa, linea: o.linea,
+              diferencial: { rural: o.diferencial_rural, etnico: o.diferencial_etnico, mayores: o.diferencial_mayores },
+              fuentes: o.fuentes || [] };
+          });
+          renderOrientaciones();
+        }
+      })
+      .catch(function () {});
+  }
 
   /* ---------- Territorio: municipios + guías + mapa ---------- */
   function renderMunicipios() {
@@ -431,4 +459,6 @@
   loadLiveResources();  // recursos en vivo
   loadTerritory();      // municipios + mapa en vivo
   loadTimeline();       // cronología en vivo
+  loadExplicaciones();  // explicaciones en vivo
+  loadOrientaciones();  // orientaciones en vivo
 })();

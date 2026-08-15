@@ -3,7 +3,7 @@
 
 window.CRC_DATA = {
   meta: {
-    lastReview: "2026-08-14",
+    lastReview: "2026-08-15",
     contactEmail: "contacto@ejemplo.org", // cambiar por el canal real antes de difundir
     earthquake: {
       date: "2026-08-10",
@@ -18,8 +18,8 @@ window.CRC_DATA = {
 
   // Panel de situación (copia de respaldo; en vivo desde la tabla situation_updates).
   situation: [
-    { id: "terremoto-nacional", title: "Terremoto 7.4 — balance nacional", metric: "288 fallecidos · 4.018 heridos", summary: "202 desaparecidos y 354 rescatados. 80.744 viviendas averiadas y 12.504 destruidas en 448 municipios.", region: "Nacional", severity: "critical", source_name: "UNGRD", url: "https://portal.gestiondelriesgo.gov.co/", as_of: "2026-08-14" },
-    { id: "replicas-choco", title: "Réplicas en curso", metric: "Chocó y occidente", summary: "El Servicio Geológico Colombiano advierte que las réplicas continuarán; consulta el monitoreo en tiempo real.", region: "Occidente", severity: "warning", source_name: "SGC", url: "https://www.sgc.gov.co/sismos", as_of: "2026-08-14" },
+    { id: "terremoto-nacional", title: "Terremoto 7.4 — balance nacional", metric: "294 fallecidos · 3.935 heridos", summary: "320 desaparecidos y 353 rescatados. 81.506 viviendas averiadas y 14.493 destruidas en 448 municipios de 15 departamentos. 115.461 personas afectadas.", region: "Nacional", severity: "critical", source_name: "UNGRD", url: "https://portal.gestiondelriesgo.gov.co/", as_of: "2026-08-15" },
+    { id: "replicas-choco", title: "Réplicas en curso", metric: "Chocó y occidente", summary: "El Servicio Geológico Colombiano advierte que las réplicas continuarán; consulta el monitoreo en tiempo real.", region: "Occidente", severity: "warning", source_name: "SGC", url: "https://www.sgc.gov.co/sismos", as_of: "2026-08-15" },
     { id: "incendios-narino", title: "Incendios forestales en Nariño", metric: "12 activos · ~2.000 ha", summary: "Calamidad pública en 29 municipios. Santacruz, Los Andes y Policarpa entre los más afectados.", region: "Nariño", severity: "warning", source_name: "Gobernación de Nariño", url: "https://narino.gov.co/", as_of: "2026-08-13" },
   ],
 

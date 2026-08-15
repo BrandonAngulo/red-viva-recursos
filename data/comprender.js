@@ -126,5 +126,21 @@ window.CRC_COMPRENDER = {
       detalle: "El censo (RUD) es la puerta para acceder a subsidios y ayudas: se hace casa por casa, es gratuito y no necesita intermediarios. Las cifras siguen cambiando a medida que las brigadas llegan a zonas rurales y apartadas, donde la comunicación es más difícil.",
       fuentes: [{ label: "Infobae — balance UNGRD", url: "https://www.infobae.com/colombia/2026/08/14/temblor-de-74-en-colombia-el-10-de-agosto-se-actualizo-el-numero-de-fallecidos-en-todo-el-pais/" }],
     },
+    {
+      dia: "Día 6", fecha: "Sáb 15 ago",
+      titulo: "Balance actualizado y planes de reconstrucción",
+      items: [
+        "La UNGRD actualiza el balance: 294 fallecidos, 3.935 heridos, 320 desaparecidos y 353 rescatados con vida.",
+        "115.461 personas afectadas en 54.008 familias. 14.493 viviendas destruidas y 81.506 averiadas; 66 edificios colapsados (Cali y Pereira).",
+        "Se busca activamente a los 320 desaparecidos en sitios de colapso en Valle del Cauca y Risaralda.",
+        "Se crea el 'Fondo Milagro' para canalizar presupuesto, donaciones y financiación internacional hacia la reconstrucción.",
+        "Anuncian el 'Plan Marshall para el Chocó', que combina reparación del desastre con inversión en infraestructura histórica.",
+      ],
+      detalle: "A casi una semana del sismo, la atención se desplaza del rescate inmediato a la evaluación de daños, la atención humanitaria sostenida y el censo completo de damnificados. Equipos de rescate especializados de EE. UU. (USAR Los Ángeles), México ('Los Topos'), Israel, Ecuador, El Salvador y Venezuela trabajan junto a Defensa Civil y Bomberos. El SGC reporta réplicas leves, como una de 2.5 en Medio San Juan (Chocó).",
+      fuentes: [
+        { label: "UNGRD — balance Día 6", url: "https://portal.gestiondelriesgo.gov.co/" },
+        { label: "El Tiempo — Fondo Milagro", url: "https://www.eltiempo.com/" },
+      ],
+    },
   ],
 };
