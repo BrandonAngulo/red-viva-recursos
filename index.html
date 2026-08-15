@@ -95,7 +95,17 @@
           <p class="legend-note">Verificación y estado son independientes de la confianza.</p>
         </div>
       </div>
-      <div class="grid" id="grid"></div>
+      <div class="layout">
+        <div class="grid" id="grid"></div>
+        <aside class="situation" id="situation" aria-label="Situación actual de la emergencia">
+          <div class="situation-head">
+            <h2>Situación actual</h2>
+            <span id="situationLive" class="live-state" hidden></span>
+          </div>
+          <div class="situation-list" id="situationList"></div>
+          <p class="situation-foot">Cifras y alertas de fuentes oficiales. Toca una tarjeta para ir a la fuente.</p>
+        </aside>
+      </div>
     </section>
 
     <!-- ===== Metodología ===== -->
@@ -138,7 +148,7 @@
     <div class="wrap">
       <div>
         <b>Central de Recursos Digitales</b>
-        <p>Directorio revisado por última vez el <span id="reviewDate">—</span>. Contenido en vivo desde Supabase; puede integrarse al Mapa Vivo como el módulo <code>/recursos</code>.</p>
+        <p>Una puerta de entrada a los recursos de respuesta al terremoto en Colombia. Directorio revisado por última vez el <span id="reviewDate">—</span>.</p>
       </div>
       <div class="cols">
         <p>Reportes y propuestas:<br><a id="contactMail" href="#">—</a></p>

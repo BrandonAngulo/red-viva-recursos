@@ -1,44 +1,27 @@
-/* =============================================================================
- * Central de Recursos Digitales — Colombia (respuesta al terremoto 7.4)
- * -----------------------------------------------------------------------------
- * FUENTE ÚNICA DE DATOS. Editar aquí (no en la interfaz).
- *
- * Este archivo se carga como <script> normal para que el directorio funcione
- * tanto abierto con doble clic (file://) como desplegado en un servidor.
- * No requiere backend.
- *
- * Reglas del proyecto:
- *  - `confianza` (tipo: oficial / institucional / ciudadano) y `vigencia`
- *    (estado + fechas) se muestran POR SEPARADO. Un recurso puede ser legítimo
- *    y estar desactualizado.
- *  - Para personas, menores y mascotas NO se replican datos personales: se
- *    enlaza siempre al portal original.
- *  - Ningún recurso propuesto por la comunidad se publica automáticamente.
- *    Debe pasar por la bitácora de verificación (ver README).
- * ========================================================================== */
+/* Central de Recursos Digitales — Colombia. Configuración y copia de respaldo.
+   El contenido real se lee en vivo desde Supabase; esto es el fallback local. */
 
 window.CRC_DATA = {
   meta: {
-    // Fecha en que Mapa Vivo revisó por última vez TODO el directorio.
     lastReview: "2026-08-14",
-    // Correo al que llegan reportes de problemas y propuestas de recursos.
-    // CAMBIA esto por el canal real antes de publicar (evita exponer correos personales).
-    contactEmail: "contacto@ejemplo.org",
+    contactEmail: "contacto@ejemplo.org", // cambiar por el canal real antes de difundir
     earthquake: {
       date: "2026-08-10",
       magnitude: "7.4",
       epicenter: "San José del Palmar, Chocó",
     },
-    // Fuente de datos EN VIVO. Si está configurada, el sitio lee los recursos
-    // desde la tabla `digital_resources` de Supabase (editar una fila = cambio
-    // instantáneo). Si falla o está vacía, usa la copia local de abajo.
-    // La anonKey es pública por diseño: el acceso lo restringe RLS (solo lectura
-    // de filas publicadas).
     supabase: {
       url: "https://afnwhdoqdwopvcsdgswi.supabase.co",
       anonKey: "sb_publishable_1EcdaBYdh9GVIVTdqtWZoQ_anWOqq8a",
     },
   },
+
+  // Panel de situación (copia de respaldo; en vivo desde la tabla situation_updates).
+  situation: [
+    { id: "terremoto-nacional", title: "Terremoto 7.4 — balance nacional", metric: "288 fallecidos · 4.018 heridos", summary: "202 desaparecidos y 354 rescatados. 80.744 viviendas averiadas y 12.504 destruidas en 448 municipios.", region: "Nacional", severity: "critical", source_name: "UNGRD", url: "https://portal.gestiondelriesgo.gov.co/", as_of: "2026-08-14" },
+    { id: "replicas-choco", title: "Réplicas en curso", metric: "Chocó y occidente", summary: "El Servicio Geológico Colombiano advierte que las réplicas continuarán; consulta el monitoreo en tiempo real.", region: "Occidente", severity: "warning", source_name: "SGC", url: "https://www.sgc.gov.co/sismos", as_of: "2026-08-14" },
+    { id: "incendios-narino", title: "Incendios forestales en Nariño", metric: "12 activos · ~2.000 ha", summary: "Calamidad pública en 29 municipios. Santacruz, Los Andes y Policarpa entre los más afectados.", region: "Nariño", severity: "warning", source_name: "Gobernación de Nariño", url: "https://narino.gov.co/", as_of: "2026-08-13" },
+  ],
 
   // Líneas oficiales para emergencia inmediata.
   emergencyLines: [
@@ -81,11 +64,6 @@ window.CRC_DATA = {
     "por-verificar": { label: "Por verificar", tone: "bad",  help: "Aún sin comprobar responsable ni privacidad." },
   },
 
-  /* ---------------------------------------------------------------------------
-   * RECURSOS. Solo enlaces con URL confirmada al 2026-08-14.
-   * `sensitive: true`  -> maneja datos personales; se enlaza al original.
-   * `warn`             -> advertencia visible (vigencia / cobertura / cautela).
-   * ------------------------------------------------------------------------ */
   resources: [
     {
       id: "lineas-emergencia",
@@ -308,7 +286,6 @@ window.CRC_DATA = {
       verification: "en-revision",
       declaredUpdate: "Enlace operativo 14/08/2026",
       lastReview: "2026-08-14",
-      note: "Se solapa con el Mapa Vivo; conviene articular en lugar de duplicar.",
     },
   ],
 };

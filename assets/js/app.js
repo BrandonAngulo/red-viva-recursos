@@ -357,10 +357,53 @@
     badge.hidden = false;
   }
 
+  /* ---------- Panel de situación ------------------------------------------- */
+  function renderSituation(list) {
+    var box = $("#situationList");
+    if (!box) return;
+    if (!list || !list.length) { box.innerHTML = ""; return; }
+    box.innerHTML = list.map(function (s) {
+      var sev = s.severity || "info";
+      var asOf = s.as_of ? String(s.as_of).slice(0, 10) : "";
+      var region = s.region ? '<span class="sit-region">' + esc(s.region) + "</span>" : "";
+      var metric = s.metric ? '<div class="sit-metric">' + esc(s.metric) + "</div>" : "";
+      var summary = s.summary ? '<p class="sit-summary">' + esc(s.summary) + "</p>" : "";
+      var foot = '<div class="sit-foot"><span>' + esc(s.source_name || "") + "</span><span>" + esc(asOf) + "</span></div>";
+      var href = s.url ? esc(s.url) : "#";
+      var attrs = s.url ? ' target="_blank" rel="noopener noreferrer"' : "";
+      return '<a class="sit-card sev-' + esc(sev) + '" href="' + href + '"' + attrs + ">" +
+        region + '<div class="sit-title">' + esc(s.title) + "</div>" + metric + summary + foot + "</a>";
+    }).join("");
+  }
+
+  function loadSituation() {
+    renderSituation(DATA.situation || []); // fallback inmediato
+    var sb = DATA.meta && DATA.meta.supabase;
+    if (!sb || !sb.url || !sb.anonKey) return;
+    var base = sb.url.charAt(sb.url.length - 1) === "/" ? sb.url.slice(0, -1) : sb.url;
+    fetch(base + "/rest/v1/situation_updates?select=*&is_published=eq.true&order=sort_order.asc", {
+      headers: { apikey: sb.anonKey, Authorization: "Bearer " + sb.anonKey },
+    })
+      .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+      .then(function (rows) {
+        if (Array.isArray(rows) && rows.length) { DATA.situation = rows; renderSituation(rows); markSituationLive(true); }
+      })
+      .catch(function (err) { console.warn("Situación en vivo no disponible; usando copia local.", err); markSituationLive(false); });
+  }
+
+  function markSituationLive(ok) {
+    var badge = $("#situationLive");
+    if (!badge) return;
+    badge.textContent = ok ? "En vivo" : "Local";
+    badge.className = "live-state " + (ok ? "on" : "off");
+    badge.hidden = false;
+  }
+
   /* ---------- Init --------------------------------------------------------- */
   readURL();
   fillStatic();
   bind();
   apply();             // render inmediato con la copia local (resiliencia)
-  loadLiveResources(); // luego refresca desde Supabase si hay conexión
+  loadSituation();     // panel de situación (fallback + en vivo)
+  loadLiveResources(); // recursos: refresca desde Supabase si hay conexión
 })();

@@ -68,6 +68,13 @@ Campos de cada recurso:
 > Los reportes ciudadanos se guardan en la tabla `resource_reports` (inserción
 > anónima permitida; sin lectura pública).
 
+### Panel “Situación actual”
+
+El bloque de alertas (lateral en escritorio, carrusel en móvil) se edita en la
+tabla **`situation_updates`**: `title`, `metric` (cifra destacada), `summary`,
+`region`, `severity` (`info` · `warning` · `critical`), `source_name`, `url`,
+`as_of` y `sort_order`. Igual que los recursos, se actualiza en vivo.
+
 ---
 
 ## Actualizar el diseño o la lógica (código)
