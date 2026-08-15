@@ -56,11 +56,11 @@
           <h1>¿Qué necesitas <em>hacer ahora?</em></h1>
           <p class="lead">Esta es una central dinámica de información y recursos digitales para afrontar la emergencia del terremoto. Aquí reunimos, verificamos y actualizamos constantemente las herramientas disponibles en internet para que puedas buscar a alguien, poner a salvo tu vivienda, pedir ayuda oficial, donar con confianza o prepararte para las réplicas.</p>
           <div class="doors">
-            <a class="door need" href="#recursos" data-mode="ayuda">
+            <a class="door need" href="#actuar" data-audiencia="ayuda">
               <span class="door-k">Necesito ayuda</span>
               <span class="door-d">Buscar a alguien, poner a salvo mi vivienda, pedir ayuda oficial o registrarme como damnificado.</span>
             </a>
-            <a class="door give" href="#recursos" data-mode="aportar">
+            <a class="door give" href="#actuar" data-audiencia="aportar">
               <span class="door-k">Quiero ayudar</span>
               <span class="door-d">Donar con seguridad, encontrar un centro de acopio o sumarme como voluntario.</span>
             </a>
@@ -148,7 +148,9 @@
             <span><i class="dot-city"></i> Ciudad afectada</span>
             <span><i class="dot-fire"></i> Incendios</span>
           </div>
-          <div class="legend-list" id="mapList"></div>
+          <div id="mapListWrap">
+            <div class="legend-list" id="mapList"></div>
+          </div>
           <p class="muted-foot">Son ubicaciones de referencia con su fuente oficial. Para operaciones de rescate, guíate siempre por las autoridades.</p>
         </aside>
       </div>
@@ -197,12 +199,16 @@
           <h2 class="view-title">Orientaciones para actuar</h2>
           <button class="btn-ghost" id="printGuide" type="button">Imprimir / guardar PDF</button>
         </div>
-        <p class="section-sub">Sabemos que es difícil pensar con calma en estos momentos. Aquí tienes pasos sencillos para cada situación, con indicaciones especiales si estás en <b>zona rural o sin señal</b>, en una <b>comunidad indígena o afro</b>, o si acompañas a <b>personas mayores o con discapacidad</b>.</p>
+        <p class="section-sub">Selecciona tu situación. Hemos separado las guías para que no te satures de información y veas exactamente lo que necesitas saber en este momento, con indicaciones especiales para <b>zonas sin señal</b>, <b>comunidades étnicas</b> y <b>personas mayores</b>.</p>
 
-        <div class="fase-picker" id="fasePicker" role="group" aria-label="¿En qué momento estás?"></div>
+        <div class="fase-picker" id="fasePicker" role="group" aria-label="Elige tu perfil"></div>
         <p class="fase-intro" id="faseIntro"></p>
 
         <div class="orientaciones" id="orientaciones"></div>
+        
+        <div class="link-to-resources" style="margin-top:20px;text-align:center;">
+          <a class="btn-ghost" href="#recursos" style="display:inline-block">→ También puedes consultar el Directorio de Recursos Digitales</a>
+        </div>
 
         <section class="block">
           <h2>Prepararse: kit, plan y capacitación</h2>

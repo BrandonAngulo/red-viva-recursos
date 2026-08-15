@@ -387,3 +387,6 @@ img { max-width:100%; }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior:auto !important; transition:none !important; animation:none !important; }
 }
+
+.muni-search { width: 100%; padding: 8px 12px; margin-bottom: 10px; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 14px; background: var(--bg-card); color: var(--fg); }
+.map-list { display: flex; flex-direction: column; gap: 4px; max-height: 400px; overflow-y: auto; }

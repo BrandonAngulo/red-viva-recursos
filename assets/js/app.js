@@ -265,12 +265,23 @@
   }
   function renderFases() {
     var box = $("#fasePicker"); if (!box) return;
-    var items = [{ id: "", icon: "•", label: "Todas las situaciones" }].concat(ORI.fases || []);
+    var items = [{ id: "", icon: "•", label: "Ver todas las guías" }].concat(ORI.fases || []);
     box.innerHTML = "";
     items.forEach(function (f) {
       var b = el("button", { "class": "fase-chip", type: "button", "aria-pressed": oriFase === f.id ? "true" : "false" });
       b.innerHTML = (f.icon ? '<span aria-hidden="true">' + esc(f.icon) + "</span> " : "") + esc(f.label);
-      b.addEventListener("click", function () { oriFase = f.id; updateFaseIntro(); renderFases(); renderOrientaciones(); });
+      b.addEventListener("click", function () { 
+        oriFase = f.id; 
+        updateFaseIntro(); 
+        renderFases(); 
+        renderOrientaciones(); 
+        // Sync with resources mode
+        if (f.id === "ayuda" || f.id === "aportar") {
+          state.mode = f.id;
+          state.intent = "";
+          applyResources();
+        }
+      });
       box.appendChild(b);
     });
   }
@@ -340,14 +351,43 @@
     if (!window.L) { node.innerHTML = '<p style="padding:20px;color:var(--fg-muted)">No se pudo cargar el mapa (sin conexión). Los puntos siguen listados a la derecha.</p>'; renderMapList(); return; }
     if (mapReady) { if (window._crcMap) window._crcMap.invalidateSize(); return; }
     mapReady = true;
-    var map = L.map(node, { scrollWheelZoom: true }).setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7);
+    var map = L.map(node, { scrollWheelZoom: false }).setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7);
     window._crcMap = map;
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "&copy; OpenStreetMap" }).addTo(map);
+    
+    // Add "Recentrar" control
+    var centerBtn = L.control({position: 'topleft'});
+    centerBtn.onAdd = function (m) {
+      var btn = L.DomUtil.create('button', 'leaflet-bar leaflet-control');
+      btn.innerHTML = '⌂';
+      btn.title = 'Recentrar mapa';
+      btn.style.width = '30px'; btn.style.height = '30px'; btn.style.cursor = 'pointer'; btn.style.backgroundColor = 'white'; btn.style.border = '2px solid rgba(0,0,0,0.2)'; btn.style.borderRadius = '4px'; btn.style.fontSize = '16px'; btn.style.lineHeight = '30px';
+      btn.onclick = function(e){ e.stopPropagation(); m.setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7); };
+      return btn;
+    };
+    centerBtn.addTo(map);
+
     addMapMarkers();
     setTimeout(function () { map.invalidateSize(); }, 60);
   }
-  function renderMapList() {
+  
+  function filterMapList() {
+    var q = norm($("#muniSearch").value);
     var box = $("#mapList"); if (!box) return;
+    Array.prototype.forEach.call(box.querySelectorAll(".leg-item"), function(el) {
+      var txt = norm(el.textContent);
+      el.style.display = txt.indexOf(q) === -1 ? 'none' : 'flex';
+    });
+  }
+
+  function renderMapList() {
+    var wrap = $("#mapListWrap"); 
+    if (!wrap) return;
+    wrap.innerHTML = '<input type="search" id="muniSearch" placeholder="Buscar municipio..." class="muni-search"><div id="mapList" class="map-list"></div>';
+    $("#muniSearch").addEventListener("input", filterMapList);
+    
+    var box = $("#mapList");
+    if (!box) return;
     box.innerHTML = (TERR.mapPoints || []).map(function (p) {
       return '<a class="leg-item" href="#mapa" data-point="' + esc(p.id) + '"><span class="lt">' + esc(p.name) + '</span><span class="ld">' + esc(p.department || "") + " · " + esc(p.note || "") + "</span></a>";
     }).join("");
@@ -423,9 +463,22 @@
     Array.prototype.forEach.call(document.querySelectorAll(".mode-switch button"), function (b) {
       b.addEventListener("click", function () { state.mode = b.dataset.mode; state.intent = ""; applyResources(); });
     });
-    // Puertas de recorrido en Inicio → van a Recursos con el modo puesto
+    // Puertas de recorrido en Inicio → van a Actuar y sincronizan el modo
     Array.prototype.forEach.call(document.querySelectorAll(".door"), function (d) {
-      d.addEventListener("click", function () { state.mode = d.getAttribute("data-mode") || "todos"; state.intent = ""; applyResources(); });
+      d.addEventListener("click", function () { 
+        var aud = d.getAttribute("data-audiencia") || "ayuda";
+        
+        // Sincronizar Recursos
+        state.mode = aud; 
+        state.intent = ""; 
+        applyResources(); 
+        
+        // Sincronizar Guías (Actuar)
+        oriFase = aud;
+        updateFaseIntro(); 
+        renderFases(); 
+        renderOrientaciones();
+      });
     });
     var byId = function (id, ev, fn) { var n = $(id); if (n) n.addEventListener(ev, fn); };
     byId("#fType", "change", function (e) { state.type = e.target.value; applyResources(); });

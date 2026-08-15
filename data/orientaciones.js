@@ -4,19 +4,21 @@
    Migrable a Supabase. Cada orientación puede compartirse/imprimirse. */
 
 window.CRC_ORIENTA = {
-  // Momento o fase de la emergencia, para que cada quien encuentre lo suyo.
+  // Clasificación por audiencia para que cada persona vea lo que necesita.
   fases: [
-    { id: "ahora", icon: "⏱️", label: "En las primeras horas", intro: "Lo primero es tu seguridad y saber quiénes están contigo." },
-    { id: "dias", icon: "📆", label: "En los días siguientes", intro: "Es momento de registrarte, pedir las ayudas y sostener el ánimo." },
-    { id: "preparar", icon: "🎒", label: "Prepararme para lo que viene", intro: "Las réplicas seguirán: un plan y un kit hacen la diferencia." },
+    { id: "ayuda", icon: "🆘", label: "Soy damnificado / Necesito ayuda", intro: "Guías prácticas para proteger tu vida, tu vivienda y acceder a las ayudas del Estado." },
+    { id: "aportar", icon: "🤝", label: "Quiero ayudar / Donar", intro: "Información para canalizar tu ayuda de forma segura y efectiva, sin estorbar las labores de rescate." },
   ],
   fasesPorId: {
-    "buscar-persona": ["ahora", "dias"],
-    "vivienda": ["ahora", "dias"],
-    "rud": ["dias"],
-    "fallecimiento": ["ahora", "dias"],
-    "apoyo-emocional": ["ahora", "dias", "preparar"],
-    "prepararme": ["preparar"],
+    "vivienda": ["ayuda"],
+    "buscar-persona": ["ayuda", "aportar"],
+    "rud": ["ayuda"],
+    "fallecimiento": ["ayuda"],
+    "apoyo-emocional": ["ayuda", "aportar"],
+    "prepararme": ["ayuda", "aportar"],
+    "donar": ["aportar"],
+    "acopios": ["aportar", "ayuda"],
+    "voluntariado": ["aportar"],
   },
 
   orientaciones: [
@@ -164,10 +166,50 @@ window.CRC_ORIENTA = {
         etnico: "Integra el plan con tu guardia o autoridad y con la señalización propia del territorio.",
         mayores: "Plan de evacuación accesible, medicación de reserva y una persona asignada de apoyo.",
       },
-      fuentes: [
-        { label: "Defensa Civil Colombiana", url: "https://www.defensacivil.gov.co/" },
-        { label: "UNGRD", url: "https://portal.gestiondelriesgo.gov.co/" },
+    },
+    {
+      id: "donar", icon: "💚", title: "Donar bien (qué sí y qué no)",
+      quePasa: "La buena voluntad sin orden puede colapsar la logística. Dona lo que realmente se necesita y por los canales correctos.",
+      pasos: [
+        "SÍ: agua embotellada, alimentos no perecederos, elementos de aseo, cobijas, colchonetas y toldillos.",
+        "NO: perecederos, ropa usada en mal estado, medicamentos vencidos o sin fórmula.",
+        "Dinero: únicamente por los canales oficiales publicados en el dominio de cada organización (p. ej. Cruz Roja).",
+        "Verifica titular y campaña antes de transferir.",
       ],
+      acudir: [
+        { who: "Cruz Roja Colombiana", channel: "Portal oficial" },
+      ],
+      estafa: "Nunca dones a cuentas personales de desconocidos en redes sociales que dicen representar a una familia.",
+      fuentes: [
+        { label: "Qué donar y qué no — Bogotá", url: "https://bogota.gov.co/mi-ciudad/ambiente/que-donar-y-no-donar-en-bogota-para-damnificados-terremoto-colombia" },
+        { label: "Cruz Roja Colombiana", url: "https://www.cruzrojacolombiana.org/" },
+      ]
+    },
+    {
+      id: "acopios", icon: "📦", title: "Llevar o recibir ayuda (acopios)",
+      quePasa: "Los centros de acopio son los puntos logísticos donde se recibe, clasifica y distribuye la ayuda material.",
+      pasos: [
+        "Consulta el mapa oficial de acopios de tu ciudad antes de desplazarte.",
+        "En Bogotá, la Alcaldía mantiene un mapa interactivo actualizado por Ideca.",
+        "Confirma el horario de atención y el tipo exacto de insumos que está recibiendo cada punto.",
+      ],
+      fuentes: [
+        { label: "Acopios de Bogotá", url: "https://bogota.gov.co/mi-ciudad/hacienda/centros-de-acopio-para-donaciones-por-terremoto-en-bogota-2026" },
+        { label: "Colombia nos necesita", url: "https://www.economiaparalapipol.com/interactivos/mapa-ayuda-colombia/" },
+      ]
+    },
+    {
+      id: "voluntariado", icon: "🤝", title: "Ser voluntario",
+      quePasa: "El trabajo en terreno requiere capacitación. Un voluntario sin preparación puede convertirse en una víctima más.",
+      pasos: [
+        "Los cupos se llenan rápido: confirma disponibilidad antes de ir (varios centros en Bogotá ya alcanzaron su capacidad).",
+        "Súmate a iniciativas verificadas y sigue estrictamente las indicaciones de los organismos de socorro.",
+        "Si no tienes entrenamiento en rescate, tu mejor aporte es en la clasificación de ayudas en centros de acopio seguros.",
+      ],
+      fuentes: [
+        { label: "ConectaColombia 7.4", url: "https://www.conectacolombia.org/?view=mapa" },
+        { label: "Colombia Hub", url: "https://colombiahub.org/terremoto-colombia-2026-como-ayudar/" },
+      ]
     },
   ],
 
