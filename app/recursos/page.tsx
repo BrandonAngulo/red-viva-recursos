@@ -50,7 +50,10 @@ function ResourceDirectory() {
   const [mode, setMode] = useState<ResponseMode>(() => searchParams.get("modo") === "ayudar" ? "ayudar" : "necesito");
   const [resources, setResources] = useState<Resource[]>([]);
   const [situations, setSituations] = useState<Situation[]>([]);
-  const [intent, setIntent] = useState("todos");
+  const [intent, setIntent] = useState(() => {
+    const requested = searchParams.get("intent");
+    return requested && intentLabels[requested] ? requested : "todos";
+  });
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -59,8 +62,8 @@ function ResourceDirectory() {
     let active = true;
     const db = getSupabaseClient();
     Promise.all([
-      db.from("digital_resources").select("id,name,org,action,description,intents,type,coverage,url,status,verification,declared_update,last_review,warn,note").order("sort_order"),
-      db.from("situation_updates").select("id,title,metric,summary,region,severity,source_name,url,as_of").order("sort_order"),
+      db.from("digital_resources").select("id,name,org,action,description,intents,type,coverage,url,status,verification,declared_update,last_review,warn,note").eq("is_published", true).order("sort_order"),
+      db.from("situation_updates").select("id,title,metric,summary,region,severity,source_name,url,as_of").eq("is_published", true).order("sort_order"),
     ]).then(([resourceResult, situationResult]) => {
       if (!active) return;
       setResources((resourceResult.data ?? []) as Resource[]);
