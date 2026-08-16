@@ -8,6 +8,8 @@
     url: "https://afnwhdoqdwopvcsdgswi.supabase.co",
     key: "sb_publishable_1EcdaBYdh9GVIVTdqtWZoQ_anWOqq8a",
   };
+  // ¿Llegamos desde un enlace de Supabase (confirmación / recuperación)?
+  var arrivedFromAuth = /access_token=|type=signup|type=recovery|[?&]code=/.test((location.hash || "") + (location.search || ""));
   var sb = window.supabase.createClient(SUPA.url, SUPA.key);
 
   var $ = function (s, c) { return (c || document).querySelector(s); };
@@ -187,11 +189,14 @@
     var nav = ENTITIES.map(function (en) {
       return '<button class="ge-nav' + (en.key === state.current ? " active" : "") + '" data-key="' + en.key + '"><span>' + en.icon + "</span> " + esc(en.label) + "</button>";
     }).join("");
+    var banner = arrivedFromAuth ? '<div class="ge-banner" id="geBanner">✅ Hemos confirmado tu correo. Sesión iniciada — ya puedes gestionar la herramienta.</div>' : "";
     app.innerHTML =
       '<header class="ge-top"><b>Gestión · Central de Recursos</b>' +
       '<span class="ge-user">' + esc(state.user.email) + ' <button id="signOut" class="al-link">Salir</button></span></header>' +
+      banner +
       '<div class="ge-body"><nav class="ge-side">' + nav + "</nav>" +
       '<main class="ge-main" id="geMain"></main></div>';
+    if (arrivedFromAuth) { arrivedFromAuth = false; setTimeout(function () { var b = $("#geBanner"); if (b) b.style.display = "none"; }, 6000); }
     Array.prototype.forEach.call(document.querySelectorAll(".ge-nav"), function (b) {
       b.addEventListener("click", function () { state.current = b.dataset.key; state.editing = null; renderShell(); loadList(); });
     });
