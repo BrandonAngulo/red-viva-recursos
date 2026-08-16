@@ -547,11 +547,19 @@
       if (msgBox) { msgBox.textContent = "Enviando..."; msgBox.style.color = "var(--fg-muted)"; }
       if (btn) btn.disabled = true;
       
+      // El formulario usa categorías amigables; la tabla exige un taxonomía fija.
+      // Mapeamos a valores válidos y conservamos el detalle en la descripción.
+      var purposeLabels = { "búsqueda": "Búsqueda de personas", "refugio": "Refugio / Vivienda", "donaciones": "Donaciones", "voluntariado": "Voluntariado", "salud": "Salud / Psicológica", "transporte": "Vías y transporte", "otro": "Otro" };
+      var typeLabels = { "oficial": "Entidad oficial", "ong": "ONG / Fundación", "iniciativa": "Iniciativa ciudadana", "acopio": "Centro de acopio", "otro": "Otro" };
+      var purpose = purposeLabels[$("#prop_intent").value] || $("#prop_intent").value;
+      var rType = typeLabels[$("#prop_kind").value] || $("#prop_kind").value;
+      var descFull = "[Propósito: " + purpose + " · Tipo: " + rType + "] " + $("#prop_desc").value;
+
       var data = {
-        intent: $("#prop_intent").value,
-        kind: $("#prop_kind").value,
+        intent: "ayudar",            // valor válido para la tabla (propuesta de ayuda)
+        kind: "recurso",             // es una propuesta de recurso
         territory: $("#prop_territory").value,
-        description: $("#prop_desc").value,
+        description: descFull,
         source_url: $("#prop_url").value,
         organization: $("#prop_org").value,
         contact_email: $("#prop_email").value,
