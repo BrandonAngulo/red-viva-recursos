@@ -173,7 +173,8 @@
     var showMsg = function (t) { if (msg) { msg.hidden = false; msg.className = "al-msg err"; msg.textContent = t; } };
     if (p.length < 8) { showMsg("La contraseña debe tener al menos 8 caracteres."); return; }
     if (p !== p2) { showMsg("Las contraseñas no coinciden."); return; }
-    sb.auth.signUp({ email: $("#email").value.trim(), password: p }).then(function (r) {
+    var redirectTo = location.origin + location.pathname; // vuelve a esta misma página (gestion.html)
+    sb.auth.signUp({ email: $("#email").value.trim(), password: p, options: { emailRedirectTo: redirectTo } }).then(function (r) {
       if (r.error) { showMsg(r.error.message); return; }
       if (r.data && r.data.session) { boot(); }
       else { renderLogin("Cuenta creada. Revisa tu correo para confirmarla y luego inicia sesión.", false); }
