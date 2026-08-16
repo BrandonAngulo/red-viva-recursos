@@ -139,30 +139,35 @@
     </section>
 
     <!-- ============================== MAPA ============================== -->
-    <section class="view view-map" id="view-mapa" data-view="mapa" hidden>
-      <div class="map-shell">
-        <div id="map" class="map" role="application" aria-label="Mapa de la emergencia"></div>
-        <aside class="map-legend" id="mapLegend">
-          <h2>Mapa de la emergencia</h2>
-          <p class="muted-foot">Dónde ocurrió el sismo y las zonas afectadas del occidente colombiano.</p>
-          <div class="legend-key">
-            <span><i class="dot-ep"></i> Epicentro</span>
-            <span><i class="dot-city"></i> Ciudad afectada</span>
-            <span><i class="dot-fire"></i> Incendios</span>
-          </div>
-          <div id="mapListWrap">
+    <section class="view" id="view-mapa" data-view="mapa" hidden>
+      <div class="bleed">
+        <div class="view-head"><h2 class="view-title">Mapa de la emergencia</h2></div>
+        <p class="section-sub">Dónde ocurrió el sismo y las zonas afectadas del occidente colombiano. Toca un punto en el mapa o en la lista para ver su detalle y su fuente.</p>
+        <div class="legend-key" aria-hidden="true">
+          <span><i class="dot-ep"></i> Epicentro</span>
+          <span><i class="dot-city"></i> Ciudad afectada</span>
+          <span><i class="dot-fire"></i> Incendios</span>
+        </div>
+        <div class="map-shell">
+          <div id="map" class="map" role="application" aria-label="Mapa de la emergencia"></div>
+          <aside class="map-legend" id="mapLegend">
+            <h3>Puntos en el mapa</h3>
             <div class="legend-list" id="mapList"></div>
-          </div>
-          <p class="muted-foot">Son ubicaciones de referencia con su fuente oficial. Para operaciones de rescate, guíate siempre por las autoridades.</p>
-        </aside>
+            <p class="muted-foot">Ubicaciones de referencia con su fuente oficial. Para operaciones de rescate, guíate siempre por las autoridades.</p>
+          </aside>
+        </div>
       </div>
     </section>
 
     <!-- =========================== MUNICIPIOS =========================== -->
     <section class="view" id="view-municipios" data-view="municipios" hidden>
       <div class="bleed">
-        <div class="view-head"><h2 class="view-title">Municipios afectados</h2></div>
-        <p class="section-sub">Un vistazo a las zonas más golpeadas del occidente y qué está pasando en cada una. En cada municipio encuentras el enlace a la información oficial más reciente.</p>
+        <div class="view-head"><h2 class="view-title">Municipios afectados</h2><span class="muni-count" id="muniCount"></span></div>
+        <p class="section-sub">Los municipios con afectación reportada, según el censo preliminar de la UNGRD. Busca el tuyo o filtra por departamento; los de mayor prioridad aparecen primero.</p>
+        <div class="muni-controls">
+          <input id="muniSearch" type="search" placeholder="Buscar municipio…" autocomplete="off" aria-label="Buscar municipio">
+          <select id="muniDept" aria-label="Filtrar por departamento"><option value="">Todos los departamentos</option></select>
+        </div>
         <div class="muni-grid" id="muniGrid"></div>
       </div>
     </section>

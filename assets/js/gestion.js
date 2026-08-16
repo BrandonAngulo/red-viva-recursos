@@ -116,16 +116,30 @@
   }
 
   /* ---------- Auth ---------- */
+  function pwField(id, label, ac) {
+    return "<label>" + label + '<div class="pw-wrap"><input id="' + id + '" type="password"' + (ac ? ' autocomplete="' + ac + '"' : "") + ' minlength="8" required><button type="button" class="pw-toggle" data-for="' + id + '">Mostrar</button></div></label>';
+  }
+  function bindPwToggles() {
+    Array.prototype.forEach.call(document.querySelectorAll(".pw-toggle"), function (b) {
+      b.addEventListener("click", function () {
+        var inp = document.getElementById(b.dataset.for); if (!inp) return;
+        var show = inp.type === "password";
+        inp.type = show ? "text" : "password";
+        b.textContent = show ? "Ocultar" : "Mostrar";
+      });
+    });
+  }
   function renderLogin(msg, isError) {
     app.innerHTML =
       '<div class="admin-login"><div class="al-card">' +
       '<h1>Panel de gestión</h1><p class="al-sub">Central de Recursos Digitales — Colombia</p>' +
       (msg ? '<p class="al-msg ' + (isError ? "err" : "ok") + '">' + esc(msg) + "</p>" : "") +
       '<form id="loginForm"><label>Correo<input id="email" type="email" required autocomplete="email"></label>' +
-      '<label>Contraseña<input id="password" type="password" required autocomplete="current-password"></label>' +
+      pwField("password", "Contraseña", "current-password") +
       '<button class="btn-primary" type="submit" id="loginBtn">Entrar</button></form>' +
       '<button class="al-link" id="toSignup" type="button">Primera vez: crear mi acceso</button>' +
       "</div></div>";
+    bindPwToggles();
     $("#loginForm").addEventListener("submit", doLogin);
     $("#toSignup").addEventListener("click", renderSignup);
   }
@@ -133,11 +147,14 @@
     app.innerHTML =
       '<div class="admin-login"><div class="al-card">' +
       "<h1>Crear acceso</h1><p class=\"al-sub\">Usa el correo que fue habilitado como administrador. Recibirás un correo para confirmar la cuenta.</p>" +
-      '<form id="signupForm"><label>Correo<input id="email" type="email" required></label>' +
-      '<label>Contraseña (mínimo 8 caracteres)<input id="password" type="password" minlength="8" required></label>' +
+      '<form id="signupForm"><label>Correo<input id="email" type="email" required autocomplete="email"></label>' +
+      pwField("password", "Contraseña (mínimo 8 caracteres)", "new-password") +
+      pwField("password2", "Confirmar contraseña", "new-password") +
+      '<div id="suMsg" class="al-msg" hidden></div>' +
       '<button class="btn-primary" type="submit">Crear acceso</button></form>' +
       '<button class="al-link" id="toLogin" type="button">Ya tengo acceso: iniciar sesión</button>' +
       "</div></div>";
+    bindPwToggles();
     $("#signupForm").addEventListener("submit", doSignup);
     $("#toLogin").addEventListener("click", function () { renderLogin(); });
   }
@@ -151,8 +168,13 @@
   }
   function doSignup(e) {
     e.preventDefault();
-    sb.auth.signUp({ email: $("#email").value.trim(), password: $("#password").value }).then(function (r) {
-      if (r.error) { renderSignup(); renderLogin(r.error.message, true); return; }
+    var msg = $("#suMsg");
+    var p = $("#password").value, p2 = $("#password2").value;
+    var showMsg = function (t) { if (msg) { msg.hidden = false; msg.className = "al-msg err"; msg.textContent = t; } };
+    if (p.length < 8) { showMsg("La contraseña debe tener al menos 8 caracteres."); return; }
+    if (p !== p2) { showMsg("Las contraseñas no coinciden."); return; }
+    sb.auth.signUp({ email: $("#email").value.trim(), password: p }).then(function (r) {
+      if (r.error) { showMsg(r.error.message); return; }
       if (r.data && r.data.session) { boot(); }
       else { renderLogin("Cuenta creada. Revisa tu correo para confirmarla y luego inicia sesión.", false); }
     });

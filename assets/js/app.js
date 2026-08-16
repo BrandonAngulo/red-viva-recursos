@@ -198,7 +198,17 @@
   }
   function loadTerritory() {
     fetchTable("municipalities", "sort_order.asc")
-      .then(function (rows) { if (Array.isArray(rows) && rows.length) { TERR.municipalities = rows; renderMunicipios(); } })
+      .then(function (rows) {
+        if (Array.isArray(rows) && rows.length) {
+          // Fusiona: los locales (lista completa) + los de Supabase (curados) sin perder ninguno.
+          var keyOf = function (m) { return norm(m.name) + "|" + norm(m.department || ""); };
+          var map = {};
+          (TERR.municipalities || []).forEach(function (m) { map[keyOf(m)] = m; });
+          rows.forEach(function (m) { map[keyOf(m)] = m; }); // Supabase tiene prioridad (datos curados)
+          TERR.municipalities = Object.keys(map).map(function (k) { return map[k]; });
+          renderMunicipios();
+        }
+      })
       .catch(function () {});
     fetchTable("map_points", "sort_order.asc")
       .then(function (rows) {
@@ -244,16 +254,34 @@
   }
 
   /* ---------- Territorio: municipios + guías + mapa ---------- */
+  var PRIO_RANK = { "epicentro": 0, "critica": 1, "muy-alta": 2, "alta": 3, "media": 4 };
+  function muniRank(m) { var r = PRIO_RANK[slug(m.priority || "")]; return r == null ? 8 : r; }
+  function populateMuniDept() {
+    var sel = $("#muniDept"); if (!sel || sel.dataset.filled) return;
+    var deps = {}; (TERR.municipalities || []).forEach(function (m) { if (m.department) deps[m.department] = 1; });
+    Object.keys(deps).sort().forEach(function (d) { var o = document.createElement("option"); o.value = d; o.textContent = d; sel.appendChild(o); });
+    sel.dataset.filled = "1";
+  }
   function renderMunicipios() {
     var box = $("#muniGrid"); if (!box) return;
-    var list = TERR.municipalities || [];
+    populateMuniDept();
+    var q = norm($("#muniSearch") ? $("#muniSearch").value : "");
+    var dep = $("#muniDept") ? $("#muniDept").value : "";
+    var all = TERR.municipalities || [];
+    var list = all.filter(function (m) {
+      if (dep && m.department !== dep) return false;
+      if (q && norm((m.name || "") + " " + (m.department || "")).indexOf(q) === -1) return false;
+      return true;
+    });
+    list.sort(function (a, b) { var d = muniRank(a) - muniRank(b); return d !== 0 ? d : String(a.name || "").localeCompare(String(b.name || "")); });
     box.innerHTML = list.map(function (m) {
-      var prio = '<span class="muni-prio p-' + slug(m.priority) + '">' + esc(m.priority) + "</span>";
+      var prio = m.priority ? '<span class="muni-prio p-' + slug(m.priority) + '">' + esc(m.priority) + "</span>" : "";
       var link = m.url ? '<a class="open" href="' + esc(m.url) + '" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>' : "";
-      return '<article class="muni-card"><div class="muni-top"><h3 class="muni-name">' + esc(m.name) + '</h3><span class="muni-dep">' + esc(m.department) + "</span></div>" +
-        prio + '<p class="muni-note">' + esc(m.note || "") + "</p>" + link + "</article>";
-    }).join("");
-    var nm = $("#navMuniCount"); if (nm) nm.textContent = list.length + " municipios con afectación";
+      return '<article class="muni-card"><div class="muni-top"><h3 class="muni-name">' + esc(m.name) + '</h3><span class="muni-dep">' + esc(m.department || "") + "</span></div>" +
+        prio + (m.note ? '<p class="muni-note">' + esc(m.note) + "</p>" : "") + link + "</article>";
+    }).join("") || '<p class="ge-empty" style="grid-column:1/-1;color:var(--fg-muted)">Ningún municipio coincide con la búsqueda.</p>';
+    var cnt = $("#muniCount"); if (cnt) cnt.textContent = list.length + (list.length === 1 ? " municipio" : " municipios") + (all.length !== list.length ? " de " + all.length : "");
+    var nm = $("#navMuniCount"); if (nm) nm.textContent = all.length + " municipios afectados";
   }
   function chip(label, value) { return '<span class="ori-chip"><b>' + esc(label) + "</b> " + esc(value) + "</span>"; }
   var oriFase = "";
@@ -388,11 +416,6 @@
   }
 
   function renderMapList() {
-    var wrap = $("#mapListWrap"); 
-    if (!wrap) return;
-    wrap.innerHTML = '<input type="search" id="muniSearch" placeholder="Buscar municipio..." class="muni-search"><div id="mapList" class="map-list"></div>';
-    $("#muniSearch").addEventListener("input", filterMapList);
-    
     var box = $("#mapList");
     if (!box) return;
     box.innerHTML = (TERR.mapPoints || []).map(function (p) {
@@ -493,6 +516,8 @@
     byId("#fVerif", "change", function (e) { state.verification = e.target.value; applyResources(); });
     var timer; byId("#search", "input", function (e) { clearTimeout(timer); var v = e.target.value; timer = setTimeout(function () { state.q = v; applyResources(); }, 160); });
     byId("#resetFilters", "click", resetAll);
+    var mTimer; byId("#muniSearch", "input", function () { clearTimeout(mTimer); mTimer = setTimeout(renderMunicipios, 130); });
+    byId("#muniDept", "change", renderMunicipios);
     byId("#themeToggle", "click", function () { setTheme(currentTheme() === "dark" ? "light" : "dark"); });
     
     // Share button
