@@ -254,7 +254,7 @@
   }
 
   /* ---------- Territorio: municipios + guías + mapa ---------- */
-  var PRIO_RANK = { "epicentro": 0, "critica": 1, "muy-alta": 2, "alta": 3, "media": 4 };
+  var PRIO_RANK = { "epicentro": 0, "critica": 1, "muy-alta": 2, "alta": 3, "emergencia-paralela": 4, "media": 5 };
   function muniRank(m) { var r = PRIO_RANK[slug(m.priority || "")]; return r == null ? 8 : r; }
   function populateMuniDept() {
     var sel = $("#muniDept"); if (!sel || sel.dataset.filled) return;

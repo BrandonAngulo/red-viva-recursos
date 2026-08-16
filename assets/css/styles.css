@@ -232,6 +232,8 @@ img { max-width:100%; }
 .muni-prio.p-critica { background:var(--bad-bg); color:var(--bad); }
 .muni-prio.p-muy-alta { background:var(--warn-bg); color:var(--warn); }
 .muni-prio.p-alta { background:var(--warn-bg); color:var(--warn); }
+.muni-prio.p-emergencia-paralela { background:var(--warn-bg); color:var(--warn); }
+.muni-prio.p-media { background:var(--surface-2); color:var(--fg-muted); border:1px solid var(--line); }
 .muni-note { font-size:13px; color:var(--fg-muted); line-height:1.45; margin:0 0 12px; }
 .muni-card .open { margin-top:auto; display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:9px 12px; border-radius:var(--radius-sm); text-decoration:none; background:transparent; border:1px solid var(--line); color:var(--fg); font-weight:650; font-size:12.5px; }
 .muni-card .open:hover { border-color:var(--green); }
