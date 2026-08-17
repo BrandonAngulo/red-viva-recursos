@@ -294,24 +294,23 @@
   }
   function renderFases() {
     var box = $("#fasePicker"); if (!box) return;
-    var items = [{ id: "", icon: "•", label: "Ver todas las guías" }].concat(ORI.fases || []);
-    box.innerHTML = "";
-    items.forEach(function (f) {
-      var b = el("button", { "class": "fase-chip", type: "button", "aria-pressed": oriFase === f.id ? "true" : "false" });
-      b.innerHTML = (f.icon ? '<span aria-hidden="true">' + esc(f.icon) + "</span> " : "") + esc(f.label);
-      b.addEventListener("click", function () { 
-        oriFase = f.id; 
-        updateFaseIntro(); 
-        renderFases(); 
-        renderOrientaciones(); 
-        // Sync with resources mode
-        if (f.id === "ayuda" || f.id === "aportar") {
-          state.mode = f.id;
-          state.intent = "";
-          applyResources();
-        }
+    var fases = ORI.fases || [];
+    var cards = fases.map(function (f) {
+      var on = oriFase === f.id;
+      return '<button class="fase-card fc-' + esc(f.id) + (on ? " active" : "") + '" type="button" data-fid="' + esc(f.id) + '" aria-pressed="' + (on ? "true" : "false") + '">' +
+        '<span class="fc-ic" aria-hidden="true">' + esc(f.icon || "") + "</span>" +
+        '<span class="fc-body"><span class="fc-title">' + esc(f.label) + '</span><span class="fc-sub">' + esc(f.intro || "") + "</span></span></button>";
+    }).join("");
+    box.innerHTML = '<div class="fase-cards">' + cards + "</div>" +
+      '<button class="fase-all' + (oriFase === "" ? " active" : "") + '" type="button" data-fid="">Ver todas las guías</button>';
+    Array.prototype.forEach.call(box.querySelectorAll("[data-fid]"), function (b) {
+      b.addEventListener("click", function () {
+        oriFase = b.getAttribute("data-fid");
+        renderFases();
+        renderOrientaciones();
+        if (oriFase === "ayuda" || oriFase === "aportar") { state.mode = oriFase; state.intent = ""; applyResources(); }
+        var o = $("#orientaciones"); if (o) o.scrollIntoView({ behavior: "smooth", block: "start" });
       });
-      box.appendChild(b);
     });
   }
   function updateFaseIntro() {
