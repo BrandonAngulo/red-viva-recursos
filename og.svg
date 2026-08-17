@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0d3b2c"/>
+  
+  <!-- Pulse logo -->
+  <rect x="80" y="80" width="120" height="120" rx="30" fill="#0b2c21" stroke="#d7ef5e" stroke-width="4"/>
+  <path d="M95 140 h30 l15 -35 l18 70 l12 -35 l10 15 h30" fill="none" stroke="#d7ef5e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Text -->
+  <text x="80" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">Central de</text>
+  <text x="80" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="86" font-weight="bold" fill="#d7ef5e">Recursos Digitales</text>
+  
+  <text x="80" y="520" font-family="Georgia, serif" font-size="42" font-style="italic" fill="#cfe0d6">Respuesta al terremoto</text>
+  
+  <!-- COLOMBIA aligned to the right, with padding -->
+  <text x="1120" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="bold" fill="#cfe0d6" text-anchor="end" letter-spacing="8">COLOMBIA</text>
+</svg>
