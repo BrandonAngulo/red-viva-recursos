@@ -214,21 +214,56 @@
     });
   }
 
+  function rowHaystack(row) {
+    var parts = [];
+    for (var k in row) { var v = row[k]; if (v == null) continue; parts.push(typeof v === "object" ? JSON.stringify(v) : String(v)); }
+    return parts.join(" ").toLowerCase();
+  }
   function renderList(en, rows) {
     var main = $("#geMain");
-    var head = '<div class="ge-head"><h2>' + en.icon + " " + esc(en.label) + ' <span class="ge-count">' + rows.length + "</span></h2>" +
-      (en.readonly ? "" : '<button class="btn-primary" id="newRow">+ Nuevo</button>') + "</div>";
-    if (!rows.length) { main.innerHTML = head + '<p class="ge-empty">Sin registros.</p>'; if ($("#newRow")) $("#newRow").addEventListener("click", function () { openEditor(en, null); }); return; }
+    var hasPub = rows.length && ("is_published" in rows[0]);
+    var controls =
+      '<input id="listSearch" class="ge-search" type="search" placeholder="Buscar…" autocomplete="off">' +
+      (hasPub ? '<select id="pubFilter" class="ge-filter"><option value="">Todos</option><option value="pub">Publicados</option><option value="hidden">Ocultos</option></select>' : "") +
+      (en.special === "contrib" ? '<select id="contribFilter" class="ge-filter"><option value="">Todos los estados</option>' + CONTRIB_STATUS.map(function (s) { return '<option value="' + s + '">' + s + "</option>"; }).join("") + "</select>" : "");
+    main.innerHTML =
+      '<div class="ge-head"><h2>' + en.icon + " " + esc(en.label) + ' <span class="ge-count" id="listCount">' + rows.length + "</span></h2>" +
+      (en.readonly ? "" : '<button class="btn-primary" id="newRow">+ Nuevo</button>') + "</div>" +
+      (rows.length ? '<div class="ge-list-controls">' + controls + "</div>" : "") +
+      '<div id="tableHost">' + (rows.length ? "" : '<p class="ge-empty">Sin registros.</p>') + "</div>";
+    if ($("#newRow")) $("#newRow").addEventListener("click", function () { openEditor(en, null); });
+    if (!rows.length) return;
+
+    var q = "", statusF = "", contribF = "", timer;
+    function apply() {
+      var qn = q.trim().toLowerCase();
+      var f = rows.filter(function (row) {
+        if (qn && rowHaystack(row).indexOf(qn) === -1) return false;
+        if (statusF === "pub" && !row.is_published) return false;
+        if (statusF === "hidden" && row.is_published) return false;
+        if (contribF && row.status !== contribF) return false;
+        return true;
+      });
+      paintRows(en, f, rows.length);
+    }
+    var s = $("#listSearch"); if (s) s.addEventListener("input", function (e) { q = e.target.value; clearTimeout(timer); timer = setTimeout(apply, 120); });
+    var pf = $("#pubFilter"); if (pf) pf.addEventListener("change", function (e) { statusF = e.target.value; apply(); });
+    var cf = $("#contribFilter"); if (cf) cf.addEventListener("change", function (e) { contribF = e.target.value; apply(); });
+    apply();
+  }
+  function paintRows(en, rows, total) {
+    var host = $("#tableHost");
+    var cnt = $("#listCount"); if (cnt) cnt.textContent = rows.length + (rows.length !== total ? " / " + total : "");
+    if (!rows.length) { host.innerHTML = '<p class="ge-empty">Sin resultados para esta búsqueda.</p>'; return; }
     var rowsHtml = rows.map(function (row, i) {
       var cells = en.listCols.map(function (c) { return "<td>" + esc(cell(row[c])) + "</td>"; }).join("");
-      var pub = ("is_published" in row) ? '<td>' + (row.is_published ? '<span class="pill ok">Publicado</span>' : '<span class="pill off">Oculto</span>') + "</td>" : "<td></td>";
+      var pub = ("is_published" in row) ? "<td>" + (row.is_published ? '<span class="pill ok">Publicado</span>' : '<span class="pill off">Oculto</span>') + "</td>" : "<td></td>";
       var acts = '<td class="ge-acts">' + (en.readonly ? '<button class="mini" data-act="view" data-i="' + i + '">Ver</button>' : '<button class="mini" data-act="edit" data-i="' + i + '">Editar</button><button class="mini danger" data-act="del" data-i="' + i + '">Eliminar</button>') + "</td>";
       return "<tr>" + cells + pub + acts + "</tr>";
     }).join("");
     var thead = en.listCols.map(function (c) { return "<th>" + esc(c) + "</th>"; }).join("") + "<th>Estado</th><th></th>";
-    main.innerHTML = head + '<div class="ge-tablewrap"><table class="ge-table"><thead><tr>' + thead + "</tr></thead><tbody>" + rowsHtml + "</tbody></table></div>";
-    if ($("#newRow")) $("#newRow").addEventListener("click", function () { openEditor(en, null); });
-    Array.prototype.forEach.call(main.querySelectorAll("[data-act]"), function (b) {
+    host.innerHTML = '<div class="ge-tablewrap"><table class="ge-table"><thead><tr>' + thead + "</tr></thead><tbody>" + rowsHtml + "</tbody></table></div>";
+    Array.prototype.forEach.call(host.querySelectorAll("[data-act]"), function (b) {
       b.addEventListener("click", function () {
         var row = rows[parseInt(b.dataset.i, 10)], act = b.dataset.act;
         if (act === "del") return delRow(en, row);

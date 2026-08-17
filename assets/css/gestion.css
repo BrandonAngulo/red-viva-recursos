@@ -43,6 +43,9 @@ body.admin { background: var(--bg); }
 .ge-count { display: inline-block; font-family: var(--font-sans); font-size: 12px; font-weight: 700; color: var(--fg-muted); background: var(--surface-2); border-radius: 999px; padding: 2px 9px; margin-left: 6px; }
 .ge-loading, .ge-empty { color: var(--fg-muted); padding: 20px 0; }
 
+.ge-list-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.ge-search { flex: 1 1 240px; min-width: 180px; font-family: inherit; font-size: 14px; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg); color: var(--fg); }
+.ge-filter { font-family: inherit; font-size: 14px; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); color: var(--fg); cursor: pointer; }
 .ge-tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
 .ge-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--surface); }
 .ge-table th { text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--fg-faint); padding: 10px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }

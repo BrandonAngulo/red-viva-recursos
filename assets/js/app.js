@@ -289,7 +289,8 @@
     var all = ORI.orientaciones || [];
     if (!oriFase) return all;
     var m = ORI.fasesPorId || {};
-    return all.filter(function (o) { return (m[o.id] || []).indexOf(oriFase) !== -1; });
+    // Una orientación sin mapeo de audiencia (p. ej. creada nueva desde el panel) se muestra en todas.
+    return all.filter(function (o) { var f = m[o.id]; return !f || f.indexOf(oriFase) !== -1; });
   }
   function renderFases() {
     var box = $("#fasePicker"); if (!box) return;
@@ -542,7 +543,9 @@
     
     // Propose Resource Modal
     var propModal = $("#proposeModal");
-    byId("#openProposeModal", "click", function () { if (propModal) propModal.showModal(); });
+    Array.prototype.forEach.call(document.querySelectorAll(".js-open-propose"), function (b) {
+      b.addEventListener("click", function () { if (propModal && propModal.showModal) propModal.showModal(); });
+    });
     byId("#closeProposeModal", "click", function () { if (propModal) propModal.close(); });
     
     // Lineas Modal

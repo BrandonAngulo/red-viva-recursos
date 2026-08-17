@@ -135,6 +135,14 @@
           </div>
         </div>
         <div class="grid" id="grid"></div>
+
+        <div class="propose-bar">
+          <div>
+            <b>¿Conoces un recurso que no está aquí?</b>
+            <span>Proponerlo también es una forma de ayudar: lo revisamos y, si es confiable, lo publicamos para que más gente lo encuentre.</span>
+          </div>
+          <button class="cta-strong js-open-propose" type="button"><span aria-hidden="true">＋</span> Proponer un recurso</button>
+        </div>
       </div>
     </section>
 
@@ -208,22 +216,15 @@
         </div>
         <p class="section-sub">Selecciona tu situación. Hemos separado las guías para que no te satures de información y veas exactamente lo que necesitas saber en este momento, con indicaciones especiales para <b>zonas sin señal</b>, <b>comunidades étnicas</b> y <b>personas mayores</b>.</p>
 
-        <!-- Botones de audiencia -->
-        <div class="audiences" style="margin-top:20px;">
-          <button class="aud-btn outline" id="btnAllGuides"><span class="k"></span> Ver todas las guías</button>
-          <button class="aud-btn need active" id="btnNeedHelp"><span class="k">SOS</span> Soy damnificado / Necesito ayuda</button>
-          <button class="aud-btn give" id="btnGiveHelp"><span class="k">🤝</span> Quiero ayudar / Donar</button>
-        </div>
-
-        <div id="actuarList"></div>
-
-        <div class="fase-picker" id="fasePicker" role="group" aria-label="Elige tu perfil" style="margin-top: 16px;"></div>
+        <h3 class="fase-q">¿Cuál es tu situación?</h3>
+        <div class="fase-picker" id="fasePicker" role="group" aria-label="Elige tu situación"></div>
         <p class="fase-intro" id="faseIntro"></p>
 
         <div class="orientaciones" id="orientaciones"></div>
-        
-        <div class="link-to-resources" style="margin-top:20px;text-align:center;">
-          <a class="btn-ghost" href="#recursos" style="display:inline-block">→ También puedes consultar el Directorio de Recursos Digitales</a>
+
+        <div class="actuar-ctas">
+          <a class="cta-soft" href="#recursos">Ver el directorio de recursos digitales →</a>
+          <button class="cta-strong js-open-propose" type="button"><span aria-hidden="true">＋</span> Proponer un recurso</button>
         </div>
 
         <section class="block">
@@ -350,7 +351,7 @@
         <p>Una puerta de entrada a los recursos de respuesta al terremoto en Colombia. Revisado por última vez el <span id="reviewDate">—</span>.</p>
       </div>
       <div class="cols">
-        <p>¿Conoces un recurso que falta?<br><button class="btn-ghost" id="openProposeModal" type="button" style="padding: 6px 12px; margin-top: 6px;">Proponer un recurso →</button></p>
+        <p>¿Conoces un recurso que falta?<br><button class="btn-ghost js-open-propose" id="openProposeModal" type="button" style="padding: 6px 12px; margin-top: 6px;">Proponer un recurso →</button></p>
         <p>Reportes y contacto:<br><a id="contactMail" href="#">—</a></p>
       </div>
     </div>
