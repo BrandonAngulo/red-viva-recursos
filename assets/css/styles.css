@@ -434,3 +434,37 @@ img { max-width:100%; }
 @media (min-width: 768px) { .section-sub { max-width: 100ch; } .hero p.lead { max-width: 80ch; } .doors { max-width: 100%; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); } .rc-nota { max-width: 100%; } .site-footer p { max-width: 100%; } }
 
 .propose-modal { padding: 24px; max-width: 500px; width: 90%; background: var(--bg); color: var(--fg); border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shadow-lg); } .propose-modal::backdrop { background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); } .form-group { margin-bottom: 12px; } .form-group label { font-weight: 600; font-size: 14px; display: block; margin-bottom: 4px; } .pm-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 24px; }
+
+/* Municipios Redesign */
+.muni-dept-group { margin-bottom: 32px; }
+.dept-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--line); color: var(--fg); display: flex; align-items: center; gap: 8px; }
+.dept-count { font-size: 0.9rem; color: var(--fg-muted); font-weight: normal; }
+.muni-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; margin-bottom: 16px; }
+.muni-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.muni-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.muni-name { font-weight: 600; font-size: 1.05rem; margin: 0; color: var(--fg); }
+.muni-prio { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; background: var(--line); color: var(--fg); width: max-content; }
+.muni-prio.p-crtica { background: #fee2e2; color: #991b1b; }
+.muni-prio.p-muy-alta { background: #ffedd5; color: #9a3412; }
+.muni-prio.p-alta { background: #fef3c7; color: #92400e; }
+.muni-prio.p-media { background: #e0f2fe; color: #075985; }
+.muni-prio.p-baja { background: #f3f4f6; color: #374151; }
+/* dark mode overrides for prio */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .muni-prio.p-crtica { background: #7f1d1d; color: #fecaca; }
+  html:not([data-theme="light"]) .muni-prio.p-muy-alta { background: #7c2d12; color: #fed7aa; }
+  html:not([data-theme="light"]) .muni-prio.p-alta { background: #78350f; color: #fde68a; }
+  html:not([data-theme="light"]) .muni-prio.p-media { background: #0c4a6e; color: #bae6fd; }
+  html:not([data-theme="light"]) .muni-prio.p-baja { background: #374151; color: #d1d5db; }
+}
+html[data-theme="dark"] .muni-prio.p-crtica { background: #7f1d1d; color: #fecaca; }
+html[data-theme="dark"] .muni-prio.p-muy-alta { background: #7c2d12; color: #fed7aa; }
+html[data-theme="dark"] .muni-prio.p-alta { background: #78350f; color: #fde68a; }
+html[data-theme="dark"] .muni-prio.p-media { background: #0c4a6e; color: #bae6fd; }
+html[data-theme="dark"] .muni-prio.p-baja { background: #374151; color: #d1d5db; }
+
+.muni-note { font-size: 0.9rem; color: var(--fg-muted); margin: 0; line-height: 1.4; }
+.muni-list-compact { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.muni-compact-item { background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; }
+.muni-compact-item .muni-name { font-size: 0.9rem; font-weight: 500; }
+.muni-prio.compact { padding: 2px 6px; font-size: 0.65rem; }
