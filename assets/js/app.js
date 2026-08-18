@@ -181,7 +181,8 @@
     if (!sb || !sb.url || !sb.anonKey) return Promise.reject("sin config");
     var base = sb.url.charAt(sb.url.length - 1) === "/" ? sb.url.slice(0, -1) : sb.url;
     return fetch(base + "/rest/v1/" + table + "?select=*&is_published=eq.true&order=" + order, { headers: { apikey: sb.anonKey, Authorization: "Bearer " + sb.anonKey } })
-      .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); });
+      .then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+      .then(function (rows) { noteUpdated(rows); return rows; });
   }
   function loadSituation() {
     renderSituation(DATA.situation || []);
@@ -462,14 +463,21 @@
   }
 
   var mapMarkers = {};
-  function markerColor(type) { return type === "epicentro" ? "#e6603f" : type === "incendio" ? "#e0a11a" : "#2f7de1"; }
+  function markerColor(type, prio) { 
+    if (type === "epicentro") return "#e6603f";
+    if (type === "incendio") return "#e0a11a";
+    var p = String(prio || "").toLowerCase();
+    if (p === "crítica" || p === "muy alta") return "#a23324";
+    if (p === "alta") return "#d46b33";
+    return "#2f7de1"; // media
+  }
   function addMapMarkers() {
     var map = window._crcMap; if (!map || !window.L) return;
     Object.keys(mapMarkers).forEach(function (k) { map.removeLayer(mapMarkers[k]); });
     mapMarkers = {};
     (TERR.mapPoints || []).forEach(function (p) {
       if (!p.coords) return;
-      var m = L.circleMarker(p.coords, { radius: p.type === "epicentro" ? 11 : 8, color: "#fff", weight: 2, fillColor: markerColor(p.type), fillOpacity: .9 }).addTo(map);
+      var m = L.circleMarker(p.coords, { radius: p.type === "epicentro" ? 11 : 8, color: "#fff", weight: 2, fillColor: markerColor(p.type, p.priority), fillOpacity: .9 }).addTo(map);
       var src = p.url ? '<br><a href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer">' + esc(p.source || "Fuente") + " ↗</a>" : "";
       m.bindPopup("<b>" + esc(p.name) + "</b><br>" + esc(p.department || "") + "<br>" + esc(p.note || "") + src);
       mapMarkers[p.id] = m;
@@ -554,11 +562,33 @@
       '<a class="hf-link" href="#entender">Entender qué pasó →</a></div>';
   }
 
+  /* ---------- Fecha de última actualización (dinámica desde la base) ---------- */
+  var latestUpdate = null;
+  function noteUpdated(rows) {
+    if (!Array.isArray(rows)) return;
+    rows.forEach(function (r) {
+      var t = r && (r.updated_at || r.created_at);
+      if (!t) return;
+      var d = new Date(t);
+      if (!isNaN(d.getTime()) && (!latestUpdate || d > latestUpdate)) latestUpdate = d;
+    });
+    renderLastUpdate();
+  }
+  function renderLastUpdate() {
+    var rd = $("#reviewDate"); if (!rd) return;
+    if (latestUpdate) {
+      try { rd.textContent = latestUpdate.toLocaleDateString("es-CO", { day: "numeric", month: "long", year: "numeric" }); }
+      catch (e) { rd.textContent = latestUpdate.toISOString().slice(0, 10); }
+    } else if (DATA.meta && DATA.meta.lastReview) {
+      rd.textContent = DATA.meta.lastReview;
+    }
+  }
+
   /* ---------- Contenido estático ---------- */
   function fillStatic() {
     var eq = DATA.meta.earthquake, e = $("#eqInfo");
     if (e && eq) e.textContent = "Sismo " + eq.magnitude + " · " + eq.date + " · epicentro " + eq.epicenter;
-    var rd = $("#reviewDate"); if (rd) rd.textContent = DATA.meta.lastReview;
+    renderLastUpdate();
     var le = $("#emergencyLines"); if (le) le.textContent = DATA.emergencyLines.map(function (l) { return l.number + " " + l.label; }).join(" · ");
     var cta = $("#proposeCta");
     if (cta) {
