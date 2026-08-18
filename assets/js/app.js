@@ -213,7 +213,13 @@
     fetchTable("map_points", "sort_order.asc")
       .then(function (rows) {
         if (Array.isArray(rows) && rows.length) {
-          TERR.mapPoints = rows.map(function (p) { return { id: p.id, type: p.type, name: p.name, department: p.department, coords: [p.lat, p.lng], note: p.note, source: p.source_name, url: p.url }; });
+          var keyOf = function (p) { return p.id || (norm(p.name) + "|" + norm(p.department || "")); };
+          var map = {};
+          (TERR.mapPoints || []).forEach(function (p) { map[keyOf(p)] = p; });
+          rows.forEach(function (p) { 
+            map[keyOf(p)] = { id: p.id, type: p.type, name: p.name, department: p.department, coords: [p.lat, p.lng], note: p.note, source: p.source_name, url: p.url }; 
+          });
+          TERR.mapPoints = Object.keys(map).map(function (k) { return map[k]; });
           if (mapReady) addMapMarkers(); else renderMapList();
         }
       })
