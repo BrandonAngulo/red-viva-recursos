@@ -2,6 +2,13 @@
 (function () {
   "use strict";
 
+  // Si el sitio se abre desde un enlace de Supabase (confirmación / recuperación / error),
+  // reenvía al panel de gestión, que muestra un mensaje claro (evita pantalla en blanco).
+  if (/[#&](access_token|type=signup|type=recovery|error|error_description)=/.test(location.hash)) {
+    location.replace("gestion.html" + location.hash);
+    return;
+  }
+
   var DATA = window.CRC_DATA;
   var TERR = window.CRC_TERRITORY || {};
   var ORI = window.CRC_ORIENTA || {};

@@ -8,8 +8,16 @@
     url: "https://afnwhdoqdwopvcsdgswi.supabase.co",
     key: "sb_publishable_1EcdaBYdh9GVIVTdqtWZoQ_anWOqq8a",
   };
-  // ¿Llegamos desde un enlace de Supabase (confirmación / recuperación)?
-  var arrivedFromAuth = /access_token=|type=signup|type=recovery|[?&]code=/.test((location.hash || "") + (location.search || ""));
+  // ¿Llegamos desde un enlace de Supabase (confirmación / recuperación / error)?
+  var _authStr = (location.hash || "") + "&" + (location.search || "");
+  var arrivedFromAuth = /access_token=|type=signup|type=recovery|[?&]code=/.test(_authStr);
+  var authType = (/[#&?]type=([a-z_]+)/.exec(_authStr) || [])[1] || "";
+  var authError = (function () {
+    var m = /error_description=([^&]+)/.exec(_authStr);
+    if (m) return decodeURIComponent(m[1].replace(/\+/g, " "));
+    if (/[#&?]error=/.test(_authStr)) return "El enlace no es válido o ya expiró.";
+    return "";
+  })();
   var sb = window.supabase.createClient(SUPA.url, SUPA.key);
 
   var $ = function (s, c) { return (c || document).querySelector(s); };
@@ -189,7 +197,10 @@
     var nav = ENTITIES.map(function (en) {
       return '<button class="ge-nav' + (en.key === state.current ? " active" : "") + '" data-key="' + en.key + '"><span>' + en.icon + "</span> " + esc(en.label) + "</button>";
     }).join("");
-    var banner = arrivedFromAuth ? '<div class="ge-banner" id="geBanner">✅ Hemos confirmado tu correo. Sesión iniciada — ya puedes gestionar la herramienta.</div>' : "";
+    var bannerMsg = authType === "recovery"
+      ? "✅ Enlace válido. Tu sesión está iniciada — ya puedes gestionar la herramienta."
+      : "✅ Tu correo quedó confirmado y tu sesión está iniciada. ¡Bienvenido/a al panel!";
+    var banner = arrivedFromAuth ? '<div class="ge-banner" id="geBanner">' + bannerMsg + "</div>" : "";
     app.innerHTML =
       '<header class="ge-top"><b>Gestión · Central de Recursos</b>' +
       '<span class="ge-user">' + esc(state.user.email) + ' <button id="signOut" class="al-link">Salir</button></span></header>' +
@@ -374,6 +385,9 @@
   }
 
   sb.auth.getSession().then(function (r) {
-    if (r.data && r.data.session) boot(); else renderLogin();
+    if (r.data && r.data.session) { boot(); return; }
+    if (authError) { renderLogin("No pudimos validar el enlace: " + authError + " Pide uno nuevo o inicia sesión con tu contraseña.", true); return; }
+    if (arrivedFromAuth) { renderLogin("Tu correo quedó confirmado. Ahora inicia sesión con tu correo y contraseña.", false); return; }
+    renderLogin();
   });
 })();
