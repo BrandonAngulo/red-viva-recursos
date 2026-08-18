@@ -348,6 +348,13 @@ img { max-width:100%; }
 .ori-src a { color:var(--green); text-decoration:none; margin-right:10px; }
 .ori-src a:hover { text-decoration:underline; }
 
+/* Galería de Descargables */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; margin-bottom: 16px; }
+.gallery-item { display: flex; flex-direction: column; text-decoration: none; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); transition: transform 0.2s, border-color 0.2s; box-shadow: var(--shadow); }
+.gallery-item:hover { transform: translateY(-4px); border-color: var(--focus); }
+.gallery-item img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-bottom: 1px solid var(--line); }
+.gallery-item span { padding: 10px; text-align: center; font-size: 0.85rem; font-weight: 600; color: var(--fg); background: var(--surface-2); }
+
 /* Preparación */
 .prep-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:13px; }
 .prep-card { padding:16px 18px; border:1px solid var(--line); border-radius:var(--radius); background:var(--surface); box-shadow:var(--shadow); }
