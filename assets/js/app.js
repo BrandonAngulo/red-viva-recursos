@@ -276,8 +276,8 @@
     var prioFilter = $("#muniPrio") ? $("#muniPrio").value : "";
     var all = TERR.municipalities || [];
     var list = all.filter(function (m) {
-      if (dep && m.department !== dep) return false;
-      if (prioFilter && m.priority !== prioFilter) return false;
+      if (dep && norm(m.department) !== norm(dep)) return false;
+      if (prioFilter && norm(m.priority) !== norm(prioFilter)) return false;
       if (q && norm((m.name || "") + " " + (m.department || "")).indexOf(q) === -1) return false;
       return true;
     });

@@ -1,4 +1,4 @@
-window.CRC_TERRITORY = {
+module.exports = {
   mapCenter: [4.6, -75.9],
   mapZoom: 7,
 
@@ -3801,7 +3801,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "aldana-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Aldana",
     "department": "Nariño",
     "coords": [
@@ -3814,7 +3814,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "ancuy-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Ancuyá",
     "department": "Nariño",
     "coords": [
@@ -3827,7 +3827,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "arboleda-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Arboleda",
     "department": "Nariño",
     "coords": [
@@ -3840,7 +3840,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "barbacoas-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Barbacoas",
     "department": "Nariño",
     "coords": [
@@ -3853,7 +3853,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "bel-n-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Belén",
     "department": "Nariño",
     "coords": [
@@ -3866,7 +3866,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "buesaco-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Buesaco",
     "department": "Nariño",
     "coords": [
@@ -3879,7 +3879,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "chachag-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Chachagüí",
     "department": "Nariño",
     "coords": [
@@ -3892,7 +3892,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "col-n-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Colón",
     "department": "Nariño",
     "coords": [
@@ -3905,7 +3905,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "consac-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Consacá",
     "department": "Nariño",
     "coords": [
@@ -3918,7 +3918,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "contadero-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Contadero",
     "department": "Nariño",
     "coords": [
@@ -3931,7 +3931,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "c-rdoba-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Córdoba",
     "department": "Nariño",
     "coords": [
@@ -3944,7 +3944,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "cuaspud-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Cuaspud",
     "department": "Nariño",
     "coords": [
@@ -3957,7 +3957,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "cumbal-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Cumbal",
     "department": "Nariño",
     "coords": [
@@ -3970,7 +3970,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "cumbitara-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Cumbitara",
     "department": "Nariño",
     "coords": [
@@ -3983,7 +3983,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "el-charco-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "El Charco",
     "department": "Nariño",
     "coords": [
@@ -3996,7 +3996,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "el-pe-ol-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "El Peñol",
     "department": "Nariño",
     "coords": [
@@ -4009,7 +4009,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "el-rosario-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "El Rosario",
     "department": "Nariño",
     "coords": [
@@ -4022,7 +4022,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "el-tabl-n-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "El Tablón",
     "department": "Nariño",
     "coords": [
@@ -4035,7 +4035,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "el-tambo-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "El Tambo",
     "department": "Nariño",
     "coords": [
@@ -4048,7 +4048,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "francisco-pizarro-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Francisco Pizarro",
     "department": "Nariño",
     "coords": [
@@ -4061,7 +4061,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "funes-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Funes",
     "department": "Nariño",
     "coords": [
@@ -4074,7 +4074,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "guachucal-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Guachucal",
     "department": "Nariño",
     "coords": [
@@ -4087,7 +4087,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "guaitarilla-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Guaitarilla",
     "department": "Nariño",
     "coords": [
@@ -4100,7 +4100,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "gualmat-n-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Gualmatán",
     "department": "Nariño",
     "coords": [
@@ -4113,7 +4113,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "iles-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Iles",
     "department": "Nariño",
     "coords": [
@@ -4126,7 +4126,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "imu-s-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Imués",
     "department": "Nariño",
     "coords": [
@@ -4139,7 +4139,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "ipiales-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Ipiales",
     "department": "Nariño",
     "coords": [
@@ -4152,7 +4152,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "la-cruz-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "La Cruz",
     "department": "Nariño",
     "coords": [
@@ -4165,7 +4165,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "la-florida-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "La Florida",
     "department": "Nariño",
     "coords": [
@@ -4178,7 +4178,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "la-llanada-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "La Llanada",
     "department": "Nariño",
     "coords": [
@@ -4191,7 +4191,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "la-tola-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "La Tola",
     "department": "Nariño",
     "coords": [
@@ -4204,7 +4204,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "la-uni-n-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "La Unión",
     "department": "Nariño",
     "coords": [
@@ -4217,7 +4217,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "leiva-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Leiva",
     "department": "Nariño",
     "coords": [
@@ -4230,7 +4230,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "linares-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Linares",
     "department": "Nariño",
     "coords": [
@@ -4243,7 +4243,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "los-andes-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Los Andes",
     "department": "Nariño",
     "coords": [
@@ -4256,7 +4256,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "mag-pay-n-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Magüí Payán",
     "department": "Nariño",
     "coords": [
@@ -4269,7 +4269,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "mallama-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Mallama",
     "department": "Nariño",
     "coords": [
@@ -4282,7 +4282,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "mosquera-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Mosquera",
     "department": "Nariño",
     "coords": [
@@ -4295,7 +4295,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "nari-o-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Nariño",
     "department": "Nariño",
     "coords": [
@@ -4308,7 +4308,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "olaya-herrera-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Olaya Herrera",
     "department": "Nariño",
     "coords": [
@@ -4321,7 +4321,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "ospina-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Ospina",
     "department": "Nariño",
     "coords": [
@@ -4334,7 +4334,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "pasto-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Pasto",
     "department": "Nariño",
     "coords": [
@@ -4347,7 +4347,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "policarpa-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Policarpa",
     "department": "Nariño",
     "coords": [
@@ -4360,7 +4360,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "potos-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Potosí",
     "department": "Nariño",
     "coords": [
@@ -4373,7 +4373,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "providencia-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Providencia",
     "department": "Nariño",
     "coords": [
@@ -4386,7 +4386,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "puerres-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Puerres",
     "department": "Nariño",
     "coords": [
@@ -4399,7 +4399,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "pupiales-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Pupiales",
     "department": "Nariño",
     "coords": [
@@ -4412,7 +4412,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "ricaurte-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Ricaurte",
     "department": "Nariño",
     "coords": [
@@ -4425,7 +4425,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "roberto-pay-n-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Roberto Payán",
     "department": "Nariño",
     "coords": [
@@ -4438,7 +4438,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "samaniego-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Samaniego",
     "department": "Nariño",
     "coords": [
@@ -4451,7 +4451,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "san-bernardo-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "San Bernardo",
     "department": "Nariño",
     "coords": [
@@ -4464,7 +4464,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "san-jos-de-alb-n-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "San José de Albán",
     "department": "Nariño",
     "coords": [
@@ -4477,7 +4477,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "san-lorenzo-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "San Lorenzo",
     "department": "Nariño",
     "coords": [
@@ -4490,7 +4490,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "san-pablo-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "San Pablo",
     "department": "Nariño",
     "coords": [
@@ -4503,7 +4503,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "san-pedro-de-cartago-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "San Pedro de Cartago",
     "department": "Nariño",
     "coords": [
@@ -4516,7 +4516,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "sandon-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Sandoná",
     "department": "Nariño",
     "coords": [
@@ -4529,7 +4529,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "santa-b-rbara-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Santa Bárbara",
     "department": "Nariño",
     "coords": [
@@ -4542,7 +4542,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "santacruz-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Santacruz",
     "department": "Nariño",
     "coords": [
@@ -4555,7 +4555,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "sapuyes-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Sapuyes",
     "department": "Nariño",
     "coords": [
@@ -4568,7 +4568,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "taminango-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Taminango",
     "department": "Nariño",
     "coords": [
@@ -4581,7 +4581,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "tangua-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Tangua",
     "department": "Nariño",
     "coords": [
@@ -4594,7 +4594,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "tumaco-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Tumaco",
     "department": "Nariño",
     "coords": [
@@ -4607,7 +4607,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "t-querres-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Túquerres",
     "department": "Nariño",
     "coords": [
@@ -4620,7 +4620,7 @@ window.CRC_TERRITORY = {
   },
   {
     "id": "yacuanquer-nari-o",
-    "type": "incendio",
+    "type": "ciudad",
     "name": "Yacuanquer",
     "department": "Nariño",
     "coords": [
