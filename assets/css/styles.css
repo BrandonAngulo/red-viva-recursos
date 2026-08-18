@@ -449,6 +449,7 @@ img { max-width:100%; }
 .muni-prio.p-alta { background: #fef3c7; color: #92400e; }
 .muni-prio.p-media { background: #e0f2fe; color: #075985; }
 .muni-prio.p-baja { background: #f3f4f6; color: #374151; }
+.muni-prio.p-otra { background: #fce7f3; color: #9d174d; border: 1px solid #f9a8d4; }
 /* dark mode overrides for prio */
 @media (prefers-color-scheme: dark) {
   html:not([data-theme="light"]) .muni-prio.p-crtica { background: #7f1d1d; color: #fecaca; }
@@ -456,12 +457,14 @@ img { max-width:100%; }
   html:not([data-theme="light"]) .muni-prio.p-alta { background: #78350f; color: #fde68a; }
   html:not([data-theme="light"]) .muni-prio.p-media { background: #0c4a6e; color: #bae6fd; }
   html:not([data-theme="light"]) .muni-prio.p-baja { background: #374151; color: #d1d5db; }
+  html:not([data-theme="light"]) .muni-prio.p-otra { background: #831843; color: #fbcfe8; border: 1px solid #be185d; }
 }
 html[data-theme="dark"] .muni-prio.p-crtica { background: #7f1d1d; color: #fecaca; }
 html[data-theme="dark"] .muni-prio.p-muy-alta { background: #7c2d12; color: #fed7aa; }
 html[data-theme="dark"] .muni-prio.p-alta { background: #78350f; color: #fde68a; }
 html[data-theme="dark"] .muni-prio.p-media { background: #0c4a6e; color: #bae6fd; }
 html[data-theme="dark"] .muni-prio.p-baja { background: #374151; color: #d1d5db; }
+html[data-theme="dark"] .muni-prio.p-otra { background: #831843; color: #fbcfe8; border: 1px solid #be185d; }
 
 .muni-note { font-size: 0.9rem; color: var(--fg-muted); margin: 0; line-height: 1.4; }
 .muni-list-compact { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
