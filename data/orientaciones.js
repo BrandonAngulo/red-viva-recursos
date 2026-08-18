@@ -10,8 +10,9 @@ window.CRC_ORIENTA = {
     { id: "aportar", icon: "🤝", label: "Quiero ayudar / Donar", intro: "Información para canalizar tu ayuda de forma segura y efectiva, sin estorbar las labores de rescate." },
   ],
   fasesPorId: {
-    "vivienda": ["ayuda"],
+    "heridos": ["ayuda"],
     "buscar-persona": ["ayuda", "aportar"],
+    "vivienda": ["ayuda"],
     "rud": ["ayuda"],
     "fallecimiento": ["ayuda"],
     "apoyo-emocional": ["ayuda", "aportar"],
@@ -22,6 +23,31 @@ window.CRC_ORIENTA = {
   },
 
   orientaciones: [
+    {
+      id: "heridos", icon: "🩺", title: "Si hay personas heridas",
+      quePasa: "Los servicios médicos pueden colapsar. La atención rápida y segura en los primeros minutos es clave.",
+      pasos: [
+        "Si alguien está atrapado o gravemente herido, no lo muevas a menos que haya peligro inminente (fuego o derrumbe).",
+        "Controla hemorragias presionando la herida con un paño limpio.",
+        "Abre paso a los equipos de rescate y no satures las líneas de emergencia con casos menores.",
+        "Si la persona no respira, inicia maniobras de RCP solo si sabes cómo hacerlo."
+      ],
+      acudir: [
+        { who: "Emergencia Médica", channel: "123" },
+        { who: "Cruz Roja Colombiana", channel: "132" },
+        { who: "Defensa Civil", channel: "144" }
+      ],
+      estafa: "El rescate y los primeros auxilios por organismos de socorro son gratuitos. Denuncia cobros abusivos.",
+      linea: "123 – 132 – 144",
+      diferencial: {
+        rural: "Pide ayuda a promotores de salud locales o busca transporte improvisado seguro.",
+        etnico: "Apóyate en los sabedores tradicionales de salud si la evacuación médica tarda.",
+        mayores: "Si la persona usa medicamentos vitales, asegúrate de rescatarlos si es seguro hacerlo."
+      },
+      fuentes: [
+        { label: "Primeros Auxilios - Cruz Roja", url: "https://www.cruzrojacolombiana.org/" }
+      ]
+    },
     {
       id: "buscar-persona", icon: "🧍", title: "Buscar o reportar a una persona",
       quePasa: "Muchas familias quedaron separadas. Hay portales oficiales y ciudadanos para reportar y buscar. No publiques datos personales en redes abiertas.",
@@ -147,7 +173,7 @@ window.CRC_ORIENTA = {
       ],
     },
     {
-      id: "prepararme", icon: "🛡️", title: "Capacitarme para responder ante emergencias",
+      id: "prepararme", icon: "🎒", title: "Prepararte para réplicas",
       quePasa: "Saber actuar reduce el riesgo para ti y tu comunidad en eventos adversos.",
       pasos: [
         "Identifica zonas seguras (junto a estructuras firmes, lejos de ventanas) y dos rutas de salida.",

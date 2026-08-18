@@ -4,7 +4,7 @@
 window.CRC_DATA = {
   meta: {
     lastReview: "2026-08-15",
-    contactEmail: "contacto@andanzascentrocultural.com", // cambiado al canal real
+    contactEmail: "centralderecursos@andanzascentrocultural.com", // cambiado al canal real
     earthquake: {
       date: "2026-08-10",
       magnitude: "7.4",
