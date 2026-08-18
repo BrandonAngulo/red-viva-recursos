@@ -481,10 +481,11 @@
     // Add "Recentrar" control
     var centerBtn = L.control({position: 'topleft'});
     centerBtn.onAdd = function (m) {
-      var btn = L.DomUtil.create('button', 'leaflet-bar leaflet-control');
-      btn.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" style="vertical-align:middle; display:block; margin:auto;"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>';
+      var btn = L.DomUtil.create('a', 'leaflet-bar leaflet-control');
+      btn.href = '#';
+      btn.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" stroke="#444" stroke-width="2" fill="none" style="vertical-align:middle; display:block; margin:auto;"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>';
       btn.title = 'Recentrar mapa a ubicación inicial';
-      btn.style.width = '30px'; btn.style.height = '30px'; btn.style.cursor = 'pointer'; btn.style.backgroundColor = 'white'; btn.style.border = '2px solid rgba(0,0,0,0.2)'; btn.style.borderRadius = '4px'; btn.style.display = 'flex'; btn.style.alignItems = 'center'; btn.style.justifyContent = 'center';
+      btn.style.width = '30px'; btn.style.height = '30px'; btn.style.cursor = 'pointer'; btn.style.backgroundColor = 'white'; btn.style.display = 'flex'; btn.style.alignItems = 'center'; btn.style.justifyContent = 'center'; btn.style.color = '#444';
       btn.onclick = function(e){ e.stopPropagation(); m.setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7); };
       return btn;
     };
