@@ -1,0 +1,646 @@
+{
+  "Cali|Valle del Cauca": {
+    "lat": 3.430990491999999,
+    "lon": -76.53487568933329
+  },
+  "Manizales|Caldas": {
+    "lat": 5.0609775512244966,
+    "lon": -75.50332353045911
+  },
+  "Pereira|Risaralda": {
+    "lat": 4.810306747580645,
+    "lon": -75.71034213387095
+  },
+  "La Virginia|Risaralda": {
+    "lat": 4.900645,
+    "lon": -75.880111
+  },
+  "Belén de Umbría|Risaralda": {
+    "lat": 5.201559566666667,
+    "lon": -75.8697267
+  },
+  "Buga|Valle del Cauca": {
+    "lat": 3.9062825833333332,
+    "lon": -76.2981261
+  },
+  "Cartago|Valle del Cauca": {
+    "lat": 4.749044271428572,
+    "lon": -75.915021
+  },
+  "Palmira|Valle del Cauca": {
+    "lat": 3.531001575,
+    "lon": -76.309827825
+  },
+  "Jamundí|Valle del Cauca": {
+    "lat": 3.2598013333333333,
+    "lon": -76.55102246666667
+  },
+  "Zarzal|Valle del Cauca": {
+    "lat": 4.389907,
+    "lon": -76.072134
+  },
+  "Roldanillo|Valle del Cauca": {
+    "lat": 4.410348257142857,
+    "lon": -76.1540281
+  },
+  "La Victoria|Valle del Cauca": {
+    "lat": 4.5235521,
+    "lon": -76.0369745
+  },
+  "Buenaventura|Valle del Cauca": {
+    "lat": 3.8689529838709684,
+    "lon": -77.06202212580646
+  },
+  "Dosquebradas|Risaralda": {
+    "lat": 4.828643463333334,
+    "lon": -75.6738374247619
+  },
+  "Viterbo|Caldas": {
+    "lat": 5.0754451,
+    "lon": -75.87923196666667
+  },
+  "Chinchiná|Caldas": {
+    "lat": 4.982803685714286,
+    "lon": -75.6352904142857
+  },
+  "Supía|Caldas": {
+    "lat": 5.45320295,
+    "lon": -75.6496762
+  },
+  "Aguadas|Caldas": {
+    "lat": 5.6130092000000005,
+    "lon": -75.4579449
+  },
+  "Anserma|Caldas": {
+    "lat": 5.241369825,
+    "lon": -75.78723005
+  },
+  "Armenia|Quindío": {
+    "lat": 4.534422996825398,
+    "lon": -75.68092836984133
+  },
+  "Calarcá|Quindío": {
+    "lat": 4.501244509090909,
+    "lon": -75.65198690000001
+  },
+  "Salento|Quindío": {
+    "lat": 4.637483100000001,
+    "lon": -75.57030376666667
+  },
+  "Quibdó|Chocó": {
+    "lat": 5.6934841684,
+    "lon": -76.65127707920001
+  },
+  "Popayán|Cauca": {
+    "lat": 2.4460856888888887,
+    "lon": -76.60657335555555
+  },
+  "Totoró|Cauca": {
+    "lat": 2.509359,
+    "lon": -76.404296
+  },
+  "El Peñol|Nariño": {
+    "lat": 1.454439,
+    "lon": -77.436565
+  },
+  "La Cruz|Nariño": {
+    "lat": 1.5875835,
+    "lon": -76.9553145
+  },
+  "Chachagüí|Nariño": {
+    "lat": 1.358751,
+    "lon": -77.283081
+  },
+  "Aranzazu|Caldas": {
+    "lat": 5.25812375,
+    "lon": -75.498093
+  },
+  "Jericó|Antioquia": {
+    "lat": 5.7922023,
+    "lon": -75.784531
+  },
+  "Cañasgordas|Antioquia": {
+    "lat": 6.7493841,
+    "lon": -76.0252436
+  },
+  "Rionegro|Antioquia": {
+    "lat": 6.145981836363637,
+    "lon": -75.39684271818182
+  },
+  "Medellín|Antioquia": {
+    "lat": 6.247384749999998,
+    "lon": -75.5765873631579
+  },
+  "Bello|Antioquia": {
+    "lat": 6.3417858,
+    "lon": -75.5481857
+  },
+  "Sonsón|Antioquia": {
+    "lat": 5.7143633,
+    "lon": -75.3086519
+  },
+  "Itagüí|Antioquia": {
+    "lat": 6.1707245,
+    "lon": -75.61811205000001
+  },
+  "Chaparral|Tolima": {
+    "lat": 3.7255870666666673,
+    "lon": -75.48478843333334
+  },
+  "Roncesvalles|Tolima": {
+    "lat": 4.012632,
+    "lon": -75.606489
+  },
+  "Ibagué|Tolima": {
+    "lat": 4.44389333478261,
+    "lon": -75.21923196086956
+  },
+  "Ortega|Tolima": {
+    "lat": 3.9347219,
+    "lon": -75.2195784
+  },
+  "Chía|Cundinamarca": {
+    "lat": 4.860138233333333,
+    "lon": -74.0486384
+  },
+  "Subachoque|Cundinamarca": {
+    "lat": 4.9290956,
+    "lon": -74.1761491
+  },
+  "Anapoima|Cundinamarca": {
+    "lat": 4.551929,
+    "lon": -74.536534
+  },
+  "Tena|Cundinamarca": {
+    "lat": 4.6553643,
+    "lon": -74.3890005
+  },
+  "Bogotá D.C.|Bogotá D.C.": {
+    "lat": 4.6719872120689665,
+    "lon": -74.07712555862071
+  },
+  "Barrancabermeja|Santander": {
+    "lat": 7.016141574999999,
+    "lon": -73.856950825
+  },
+  "Barranquilla|Atlántico": {
+    "lat": 10.9975141625,
+    "lon": -74.807380225
+  },
+  "El Cairo|Valle del Cauca": {
+    "lat": 4.760675699999999,
+    "lon": -76.2218065
+  },
+  "Villamaría|Caldas": {
+    "lat": 5.022839639999999,
+    "lon": -75.5112892
+  },
+  "Riosucio|Caldas": {
+    "lat": 5.419923249999999,
+    "lon": -75.70279645
+  },
+  "Tenjo|Cundinamarca": {
+    "lat": 4.8701636,
+    "lon": -74.1441367
+  },
+  "Quimbaya|Quindío": {
+    "lat": 4.62132552,
+    "lon": -75.76381153999998
+  },
+  "Montenegro|Quindío": {
+    "lat": 4.5591037,
+    "lon": -75.75448806153847
+  },
+  "Circasia|Quindío": {
+    "lat": 4.6205065,
+    "lon": -75.6343479
+  },
+  "La Ceja|Antioquia": {
+    "lat": 6.026728566666667,
+    "lon": -75.43159703333333
+  },
+  "Hispania|Antioquia": {
+    "lat": 5.7987401,
+    "lon": -75.90823789999999
+  },
+  "La Unión|Antioquia": {
+    "lat": 5.971702,
+    "lon": -75.3613303
+  },
+  "Argelia|Antioquia": {
+    "lat": 5.7318363,
+    "lon": -75.143029
+  },
+  "Guarne|Antioquia": {
+    "lat": 6.2308863,
+    "lon": -75.397336
+  },
+  "El Cerrito|Valle del Cauca": {
+    "lat": 3.6874588999999998,
+    "lon": -76.31393403333334
+  },
+  "La Plata|Huila": {
+    "lat": 2.4116623,
+    "lon": -75.9492736
+  },
+  "Tello|Huila": {
+    "lat": 3.0469677,
+    "lon": -75.016217
+  },
+  "Rivera|Huila": {
+    "lat": 2.760045,
+    "lon": -75.2383682
+  },
+  "Garzón|Huila": {
+    "lat": 2.19404045,
+    "lon": -75.6292435
+  },
+  "Baraya|Huila": {
+    "lat": 3.1453763,
+    "lon": -75.0620803
+  },
+  "Aipe|Huila": {
+    "lat": 3.2248647,
+    "lon": -75.2360863
+  },
+  "Neiva|Huila": {
+    "lat": 2.9412100199999998,
+    "lon": -75.29473908
+  },
+  "Elías|Huila": {
+    "lat": 2.0127334,
+    "lon": -75.94089115
+  },
+  "La Pintada|Antioquia": {
+    "lat": 5.742500724999999,
+    "lon": -75.607214725
+  },
+  "Tuluá|Valle del Cauca": {
+    "lat": 4.063303281818182,
+    "lon": -76.16674706363636
+  },
+  "Toribío|Cauca": {
+    "lat": 2.9606709,
+    "lon": -76.2693583
+  },
+  "El Tambo|Cauca": {
+    "lat": 2.4511252,
+    "lon": -76.8072158
+  },
+  "Granada|Antioquia": {
+    "lat": 6.1443581,
+    "lon": -75.1866118
+  },
+  "Palestina|Caldas": {
+    "lat": 5.062256603333333,
+    "lon": -75.66137137666665
+  },
+  "San José del Palmar|Chocó": {
+    "lat": 4.8365034,
+    "lon": -76.4357888
+  },
+  "Guapi|Cauca": {
+    "lat": 2.5628342,
+    "lon": -77.77188369999999
+  },
+  "Herveo|Tolima": {
+    "lat": 5.0806128,
+    "lon": -75.1763906
+  },
+  "Jardín|Antioquia": {
+    "lat": 5.5992204,
+    "lon": -75.8196414
+  },
+  "Yumbo|Valle del Cauca": {
+    "lat": 3.5792936166666665,
+    "lon": -76.49364376666666
+  },
+  "Bugalagrande|Valle del Cauca": {
+    "lat": 4.2122536,
+    "lon": -76.15730595
+  },
+  "La Tebaida|Quindío": {
+    "lat": 4.4518439,
+    "lon": -75.7826526
+  },
+  "Puracé|Cauca": {
+    "lat": 2.3138323,
+    "lon": -76.3949167
+  },
+  "Purificación|Tolima": {
+    "lat": 3.8573485,
+    "lon": -74.9346511
+  },
+  "Líbano|Tolima": {
+    "lat": 4.920541,
+    "lon": -75.0579684
+  },
+  "Villavicencio|Meta": {
+    "lat": 4.1544817,
+    "lon": -73.6380881
+  },
+  "Santa Marta|Magdalena": {
+    "lat": 11.220372895,
+    "lon": -74.184797265
+  },
+  "Fresno|Tolima": {
+    "lat": 5.1508649,
+    "lon": -75.0342785
+  },
+  "Cajicá|Cundinamarca": {
+    "lat": 4.9197803,
+    "lon": -74.02479185
+  },
+  "Cúcuta|Norte de Santander": {
+    "lat": 7.899848,
+    "lon": -72.4970721
+  },
+  "Istmina|Chocó": {
+    "lat": 5.1515754,
+    "lon": -76.6870917
+  },
+  "Tadó|Chocó": {
+    "lat": 5.2651622,
+    "lon": -76.5557439
+  },
+  "Bucaramanga|Santander": {
+    "lat": 7.119767150000001,
+    "lon": -73.12485388
+  },
+  "Versalles|Valle del Cauca": {
+    "lat": 4.597246216666666,
+    "lon": -76.20344826666667
+  },
+  "Dagua|Valle del Cauca": {
+    "lat": 3.655824,
+    "lon": -76.6853769
+  },
+  "La Cumbre|Valle del Cauca": {
+    "lat": 3.65021195,
+    "lon": -76.5695059
+  },
+  "Copacabana|Antioquia": {
+    "lat": 6.34251475,
+    "lon": -75.51740173
+  },
+  "Ansermanuevo|Valle del Cauca": {
+    "lat": 4.7990022,
+    "lon": -75.9954108
+  },
+  "El Santuario|Antioquia": {
+    "lat": 6.1392988,
+    "lon": -75.265031
+  },
+  "Restrepo|Valle del Cauca": {
+    "lat": 3.8212726999999997,
+    "lon": -76.52527815
+  },
+  "La Unión|Valle del Cauca": {
+    "lat": 4.5338907,
+    "lon": -76.1029551
+  },
+  "Ginebra|Valle del Cauca": {
+    "lat": 3.7222232,
+    "lon": -76.2679212
+  },
+  "Salamina|Caldas": {
+    "lat": 5.40319445,
+    "lon": -75.48867965
+  },
+  "San Luis|Tolima": {
+    "lat": 4.1323779,
+    "lon": -75.0981222
+  },
+  "Pasto|Nariño": {
+    "lat": 1.2122987181818181,
+    "lon": -77.27962313636363
+  },
+  "Urrao|Antioquia": {
+    "lat": 6.31758735,
+    "lon": -76.13238135
+  },
+  "Támesis|Antioquia": {
+    "lat": 5.66587305,
+    "lon": -75.71426025
+  },
+  "Zipaquirá|Cundinamarca": {
+    "lat": 5.024361466666668,
+    "lon": -73.9986425
+  },
+  "Guataquí|Cundinamarca": {
+    "lat": 4.516431,
+    "lon": -74.7910448
+  },
+  "Sasaima|Cundinamarca": {
+    "lat": 4.9646224,
+    "lon": -74.4366545
+  },
+  "Ipiales|Nariño": {
+    "lat": 0.8293598,
+    "lon": -77.63313355
+  },
+  "Belalcázar|Caldas": {
+    "lat": 4.968749,
+    "lon": -75.81710045
+  },
+  "Pensilvania|Caldas": {
+    "lat": 5.447691010000001,
+    "lon": -75.149983654
+  },
+  "Neira|Caldas": {
+    "lat": 5.1896952,
+    "lon": -75.6799048
+  },
+  "Norcasia|Caldas": {
+    "lat": 5.6975924,
+    "lon": -74.8317328
+  },
+  "Filadelfia|Caldas": {
+    "lat": 5.2967743,
+    "lon": -75.56009028
+  },
+  "Yolombó|Antioquia": {
+    "lat": 6.5938334,
+    "lon": -75.0137967
+  },
+  "Anzá|Antioquia": {
+    "lat": 6.3034975,
+    "lon": -75.8538779
+  },
+  "Santander de Quilichao|Cauca": {
+    "lat": 3.02377945,
+    "lon": -76.47555349999999
+  },
+  "Puerto Tejada|Cauca": {
+    "lat": 3.229697,
+    "lon": -76.4191027
+  },
+  "San Rafael|Antioquia": {
+    "lat": 6.2954096,
+    "lon": -75.0275609
+  },
+  "Marsella|Risaralda": {
+    "lat": 4.93814605,
+    "lon": -75.7371848
+  },
+  "Santa Rosa de Cabal|Risaralda": {
+    "lat": 4.89995774,
+    "lon": -75.65006548
+  },
+  "Cajamarca|Tolima": {
+    "lat": 4.4422185,
+    "lon": -75.4275064
+  },
+  "Tunja|Boyacá": {
+    "lat": 5.5335801,
+    "lon": -73.363438
+  },
+  "Valledupar|Cesar": {
+    "lat": 10.4649732,
+    "lon": -73.25440935
+  },
+  "Montería|Córdoba": {
+    "lat": 8.761873266666667,
+    "lon": -75.87191543333334
+  },
+  "Riohacha|La Guajira": {
+    "lat": 11.5512429,
+    "lon": -72.90864485
+  },
+  "El Águila|Valle del Cauca": {
+    "lat": 4.8743327,
+    "lon": -76.057074
+  },
+  "Andalucía|Valle del Cauca": {
+    "lat": 4.164815,
+    "lon": -76.1693455
+  },
+  "Victoria|Caldas": {
+    "lat": 5.3161792,
+    "lon": -74.9128369
+  },
+  "Caucasia|Antioquia": {
+    "lat": 7.9683433,
+    "lon": -75.20106
+  },
+  "La Mesa|Cundinamarca": {
+    "lat": 4.6306402,
+    "lon": -74.4650396
+  },
+  "La Palma|Cundinamarca": {
+    "lat": 5.3608424,
+    "lon": -74.3904493
+  },
+  "Betulia|Antioquia": {
+    "lat": 6.1116598,
+    "lon": -75.9843544
+  },
+  "San Antonio del Tequendama|Cundinamarca": {
+    "lat": 4.5946642,
+    "lon": -74.3429553
+  },
+  "Cáqueza|Cundinamarca": {
+    "lat": 4.405203,
+    "lon": -73.9471971
+  },
+  "Pacho|Cundinamarca": {
+    "lat": 5.1295209,
+    "lon": -74.1574228
+  },
+  "Sincelejo|Sucre": {
+    "lat": 9.3043358,
+    "lon": -75.3937233
+  },
+  "Acacías|Meta": {
+    "lat": 3.9878095,
+    "lon": -73.7617732
+  },
+  "Granada|Meta": {
+    "lat": 3.5408048,
+    "lon": -73.6999845
+  },
+  "Florencia|Caquetá": {
+    "lat": 1.6101358,
+    "lon": -75.6065035
+  },
+  "Mocoa|Putumayo": {
+    "lat": 1.1472712,
+    "lon": -76.6470453
+  },
+  "Bosconia|Cesar": {
+    "lat": 9.9685377,
+    "lon": -73.8833531
+  },
+  "San Diego|Cesar": {
+    "lat": 10.3300707,
+    "lon": -73.1819677
+  },
+  "El Retiro|Antioquia": {
+    "lat": 6.0567058,
+    "lon": -75.5024808
+  },
+  "Balboa|Risaralda": {
+    "lat": 4.9514943,
+    "lon": -75.9591934
+  },
+  "Honda|Tolima": {
+    "lat": 5.2013682,
+    "lon": -74.7404767
+  },
+  "Génova|Quindío": {
+    "lat": 4.2094845,
+    "lon": -75.7873509
+  },
+  "Bolívar|Valle del Cauca": {
+    "lat": 4.3615842,
+    "lon": -76.21357855
+  },
+  "Andes|Antioquia": {
+    "lat": 5.6581262500000005,
+    "lon": -75.92455245
+  },
+  "Manzanares|Caldas": {
+    "lat": 5.192940650000001,
+    "lon": -75.118671
+  },
+  "Sevilla|Valle del Cauca": {
+    "lat": 4.265703633333334,
+    "lon": -75.9318697
+  },
+  "Pácora|Caldas": {
+    "lat": 5.514949,
+    "lon": -75.46431695
+  },
+  "Rosas|Cauca": {
+    "lat": 2.2613521,
+    "lon": -76.7410513
+  },
+  "Condoto|Chocó": {
+    "lat": 5.0535693,
+    "lon": -76.6493681
+  },
+  "Vijes|Valle del Cauca": {
+    "lat": 3.6990986000000006,
+    "lon": -76.44135956666666
+  },
+  "Caicedonia|Valle del Cauca": {
+    "lat": 4.3310905,
+    "lon": -75.8287406
+  },
+  "Yotoco|Valle del Cauca": {
+    "lat": 3.9524341,
+    "lon": -76.37361443333333
+  },
+  "Soacha|Cundinamarca": {
+    "lat": 4.580997133333333,
+    "lon": -74.20873683333333
+  },
+  "Pradera|Valle del Cauca": {
+    "lat": 3.4189426000000003,
+    "lon": -76.2444271
+  },
+  "Candelaria|Valle del Cauca": {
+    "lat": 3.396171,
+    "lon": -76.3613876
+  }
+}

@@ -1,0 +1,3918 @@
+[
+  {
+    "name": "Acandí",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      8.5115155,
+      -77.2790562
+    ]
+  },
+  {
+    "name": "Alto Baudó",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.6659771,
+      -77.079633
+    ]
+  },
+  {
+    "name": "Bagadó",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.4116935,
+      -76.4159671
+    ]
+  },
+  {
+    "name": "Bahía Solano",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.2245644,
+      -77.4034389
+    ]
+  },
+  {
+    "name": "Bajo Baudó",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.0018176,
+      -77.1580453
+    ]
+  },
+  {
+    "name": "Bojayá",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.4417196,
+      -77.0545721
+    ]
+  },
+  {
+    "name": "Cantón de San Pablo",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.3350691,
+      -76.7272132
+    ]
+  },
+  {
+    "name": "Cértegui",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.3719043,
+      -76.6085751
+    ]
+  },
+  {
+    "name": "Condoto",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.09568,
+      -76.5114837
+    ]
+  },
+  {
+    "name": "El Atrato",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.5474741,
+      -76.6420872
+    ]
+  },
+  {
+    "name": "El Carmen de Atrato",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.8389066,
+      -76.2084203
+    ]
+  },
+  {
+    "name": "El Carmen del Darién",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.1431915,
+      -76.9374075
+    ]
+  },
+  {
+    "name": "Istmina",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.1593099,
+      -76.685528
+    ]
+  },
+  {
+    "name": "Juradó",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.1031695,
+      -77.7623252
+    ]
+  },
+  {
+    "name": "Litoral de San Juan",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.7352037,
+      -76.4016751
+    ]
+  },
+  {
+    "name": "Lloró",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.5844842,
+      -76.3725649
+    ]
+  },
+  {
+    "name": "Medio Atrato",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0114997,
+      -76.6907282
+    ]
+  },
+  {
+    "name": "Medio Baudó",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.1492979,
+      -76.9858805
+    ]
+  },
+  {
+    "name": "Medio San Juan",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.8126231,
+      -76.8360843
+    ]
+  },
+  {
+    "name": "Nóvita",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectaciones críticas. Múltiples vías bloqueadas.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.842978,
+      -76.6445335
+    ]
+  },
+  {
+    "name": "Nuquí",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.707435,
+      -77.2710963
+    ]
+  },
+  {
+    "name": "Quibdó",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectaciones críticas. Múltiples vías bloqueadas.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.6912838,
+      -76.6531337
+    ]
+  },
+  {
+    "name": "Río Iró",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.1853204,
+      -76.4720948
+    ]
+  },
+  {
+    "name": "Río Quito",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.5515206,
+      -76.7931361
+    ]
+  },
+  {
+    "name": "Riosucio",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.4365576,
+      -77.1122594
+    ]
+  },
+  {
+    "name": "San José del Palmar",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.8950096,
+      -76.2350277
+    ]
+  },
+  {
+    "name": "Sipí",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.5649239,
+      -76.5209058
+    ]
+  },
+  {
+    "name": "Tadó",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.263378,
+      -76.5621239
+    ]
+  },
+  {
+    "name": "Unión Panamericana",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.2813079,
+      -76.6293417
+    ]
+  },
+  {
+    "name": "Unguía",
+    "department": "Chocó",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      8.0412373,
+      -77.0933751
+    ]
+  },
+  {
+    "name": "Alcalá",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.6748944,
+      -75.781669
+    ]
+  },
+  {
+    "name": "Andalucía",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.1694199,
+      -76.1670623
+    ]
+  },
+  {
+    "name": "Ansermanuevo",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.7957054,
+      -75.9937832
+    ]
+  },
+  {
+    "name": "Argelia",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.7270067,
+      -76.1213087
+    ]
+  },
+  {
+    "name": "Bolívar",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.3372359,
+      -76.1847682
+    ]
+  },
+  {
+    "name": "Buenaventura",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Colapso de viviendas y hospitales a máxima capacidad.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.8881929,
+      -77.0738324
+    ]
+  },
+  {
+    "name": "Buga",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.9000578,
+      -76.302013
+    ]
+  },
+  {
+    "name": "Bugalagrande",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.2138883,
+      -76.1571129
+    ]
+  },
+  {
+    "name": "Caicedonia",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.3076028,
+      -75.8397908
+    ]
+  },
+  {
+    "name": "Cali",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.4108435,
+      -76.5812127
+    ]
+  },
+  {
+    "name": "Calima",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.9318186,
+      -76.4842408
+    ]
+  },
+  {
+    "name": "Candelaria",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.4090481,
+      -76.347379
+    ]
+  },
+  {
+    "name": "Cartago",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.7106593,
+      -75.9323875
+    ]
+  },
+  {
+    "name": "Dagua",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.658161,
+      -76.6893973
+    ]
+  },
+  {
+    "name": "El Águila",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.9381541,
+      -76.0602975
+    ]
+  },
+  {
+    "name": "El Cairo",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.7621884,
+      -76.2207611
+    ]
+  },
+  {
+    "name": "El Cerrito",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.6829185,
+      -76.3071487
+    ]
+  },
+  {
+    "name": "El Dovio",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.511899,
+      -76.238102
+    ]
+  },
+  {
+    "name": "Florida",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.3004741,
+      -76.1897061
+    ]
+  },
+  {
+    "name": "Ginebra",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.7237049,
+      -76.2687988
+    ]
+  },
+  {
+    "name": "Guacarí",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.7630235,
+      -76.3344854
+    ]
+  },
+  {
+    "name": "Jamundí",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.2618357,
+      -76.5407975
+    ]
+  },
+  {
+    "name": "La Cumbre",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.6505888,
+      -76.569897
+    ]
+  },
+  {
+    "name": "La Unión",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.5373411,
+      -76.104472
+    ]
+  },
+  {
+    "name": "La Victoria",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.5232502,
+      -76.0357835
+    ]
+  },
+  {
+    "name": "Obando",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.5746578,
+      -75.9721783
+    ]
+  },
+  {
+    "name": "Palmira",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.5308373,
+      -76.2988048
+    ]
+  },
+  {
+    "name": "Pradera",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.4196687,
+      -76.2424378
+    ]
+  },
+  {
+    "name": "Restrepo",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.822009,
+      -76.5222535
+    ]
+  },
+  {
+    "name": "Riofrío",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.1071481,
+      -76.3839423
+    ]
+  },
+  {
+    "name": "Roldanillo",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.4091166,
+      -76.1543744
+    ]
+  },
+  {
+    "name": "San Pedro",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.9955682,
+      -76.2280495
+    ]
+  },
+  {
+    "name": "Sevilla",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.2645071,
+      -75.934396
+    ]
+  },
+  {
+    "name": "Toro",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.608925,
+      -76.0824045
+    ]
+  },
+  {
+    "name": "Trujillo",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.2123039,
+      -76.3188928
+    ]
+  },
+  {
+    "name": "Tuluá",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.0856667,
+      -76.1972779
+    ]
+  },
+  {
+    "name": "Ulloa",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.7081028,
+      -75.7812539
+    ]
+  },
+  {
+    "name": "Versalles",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.6166442,
+      -76.2325677
+    ]
+  },
+  {
+    "name": "Vijes",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.7003997,
+      -76.4428876
+    ]
+  },
+  {
+    "name": "Yotoco",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.8976611,
+      -76.387873
+    ]
+  },
+  {
+    "name": "Yumbo",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.5834664,
+      -76.4952223
+    ]
+  },
+  {
+    "name": "Zarzal",
+    "department": "Valle del Cauca",
+    "priority": "Muy alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.393943,
+      -76.0706472
+    ]
+  },
+  {
+    "name": "Aguadas",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.613113,
+      -75.4575902
+    ]
+  },
+  {
+    "name": "Anserma",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.2295674,
+      -75.7878384
+    ]
+  },
+  {
+    "name": "Aranzazu",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.2711368,
+      -75.4904079
+    ]
+  },
+  {
+    "name": "Belalcázar",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.994718,
+      -75.8122627
+    ]
+  },
+  {
+    "name": "Chinchiná",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Deslizamientos y vías intermunicipales cerradas.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.0021529,
+      -75.703989
+    ]
+  },
+  {
+    "name": "Filadelfia",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.2963713,
+      -75.5622217
+    ]
+  },
+  {
+    "name": "La Dorada",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.4457655,
+      -74.6618458
+    ]
+  },
+  {
+    "name": "La Merced",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.3990667,
+      -75.5478047
+    ]
+  },
+  {
+    "name": "Manizales",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Deslizamientos y vías intermunicipales cerradas.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.0743694,
+      -75.5081167
+    ]
+  },
+  {
+    "name": "Manzanares",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.253198,
+      -75.1544544
+    ]
+  },
+  {
+    "name": "Marmato",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.4754029,
+      -75.5987879
+    ]
+  },
+  {
+    "name": "Marquetalia",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.2966038,
+      -75.0546064
+    ]
+  },
+  {
+    "name": "Marulanda",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.2841208,
+      -75.2606169
+    ]
+  },
+  {
+    "name": "Neira",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.1917458,
+      -75.5195162
+    ]
+  },
+  {
+    "name": "Norcasia",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.5758643,
+      -74.8881645
+    ]
+  },
+  {
+    "name": "Pácora",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.5272323,
+      -75.4594449
+    ]
+  },
+  {
+    "name": "Palestina",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.0203683,
+      -75.6223394
+    ]
+  },
+  {
+    "name": "Pensilvania",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.3833488,
+      -75.1609683
+    ]
+  },
+  {
+    "name": "Riosucio",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.4209549,
+      -75.7030623
+    ]
+  },
+  {
+    "name": "Risaralda",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.1635531,
+      -75.7673963
+    ]
+  },
+  {
+    "name": "Salamina",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.4078495,
+      -75.4880496
+    ]
+  },
+  {
+    "name": "Samaná",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.4127804,
+      -74.992031
+    ]
+  },
+  {
+    "name": "San José",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.0804958,
+      -75.7923405
+    ]
+  },
+  {
+    "name": "Supía",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.455661,
+      -75.6495037
+    ]
+  },
+  {
+    "name": "Victoria",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.3167944,
+      -74.9120079
+    ]
+  },
+  {
+    "name": "Villamaría",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.9274251,
+      -75.4531346
+    ]
+  },
+  {
+    "name": "Viterbo",
+    "department": "Caldas",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.0618565,
+      -75.8734996
+    ]
+  },
+  {
+    "name": "Apía",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.1065543,
+      -75.9425022
+    ]
+  },
+  {
+    "name": "Balboa",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.9233884,
+      -75.9361785
+    ]
+  },
+  {
+    "name": "Belén de Umbría",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.2008906,
+      -75.8689921
+    ]
+  },
+  {
+    "name": "Dosquebradas",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Daños estructurales severos en zona urbana.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.8339551,
+      -75.6713013
+    ]
+  },
+  {
+    "name": "Guática",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.3155623,
+      -75.8008056
+    ]
+  },
+  {
+    "name": "La Celia",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.00335,
+      -76.0031995
+    ]
+  },
+  {
+    "name": "La Virginia",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.8995993,
+      -75.8825661
+    ]
+  },
+  {
+    "name": "Marsella",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.9583904,
+      -75.7541209
+    ]
+  },
+  {
+    "name": "Mistrató",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.4065243,
+      -75.9636005
+    ]
+  },
+  {
+    "name": "Pereira",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.7854606,
+      -75.788322
+    ]
+  },
+  {
+    "name": "Pueblo Rico",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.2215789,
+      -76.0302156
+    ]
+  },
+  {
+    "name": "Quinchía",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.3261634,
+      -75.7218684
+    ]
+  },
+  {
+    "name": "Santa Rosa de Cabal",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.8650708,
+      -75.6211554
+    ]
+  },
+  {
+    "name": "Santuario",
+    "department": "Risaralda",
+    "priority": "Alta",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.0732065,
+      -75.9624682
+    ]
+  },
+  {
+    "name": "Abejorral",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.7914299,
+      -75.4270381
+    ]
+  },
+  {
+    "name": "Abriaquí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.631864,
+      -76.0645258
+    ]
+  },
+  {
+    "name": "Alejandría",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.3769175,
+      -75.1411601
+    ]
+  },
+  {
+    "name": "Amagá",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0406977,
+      -75.7030694
+    ]
+  },
+  {
+    "name": "Amalfi",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.9070097,
+      -75.0735908
+    ]
+  },
+  {
+    "name": "Andes",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectaciones en Suroeste y occidente antioqueño.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.6556134,
+      -75.8776753
+    ]
+  },
+  {
+    "name": "Angelópolis",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1115405,
+      -75.7102848
+    ]
+  },
+  {
+    "name": "Angostura",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.8858191,
+      -75.3349565
+    ]
+  },
+  {
+    "name": "Anorí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.0736127,
+      -75.1466433
+    ]
+  },
+  {
+    "name": "Anzá",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.3034529,
+      -75.8540836
+    ]
+  },
+  {
+    "name": "Apartadó",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.8849011,
+      -76.6227461
+    ]
+  },
+  {
+    "name": "Arboletes",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      8.8528266,
+      -76.4273168
+    ]
+  },
+  {
+    "name": "Argelia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.7310785,
+      -75.1428525
+    ]
+  },
+  {
+    "name": "Armenia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectaciones en Suroeste y occidente antioqueño.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1561777,
+      -75.7870472
+    ]
+  },
+  {
+    "name": "Barbosa",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.4370185,
+      -75.3313779
+    ]
+  },
+  {
+    "name": "Bello",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.334997,
+      -75.5582665
+    ]
+  },
+  {
+    "name": "Belmira",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.606779,
+      -75.667459
+    ]
+  },
+  {
+    "name": "Betania",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.7451779,
+      -75.9768362
+    ]
+  },
+  {
+    "name": "Betulia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1134294,
+      -75.9845433
+    ]
+  },
+  {
+    "name": "Briceño",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.1231235,
+      -75.5818421
+    ]
+  },
+  {
+    "name": "Buriticá",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.719853,
+      -75.9068707
+    ]
+  },
+  {
+    "name": "Cáceres",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.577089,
+      -75.3514383
+    ]
+  },
+  {
+    "name": "Caicedo",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.405955,
+      -75.9825592
+    ]
+  },
+  {
+    "name": "Caldas",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0918609,
+      -75.6356917
+    ]
+  },
+  {
+    "name": "Campamento",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.9790857,
+      -75.2963715
+    ]
+  },
+  {
+    "name": "Cañasgordas",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.7519854,
+      -76.0261638
+    ]
+  },
+  {
+    "name": "Caracolí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.4092756,
+      -74.7566979
+    ]
+  },
+  {
+    "name": "Caramanta",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.5487065,
+      -75.6444056
+    ]
+  },
+  {
+    "name": "Carepa",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.7984516,
+      -76.7460389
+    ]
+  },
+  {
+    "name": "Carolina del Príncipe",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.7234802,
+      -75.2815889
+    ]
+  },
+  {
+    "name": "Caucasia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.9877579,
+      -75.1983745
+    ]
+  },
+  {
+    "name": "Chigorodó",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.6129384,
+      -76.638426
+    ]
+  },
+  {
+    "name": "Cisneros",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.5382418,
+      -75.0871316
+    ]
+  },
+  {
+    "name": "Ciudad Bolívar",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectaciones en Suroeste y occidente antioqueño.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.8500342,
+      -76.0208666
+    ]
+  },
+  {
+    "name": "Cocorná",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0580111,
+      -75.1859102
+    ]
+  },
+  {
+    "name": "Concepción",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.3953198,
+      -75.259323
+    ]
+  },
+  {
+    "name": "Concordia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0457595,
+      -75.9074199
+    ]
+  },
+  {
+    "name": "Copacabana",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.3461047,
+      -75.5080262
+    ]
+  },
+  {
+    "name": "Dabeiba",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.0015209,
+      -76.2666243
+    ]
+  },
+  {
+    "name": "Donmatías",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.4862703,
+      -75.3946313
+    ]
+  },
+  {
+    "name": "Ebéjico",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.3265312,
+      -75.7685045
+    ]
+  },
+  {
+    "name": "El Bagre",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.5989686,
+      -74.8046507
+    ]
+  },
+  {
+    "name": "El Carmen de Viboral",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0833063,
+      -75.3353501
+    ]
+  },
+  {
+    "name": "El Peñol",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.2187927,
+      -75.2432026
+    ]
+  },
+  {
+    "name": "El Retiro",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0572745,
+      -75.502611
+    ]
+  },
+  {
+    "name": "El Santuario",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1221525,
+      -75.2653958
+    ]
+  },
+  {
+    "name": "Entrerríos",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.5915992,
+      -75.5622405
+    ]
+  },
+  {
+    "name": "Envigado",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1701348,
+      -75.587415
+    ]
+  },
+  {
+    "name": "Fredonia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.9270644,
+      -75.6718221
+    ]
+  },
+  {
+    "name": "Frontino",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.7721761,
+      -76.1311575
+    ]
+  },
+  {
+    "name": "Giraldo",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.6804539,
+      -75.95338
+    ]
+  },
+  {
+    "name": "Girardota",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.3773809,
+      -75.4459762
+    ]
+  },
+  {
+    "name": "Gómez Plata",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.6815224,
+      -75.2194104
+    ]
+  },
+  {
+    "name": "Granada",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1442998,
+      -75.1844057
+    ]
+  },
+  {
+    "name": "Guadalupe",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.8149918,
+      -75.2403991
+    ]
+  },
+  {
+    "name": "Guarne",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.2800171,
+      -75.4426875
+    ]
+  },
+  {
+    "name": "Guatapé",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.2342179,
+      -75.1617452
+    ]
+  },
+  {
+    "name": "Heliconia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.2076404,
+      -75.7339685
+    ]
+  },
+  {
+    "name": "Hispania",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.799535,
+      -75.9073763
+    ]
+  },
+  {
+    "name": "Itagüí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1724352,
+      -75.6093254
+    ]
+  },
+  {
+    "name": "Ituango",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.1723319,
+      -75.7640925
+    ]
+  },
+  {
+    "name": "Jardín",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.5990503,
+      -75.8191833
+    ]
+  },
+  {
+    "name": "Jericó",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.7914622,
+      -75.7862133
+    ]
+  },
+  {
+    "name": "La Ceja",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0309532,
+      -75.4316155
+    ]
+  },
+  {
+    "name": "La Estrella",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1576781,
+      -75.6433878
+    ]
+  },
+  {
+    "name": "La Pintada",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.7466446,
+      -75.6054273
+    ]
+  },
+  {
+    "name": "La Unión",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.9737744,
+      -75.3613093
+    ]
+  },
+  {
+    "name": "Liborina",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.6781311,
+      -75.8112309
+    ]
+  },
+  {
+    "name": "Maceo",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.5535012,
+      -74.7877474
+    ]
+  },
+  {
+    "name": "Marinilla",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1736417,
+      -75.3346548
+    ]
+  },
+  {
+    "name": "Medellín",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.2697324,
+      -75.6025597
+    ]
+  },
+  {
+    "name": "Montebello",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.9458633,
+      -75.5246825
+    ]
+  },
+  {
+    "name": "Murindó",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.9782419,
+      -76.8192432
+    ]
+  },
+  {
+    "name": "Mutatá",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.2440678,
+      -76.436542
+    ]
+  },
+  {
+    "name": "Nariño",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.5520333,
+      -75.1917235
+    ]
+  },
+  {
+    "name": "Nechí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      8.0938077,
+      -74.7751988
+    ]
+  },
+  {
+    "name": "Necoclí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      8.4242821,
+      -76.784019
+    ]
+  },
+  {
+    "name": "Olaya",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.6281792,
+      -75.8123079
+    ]
+  },
+  {
+    "name": "Peque",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.0216424,
+      -75.9095164
+    ]
+  },
+  {
+    "name": "Pueblorrico",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.8194403,
+      -75.8592985
+    ]
+  },
+  {
+    "name": "Puerto Berrío",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.4899205,
+      -74.4020634
+    ]
+  },
+  {
+    "name": "Puerto Nare",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1876653,
+      -74.5828711
+    ]
+  },
+  {
+    "name": "Puerto Triunfo",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.8689335,
+      -74.6407965
+    ]
+  },
+  {
+    "name": "Remedios",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.0285327,
+      -74.695191
+    ]
+  },
+  {
+    "name": "Rionegro",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1536166,
+      -75.3741691
+    ]
+  },
+  {
+    "name": "Sabanalarga",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.848687,
+      -75.8166534
+    ]
+  },
+  {
+    "name": "Sabaneta",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1515344,
+      -75.6153715
+    ]
+  },
+  {
+    "name": "Salgar",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.9631358,
+      -75.9791386
+    ]
+  },
+  {
+    "name": "San Andrés de Cuerquia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.9148672,
+      -75.6764208
+    ]
+  },
+  {
+    "name": "San Carlos",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.1908026,
+      -74.9437879
+    ]
+  },
+  {
+    "name": "San Francisco",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.8787216,
+      -74.9611669
+    ]
+  },
+  {
+    "name": "San Jerónimo",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.4427228,
+      -75.727937
+    ]
+  },
+  {
+    "name": "San José de la Montaña",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.8169298,
+      -75.6756064
+    ]
+  },
+  {
+    "name": "San Juan de Urabá",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      8.7609887,
+      -76.5283566
+    ]
+  },
+  {
+    "name": "San Luis",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0428128,
+      -74.9944061
+    ]
+  },
+  {
+    "name": "San Pedro de Urabá",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      8.2778883,
+      -76.3830793
+    ]
+  },
+  {
+    "name": "San Pedro de los Milagros",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.4618141,
+      -75.5560645
+    ]
+  },
+  {
+    "name": "San Rafael",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.2954934,
+      -75.0280123
+    ]
+  },
+  {
+    "name": "San Roque",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.4851146,
+      -75.0195044
+    ]
+  },
+  {
+    "name": "San Vicente",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.2826782,
+      -75.3318244
+    ]
+  },
+  {
+    "name": "Santa Bárbara",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.8743766,
+      -75.5679573
+    ]
+  },
+  {
+    "name": "Santa Fe de Antioquia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.5401946,
+      -75.9159851
+    ]
+  },
+  {
+    "name": "Santa Rosa de Osos",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.6453171,
+      -75.4614576
+    ]
+  },
+  {
+    "name": "Santo Domingo",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.471221,
+      -75.1643724
+    ]
+  },
+  {
+    "name": "Segovia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.081679,
+      -74.7009089
+    ]
+  },
+  {
+    "name": "Sonsón",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.7106659,
+      -75.3103532
+    ]
+  },
+  {
+    "name": "Sopetrán",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.5009582,
+      -75.7424979
+    ]
+  },
+  {
+    "name": "Támesis",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.6653183,
+      -75.7139734
+    ]
+  },
+  {
+    "name": "Tarazá",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.5804751,
+      -75.3998498
+    ]
+  },
+  {
+    "name": "Tarso",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.864064,
+      -75.8217932
+    ]
+  },
+  {
+    "name": "Titiribí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.0633763,
+      -75.79373
+    ]
+  },
+  {
+    "name": "Toledo",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.0109536,
+      -75.6921058
+    ]
+  },
+  {
+    "name": "Turbo",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      8.0952972,
+      -76.7289956
+    ]
+  },
+  {
+    "name": "Uramita",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.8993072,
+      -76.1742258
+    ]
+  },
+  {
+    "name": "Urrao",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.3168685,
+      -76.1344983
+    ]
+  },
+  {
+    "name": "Valdivia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.165519,
+      -75.438614
+    ]
+  },
+  {
+    "name": "Valparaíso",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.6153841,
+      -75.6247028
+    ]
+  },
+  {
+    "name": "Vegachí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.8613372,
+      -74.7234644
+    ]
+  },
+  {
+    "name": "Venecia",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      5.9635386,
+      -75.7339175
+    ]
+  },
+  {
+    "name": "Vigía del Fuerte",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.5896299,
+      -76.8962209
+    ]
+  },
+  {
+    "name": "Yalí",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.675426,
+      -74.84226
+    ]
+  },
+  {
+    "name": "Yarumal",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.9625927,
+      -75.4165529
+    ]
+  },
+  {
+    "name": "Yolombó",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      6.5981185,
+      -75.0108088
+    ]
+  },
+  {
+    "name": "Yondó",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.0044426,
+      -73.9113922
+    ]
+  },
+  {
+    "name": "Zaragoza",
+    "department": "Antioquia",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      7.4925154,
+      -74.8682314
+    ]
+  },
+  {
+    "name": "Almaguer",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.9142744,
+      -76.8548514
+    ]
+  },
+  {
+    "name": "Argelia",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.2568076,
+      -77.2494094
+    ]
+  },
+  {
+    "name": "Balboa",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.042096,
+      -77.2157842
+    ]
+  },
+  {
+    "name": "Bolívar",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.8733279,
+      -76.9919324
+    ]
+  },
+  {
+    "name": "Buenos Aires",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.0165467,
+      -76.6406849
+    ]
+  },
+  {
+    "name": "Cajibío",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.6231693,
+      -76.5693504
+    ]
+  },
+  {
+    "name": "Caldono",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.796326,
+      -76.4836526
+    ]
+  },
+  {
+    "name": "Caloto",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.0336985,
+      -76.4085199
+    ]
+  },
+  {
+    "name": "Corinto",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.1439306,
+      -76.2002489
+    ]
+  },
+  {
+    "name": "El Tambo",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.4511923,
+      -76.8117409
+    ]
+  },
+  {
+    "name": "Florencia",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6830289,
+      -77.0726877
+    ]
+  },
+  {
+    "name": "Guachené",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.1323331,
+      -76.3916018
+    ]
+  },
+  {
+    "name": "Guapí",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.5708069,
+      -77.882619
+    ]
+  },
+  {
+    "name": "Inzá",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.5500211,
+      -76.0643978
+    ]
+  },
+  {
+    "name": "Jambaló",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.7776822,
+      -76.3243788
+    ]
+  },
+  {
+    "name": "La Sierra",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.1763552,
+      -76.7634852
+    ]
+  },
+  {
+    "name": "La Vega",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.0525728,
+      -76.7759384
+    ]
+  },
+  {
+    "name": "López de Micay",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.847624,
+      -77.247802
+    ]
+  },
+  {
+    "name": "Mercaderes",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.8004122,
+      -77.165892
+    ]
+  },
+  {
+    "name": "Miranda",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.2511475,
+      -76.2291572
+    ]
+  },
+  {
+    "name": "Morales",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.8438981,
+      -76.848882
+    ]
+  },
+  {
+    "name": "Padilla",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.2254364,
+      -76.3139739
+    ]
+  },
+  {
+    "name": "Páez",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.7357822,
+      -75.9915281
+    ]
+  },
+  {
+    "name": "Patía",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.07501,
+      -77.0616762
+    ]
+  },
+  {
+    "name": "Piamonte",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.1185119,
+      -76.3265519
+    ]
+  },
+  {
+    "name": "Piendamó",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.6404294,
+      -76.5325746
+    ]
+  },
+  {
+    "name": "Popayán",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.4431455,
+      -76.5463299
+    ]
+  },
+  {
+    "name": "Puerto Tejada",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Interrupciones de energía y acueducto rural.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.2288972,
+      -76.4192267
+    ]
+  },
+  {
+    "name": "Puracé",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.3811038,
+      -76.4551183
+    ]
+  },
+  {
+    "name": "Rosas",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.2621018,
+      -76.7392875
+    ]
+  },
+  {
+    "name": "San Sebastián",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.8386665,
+      -76.7697662
+    ]
+  },
+  {
+    "name": "Santa Rosa",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.7018257,
+      -76.5725868
+    ]
+  },
+  {
+    "name": "Santander de Quilichao",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Interrupciones de energía y acueducto rural.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.0075752,
+      -76.4856531
+    ]
+  },
+  {
+    "name": "Silvia",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.6115436,
+      -76.378424
+    ]
+  },
+  {
+    "name": "Sotará",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.2248489,
+      -76.5924607
+    ]
+  },
+  {
+    "name": "Suárez",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.9543543,
+      -76.6948801
+    ]
+  },
+  {
+    "name": "Sucre",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.0382339,
+      -76.9249937
+    ]
+  },
+  {
+    "name": "Timbío",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.3528374,
+      -76.683012
+    ]
+  },
+  {
+    "name": "Timbiquí",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.7705138,
+      -77.6643122
+    ]
+  },
+  {
+    "name": "Toribío",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.9554697,
+      -76.2686889
+    ]
+  },
+  {
+    "name": "Totoró",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.5109533,
+      -76.4011501
+    ]
+  },
+  {
+    "name": "Villa Rica",
+    "department": "Cauca",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      3.1765241,
+      -76.4637676
+    ]
+  },
+  {
+    "name": "Armenia",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Colapso de edificaciones antiguas y alertas por réplicas.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.4919894,
+      -75.7413961
+    ]
+  },
+  {
+    "name": "Buenavista",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.3599158,
+      -75.7386779
+    ]
+  },
+  {
+    "name": "Calarcá",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.5305855,
+      -75.640632
+    ]
+  },
+  {
+    "name": "Circasia",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.6075667,
+      -75.6667067
+    ]
+  },
+  {
+    "name": "Córdoba",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.3900715,
+      -75.6858247
+    ]
+  },
+  {
+    "name": "Filandia",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.6750767,
+      -75.6579957
+    ]
+  },
+  {
+    "name": "Génova",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.1929922,
+      -75.7448118
+    ]
+  },
+  {
+    "name": "La Tebaida",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Colapso de edificaciones antiguas y alertas por réplicas.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.4512175,
+      -75.7887314
+    ]
+  },
+  {
+    "name": "Montenegro",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.5664176,
+      -75.7507081
+    ]
+  },
+  {
+    "name": "Pijao",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.3341444,
+      -75.7038062
+    ]
+  },
+  {
+    "name": "Quimbaya",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.6224544,
+      -75.7631282
+    ]
+  },
+  {
+    "name": "Salento",
+    "department": "Quindío",
+    "priority": "Media",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      4.6373012,
+      -75.569799
+    ]
+  },
+  {
+    "name": "Aldana",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.8822547,
+      -77.7003164
+    ]
+  },
+  {
+    "name": "Ancuyá",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.2615284,
+      -77.5147482
+    ]
+  },
+  {
+    "name": "Arboleda",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.4846286,
+      -77.121058
+    ]
+  },
+  {
+    "name": "Barbacoas",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6741037,
+      -78.1364951
+    ]
+  },
+  {
+    "name": "Belén",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.5961164,
+      -77.0159361
+    ]
+  },
+  {
+    "name": "Buesaco",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.384101,
+      -77.156619
+    ]
+  },
+  {
+    "name": "Chachagüí",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.360752,
+      -77.2831744
+    ]
+  },
+  {
+    "name": "Colón",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6310467,
+      -77.0363205
+    ]
+  },
+  {
+    "name": "Consacá",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.2092969,
+      -77.4267187
+    ]
+  },
+  {
+    "name": "Contadero",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.9275026,
+      -77.521693
+    ]
+  },
+  {
+    "name": "Córdoba",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.8540703,
+      -77.5182592
+    ]
+  },
+  {
+    "name": "Cuaspud",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.8750911,
+      -77.7420114
+    ]
+  },
+  {
+    "name": "Cumbal",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.9092082,
+      -77.788906
+    ]
+  },
+  {
+    "name": "Cumbitara",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6473621,
+      -77.578094
+    ]
+  },
+  {
+    "name": "El Charco",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.4798209,
+      -78.110793
+    ]
+  },
+  {
+    "name": "El Peñol",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.454125,
+      -77.4396657
+    ]
+  },
+  {
+    "name": "El Rosario",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.7426237,
+      -77.3349654
+    ]
+  },
+  {
+    "name": "El Tablón",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6377965,
+      -76.9596243
+    ]
+  },
+  {
+    "name": "El Tambo",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.4093115,
+      -77.3923306
+    ]
+  },
+  {
+    "name": "Francisco Pizarro",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.0865197,
+      -78.597912
+    ]
+  },
+  {
+    "name": "Funes",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.9987301,
+      -77.448542
+    ]
+  },
+  {
+    "name": "Guachucal",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.9573434,
+      -77.7333581
+    ]
+  },
+  {
+    "name": "Guaitarilla",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.1305245,
+      -77.5483421
+    ]
+  },
+  {
+    "name": "Gualmatán",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.9200211,
+      -77.5661383
+    ]
+  },
+  {
+    "name": "Iles",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.9698295,
+      -77.5201636
+    ]
+  },
+  {
+    "name": "Imués",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.0693749,
+      -77.504296
+    ]
+  },
+  {
+    "name": "Ipiales",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.8236501,
+      -77.6348556
+    ]
+  },
+  {
+    "name": "La Cruz",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6003354,
+      -76.9711667
+    ]
+  },
+  {
+    "name": "La Florida",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.2986074,
+      -77.4044845
+    ]
+  },
+  {
+    "name": "La Llanada",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.472721,
+      -77.5802015
+    ]
+  },
+  {
+    "name": "La Tola",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.3995791,
+      -78.1882925
+    ]
+  },
+  {
+    "name": "La Unión",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.5989976,
+      -77.1305999
+    ]
+  },
+  {
+    "name": "Leiva",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.9356061,
+      -77.3068188
+    ]
+  },
+  {
+    "name": "Linares",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.3516458,
+      -77.5235169
+    ]
+  },
+  {
+    "name": "Los Andes",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.4932789,
+      -77.5210552
+    ]
+  },
+  {
+    "name": "Magüí Payán",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.7665774,
+      -78.1835713
+    ]
+  },
+  {
+    "name": "Mallama",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.1889966,
+      -77.8705652
+    ]
+  },
+  {
+    "name": "Mosquera",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.507865,
+      -78.4516461
+    ]
+  },
+  {
+    "name": "Nariño",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.2906755,
+      -77.3578572
+    ]
+  },
+  {
+    "name": "Olaya Herrera",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.348495,
+      -78.3267125
+    ]
+  },
+  {
+    "name": "Ospina",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.0586533,
+      -77.5656698
+    ]
+  },
+  {
+    "name": "Pasto",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.2140275,
+      -77.2785096
+    ]
+  },
+  {
+    "name": "Policarpa",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6286636,
+      -77.4594651
+    ]
+  },
+  {
+    "name": "Potosí",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.7340175,
+      -77.4091765
+    ]
+  },
+  {
+    "name": "Providencia",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.2391932,
+      -77.5973656
+    ]
+  },
+  {
+    "name": "Puerres",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.7996157,
+      -77.2564469
+    ]
+  },
+  {
+    "name": "Pupiales",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      0.8707969,
+      -77.6419358
+    ]
+  },
+  {
+    "name": "Ricaurte",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.213249,
+      -77.9945007
+    ]
+  },
+  {
+    "name": "Roberto Payán",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6968414,
+      -78.2451441
+    ]
+  },
+  {
+    "name": "Samaniego",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.3389525,
+      -77.5933795
+    ]
+  },
+  {
+    "name": "San Bernardo",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.5158752,
+      -77.0457718
+    ]
+  },
+  {
+    "name": "San José de Albán",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.4744366,
+      -77.0813409
+    ]
+  },
+  {
+    "name": "San Lorenzo",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.5031548,
+      -77.2153366
+    ]
+  },
+  {
+    "name": "San Pablo",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.6788623,
+      -76.989174
+    ]
+  },
+  {
+    "name": "San Pedro de Cartago",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.5524899,
+      -77.1200173
+    ]
+  },
+  {
+    "name": "Sandoná",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.2863843,
+      -77.4710722
+    ]
+  },
+  {
+    "name": "Santa Bárbara",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      2.3242097,
+      -77.9273143
+    ]
+  },
+  {
+    "name": "Santacruz",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectado simultáneamente por incendios forestales.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.2226827,
+      -77.6769685
+    ]
+  },
+  {
+    "name": "Sapuyes",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.0418207,
+      -77.7062802
+    ]
+  },
+  {
+    "name": "Taminango",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.5696216,
+      -77.2772963
+    ]
+  },
+  {
+    "name": "Tangua",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.0944024,
+      -77.3948049
+    ]
+  },
+  {
+    "name": "Tumaco",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.8062887,
+      -78.7649814
+    ]
+  },
+  {
+    "name": "Túquerres",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.0877024,
+      -77.6188242
+    ]
+  },
+  {
+    "name": "Yacuanquer",
+    "department": "Nariño",
+    "priority": "Emergencia paralela",
+    "note": "Afectación reportada en censo preliminar.",
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "coords": [
+      1.1222843,
+      -77.4291925
+    ]
+  }
+]
