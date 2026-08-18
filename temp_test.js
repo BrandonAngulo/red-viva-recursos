@@ -3801,7 +3801,7 @@ module.exports = {
   },
   {
     "id": "aldana-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Aldana",
     "department": "Nariño",
     "coords": [
@@ -3814,7 +3814,7 @@ module.exports = {
   },
   {
     "id": "ancuy-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Ancuyá",
     "department": "Nariño",
     "coords": [
@@ -3827,7 +3827,7 @@ module.exports = {
   },
   {
     "id": "arboleda-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Arboleda",
     "department": "Nariño",
     "coords": [
@@ -3840,7 +3840,7 @@ module.exports = {
   },
   {
     "id": "barbacoas-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Barbacoas",
     "department": "Nariño",
     "coords": [
@@ -3853,7 +3853,7 @@ module.exports = {
   },
   {
     "id": "bel-n-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Belén",
     "department": "Nariño",
     "coords": [
@@ -3866,7 +3866,7 @@ module.exports = {
   },
   {
     "id": "buesaco-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Buesaco",
     "department": "Nariño",
     "coords": [
@@ -3879,7 +3879,7 @@ module.exports = {
   },
   {
     "id": "chachag-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Chachagüí",
     "department": "Nariño",
     "coords": [
@@ -3892,7 +3892,7 @@ module.exports = {
   },
   {
     "id": "col-n-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Colón",
     "department": "Nariño",
     "coords": [
@@ -3905,7 +3905,7 @@ module.exports = {
   },
   {
     "id": "consac-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Consacá",
     "department": "Nariño",
     "coords": [
@@ -3918,7 +3918,7 @@ module.exports = {
   },
   {
     "id": "contadero-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Contadero",
     "department": "Nariño",
     "coords": [
@@ -3931,7 +3931,7 @@ module.exports = {
   },
   {
     "id": "c-rdoba-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Córdoba",
     "department": "Nariño",
     "coords": [
@@ -3944,7 +3944,7 @@ module.exports = {
   },
   {
     "id": "cuaspud-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Cuaspud",
     "department": "Nariño",
     "coords": [
@@ -3957,7 +3957,7 @@ module.exports = {
   },
   {
     "id": "cumbal-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Cumbal",
     "department": "Nariño",
     "coords": [
@@ -3970,7 +3970,7 @@ module.exports = {
   },
   {
     "id": "cumbitara-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Cumbitara",
     "department": "Nariño",
     "coords": [
@@ -3983,7 +3983,7 @@ module.exports = {
   },
   {
     "id": "el-charco-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "El Charco",
     "department": "Nariño",
     "coords": [
@@ -3996,7 +3996,7 @@ module.exports = {
   },
   {
     "id": "el-pe-ol-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "El Peñol",
     "department": "Nariño",
     "coords": [
@@ -4009,7 +4009,7 @@ module.exports = {
   },
   {
     "id": "el-rosario-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "El Rosario",
     "department": "Nariño",
     "coords": [
@@ -4022,7 +4022,7 @@ module.exports = {
   },
   {
     "id": "el-tabl-n-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "El Tablón",
     "department": "Nariño",
     "coords": [
@@ -4035,7 +4035,7 @@ module.exports = {
   },
   {
     "id": "el-tambo-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "El Tambo",
     "department": "Nariño",
     "coords": [
@@ -4048,7 +4048,7 @@ module.exports = {
   },
   {
     "id": "francisco-pizarro-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Francisco Pizarro",
     "department": "Nariño",
     "coords": [
@@ -4061,7 +4061,7 @@ module.exports = {
   },
   {
     "id": "funes-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Funes",
     "department": "Nariño",
     "coords": [
@@ -4074,7 +4074,7 @@ module.exports = {
   },
   {
     "id": "guachucal-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Guachucal",
     "department": "Nariño",
     "coords": [
@@ -4087,7 +4087,7 @@ module.exports = {
   },
   {
     "id": "guaitarilla-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Guaitarilla",
     "department": "Nariño",
     "coords": [
@@ -4100,7 +4100,7 @@ module.exports = {
   },
   {
     "id": "gualmat-n-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Gualmatán",
     "department": "Nariño",
     "coords": [
@@ -4113,7 +4113,7 @@ module.exports = {
   },
   {
     "id": "iles-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Iles",
     "department": "Nariño",
     "coords": [
@@ -4126,7 +4126,7 @@ module.exports = {
   },
   {
     "id": "imu-s-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Imués",
     "department": "Nariño",
     "coords": [
@@ -4139,7 +4139,7 @@ module.exports = {
   },
   {
     "id": "ipiales-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Ipiales",
     "department": "Nariño",
     "coords": [
@@ -4152,7 +4152,7 @@ module.exports = {
   },
   {
     "id": "la-cruz-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "La Cruz",
     "department": "Nariño",
     "coords": [
@@ -4165,7 +4165,7 @@ module.exports = {
   },
   {
     "id": "la-florida-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "La Florida",
     "department": "Nariño",
     "coords": [
@@ -4178,7 +4178,7 @@ module.exports = {
   },
   {
     "id": "la-llanada-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "La Llanada",
     "department": "Nariño",
     "coords": [
@@ -4191,7 +4191,7 @@ module.exports = {
   },
   {
     "id": "la-tola-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "La Tola",
     "department": "Nariño",
     "coords": [
@@ -4204,7 +4204,7 @@ module.exports = {
   },
   {
     "id": "la-uni-n-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "La Unión",
     "department": "Nariño",
     "coords": [
@@ -4217,7 +4217,7 @@ module.exports = {
   },
   {
     "id": "leiva-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Leiva",
     "department": "Nariño",
     "coords": [
@@ -4230,7 +4230,7 @@ module.exports = {
   },
   {
     "id": "linares-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Linares",
     "department": "Nariño",
     "coords": [
@@ -4243,7 +4243,7 @@ module.exports = {
   },
   {
     "id": "los-andes-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Los Andes",
     "department": "Nariño",
     "coords": [
@@ -4256,7 +4256,7 @@ module.exports = {
   },
   {
     "id": "mag-pay-n-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Magüí Payán",
     "department": "Nariño",
     "coords": [
@@ -4269,7 +4269,7 @@ module.exports = {
   },
   {
     "id": "mallama-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Mallama",
     "department": "Nariño",
     "coords": [
@@ -4282,7 +4282,7 @@ module.exports = {
   },
   {
     "id": "mosquera-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Mosquera",
     "department": "Nariño",
     "coords": [
@@ -4295,7 +4295,7 @@ module.exports = {
   },
   {
     "id": "nari-o-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Nariño",
     "department": "Nariño",
     "coords": [
@@ -4308,7 +4308,7 @@ module.exports = {
   },
   {
     "id": "olaya-herrera-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Olaya Herrera",
     "department": "Nariño",
     "coords": [
@@ -4321,7 +4321,7 @@ module.exports = {
   },
   {
     "id": "ospina-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Ospina",
     "department": "Nariño",
     "coords": [
@@ -4334,7 +4334,7 @@ module.exports = {
   },
   {
     "id": "pasto-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Pasto",
     "department": "Nariño",
     "coords": [
@@ -4347,7 +4347,7 @@ module.exports = {
   },
   {
     "id": "policarpa-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Policarpa",
     "department": "Nariño",
     "coords": [
@@ -4360,7 +4360,7 @@ module.exports = {
   },
   {
     "id": "potos-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Potosí",
     "department": "Nariño",
     "coords": [
@@ -4373,7 +4373,7 @@ module.exports = {
   },
   {
     "id": "providencia-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Providencia",
     "department": "Nariño",
     "coords": [
@@ -4386,7 +4386,7 @@ module.exports = {
   },
   {
     "id": "puerres-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Puerres",
     "department": "Nariño",
     "coords": [
@@ -4399,7 +4399,7 @@ module.exports = {
   },
   {
     "id": "pupiales-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Pupiales",
     "department": "Nariño",
     "coords": [
@@ -4412,7 +4412,7 @@ module.exports = {
   },
   {
     "id": "ricaurte-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Ricaurte",
     "department": "Nariño",
     "coords": [
@@ -4425,7 +4425,7 @@ module.exports = {
   },
   {
     "id": "roberto-pay-n-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Roberto Payán",
     "department": "Nariño",
     "coords": [
@@ -4438,7 +4438,7 @@ module.exports = {
   },
   {
     "id": "samaniego-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Samaniego",
     "department": "Nariño",
     "coords": [
@@ -4451,7 +4451,7 @@ module.exports = {
   },
   {
     "id": "san-bernardo-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "San Bernardo",
     "department": "Nariño",
     "coords": [
@@ -4464,7 +4464,7 @@ module.exports = {
   },
   {
     "id": "san-jos-de-alb-n-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "San José de Albán",
     "department": "Nariño",
     "coords": [
@@ -4477,7 +4477,7 @@ module.exports = {
   },
   {
     "id": "san-lorenzo-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "San Lorenzo",
     "department": "Nariño",
     "coords": [
@@ -4490,7 +4490,7 @@ module.exports = {
   },
   {
     "id": "san-pablo-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "San Pablo",
     "department": "Nariño",
     "coords": [
@@ -4503,7 +4503,7 @@ module.exports = {
   },
   {
     "id": "san-pedro-de-cartago-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "San Pedro de Cartago",
     "department": "Nariño",
     "coords": [
@@ -4516,7 +4516,7 @@ module.exports = {
   },
   {
     "id": "sandon-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Sandoná",
     "department": "Nariño",
     "coords": [
@@ -4529,7 +4529,7 @@ module.exports = {
   },
   {
     "id": "santa-b-rbara-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Santa Bárbara",
     "department": "Nariño",
     "coords": [
@@ -4542,7 +4542,7 @@ module.exports = {
   },
   {
     "id": "santacruz-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Santacruz",
     "department": "Nariño",
     "coords": [
@@ -4555,7 +4555,7 @@ module.exports = {
   },
   {
     "id": "sapuyes-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Sapuyes",
     "department": "Nariño",
     "coords": [
@@ -4568,7 +4568,7 @@ module.exports = {
   },
   {
     "id": "taminango-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Taminango",
     "department": "Nariño",
     "coords": [
@@ -4581,7 +4581,7 @@ module.exports = {
   },
   {
     "id": "tangua-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Tangua",
     "department": "Nariño",
     "coords": [
@@ -4594,7 +4594,7 @@ module.exports = {
   },
   {
     "id": "tumaco-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Tumaco",
     "department": "Nariño",
     "coords": [
@@ -4607,7 +4607,7 @@ module.exports = {
   },
   {
     "id": "t-querres-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Túquerres",
     "department": "Nariño",
     "coords": [
@@ -4620,7 +4620,7 @@ module.exports = {
   },
   {
     "id": "yacuanquer-nari-o",
-    "type": "ciudad",
+    "type": "incendio",
     "name": "Yacuanquer",
     "department": "Nariño",
     "coords": [

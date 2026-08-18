@@ -14,7 +14,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "alto-baud-choc-",
@@ -27,7 +28,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "bagad-choc-",
@@ -40,7 +42,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "bah-a-solano-choc-",
@@ -53,7 +56,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "bajo-baud-choc-",
@@ -66,7 +70,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "bojay-choc-",
@@ -79,7 +84,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "cant-n-de-san-pablo-choc-",
@@ -92,7 +98,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "c-rtegui-choc-",
@@ -105,7 +112,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "condoto-choc-",
@@ -118,7 +126,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "el-atrato-choc-",
@@ -131,7 +140,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "el-carmen-de-atrato-choc-",
@@ -144,7 +154,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "el-carmen-del-dari-n-choc-",
@@ -157,7 +168,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "istmina-choc-",
@@ -170,7 +182,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "jurad-choc-",
@@ -183,7 +196,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "litoral-de-san-juan-choc-",
@@ -196,7 +210,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "llor-choc-",
@@ -209,7 +224,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "medio-atrato-choc-",
@@ -222,7 +238,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "medio-baud-choc-",
@@ -235,7 +252,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "medio-san-juan-choc-",
@@ -248,7 +266,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "n-vita-choc-",
@@ -261,7 +280,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectaciones críticas. Múltiples vías bloqueadas.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "nuqu-choc-",
@@ -274,7 +294,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "quibd-choc-",
@@ -287,7 +308,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectaciones críticas. Múltiples vías bloqueadas.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "r-o-ir-choc-",
@@ -300,7 +322,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "r-o-quito-choc-",
@@ -313,7 +336,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "riosucio-choc-",
@@ -326,7 +350,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "san-jos-del-palmar-choc-",
@@ -339,7 +364,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "sip-choc-",
@@ -352,7 +378,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "tad-choc-",
@@ -365,7 +392,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "uni-n-panamericana-choc-",
@@ -378,7 +406,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "ungu-a-choc-",
@@ -391,7 +420,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "alcal-valle-del-cauca",
@@ -404,7 +434,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "andaluc-a-valle-del-cauca",
@@ -417,7 +448,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "ansermanuevo-valle-del-cauca",
@@ -430,7 +462,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "argelia-valle-del-cauca",
@@ -443,7 +476,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "bol-var-valle-del-cauca",
@@ -456,7 +490,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "buenaventura-valle-del-cauca",
@@ -469,7 +504,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Colapso de viviendas y hospitales a máxima capacidad.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "buga-valle-del-cauca",
@@ -482,7 +518,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "bugalagrande-valle-del-cauca",
@@ -495,7 +532,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "caicedonia-valle-del-cauca",
@@ -508,7 +546,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "cali-valle-del-cauca",
@@ -521,7 +560,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "calima-valle-del-cauca",
@@ -534,7 +574,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "candelaria-valle-del-cauca",
@@ -547,7 +588,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "cartago-valle-del-cauca",
@@ -560,7 +602,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "dagua-valle-del-cauca",
@@ -573,7 +616,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "el-guila-valle-del-cauca",
@@ -586,7 +630,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "el-cairo-valle-del-cauca",
@@ -599,7 +644,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "el-cerrito-valle-del-cauca",
@@ -612,7 +658,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "el-dovio-valle-del-cauca",
@@ -625,7 +672,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "florida-valle-del-cauca",
@@ -638,7 +686,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "ginebra-valle-del-cauca",
@@ -651,7 +700,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "guacar-valle-del-cauca",
@@ -664,7 +714,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "jamund-valle-del-cauca",
@@ -677,7 +728,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "la-cumbre-valle-del-cauca",
@@ -690,7 +742,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "la-uni-n-valle-del-cauca",
@@ -703,7 +756,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "la-victoria-valle-del-cauca",
@@ -716,7 +770,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "obando-valle-del-cauca",
@@ -729,7 +784,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "palmira-valle-del-cauca",
@@ -742,7 +798,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "pradera-valle-del-cauca",
@@ -755,7 +812,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "restrepo-valle-del-cauca",
@@ -768,7 +826,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "riofr-o-valle-del-cauca",
@@ -781,7 +840,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "roldanillo-valle-del-cauca",
@@ -794,7 +854,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "san-pedro-valle-del-cauca",
@@ -807,7 +868,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "sevilla-valle-del-cauca",
@@ -820,7 +882,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "toro-valle-del-cauca",
@@ -833,7 +896,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "trujillo-valle-del-cauca",
@@ -846,7 +910,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "tulu-valle-del-cauca",
@@ -859,7 +924,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "ulloa-valle-del-cauca",
@@ -872,7 +938,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "versalles-valle-del-cauca",
@@ -885,7 +952,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "vijes-valle-del-cauca",
@@ -898,7 +966,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "yotoco-valle-del-cauca",
@@ -911,7 +980,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "yumbo-valle-del-cauca",
@@ -924,7 +994,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "zarzal-valle-del-cauca",
@@ -937,7 +1008,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Muy alta"
   },
   {
     "id": "aguadas-caldas",
@@ -950,7 +1022,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "anserma-caldas",
@@ -963,7 +1036,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "aranzazu-caldas",
@@ -976,7 +1050,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "belalc-zar-caldas",
@@ -989,7 +1064,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "chinchin-caldas",
@@ -1002,7 +1078,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Deslizamientos y vías intermunicipales cerradas.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "filadelfia-caldas",
@@ -1015,7 +1092,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "la-dorada-caldas",
@@ -1028,7 +1106,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "la-merced-caldas",
@@ -1041,7 +1120,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "manizales-caldas",
@@ -1054,7 +1134,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Deslizamientos y vías intermunicipales cerradas.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "manzanares-caldas",
@@ -1067,7 +1148,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "marmato-caldas",
@@ -1080,7 +1162,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "marquetalia-caldas",
@@ -1093,7 +1176,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "marulanda-caldas",
@@ -1106,7 +1190,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "neira-caldas",
@@ -1119,7 +1204,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "norcasia-caldas",
@@ -1132,7 +1218,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "p-cora-caldas",
@@ -1145,7 +1232,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "palestina-caldas",
@@ -1158,7 +1246,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "pensilvania-caldas",
@@ -1171,7 +1260,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "riosucio-caldas",
@@ -1184,7 +1274,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "risaralda-caldas",
@@ -1197,7 +1288,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "salamina-caldas",
@@ -1210,7 +1302,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "saman-caldas",
@@ -1223,7 +1316,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "san-jos-caldas",
@@ -1236,7 +1330,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "sup-a-caldas",
@@ -1249,7 +1344,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "victoria-caldas",
@@ -1262,7 +1358,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "villamar-a-caldas",
@@ -1275,7 +1372,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "viterbo-caldas",
@@ -1288,7 +1386,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "ap-a-risaralda",
@@ -1301,7 +1400,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "balboa-risaralda",
@@ -1314,7 +1414,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "bel-n-de-umbr-a-risaralda",
@@ -1327,7 +1428,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "dosquebradas-risaralda",
@@ -1340,7 +1442,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Daños estructurales severos en zona urbana.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "gu-tica-risaralda",
@@ -1353,7 +1456,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "la-celia-risaralda",
@@ -1366,7 +1470,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "la-virginia-risaralda",
@@ -1379,7 +1484,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "marsella-risaralda",
@@ -1392,7 +1498,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "mistrat-risaralda",
@@ -1405,7 +1512,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "pereira-risaralda",
@@ -1418,7 +1526,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "pueblo-rico-risaralda",
@@ -1431,7 +1540,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "quinch-a-risaralda",
@@ -1444,7 +1554,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "santa-rosa-de-cabal-risaralda",
@@ -1457,7 +1568,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "santuario-risaralda",
@@ -1470,7 +1582,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Alta"
   },
   {
     "id": "abejorral-antioquia",
@@ -1483,7 +1596,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "abriaqu-antioquia",
@@ -1496,7 +1610,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "alejandr-a-antioquia",
@@ -1509,7 +1624,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "amag-antioquia",
@@ -1522,7 +1638,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "amalfi-antioquia",
@@ -1535,7 +1652,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "andes-antioquia",
@@ -1548,7 +1666,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectaciones en Suroeste y occidente antioqueño.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "angel-polis-antioquia",
@@ -1561,7 +1680,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "angostura-antioquia",
@@ -1574,7 +1694,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "anor-antioquia",
@@ -1587,7 +1708,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "anz-antioquia",
@@ -1600,7 +1722,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "apartad-antioquia",
@@ -1613,7 +1736,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "arboletes-antioquia",
@@ -1626,7 +1750,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "argelia-antioquia",
@@ -1639,7 +1764,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "armenia-antioquia",
@@ -1652,7 +1778,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectaciones en Suroeste y occidente antioqueño.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "barbosa-antioquia",
@@ -1665,7 +1792,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "bello-antioquia",
@@ -1678,7 +1806,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "belmira-antioquia",
@@ -1691,7 +1820,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "betania-antioquia",
@@ -1704,7 +1834,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "betulia-antioquia",
@@ -1717,7 +1848,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "brice-o-antioquia",
@@ -1730,7 +1862,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "buritic-antioquia",
@@ -1743,7 +1876,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "c-ceres-antioquia",
@@ -1756,7 +1890,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "caicedo-antioquia",
@@ -1769,7 +1904,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "caldas-antioquia",
@@ -1782,7 +1918,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "campamento-antioquia",
@@ -1795,7 +1932,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "ca-asgordas-antioquia",
@@ -1808,7 +1946,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "caracol-antioquia",
@@ -1821,7 +1960,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "caramanta-antioquia",
@@ -1834,7 +1974,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "carepa-antioquia",
@@ -1847,7 +1988,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "carolina-del-pr-ncipe-antioquia",
@@ -1860,7 +2002,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "caucasia-antioquia",
@@ -1873,7 +2016,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "chigorod-antioquia",
@@ -1886,7 +2030,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "cisneros-antioquia",
@@ -1899,7 +2044,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "ciudad-bol-var-antioquia",
@@ -1912,7 +2058,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectaciones en Suroeste y occidente antioqueño.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "cocorn-antioquia",
@@ -1925,7 +2072,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "concepci-n-antioquia",
@@ -1938,7 +2086,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "concordia-antioquia",
@@ -1951,7 +2100,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "copacabana-antioquia",
@@ -1964,7 +2114,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "dabeiba-antioquia",
@@ -1977,7 +2128,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "donmat-as-antioquia",
@@ -1990,7 +2142,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "eb-jico-antioquia",
@@ -2003,7 +2156,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "el-bagre-antioquia",
@@ -2016,7 +2170,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "el-carmen-de-viboral-antioquia",
@@ -2029,7 +2184,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "el-pe-ol-antioquia",
@@ -2042,7 +2198,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "el-retiro-antioquia",
@@ -2055,7 +2212,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "el-santuario-antioquia",
@@ -2068,7 +2226,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "entrerr-os-antioquia",
@@ -2081,7 +2240,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "envigado-antioquia",
@@ -2094,7 +2254,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "fredonia-antioquia",
@@ -2107,7 +2268,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "frontino-antioquia",
@@ -2120,7 +2282,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "giraldo-antioquia",
@@ -2133,7 +2296,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "girardota-antioquia",
@@ -2146,7 +2310,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "g-mez-plata-antioquia",
@@ -2159,7 +2324,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "granada-antioquia",
@@ -2172,7 +2338,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "guadalupe-antioquia",
@@ -2185,7 +2352,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "guarne-antioquia",
@@ -2198,7 +2366,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "guatap-antioquia",
@@ -2211,7 +2380,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "heliconia-antioquia",
@@ -2224,7 +2394,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "hispania-antioquia",
@@ -2237,7 +2408,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "itag-antioquia",
@@ -2250,7 +2422,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "ituango-antioquia",
@@ -2263,7 +2436,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "jard-n-antioquia",
@@ -2276,7 +2450,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "jeric-antioquia",
@@ -2289,7 +2464,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "la-ceja-antioquia",
@@ -2302,7 +2478,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "la-estrella-antioquia",
@@ -2315,7 +2492,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "la-pintada-antioquia",
@@ -2328,7 +2506,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "la-uni-n-antioquia",
@@ -2341,7 +2520,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "liborina-antioquia",
@@ -2354,7 +2534,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "maceo-antioquia",
@@ -2367,7 +2548,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "marinilla-antioquia",
@@ -2380,7 +2562,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "medell-n-antioquia",
@@ -2393,7 +2576,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "montebello-antioquia",
@@ -2406,7 +2590,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "murind-antioquia",
@@ -2419,7 +2604,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "mutat-antioquia",
@@ -2432,7 +2618,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "nari-o-antioquia",
@@ -2445,7 +2632,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "nech-antioquia",
@@ -2458,7 +2646,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "necocl-antioquia",
@@ -2471,7 +2660,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "olaya-antioquia",
@@ -2484,7 +2674,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "peque-antioquia",
@@ -2497,7 +2688,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "pueblorrico-antioquia",
@@ -2510,7 +2702,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "puerto-berr-o-antioquia",
@@ -2523,7 +2716,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "puerto-nare-antioquia",
@@ -2536,7 +2730,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "puerto-triunfo-antioquia",
@@ -2549,7 +2744,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "remedios-antioquia",
@@ -2562,7 +2758,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "rionegro-antioquia",
@@ -2575,7 +2772,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "sabanalarga-antioquia",
@@ -2588,7 +2786,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "sabaneta-antioquia",
@@ -2601,7 +2800,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "salgar-antioquia",
@@ -2614,7 +2814,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-andr-s-de-cuerquia-antioquia",
@@ -2627,7 +2828,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-carlos-antioquia",
@@ -2640,7 +2842,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-francisco-antioquia",
@@ -2653,7 +2856,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-jer-nimo-antioquia",
@@ -2666,7 +2870,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-jos-de-la-monta-a-antioquia",
@@ -2679,7 +2884,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-juan-de-urab-antioquia",
@@ -2692,7 +2898,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-luis-antioquia",
@@ -2705,7 +2912,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-pedro-de-urab-antioquia",
@@ -2718,7 +2926,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-pedro-de-los-milagros-antioquia",
@@ -2731,7 +2940,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-rafael-antioquia",
@@ -2744,7 +2954,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-roque-antioquia",
@@ -2757,7 +2968,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-vicente-antioquia",
@@ -2770,7 +2982,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "santa-b-rbara-antioquia",
@@ -2783,7 +2996,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "santa-fe-de-antioquia-antioquia",
@@ -2796,7 +3010,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "santa-rosa-de-osos-antioquia",
@@ -2809,7 +3024,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "santo-domingo-antioquia",
@@ -2822,7 +3038,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "segovia-antioquia",
@@ -2835,7 +3052,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "sons-n-antioquia",
@@ -2848,7 +3066,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "sopetr-n-antioquia",
@@ -2861,7 +3080,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "t-mesis-antioquia",
@@ -2874,7 +3094,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "taraz-antioquia",
@@ -2887,7 +3108,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "tarso-antioquia",
@@ -2900,7 +3122,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "titirib-antioquia",
@@ -2913,7 +3136,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "toledo-antioquia",
@@ -2926,7 +3150,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "turbo-antioquia",
@@ -2939,7 +3164,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "uramita-antioquia",
@@ -2952,7 +3178,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "urrao-antioquia",
@@ -2965,7 +3192,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "valdivia-antioquia",
@@ -2978,7 +3206,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "valpara-so-antioquia",
@@ -2991,7 +3220,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "vegach-antioquia",
@@ -3004,7 +3234,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "venecia-antioquia",
@@ -3017,7 +3248,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "vig-a-del-fuerte-antioquia",
@@ -3030,7 +3262,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "yal-antioquia",
@@ -3043,7 +3276,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "yarumal-antioquia",
@@ -3056,7 +3290,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "yolomb-antioquia",
@@ -3069,7 +3304,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "yond-antioquia",
@@ -3082,7 +3318,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "zaragoza-antioquia",
@@ -3095,7 +3332,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "almaguer-cauca",
@@ -3108,7 +3346,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "argelia-cauca",
@@ -3121,7 +3360,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "balboa-cauca",
@@ -3134,7 +3374,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "bol-var-cauca",
@@ -3147,7 +3388,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "buenos-aires-cauca",
@@ -3160,7 +3402,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "cajib-o-cauca",
@@ -3173,7 +3416,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "caldono-cauca",
@@ -3186,7 +3430,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "caloto-cauca",
@@ -3199,7 +3444,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "corinto-cauca",
@@ -3212,7 +3458,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "el-tambo-cauca",
@@ -3225,7 +3472,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "florencia-cauca",
@@ -3238,7 +3486,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "guachen-cauca",
@@ -3251,7 +3500,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "guap-cauca",
@@ -3264,7 +3514,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "inz-cauca",
@@ -3277,7 +3528,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "jambal-cauca",
@@ -3290,7 +3542,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "la-sierra-cauca",
@@ -3303,7 +3556,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "la-vega-cauca",
@@ -3316,7 +3570,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "l-pez-de-micay-cauca",
@@ -3329,7 +3584,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "mercaderes-cauca",
@@ -3342,7 +3598,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "miranda-cauca",
@@ -3355,7 +3612,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "morales-cauca",
@@ -3368,7 +3626,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "padilla-cauca",
@@ -3381,7 +3640,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "p-ez-cauca",
@@ -3394,7 +3654,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "pat-a-cauca",
@@ -3407,7 +3668,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "piamonte-cauca",
@@ -3420,7 +3682,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "piendam-cauca",
@@ -3433,7 +3696,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "popay-n-cauca",
@@ -3446,7 +3710,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "puerto-tejada-cauca",
@@ -3459,7 +3724,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Interrupciones de energía y acueducto rural.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "purac-cauca",
@@ -3472,7 +3738,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "rosas-cauca",
@@ -3485,7 +3752,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "san-sebasti-n-cauca",
@@ -3498,7 +3766,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "santa-rosa-cauca",
@@ -3511,7 +3780,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "santander-de-quilichao-cauca",
@@ -3524,7 +3794,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Interrupciones de energía y acueducto rural.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "silvia-cauca",
@@ -3537,7 +3808,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "sotar-cauca",
@@ -3550,7 +3822,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "su-rez-cauca",
@@ -3563,7 +3836,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "sucre-cauca",
@@ -3576,7 +3850,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "timb-o-cauca",
@@ -3589,7 +3864,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "timbiqu-cauca",
@@ -3602,7 +3878,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "torib-o-cauca",
@@ -3615,7 +3892,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "totor-cauca",
@@ -3628,7 +3906,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "villa-rica-cauca",
@@ -3641,7 +3920,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "armenia-quind-o",
@@ -3654,7 +3934,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Colapso de edificaciones antiguas y alertas por réplicas.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "buenavista-quind-o",
@@ -3667,7 +3948,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "calarc-quind-o",
@@ -3680,7 +3962,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "circasia-quind-o",
@@ -3693,7 +3976,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "c-rdoba-quind-o",
@@ -3706,7 +3990,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "filandia-quind-o",
@@ -3719,7 +4004,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "g-nova-quind-o",
@@ -3732,7 +4018,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "la-tebaida-quind-o",
@@ -3745,7 +4032,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Colapso de edificaciones antiguas y alertas por réplicas.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "montenegro-quind-o",
@@ -3758,7 +4046,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "pijao-quind-o",
@@ -3771,7 +4060,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "quimbaya-quind-o",
@@ -3784,7 +4074,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "salento-quind-o",
@@ -3797,7 +4088,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Media"
   },
   {
     "id": "aldana-nari-o",
@@ -3810,7 +4102,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "ancuy-nari-o",
@@ -3823,7 +4116,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "arboleda-nari-o",
@@ -3836,7 +4130,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "barbacoas-nari-o",
@@ -3849,7 +4144,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "bel-n-nari-o",
@@ -3862,7 +4158,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "buesaco-nari-o",
@@ -3875,7 +4172,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "chachag-nari-o",
@@ -3888,7 +4186,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "col-n-nari-o",
@@ -3901,7 +4200,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "consac-nari-o",
@@ -3914,7 +4214,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "contadero-nari-o",
@@ -3927,7 +4228,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "c-rdoba-nari-o",
@@ -3940,7 +4242,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "cuaspud-nari-o",
@@ -3953,7 +4256,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "cumbal-nari-o",
@@ -3966,7 +4270,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "cumbitara-nari-o",
@@ -3979,7 +4284,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "el-charco-nari-o",
@@ -3992,7 +4298,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "el-pe-ol-nari-o",
@@ -4005,7 +4312,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "el-rosario-nari-o",
@@ -4018,7 +4326,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "el-tabl-n-nari-o",
@@ -4031,7 +4340,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "el-tambo-nari-o",
@@ -4044,7 +4354,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "francisco-pizarro-nari-o",
@@ -4057,7 +4368,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "funes-nari-o",
@@ -4070,7 +4382,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "guachucal-nari-o",
@@ -4083,7 +4396,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "guaitarilla-nari-o",
@@ -4096,7 +4410,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "gualmat-n-nari-o",
@@ -4109,7 +4424,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "iles-nari-o",
@@ -4122,7 +4438,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "imu-s-nari-o",
@@ -4135,7 +4452,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "ipiales-nari-o",
@@ -4148,7 +4466,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "la-cruz-nari-o",
@@ -4161,7 +4480,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "la-florida-nari-o",
@@ -4174,7 +4494,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "la-llanada-nari-o",
@@ -4187,7 +4508,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "la-tola-nari-o",
@@ -4200,7 +4522,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "la-uni-n-nari-o",
@@ -4213,7 +4536,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "leiva-nari-o",
@@ -4226,7 +4550,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "linares-nari-o",
@@ -4239,7 +4564,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "los-andes-nari-o",
@@ -4252,7 +4578,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "mag-pay-n-nari-o",
@@ -4265,7 +4592,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "mallama-nari-o",
@@ -4278,7 +4606,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "mosquera-nari-o",
@@ -4291,7 +4620,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "nari-o-nari-o",
@@ -4304,7 +4634,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "olaya-herrera-nari-o",
@@ -4317,7 +4648,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "ospina-nari-o",
@@ -4330,7 +4662,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "pasto-nari-o",
@@ -4343,7 +4676,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "policarpa-nari-o",
@@ -4356,7 +4690,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "potos-nari-o",
@@ -4369,7 +4704,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "providencia-nari-o",
@@ -4382,7 +4718,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "puerres-nari-o",
@@ -4395,7 +4732,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "pupiales-nari-o",
@@ -4408,7 +4746,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "ricaurte-nari-o",
@@ -4421,7 +4760,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "roberto-pay-n-nari-o",
@@ -4434,7 +4774,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "samaniego-nari-o",
@@ -4447,7 +4788,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "san-bernardo-nari-o",
@@ -4460,7 +4802,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "san-jos-de-alb-n-nari-o",
@@ -4473,7 +4816,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "san-lorenzo-nari-o",
@@ -4486,7 +4830,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "san-pablo-nari-o",
@@ -4499,7 +4844,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "san-pedro-de-cartago-nari-o",
@@ -4512,7 +4858,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "sandon-nari-o",
@@ -4525,7 +4872,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "santa-b-rbara-nari-o",
@@ -4538,7 +4886,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "santacruz-nari-o",
@@ -4551,7 +4900,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectado simultáneamente por incendios forestales.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "sapuyes-nari-o",
@@ -4564,7 +4914,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "taminango-nari-o",
@@ -4577,7 +4928,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "tangua-nari-o",
@@ -4590,7 +4942,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "tumaco-nari-o",
@@ -4603,7 +4956,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "t-querres-nari-o",
@@ -4616,7 +4970,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   },
   {
     "id": "yacuanquer-nari-o",
@@ -4629,7 +4984,8 @@ window.CRC_TERRITORY = {
     ],
     "note": "Afectación reportada en censo preliminar.",
     "source": "UNGRD",
-    "url": "https://portal.gestiondelriesgo.gov.co/"
+    "url": "https://portal.gestiondelriesgo.gov.co/",
+    "priority": "Emergencia paralela"
   }
 ],
 
