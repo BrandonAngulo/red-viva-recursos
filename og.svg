@@ -1,16 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <rect width="1200" height="630" fill="#0d3b2c"/>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#09261c"/>
   
-  <!-- Pulse logo -->
-  <rect x="80" y="80" width="120" height="120" rx="30" fill="#0b2c21" stroke="#d7ef5e" stroke-width="4"/>
-  <path d="M95 140 h30 l15 -35 l18 70 l12 -35 l10 15 h30" fill="none" stroke="#d7ef5e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Subtle background pattern (earthquake waves) -->
+  <path d="M0 500 Q 300 450, 600 500 T 1200 500 M0 550 Q 300 500, 600 550 T 1200 550" fill="none" stroke="#d7ef5e" stroke-width="2" opacity="0.1"/>
   
-  <!-- Text -->
-  <text x="80" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">Central de</text>
-  <text x="80" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="86" font-weight="bold" fill="#d7ef5e">Recursos Digitales</text>
+  <!-- Icon: Location Pin with a Help Cross and Network rings -->
+  <g transform="translate(80, 80)">
+    <!-- Base container -->
+    <rect x="0" y="0" width="140" height="140" rx="35" fill="#0d3b2c" stroke="#d7ef5e" stroke-width="4"/>
+    
+    <!-- Map marker body -->
+    <path d="M70 25 C45 25 25 45 25 70 C25 105 70 125 70 125 C70 125 115 105 115 70 C115 45 95 25 70 25 Z" fill="none" stroke="#d7ef5e" stroke-width="8" stroke-linejoin="round"/>
+    
+    <!-- Inner Cross (Resources/Help) -->
+    <path d="M70 50 V90 M50 70 H90" stroke="#d7ef5e" stroke-width="8" stroke-linecap="round"/>
+  </g>
   
-  <text x="80" y="520" font-family="Georgia, serif" font-size="42" font-style="italic" fill="#cfe0d6">Respuesta al terremoto</text>
+  <!-- Text Content -->
+  <text x="80" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="76" font-weight="900" fill="#ffffff" letter-spacing="-1">Central de</text>
+  <text x="80" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="92" font-weight="900" fill="#d7ef5e" letter-spacing="-1">Recursos Digitales</text>
   
-  <!-- COLOMBIA aligned to the right, with padding -->
-  <text x="1120" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="bold" fill="#cfe0d6" text-anchor="end" letter-spacing="8">COLOMBIA</text>
+  <text x="80" y="520" font-family="Georgia, serif" font-size="46" font-style="italic" fill="#cfe0d6">Respuesta al sismo en</text>
+  
+  <!-- COLOMBIA properly spaced -->
+  <text x="1120" y="520" font-family="system-ui, -apple-system, sans-serif" font-size="54" font-weight="800" fill="#cfe0d6" text-anchor="end" letter-spacing="12">COLOMBIA</text>
 </svg>
