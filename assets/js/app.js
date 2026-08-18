@@ -267,9 +267,11 @@
     populateMuniDept();
     var q = norm($("#muniSearch") ? $("#muniSearch").value : "");
     var dep = $("#muniDept") ? $("#muniDept").value : "";
+    var prioFilter = $("#muniPrio") ? $("#muniPrio").value : "";
     var all = TERR.municipalities || [];
     var list = all.filter(function (m) {
       if (dep && m.department !== dep) return false;
+      if (prioFilter && m.priority !== prioFilter) return false;
       if (q && norm((m.name || "") + " " + (m.department || "")).indexOf(q) === -1) return false;
       return true;
     });
@@ -474,9 +476,9 @@
     var centerBtn = L.control({position: 'topleft'});
     centerBtn.onAdd = function (m) {
       var btn = L.DomUtil.create('button', 'leaflet-bar leaflet-control');
-      btn.innerHTML = '⌂';
-      btn.title = 'Recentrar mapa';
-      btn.style.width = '30px'; btn.style.height = '30px'; btn.style.cursor = 'pointer'; btn.style.backgroundColor = 'white'; btn.style.border = '2px solid rgba(0,0,0,0.2)'; btn.style.borderRadius = '4px'; btn.style.fontSize = '16px'; btn.style.lineHeight = '30px';
+      btn.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" style="vertical-align:middle; display:block; margin:auto;"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>';
+      btn.title = 'Recentrar mapa a ubicación inicial';
+      btn.style.width = '30px'; btn.style.height = '30px'; btn.style.cursor = 'pointer'; btn.style.backgroundColor = 'white'; btn.style.border = '2px solid rgba(0,0,0,0.2)'; btn.style.borderRadius = '4px'; btn.style.display = 'flex'; btn.style.alignItems = 'center'; btn.style.justifyContent = 'center';
       btn.onclick = function(e){ e.stopPropagation(); m.setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7); };
       return btn;
     };
@@ -582,6 +584,7 @@
     byId("#resetFilters", "click", resetAll);
     var mTimer; byId("#muniSearch", "input", function () { clearTimeout(mTimer); mTimer = setTimeout(renderMunicipios, 130); });
     byId("#muniDept", "change", renderMunicipios);
+    byId("#muniPrio", "change", renderMunicipios);
     byId("#themeToggle", "click", function () { setTheme(currentTheme() === "dark" ? "light" : "dark"); });
     
     // Share button
