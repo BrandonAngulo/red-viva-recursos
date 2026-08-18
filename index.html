@@ -19,7 +19,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d3b2c'/%3E%3Cg fill='none' stroke='%23d7ef5e' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='14' cy='8' rx='10' ry='4'/%3E%3Cpath d='M4 8v14c0 2.2 4.5 4 10 4s10-1.8 10-4V8'/%3E%3Cpath d='M4 15c0 2.2 4.5 4 10 4s10-1.8 10-4'/%3E%3Cpath d='M28 12v14M24 22l4 4 4-4'/%3E%3C/g%3E%3C/svg%3E">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260817-2">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260817-3">
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -38,7 +38,6 @@
         <a class="tab" href="#inicio"     data-view="inicio">Inicio</a>
         <a class="tab" href="#recursos"   data-view="recursos">Recursos</a>
         <a class="tab" href="#mapa"        data-view="mapa">Mapa</a>
-        <a class="tab" href="#municipios"  data-view="municipios">Municipios</a>
         <a class="tab tab-featured" href="#entender"    data-view="entender">Qué pasó</a>
         <a class="tab tab-featured" href="#actuar"      data-view="actuar">Cómo actuar</a>
       </nav>
@@ -102,8 +101,7 @@
             <a class="nav-card" href="#entender"><b>Qué pasó</b><span>El sismo explicado y el día a día</span></a>
             <a class="nav-card" href="#actuar"><b>Cómo actuar</b><span>Guías paso a paso según tu momento</span></a>
             <a class="nav-card" href="#recursos"><b>Recursos</b><span id="navRecursosCount">Directorio verificado de ayuda</span></a>
-            <a class="nav-card" href="#mapa"><b>Mapa</b><span>Dónde golpeó el sismo y los focos activos</span></a>
-            <a class="nav-card" href="#municipios"><b>Municipios</b><span id="navMuniCount">Zonas más afectadas y a quién acudir</span></a>
+            <a class="nav-card" href="#mapa"><b>Mapa y Zonas Afectadas</b><span id="navMuniCount">Dónde golpeó el sismo y focos activos</span></a>
           </div>
         </section>
       </div>
@@ -166,24 +164,14 @@
         <div class="map-shell">
           <div id="map" class="map" role="application" aria-label="Mapa de la emergencia"></div>
           <aside class="map-legend" id="mapLegend">
-            <h3>Puntos en el mapa</h3>
-            <div class="legend-list" id="mapList"></div>
-            <p class="muted-foot">Ubicaciones de referencia con su fuente oficial. Para operaciones de rescate, guíate siempre por las autoridades.</p>
+            <div class="muni-controls">
+              <input id="muniSearch" type="search" placeholder="Buscar municipio…" autocomplete="off" aria-label="Buscar municipio">
+              <select id="muniDept" aria-label="Filtrar por departamento"><option value="">Todos los departamentos</option></select>
+            </div>
+            <div class="muni-grid" id="muniGrid"></div>
+            <p class="muted-foot" style="margin-top: 16px;">Ubicaciones de referencia con su fuente oficial. Para operaciones de rescate, guíate siempre por las autoridades.</p>
           </aside>
         </div>
-      </div>
-    </section>
-
-    <!-- =========================== MUNICIPIOS =========================== -->
-    <section class="view" id="view-municipios" data-view="municipios" hidden>
-      <div class="bleed">
-        <div class="view-head"><h2 class="view-title">Municipios afectados</h2><span class="muni-count" id="muniCount"></span></div>
-        <p class="section-sub">Los municipios con afectación reportada, según el censo preliminar de la UNGRD. Busca el tuyo o filtra por departamento; los de mayor prioridad aparecen primero.</p>
-        <div class="muni-controls">
-          <input id="muniSearch" type="search" placeholder="Buscar municipio…" autocomplete="off" aria-label="Buscar municipio">
-          <select id="muniDept" aria-label="Filtrar por departamento"><option value="">Todos los departamentos</option></select>
-        </div>
-        <div class="muni-grid" id="muniGrid"></div>
       </div>
     </section>
 
@@ -368,6 +356,6 @@
   <script src="data/territory.js?v=20260817"></script>
   <script src="data/orientaciones.js?v=20260817"></script>
   <script src="data/comprender.js?v=20260817"></script>
-  <script src="assets/js/app.js?v=20260817-2" defer></script>
+  <script src="assets/js/app.js?v=20260817-3" defer></script>
 </body>
 </html>

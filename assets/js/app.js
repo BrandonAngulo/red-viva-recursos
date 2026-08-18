@@ -214,7 +214,7 @@
       .then(function (rows) {
         if (Array.isArray(rows) && rows.length) {
           TERR.mapPoints = rows.map(function (p) { return { id: p.id, type: p.type, name: p.name, department: p.department, coords: [p.lat, p.lng], note: p.note, source: p.source_name, url: p.url }; });
-          if (mapReady) addMapMarkers(); else renderMapList();
+          if (mapReady) addMapMarkers();
         }
       })
       .catch(function () {});
@@ -263,26 +263,104 @@
     sel.dataset.filled = "1";
   }
   function renderMunicipios() {
-    var box = $("#muniGrid"); if (!box) return;
-    populateMuniDept();
-    var q = norm($("#muniSearch") ? $("#muniSearch").value : "");
-    var dep = $("#muniDept") ? $("#muniDept").value : "";
-    var all = TERR.municipalities || [];
-    var list = all.filter(function (m) {
-      if (dep && m.department !== dep) return false;
-      if (q && norm((m.name || "") + " " + (m.department || "")).indexOf(q) === -1) return false;
-      return true;
-    });
-    list.sort(function (a, b) { var d = muniRank(a) - muniRank(b); return d !== 0 ? d : String(a.name || "").localeCompare(String(b.name || "")); });
-    box.innerHTML = list.map(function (m) {
-      var prio = m.priority ? '<span class="muni-prio p-' + slug(m.priority) + '">' + esc(m.priority) + "</span>" : "";
-      var link = m.url ? '<a class="open" href="' + esc(m.url) + '" target="_blank" rel="noopener noreferrer">Ver fuente ↗</a>' : "";
-      return '<article class="muni-card"><div class="muni-top"><h3 class="muni-name">' + esc(m.name) + '</h3><span class="muni-dep">' + esc(m.department || "") + "</span></div>" +
-        prio + (m.note ? '<p class="muni-note">' + esc(m.note) + "</p>" : "") + link + "</article>";
-    }).join("") || '<p class="ge-empty" style="grid-column:1/-1;color:var(--fg-muted)">Ningún municipio coincide con la búsqueda.</p>';
-    var cnt = $("#muniCount"); if (cnt) cnt.textContent = list.length + (list.length === 1 ? " municipio" : " municipios") + (all.length !== list.length ? " de " + all.length : "");
-    var nm = $("#navMuniCount"); if (nm) nm.textContent = all.length + " municipios afectados";
-  }
+      var box = $("#muniGrid"); if (!box) return;
+      populateMuniDept();
+      var q = norm($("#muniSearch") ? $("#muniSearch").value : "");
+      var dep = $("#muniDept") ? $("#muniDept").value : "";
+      var all = TERR.municipalities || [];
+      var list = all.filter(function (m) {
+        if (dep && m.department !== dep) return false;
+        if (q && norm((m.name || "") + " " + (m.department || "")).indexOf(q) === -1) return false;
+        return true;
+      });
+      list.sort(function (a, b) { var d = muniRank(a) - muniRank(b); return d !== 0 ? d : String(a.name || "").localeCompare(String(b.name || "")); });
+      
+      // Update Map Markers visibility
+      var visibleNames = {};
+      list.forEach(function(m) { visibleNames[norm(m.name) + "|" + norm(m.department || "")] = true; });
+      if(window._crcMap && typeof mapMarkers !== "undefined") {
+        (TERR.mapPoints || []).forEach(function(p) {
+          var k = norm(p.name) + "|" + norm(p.department || "");
+          var mkr = mapMarkers[p.id];
+          if(mkr) {
+             if(!q && !dep) {
+               if(!window._crcMap.hasLayer(mkr)) window._crcMap.addLayer(mkr);
+             } else {
+               if(visibleNames[k]) {
+                 if(!window._crcMap.hasLayer(mkr)) window._crcMap.addLayer(mkr);
+               } else {
+                 if(window._crcMap.hasLayer(mkr)) window._crcMap.removeLayer(mkr);
+               }
+             }
+          }
+        });
+      }
+      
+      // Group by department
+      var byDept = {};
+      list.forEach(function(m) {
+        var d = m.department || "Otros";
+        if(!byDept[d]) byDept[d] = [];
+        byDept[d].push(m);
+      });
+      
+      var depts = Object.keys(byDept).sort(function(a,b){
+         var aCrit = byDept[a].filter(x => x.priority==="CR�TICA" || x.priority==="MUY ALTA").length;
+         var bCrit = byDept[b].filter(x => x.priority==="CR�TICA" || x.priority==="MUY ALTA").length;
+         if(bCrit !== aCrit) return bCrit - aCrit;
+         return byDept[b].length - byDept[a].length;
+      });
+      
+      var html = "";
+      depts.forEach(function(d) {
+         var muns = byDept[d];
+         html += "<div class=\"muni-dept-group\">";
+         html += "<h3 class=\"dept-title\">" + esc(d) + " <span class=\"dept-count\">(" + muns.length + ")</span></h3>";
+         
+         var crit = muns.filter(x => x.priority === "CR�TICA" || x.priority === "MUY ALTA" || x.priority === "ALTA");
+         var rest = muns.filter(x => x.priority !== "CR�TICA" && x.priority !== "MUY ALTA" && x.priority !== "ALTA");
+         
+         var mapMatcher = function(m) {
+            var k = norm(m.name) + "|" + norm(m.department || "");
+            var point = (TERR.mapPoints || []).find(p => norm(p.name) + "|" + norm(p.department || "") === k);
+            return point ? point.id : "";
+         };
+         
+         if(crit.length) {
+            html += "<div class=\"muni-grid\">" + crit.map(function(m) {
+               var prio = m.priority ? "<span class=\"muni-prio p-" + slug(m.priority) + "\">" + esc(m.priority) + "</span>" : "";
+               var pid = mapMatcher(m);
+               var attrs = pid ? " data-point=\"" + esc(pid) + "\" style=\"cursor:pointer\"" : "";
+               return "<article class=\"muni-card\"" + attrs + "><div class=\"muni-top\"><h3 class=\"muni-name\">" + esc(m.name) + "</h3></div>" + prio + "</article>";
+            }).join("") + "</div>";
+         }
+         
+         if(rest.length) {
+            html += "<div class=\"muni-list-compact\">" + rest.map(function(m) {
+               var prio = m.priority ? "<span class=\"muni-prio p-" + slug(m.priority) + " compact\">" + esc(m.priority) + "</span>" : "";
+               var pid = mapMatcher(m);
+               var attrs = pid ? " data-point=\"" + esc(pid) + "\" style=\"cursor:pointer\"" : "";
+               return "<div class=\"muni-compact-item\"" + attrs + "><span class=\"muni-name\">" + esc(m.name) + "</span>" + prio + "</div>";
+            }).join("") + "</div>";
+         }
+         
+         html += "</div>";
+      });
+      
+      box.innerHTML = html || "<p class=\"ge-empty\" style=\"padding: 10px; color:var(--fg-muted)\">Ning�n municipio coincide con la b�squeda.</p>";
+      
+      // Bind click events
+      Array.prototype.forEach.call(box.querySelectorAll("[data-point]"), function (el) {
+        el.addEventListener("click", function (e) {
+          var id = el.getAttribute("data-point");
+          var p = (TERR.mapPoints || []).find(x => x.id === id);
+          if (window._crcMap && p && p.coords) {
+             window._crcMap.setView(p.coords, 10);
+             if (typeof mapMarkers !== "undefined" && mapMarkers[id]) mapMarkers[id].openPopup();
+          }
+        });
+      });
+    }
   function chip(label, value) { return '<span class="ori-chip"><b>' + esc(label) + "</b> " + esc(value) + "</span>"; }
   var oriFase = "";
   function orientacionesForFase() {
@@ -379,11 +457,11 @@
       m.bindPopup("<b>" + esc(p.name) + "</b><br>" + esc(p.department || "") + "<br>" + esc(p.note || "") + src);
       mapMarkers[p.id] = m;
     });
-    renderMapList();
+    
   }
   function initMap() {
     var node = $("#map"); if (!node) return;
-    if (!window.L) { node.innerHTML = '<p style="padding:20px;color:var(--fg-muted)">No se pudo cargar el mapa (sin conexión). Los puntos siguen listados a la derecha.</p>'; renderMapList(); return; }
+    if (!window.L) { node.innerHTML = '<p style="padding:20px;color:var(--fg-muted)">No se pudo cargar el mapa (sin conexión). Los puntos siguen listados a la derecha.</p>';  return; }
     if (mapReady) { if (window._crcMap) window._crcMap.invalidateSize(); return; }
     mapReady = true;
     var map = L.map(node, { scrollWheelZoom: false }).setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7);
@@ -406,89 +484,7 @@
     setTimeout(function () { map.invalidateSize(); }, 60);
   }
   
-  function filterMapList() {
-    var q = norm($("#muniSearch").value);
-    var box = $("#mapList"); if (!box) return;
-    Array.prototype.forEach.call(box.querySelectorAll(".leg-item"), function(el) {
-      var txt = norm(el.textContent);
-      el.style.display = txt.indexOf(q) === -1 ? 'none' : 'flex';
-    });
-  }
-
-  function renderMapList() {
-    var box = $("#mapList");
-    if (!box) return;
-    box.innerHTML = (TERR.mapPoints || []).map(function (p) {
-      return '<a class="leg-item" href="#mapa" data-point="' + esc(p.id) + '"><span class="lt">' + esc(p.name) + '</span><span class="ld">' + esc(p.department || "") + " · " + esc(p.note || "") + "</span></a>";
-    }).join("");
-    Array.prototype.forEach.call(box.querySelectorAll(".leg-item"), function (a) {
-      a.addEventListener("click", function (e) {
-        e.preventDefault();
-        var id = a.getAttribute("data-point"), p = (TERR.mapPoints || []).filter(function (x) { return x.id === id; })[0];
-        if (window._crcMap && p && p.coords) { window._crcMap.setView(p.coords, 9); if (mapMarkers[id]) mapMarkers[id].openPopup(); }
-      });
-    });
-  }
-
-  /* ---------- Entender qué pasó ---------- */
-  function renderComprender() {
-    var r = COMP.resumen || {};
-    var rc = $("#resumenCard");
-    if (rc && r.magnitud) {
-      var stat = function (k, v) { return v ? '<div class="rc-stat"><dt>' + esc(k) + "</dt><dd>" + esc(v) + "</dd></div>" : ""; };
-      var src = r.fuente ? '<a class="rc-src" href="' + esc(r.fuente.url) + '" target="_blank" rel="noopener noreferrer">' + esc(r.fuente.label) + " ↗</a>" : "";
-      rc.innerHTML = '<dl class="rc-stats">' + stat("Magnitud", r.magnitud) + stat("Fecha", r.fecha) + stat("Hora", r.hora) + stat("Epicentro", r.epicentro) + stat("Profundidad", r.profundidad) + "</dl>" +
-        (r.nota ? '<p class="rc-nota">' + esc(r.nota) + "</p>" : "") + src;
-    }
-    var moreBlock = function (paras) {
-      if (!paras || !paras.length) return "";
-      var ps = paras.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
-      return '<details class="more"><summary>Leer más</summary><div class="more-body">' + ps + "</div></details>";
-    };
-    var eg = $("#explicaGrid");
-    if (eg) eg.innerHTML = (COMP.explicacion || []).map(function (e) {
-      var link = e.link ? '<a class="explica-link" href="' + esc(e.link.url) + '"' + (/^#/.test(e.link.url) ? "" : ' target="_blank" rel="noopener noreferrer"') + ">" + esc(e.link.label) + " →</a>" : "";
-      return '<article class="explica-card"><div class="ex-ic" aria-hidden="true">' + esc(e.icon || "•") + "</div><h3>" + esc(e.title) + "</h3><p>" + esc(e.body) + "</p>" + moreBlock(e.mas) + link + "</article>";
-    }).join("");
-    var hi = $("#historiaIntro"); if (hi) hi.textContent = COMP.historiaIntro || "";
-    var hg = $("#historiaGrid");
-    if (hg) hg.innerHTML = (COMP.historia || []).map(function (h) {
-      return '<article class="hist-card"><div class="hist-year">' + esc(h.year) + '</div><div class="hist-body"><b>' + esc(h.place) + '</b> <span class="hist-mag">M ' + esc(h.mag) + "</span><p>" + esc(h.note) + "</p></div></article>";
-    }).join("");
-    var cu = $("#cronoUpdated"); if (cu) cu.textContent = COMP.actualizado ? "Actualizado el " + COMP.actualizado + ". Se ampliará con los días." : "";
-    var cl = $("#cronoList");
-    if (cl) cl.innerHTML = (COMP.cronologia || []).map(function (d) {
-      var items = (d.items || []).map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("");
-      var fuentes = (d.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(f.label) + " ↗</a>"; }).join("");
-      return '<div class="crono-item"><div class="crono-when"><span class="crono-dia">' + esc(d.dia) + '</span><span class="crono-fecha">' + esc(d.fecha) + "</span></div>" +
-        '<div class="crono-card"><h3>' + esc(d.titulo) + "</h3><ul>" + items + "</ul>" + (d.detalle ? moreBlock([d.detalle]) : "") + (fuentes ? '<p class="crono-src">Fuentes: ' + fuentes + "</p>" : "") + "</div></div>";
-    }).join("");
-  }
-
-  function renderHeroFacts() {
-    var r = COMP.resumen || {}; var box = $("#heroFacts"); if (!box || !r.magnitud) return;
-    var mag = String(r.magnitud).split(" ")[0];
-    var row = function (k, v) { return v ? "<div><dt>" + esc(k) + "</dt><dd>" + esc(v) + "</dd></div>" : ""; };
-    box.innerHTML = '<div class="hf-card"><div class="hf-mag">' + esc(mag) + ' <span>Mw</span></div>' +
-      "<dl>" + row("Fecha", r.fecha) + row("Epicentro", r.epicentro) + row("Profundidad", r.profundidad) + "</dl>" +
-      '<a class="hf-link" href="#entender">Entender qué pasó →</a></div>';
-  }
-
-  /* ---------- Contenido estático ---------- */
-  function fillStatic() {
-    var eq = DATA.meta.earthquake, e = $("#eqInfo");
-    if (e && eq) e.textContent = "Sismo " + eq.magnitude + " · " + eq.date + " · epicentro " + eq.epicenter;
-    var rd = $("#reviewDate"); if (rd) rd.textContent = DATA.meta.lastReview;
-    var le = $("#emergencyLines"); if (le) le.textContent = DATA.emergencyLines.map(function (l) { return l.number + " " + l.label; }).join(" · ");
-    var cta = $("#proposeCta");
-    if (cta) {
-      var pb = ["Nombre del recurso:", "Enlace (URL):", "Organización responsable:", "¿Qué resuelve?:", "Cobertura territorial:", "¿Maneja datos personales?:", ""].join(NL);
-      cta.href = "mailto:" + encodeURIComponent(DATA.meta.contactEmail) + "?subject=" + encodeURIComponent("Propuesta de recurso para el directorio") + "&body=" + encodeURIComponent(pb);
-    }
-    var mail = $("#contactMail"); if (mail) { mail.textContent = DATA.meta.contactEmail; mail.href = "mailto:" + DATA.meta.contactEmail; }
-  }
-
-  /* ---------- Eventos ---------- */
+    /* ---------- Eventos ---------- */
   function bind() {
     Array.prototype.forEach.call(document.querySelectorAll(".mode-switch button"), function (b) {
       b.addEventListener("click", function () { state.mode = b.dataset.mode; state.intent = ""; applyResources(); });
