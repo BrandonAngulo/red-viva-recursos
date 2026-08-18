@@ -285,7 +285,7 @@
         var k = norm(p.name) + "|" + norm(p.department || "");
         var mkr = mapMarkers[p.id];
         if(mkr) {
-           if(!q && !dep) {
+           if(!q && !dep && !prioFilter) {
              if(!window._crcMap.hasLayer(mkr)) window._crcMap.addLayer(mkr);
            } else {
              if(visibleNames[k]) {
@@ -468,7 +468,7 @@
     if (!window.L) { node.innerHTML = '<p style="padding:20px;color:var(--fg-muted)">No se pudo cargar el mapa (sin conexión). Los puntos siguen listados a la derecha.</p>'; renderMapList(); return; }
     if (mapReady) { if (window._crcMap) window._crcMap.invalidateSize(); return; }
     mapReady = true;
-    var map = L.map(node, { scrollWheelZoom: false }).setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7);
+    var map = L.map(node, { scrollWheelZoom: true }).setView(TERR.mapCenter || [4.6, -75.9], TERR.mapZoom || 7);
     window._crcMap = map;
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: "&copy; OpenStreetMap" }).addTo(map);
     
