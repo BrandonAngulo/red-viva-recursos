@@ -147,8 +147,8 @@ window.CRC_ORIENTA = {
       ],
     },
     {
-      id: "prepararme", icon: "🎒", title: "Prepararme para réplicas y nuevos eventos",
-      quePasa: "Las réplicas seguirán por días o semanas. Prepararte reduce el riesgo para ti y tu familia.",
+      id: "prepararme", icon: "🛡️", title: "Capacitarme para responder ante emergencias",
+      quePasa: "Saber actuar reduce el riesgo para ti y tu comunidad en eventos adversos.",
       pasos: [
         "Identifica zonas seguras (junto a estructuras firmes, lejos de ventanas) y dos rutas de salida.",
         "Ten listo un kit: agua, linterna, radio a pilas, documentos, medicinas, silbato y efectivo.",
