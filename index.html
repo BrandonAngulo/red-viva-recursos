@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="assets/css/styles.css?v=20260817-8">
+  <link rel="stylesheet" href="assets/css/guias.css?v=20260819-2">
   <link rel="stylesheet" href="assets/css/mobile.css?v=20260818-1">
 </head>
 <body>
@@ -238,18 +239,14 @@
         <section class="block" id="kit-difusion" style="margin-top: 40px;">
           <h2>Paquete de guías para WhatsApp e Instagram</h2>
           <p style="color: var(--fg-muted); margin-bottom: 24px;">Descarga estas guías visuales para compartirlas fácilmente en tus redes sociales o grupos de WhatsApp. Si has llegado aquí por medio de redes sociales, debes saber que en esta herramienta puedes encontrar mucha más información, líneas directas y recursos adicionales a los de la pieza gráfica.</p>
-          <div class="gallery-grid">
-          <div class="gallery-grid">
-            <div class="gallery-item-wrapper" style="display:flex; flex-direction:column; gap:8px;">
-              <div class="gallery-item" style="position:relative; border-radius:8px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); cursor:pointer; transition: transform 0.2s; background:var(--surface);" onclick="openPreviewModal()" title="Ver vista previa">
-                <img src="assets/img/guias/rutapractica/01_Portada.jpg" alt="Paquete de guías: Ruta práctica" loading="lazy" style="display:block; width:100%; aspect-ratio:4/5; object-fit:cover; border-bottom:none;">
-                <div style="position:absolute; top:8px; right:8px; background:rgba(0,0,0,0.65); color:white; padding:4px 10px; border-radius:12px; font-size:0.8rem; font-weight:600; display:flex; align-items:center; gap:6px; backdrop-filter:blur(4px);">
-                  👁️ Ver previo
-                </div>
+          <div class="gallery-grid" id="guiasGrid">
+            <!-- Renderizado por app.js desde Supabase (tabla guias). Fallback sin-JS: -->
+            <noscript>
+              <div class="guia-card">
+                <img src="assets/img/guias/rutapractica/01_Portada.jpg" alt="Ruta práctica" loading="lazy" style="width:100%; border-radius:8px;">
+                <a href="assets/descargas/Ruta_Practica.zip" download class="btn-primary" style="display:block; text-align:center; margin-top:8px;">⬇ Descargar paquete (ZIP)</a>
               </div>
-              <a href="assets/descargas/Ruta_Practica.zip" download class="btn-primary" style="text-align:center; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; width:100%; box-sizing:border-box; font-size:0.9rem;">⬇ Descargar paquete (ZIP)</a>
-            </div>
-            <!-- Lógica futura: Aquí se irán sumando los nuevos paquetes cuando se carguen -->
+            </noscript>
           </div>
         </section>
 
@@ -367,16 +364,25 @@
       </div>
     </dialog>
 
-    <!-- Modal de Vista Previa -->
-    <div id="previewModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); z-index:9999; flex-direction:column; align-items:center; justify-content:center;">
-      <button type="button" onclick="closePreviewModal()" aria-label="Cerrar vista previa" style="position:absolute; top:20px; right:20px; background:var(--surface); border:none; border-radius:50%; width:44px; height:44px; font-size:20px; cursor:pointer; box-shadow:var(--shadow); z-index:10; color:var(--fg);">✕</button>
-      <div class="preview-img-container" style="display:flex; align-items:center; justify-content:center; height:calc(100% - 100px); max-width:95vw;">
-        <img id="previewImg" src="" alt="Vista previa de guía" style="max-height:100%; max-width:100%; object-fit:contain; border-radius:8px; box-shadow:0 4px 24px rgba(0,0,0,0.4);">
-      </div>
-      <div class="preview-nav" style="display:flex; gap:16px; margin-top:20px; align-items:center; justify-content:center;">
-        <button type="button" onclick="prevPreviewImg()" id="prevPreviewBtn" class="btn-ghost" style="background:var(--surface); border-radius:24px; padding:10px 20px;">⬅ Anterior</button>
-        <span id="previewCounter" style="color:#fff; font-weight:600; font-size:1.1rem; min-width:60px; text-align:center; text-shadow:0 2px 4px rgba(0,0,0,0.8);">1 / 7</span>
-        <button type="button" onclick="nextPreviewImg()" id="nextPreviewBtn" class="btn-ghost" style="background:var(--surface); border-radius:24px; padding:10px 20px;">Siguiente ➡</button>
+    <!-- Modal de Vista Previa (panel scrollable con descargas) -->
+    <div id="previewModal" class="preview-modal" hidden>
+      <div class="preview-dialog" role="dialog" aria-modal="true" aria-labelledby="previewTitle">
+        <header class="preview-head">
+          <div class="preview-head-text">
+            <h3 id="previewTitle">Vista previa</h3>
+            <p id="previewDesc" class="preview-desc"></p>
+          </div>
+          <button type="button" class="preview-close js-preview-close" aria-label="Cerrar vista previa">✕</button>
+        </header>
+        <div class="preview-toolbar">
+          <label class="preview-selall"><input type="checkbox" id="previewSelectAll" checked> Seleccionar todas</label>
+          <span id="previewSelCount" class="preview-count"></span>
+          <div class="preview-toolbar-actions">
+            <button type="button" class="btn-ghost js-guia-dl-sel">⬇ Descargar seleccionadas</button>
+            <button type="button" class="btn-primary js-guia-dl-all">⬇ Descargar todo (ZIP)</button>
+          </div>
+        </div>
+        <div class="preview-scroll" id="previewScroll"></div>
       </div>
     </div>
 
@@ -401,6 +407,6 @@
   <script src="data/territory.js?v=20260817"></script>
   <script src="data/orientaciones.js?v=20260817"></script>
   <script src="data/comprender.js?v=20260817"></script>
-  <script src="assets/js/app.js?v=20260818-3" defer></script>
+  <script src="assets/js/app.js?v=20260819-1" defer></script>
 </body>
 </html>

@@ -98,6 +98,16 @@
         { n: "link_label", l: "Enlace: texto", t: "text" }, { n: "link_url", l: "Enlace: url", t: "text" },
         { n: "is_published", l: "Publicado", t: "bool" }, { n: "sort_order", l: "Orden", t: "int" },
       ] },
+    { key: "guias", label: "Guías visuales", icon: "🖼️", table: "guias", order: "sort_order.asc", listCols: ["title", "category"], titleField: "title", special: "guias",
+      fields: [
+        { n: "title", l: "Título de la guía", t: "text" },
+        { n: "description", l: "Descripción (qué verá y descargará el usuario)", t: "textarea" },
+        { n: "category", l: "Categoría (opcional)", t: "text" },
+        { n: "images", l: "Imágenes del paquete", t: "images" },
+        { n: "zip_url", l: "ZIP pre-armado (opcional; si se deja vacío se genera solo al descargar)", t: "text" },
+        { n: "cover_url", l: "Portada (opcional; por defecto usa la 1ª imagen)", t: "text" },
+        { n: "is_published", l: "Publicado", t: "bool" }, { n: "sort_order", l: "Orden", t: "int" },
+      ] },
     { key: "admins", label: "Administradores", icon: "👤", table: "admins", order: "created_at.asc", listCols: ["email"], titleField: "email",
       fields: [{ n: "email", l: "Correo del administrador", t: "text", pk: true }] },
   ];
@@ -105,6 +115,10 @@
 
   /* ---------- Estado ---------- */
   var state = { user: null, isAdmin: false, current: "contributions", editing: null };
+  var guiaImagesState = []; // piezas del paquete que se está editando (guías visuales)
+
+  var reDiaG = new RegExp("[" + String.fromCharCode(0x300) + "-" + String.fromCharCode(0x36f) + "]", "g");
+  function slugG(s) { return String(s || "").toLowerCase().normalize("NFD").replace(reDiaG, "").replace(/[^a-z0-9.]+/g, "-").replace(/^-|-$/g, ""); }
 
   /* ---------- Conversión de valores ---------- */
   function toForm(field, value) {
@@ -284,15 +298,100 @@
   }
   function cell(v) { if (Array.isArray(v)) return v.length + " ítem(s)"; if (v && typeof v === "object") return JSON.stringify(v).slice(0, 40); return v == null ? "" : String(v).slice(0, 60); }
 
+  /* ---------- Widget de imágenes (guías visuales) ---------- */
+  function imagesWidgetHtml() {
+    return '<div class="gi-widget">' +
+      '<div class="gi-list" id="giList"></div>' +
+      '<div class="gi-add">' +
+        '<label class="btn-ghost gi-addbtn">+ Agregar imágenes<input type="file" id="giFile" accept="image/*" multiple hidden></label>' +
+        '<button type="button" class="btn-ghost" id="giPreview">👁 Previsualizar paquete</button>' +
+        '<span id="giStatus" class="gi-status"></span>' +
+      '</div>' +
+      '<p class="gi-hint">Sube las piezas en orden. Puedes reordenarlas, editar la descripción de cada una y previsualizar cómo se verá el paquete antes de guardar.</p>' +
+    '</div>';
+  }
+  function renderGiList() {
+    var host = $("#giList"); if (!host) return;
+    if (!guiaImagesState.length) { host.innerHTML = '<p class="gi-empty">Aún no hay imágenes. Usa “Agregar imágenes”.</p>'; return; }
+    host.innerHTML = guiaImagesState.map(function (im, i) {
+      return '<div class="gi-row" data-i="' + i + '">' +
+        '<img src="' + esc(im.url) + '" alt="">' +
+        '<input type="text" class="gi-cap" data-i="' + i + '" value="' + esc(im.caption || "") + '" placeholder="Descripción de la pieza">' +
+        '<div class="gi-row-acts">' +
+          '<button type="button" class="mini" data-giact="up" data-i="' + i + '"' + (i === 0 ? " disabled" : "") + '>↑</button>' +
+          '<button type="button" class="mini" data-giact="down" data-i="' + i + '"' + (i === guiaImagesState.length - 1 ? " disabled" : "") + '>↓</button>' +
+          '<button type="button" class="mini danger" data-giact="del" data-i="' + i + '">✕</button>' +
+        '</div>' +
+      '</div>';
+    }).join("");
+    Array.prototype.forEach.call(host.querySelectorAll(".gi-cap"), function (inp) {
+      inp.addEventListener("input", function () { var it = guiaImagesState[+inp.dataset.i]; if (it) it.caption = inp.value; });
+    });
+    Array.prototype.forEach.call(host.querySelectorAll("[data-giact]"), function (b) {
+      b.addEventListener("click", function () {
+        var i = +b.dataset.i, act = b.dataset.giact, t;
+        if (act === "del") guiaImagesState.splice(i, 1);
+        else if (act === "up" && i > 0) { t = guiaImagesState[i - 1]; guiaImagesState[i - 1] = guiaImagesState[i]; guiaImagesState[i] = t; }
+        else if (act === "down" && i < guiaImagesState.length - 1) { t = guiaImagesState[i + 1]; guiaImagesState[i + 1] = guiaImagesState[i]; guiaImagesState[i] = t; }
+        renderGiList();
+      });
+    });
+  }
+  function uploadGiFiles(files) {
+    if (!files || !files.length) return;
+    var status = $("#giStatus"), arr = Array.prototype.slice.call(files), total = arr.length, done = 0;
+    status.textContent = "Subiendo 0/" + total + "…";
+    function next() {
+      if (!arr.length) { status.textContent = "Listo · " + done + "/" + total + " subida(s)."; renderGiList(); return; }
+      var f = arr.shift();
+      var path = "paquetes/" + Date.now() + "-" + Math.random().toString(36).slice(2, 7) + "-" + (slugG(f.name) || "img");
+      sb.storage.from("guias").upload(path, f, { cacheControl: "3600", upsert: false, contentType: f.type || "image/jpeg" }).then(function (res) {
+        if (res.error) { status.textContent = "Error con " + f.name + ": " + res.error.message; return; }
+        var url = sb.storage.from("guias").getPublicUrl(path).data.publicUrl;
+        var cap = f.name.replace(/\.[a-z0-9]+$/i, "").replace(/[_-]+/g, " ").trim();
+        guiaImagesState.push({ url: url, caption: cap });
+        done++; status.textContent = "Subiendo " + done + "/" + total + "…";
+        renderGiList(); next();
+      });
+    }
+    next();
+  }
+  function openGiPreview() {
+    if (!guiaImagesState.length) { window.alert("Agrega imágenes primero para previsualizar."); return; }
+    var title = ($("#f_title") && $("#f_title").value) || "Vista previa";
+    var desc = ($("#f_description") && $("#f_description").value) || "";
+    var ov = document.createElement("div");
+    ov.className = "gi-preview-modal";
+    ov.innerHTML = '<div class="gi-preview-dialog"><header><div><h3>' + esc(title) + "</h3>" + (desc ? "<p>" + esc(desc) + "</p>" : "") +
+      '</div><button type="button" class="preview-close" id="giPvClose" aria-label="Cerrar">✕</button></header>' +
+      '<div class="gi-preview-scroll">' + guiaImagesState.map(function (im, i) {
+        return '<figure><img src="' + esc(im.url) + '" alt=""><figcaption>' + esc(im.caption || ("Pieza " + (i + 1))) + "</figcaption></figure>";
+      }).join("") + "</div></div>";
+    document.body.appendChild(ov);
+    document.body.style.overflow = "hidden";
+    function close() { ov.remove(); document.body.style.overflow = ""; }
+    ov.addEventListener("click", function (e) { if (e.target === ov || e.target.id === "giPvClose") close(); });
+    document.addEventListener("keydown", function esc2(e) { if (e.key === "Escape") { close(); document.removeEventListener("keydown", esc2); } });
+  }
+  function bindGiWidget() {
+    renderGiList();
+    var file = $("#giFile"); if (file) file.addEventListener("change", function () { uploadGiFiles(file.files); file.value = ""; });
+    var pv = $("#giPreview"); if (pv) pv.addEventListener("click", openGiPreview);
+  }
+
   /* ---------- Editor ---------- */
   function openEditor(en, row) {
     var isNew = !row;
     var main = $("#geMain");
+    if (en.special === "guias") {
+      guiaImagesState = (row && Array.isArray(row.images) ? row.images : []).map(function (im) { return { url: im.url, caption: im.caption || "" }; });
+    }
     var fieldsHtml = en.fields.map(function (f) {
       var val = row ? toForm(f, row[f.n]) : toForm(f, f.t === "bool" ? (f.n === "is_published") : "");
       var id = "f_" + f.n;
       var input;
-      if (f.t === "textarea") input = '<textarea id="' + id + '" rows="3">' + esc(val) + "</textarea>";
+      if (f.t === "images") input = imagesWidgetHtml();
+      else if (f.t === "textarea") input = '<textarea id="' + id + '" rows="3">' + esc(val) + "</textarea>";
       else if (f.t === "lines" || f.t === "kv") input = '<textarea id="' + id + '" rows="4">' + esc(val) + "</textarea>";
       else if (f.t === "bool") input = '<input type="checkbox" id="' + id + '"' + (val ? " checked" : "") + ">";
       else if (f.t === "select") input = '<select id="' + id + '">' + f.o.map(function (o) { return '<option' + (o === val ? " selected" : "") + ">" + esc(o) + "</option>"; }).join("") + "</select>";
@@ -313,6 +412,7 @@
       "</form>";
     $("#backList").addEventListener("click", loadList);
     $("#cancelEdit").addEventListener("click", loadList);
+    if (en.special === "guias") bindGiWidget();
     if ($("#toResource")) $("#toResource").addEventListener("click", function () { contribToResource(row); });
     if (!en.readonly) $("#editForm").addEventListener("submit", function (e) { e.preventDefault(); saveRow(en, row, isNew); });
   }
@@ -320,6 +420,7 @@
   function collect(en) {
     var obj = {};
     en.fields.forEach(function (f) {
+      if (f.t === "images") { obj[f.n] = guiaImagesState.map(function (im) { return { url: im.url, caption: im.caption || "" }; }); return; }
       var node = $("#f_" + f.n); if (!node) return;
       var raw = f.t === "bool" ? node.checked : node.value;
       obj[f.n] = fromForm(f, raw);

@@ -1,0 +1,166 @@
+/* Guías visuales (paquetes de imágenes) — galería + modal de vista previa.
+   Archivo aislado para no interferir con styles.css. */
+
+/* ---------- Galería de tarjetas ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+.guia-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.guia-cover {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: var(--surface-2, #0000000a);
+  cursor: pointer;
+  line-height: 0;
+}
+.guia-cover img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+.guia-cover:hover img { transform: scale(1.03); }
+.guia-badge {
+  position: absolute;
+  bottom: 8px; left: 8px;
+  background: rgba(0, 0, 0, .68);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+  line-height: 1;
+  backdrop-filter: blur(4px);
+}
+.guia-body { display: flex; flex-direction: column; gap: 8px; padding: 14px; }
+.guia-body h3 { margin: 0; font-size: 1.02rem; line-height: 1.25; }
+.guia-desc {
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: .88rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.guia-actions { display: flex; gap: 8px; margin-top: 2px; }
+.guia-actions button { flex: 1 1 0; min-width: 0; padding: 9px 10px; border-radius: 8px; font-size: .86rem; cursor: pointer; }
+.guia-empty { color: var(--fg-muted); }
+
+/* ---------- Modal de vista previa ---------- */
+.preview-modal[hidden] { display: none; }
+.preview-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(8px, 3vw, 32px);
+  background: rgba(0, 0, 0, .72);
+  backdrop-filter: blur(3px);
+}
+.preview-dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(760px, 100%);
+  max-height: 92vh;
+  background: var(--bg, #fff);
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, .45);
+  overflow: hidden;
+}
+.preview-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.preview-head-text { min-width: 0; }
+.preview-head h3 { margin: 0 0 4px; font-size: 1.1rem; }
+.preview-desc { margin: 0; color: var(--fg-muted); font-size: .9rem; line-height: 1.45; }
+.preview-close {
+  flex: 0 0 auto;
+  width: 38px; height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--fg);
+  font-size: 18px;
+  cursor: pointer;
+}
+.preview-close:hover { background: var(--surface-2, #0000000f); }
+.preview-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+.preview-selall { display: inline-flex; align-items: center; gap: 7px; font-size: .9rem; font-weight: 600; cursor: pointer; }
+.preview-count { color: var(--fg-muted); font-size: .84rem; }
+.preview-toolbar-actions { display: flex; gap: 8px; margin-left: auto; flex-wrap: wrap; }
+.preview-toolbar-actions button { padding: 8px 14px; border-radius: 8px; font-size: .85rem; cursor: pointer; }
+
+.preview-scroll {
+  overflow-y: auto;
+  padding: 16px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+.preview-item {
+  margin: 0;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.preview-item img { display: block; width: 100%; height: auto; }
+.preview-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: .86rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+.preview-item figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--line);
+  font-size: .88rem;
+}
+.btn-sm { padding: 6px 12px !important; border-radius: 7px; font-size: .82rem; }
+
+@media (max-width: 560px) {
+  .preview-toolbar-actions { margin-left: 0; width: 100%; }
+  .preview-toolbar-actions button { flex: 1 1 0; }
+}

@@ -788,6 +788,207 @@
     window.addEventListener("hashchange", route);
   }
 
+  /* ---------- Guías visuales (paquetes de imágenes) ---------- */
+  var GUIAS_FALLBACK = [{
+    id: "rutapractica",
+    title: "Ruta práctica: qué hacer paso a paso",
+    description: "Guía visual de 7 piezas para compartir por WhatsApp e Instagram. Explica cómo buscar a una persona, revisar tu vivienda, registrarte en el RUD, qué hacer ante un fallecimiento, apoyo emocional y cómo prepararte.",
+    cover_url: "assets/img/guias/rutapractica/01_Portada.jpg",
+    zip_url: "assets/descargas/Ruta_Practica.zip",
+    images: [
+      { url: "assets/img/guias/rutapractica/01_Portada.jpg", caption: "Portada" },
+      { url: "assets/img/guias/rutapractica/02_BuscarPersona.jpg", caption: "Cómo buscar a una persona" },
+      { url: "assets/img/guias/rutapractica/03_Vivienda.jpg", caption: "Revisar tu vivienda" },
+      { url: "assets/img/guias/rutapractica/04_RUD.jpg", caption: "Registro Único de Damnificados (RUD)" },
+      { url: "assets/img/guias/rutapractica/05_Fallecimiento.jpg", caption: "Qué hacer ante un fallecimiento" },
+      { url: "assets/img/guias/rutapractica/06_ApoyoEmocional.jpg", caption: "Apoyo emocional" },
+      { url: "assets/img/guias/rutapractica/07_Prepararte.jpg", caption: "Cómo prepararte" }
+    ]
+  }];
+  var GUIAS = GUIAS_FALLBACK.slice();
+  var activeGuia = null;
+
+  function guiaImages(g) { return g && Array.isArray(g.images) ? g.images : []; }
+  var pad2 = function (n) { return ("0" + n).slice(-2); };
+
+  function renderGuias() {
+    var grid = $("#guiasGrid");
+    if (!grid) return;
+    if (!GUIAS.length) { grid.innerHTML = '<p class="guia-empty">Pronto agregaremos guías visuales para compartir.</p>'; return; }
+    grid.innerHTML = GUIAS.map(function (g, i) {
+      var imgs = guiaImages(g);
+      var cover = g.cover_url || (imgs[0] && imgs[0].url) || "";
+      return '<article class="guia-card">' +
+        '<button type="button" class="guia-cover js-guia-preview" data-idx="' + i + '" title="Ver vista previa">' +
+          (cover ? '<img src="' + esc(cover) + '" alt="' + esc(g.title) + '" loading="lazy">' : '') +
+          '<span class="guia-badge">👁️ Ver ' + imgs.length + ' piezas</span>' +
+        '</button>' +
+        '<div class="guia-body">' +
+          '<h3>' + esc(g.title) + '</h3>' +
+          (g.description ? '<p class="guia-desc">' + esc(g.description) + '</p>' : '') +
+          '<div class="guia-actions">' +
+            '<button type="button" class="btn-ghost js-guia-preview" data-idx="' + i + '">👁️ Vista previa</button>' +
+            '<button type="button" class="btn-primary js-guia-download" data-idx="' + i + '">⬇ Descargar</button>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+    }).join("");
+  }
+
+  function loadGuias() {
+    renderGuias();
+    fetchTable("guias", "sort_order.asc")
+      .then(function (rows) { if (Array.isArray(rows) && rows.length) { GUIAS = rows; renderGuias(); markLiveBadge("#guiasLive", true); } })
+      .catch(function () { markLiveBadge("#guiasLive", false); });
+  }
+
+  function guiaFilename(g, im, idx) {
+    var clean = String(im.url || "").split("?")[0];
+    var m = clean.match(/\.(jpe?g|png|webp|gif|pdf)$/i);
+    var ext = m ? m[0] : ".jpg";
+    var cap = im.caption ? slug(im.caption) : ("pieza-" + (idx + 1));
+    return slug(g.title || "guia") + "_" + pad2(idx + 1) + "_" + cap + ext;
+  }
+
+  function triggerDownload(url, filename) {
+    var a = document.createElement("a");
+    if (/^https?:\/\//i.test(url) && url.indexOf("/storage/v1/object/public/") !== -1) {
+      // Storage público de Supabase: forzar descarga con Content-Disposition.
+      a.href = url + (url.indexOf("?") > -1 ? "&" : "?") + "download=" + encodeURIComponent(filename || "");
+    } else {
+      a.href = url;
+      if (filename) a.download = filename;
+    }
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { a.remove(); }, 120);
+  }
+
+  var _jszip = null;
+  function loadJSZip() {
+    if (window.JSZip) return Promise.resolve(window.JSZip);
+    if (_jszip) return _jszip;
+    _jszip = new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = "https://unpkg.com/jszip@3.10.1/dist/jszip.min.js";
+      s.onload = function () { resolve(window.JSZip); };
+      s.onerror = function () { _jszip = null; reject(new Error("no se pudo cargar JSZip")); };
+      document.head.appendChild(s);
+    });
+    return _jszip;
+  }
+
+  function zipImages(g, items, btn) {
+    var label = btn ? btn.innerHTML : "";
+    if (btn) { btn.disabled = true; btn.innerHTML = "Preparando ZIP…"; }
+    function restore() { if (btn) { btn.disabled = false; btn.innerHTML = label; } }
+    return loadJSZip().then(function (JSZip) {
+      var zip = new JSZip();
+      return Promise.all(items.map(function (it) {
+        return fetch(it.url).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.blob(); })
+          .then(function (b) { zip.file(it.filename, b); });
+      })).then(function () { return zip.generateAsync({ type: "blob" }); });
+    }).then(function (blob) {
+      var u = URL.createObjectURL(blob);
+      triggerDownload(u, slug(g.title || "guia") + ".zip");
+      setTimeout(function () { URL.revokeObjectURL(u); }, 5000);
+      restore();
+    }).catch(function (e) {
+      restore();
+      alert("No se pudo generar el ZIP. Puedes descargar las piezas una por una desde la vista previa. (" + e.message + ")");
+    });
+  }
+
+  function downloadGuia(g, btn) {
+    if (!g) return;
+    if (g.zip_url) { triggerDownload(g.zip_url, slug(g.title || "guia") + ".zip"); return; }
+    var items = guiaImages(g).map(function (im, idx) { return { url: im.url, filename: guiaFilename(g, im, idx) }; });
+    if (!items.length) return;
+    zipImages(g, items, btn);
+  }
+
+  function updateSelCount() {
+    var boxes = document.querySelectorAll(".js-guia-sel");
+    var n = 0;
+    Array.prototype.forEach.call(boxes, function (cb) { if (cb.checked) n++; });
+    var c = $("#previewSelCount"); if (c) c.textContent = n + " de " + boxes.length + " seleccionadas";
+    var sa = $("#previewSelectAll"); if (sa) sa.checked = n === boxes.length && n > 0;
+  }
+
+  function openGuiaPreview(i) {
+    var g = GUIAS[i];
+    if (!g) return;
+    activeGuia = g;
+    var imgs = guiaImages(g);
+    var t = $("#previewTitle"); if (t) t.textContent = g.title || "Guía visual";
+    var d = $("#previewDesc"); if (d) d.textContent = g.description || "";
+    var scroll = $("#previewScroll");
+    if (scroll) {
+      scroll.scrollTop = 0;
+      scroll.innerHTML = imgs.map(function (im, idx) {
+        return '<figure class="preview-item">' +
+          '<label class="preview-check"><input type="checkbox" class="js-guia-sel" data-idx="' + idx + '" checked> Incluir</label>' +
+          '<img src="' + esc(im.url) + '" alt="' + esc(im.caption || ("Pieza " + (idx + 1))) + '" loading="lazy">' +
+          '<figcaption><span>' + esc(im.caption || ("Pieza " + (idx + 1))) + '</span>' +
+          '<button type="button" class="btn-ghost btn-sm js-guia-dl-one" data-idx="' + idx + '">⬇ Descargar</button></figcaption>' +
+        '</figure>';
+      }).join("");
+    }
+    updateSelCount();
+    var m = $("#previewModal");
+    if (m) m.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeGuiaPreview() {
+    var m = $("#previewModal"); if (m) m.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  function downloadSelected(btn) {
+    var g = activeGuia; if (!g) return;
+    var imgs = guiaImages(g), chosen = [];
+    Array.prototype.forEach.call(document.querySelectorAll(".js-guia-sel"), function (cb) {
+      if (cb.checked) { var idx = +cb.getAttribute("data-idx"); chosen.push({ url: imgs[idx].url, filename: guiaFilename(g, imgs[idx], idx) }); }
+    });
+    if (!chosen.length) { alert("Selecciona al menos una pieza para descargar."); return; }
+    if (chosen.length === 1) { triggerDownload(chosen[0].url, chosen[0].filename); return; }
+    zipImages(g, chosen, btn);
+  }
+
+  function bindGuias() {
+    var grid = $("#guiasGrid");
+    if (grid) {
+      grid.addEventListener("click", function (e) {
+        var pv = e.target.closest(".js-guia-preview");
+        if (pv) { openGuiaPreview(+pv.getAttribute("data-idx")); return; }
+        var dl = e.target.closest(".js-guia-download");
+        if (dl) { downloadGuia(GUIAS[+dl.getAttribute("data-idx")], dl); return; }
+      });
+    }
+    var modal = $("#previewModal");
+    if (modal) {
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) { closeGuiaPreview(); return; }
+        if (e.target.closest(".js-preview-close")) { closeGuiaPreview(); return; }
+        var one = e.target.closest(".js-guia-dl-one");
+        if (one) { var idx = +one.getAttribute("data-idx"); var im = guiaImages(activeGuia)[idx]; if (im) triggerDownload(im.url, guiaFilename(activeGuia, im, idx)); return; }
+        var sel = e.target.closest(".js-guia-dl-sel");
+        if (sel) { downloadSelected(sel); return; }
+        var all = e.target.closest(".js-guia-dl-all");
+        if (all) { downloadGuia(activeGuia, all); return; }
+      });
+      modal.addEventListener("change", function (e) {
+        if (e.target.id === "previewSelectAll") {
+          var on = e.target.checked;
+          Array.prototype.forEach.call(document.querySelectorAll(".js-guia-sel"), function (cb) { cb.checked = on; });
+        }
+        if (e.target.classList.contains("js-guia-sel") || e.target.id === "previewSelectAll") updateSelCount();
+      });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) closeGuiaPreview(); });
+    }
+  }
+
   /* ---------- Init ---------- */
   fillStatic();
   bind();
@@ -800,6 +1001,8 @@
   renderLineas();
   renderComprender();
   renderHeroFacts();
+  renderGuias();
+  bindGuias();
   renderSituation(DATA.situation || []);
   route();              // muestra la vista según el hash (o Inicio)
   loadSituation();      // en vivo
@@ -808,81 +1011,6 @@
   loadTimeline();       // cronología en vivo
   loadExplicaciones();  // explicaciones en vivo
   loadOrientaciones();  // orientaciones en vivo
+  loadGuias();          // guías visuales en vivo
 })();
-
-  // ==========================================
-  // Gallery Preview Logic
-  // ==========================================
-  var previewModal = $("#previewModal");
-  var previewImg = $("#previewImg");
-  var previewCounter = $("#previewCounter");
-  var prevPreviewBtn = $("#prevPreviewBtn");
-  var nextPreviewBtn = $("#nextPreviewBtn");
-  
-  var currentPreviewImages = [];
-  var currentPreviewIndex = 0;
-
-  var rutapracticaImages = [
-    "assets/img/guias/rutapractica/01_Portada.jpg",
-    "assets/img/guias/rutapractica/02_BuscarPersona.jpg",
-    "assets/img/guias/rutapractica/03_Vivienda.jpg",
-    "assets/img/guias/rutapractica/04_RUD.jpg",
-    "assets/img/guias/rutapractica/05_Fallecimiento.jpg",
-    "assets/img/guias/rutapractica/06_ApoyoEmocional.jpg",
-    "assets/img/guias/rutapractica/07_Prepararte.jpg"
-  ];
-
-  function updatePreview() {
-    if (!currentPreviewImages.length) return;
-    previewImg.src = currentPreviewImages[currentPreviewIndex];
-    previewCounter.textContent = (currentPreviewIndex + 1) + " / " + currentPreviewImages.length;
-    prevPreviewBtn.disabled = currentPreviewIndex === 0;
-    nextPreviewBtn.disabled = currentPreviewIndex === currentPreviewImages.length - 1;
-  }
-
-  window.openPreviewModal = function() {
-    var m = document.getElementById("previewModal");
-    if (!m) return;
-    currentPreviewImages = rutapracticaImages;
-    currentPreviewIndex = 0;
-    updatePreview();
-    m.style.display = "flex";
-    document.body.style.overflow = "hidden";
-  };
-
-  window.closePreviewModal = function() {
-    var m = document.getElementById("previewModal");
-    if (m) m.style.display = "none";
-    document.body.style.overflow = "";
-  };
-
-  window.prevPreviewImg = function() {
-    if (currentPreviewIndex > 0) {
-      currentPreviewIndex--;
-      updatePreview();
-    }
-  };
-
-  window.nextPreviewImg = function() {
-    if (currentPreviewIndex < currentPreviewImages.length - 1) {
-      currentPreviewIndex++;
-      updatePreview();
-    }
-  };
-
-  // Legacy event bindings removed
-
-
-
-
-  document.addEventListener("DOMContentLoaded", function() {
-    var m = document.getElementById("previewModal");
-    if (m) {
-      m.addEventListener("click", function(e) {
-        if (e.target === m) {
-          window.closePreviewModal();
-        }
-      });
-    }
-  });
 
