@@ -807,6 +807,8 @@
   }];
   var GUIAS = GUIAS_FALLBACK.slice();
   var activeGuia = null;
+  var carIndex = 0;      // pieza visible en el carrusel
+  var guiaSel = [];      // selección por pieza (para descarga)
 
   function guiaImages(g) { return g && Array.isArray(g.images) ? g.images : []; }
   var pad2 = function (n) { return ("0" + n).slice(-2); };
@@ -908,11 +910,27 @@
   }
 
   function updateSelCount() {
-    var boxes = document.querySelectorAll(".js-guia-sel");
-    var n = 0;
-    Array.prototype.forEach.call(boxes, function (cb) { if (cb.checked) n++; });
-    var c = $("#previewSelCount"); if (c) c.textContent = n + " de " + boxes.length + " seleccionadas";
-    var sa = $("#previewSelectAll"); if (sa) sa.checked = n === boxes.length && n > 0;
+    var total = guiaSel.length, n = 0;
+    for (var i = 0; i < total; i++) if (guiaSel[i]) n++;
+    var c = $("#previewSelCount"); if (c) c.textContent = n + " de " + total + " seleccionadas";
+    var sa = $("#previewSelectAll"); if (sa) sa.checked = n === total && n > 0;
+  }
+
+  function renderCarousel() {
+    var imgs = guiaImages(activeGuia);
+    if (!imgs.length) return;
+    if (carIndex < 0) carIndex = imgs.length - 1;      // ciclo
+    if (carIndex >= imgs.length) carIndex = 0;
+    var im = imgs[carIndex];
+    var img = $("#carImg"); if (img) { img.src = im.url; img.alt = im.caption || ("Pieza " + (carIndex + 1)); }
+    var cap = $("#carCaption"); if (cap) cap.textContent = im.caption || ("Pieza " + (carIndex + 1));
+    var cnt = $("#carCounter"); if (cnt) cnt.textContent = (carIndex + 1) + " / " + imgs.length;
+    var inc = $("#carInclude"); if (inc) inc.checked = !!guiaSel[carIndex];
+    Array.prototype.forEach.call(document.querySelectorAll("#carThumbs .car-thumb"), function (t) {
+      var idx = +t.getAttribute("data-idx");
+      t.classList.toggle("active", idx === carIndex);
+      t.classList.toggle("excluded", !guiaSel[idx]);
+    });
   }
 
   function openGuiaPreview(i) {
@@ -920,20 +938,15 @@
     if (!g) return;
     activeGuia = g;
     var imgs = guiaImages(g);
+    guiaSel = imgs.map(function () { return true; });
+    carIndex = 0;
     var t = $("#previewTitle"); if (t) t.textContent = g.title || "Guía visual";
     var d = $("#previewDesc"); if (d) d.textContent = g.description || "";
-    var scroll = $("#previewScroll");
-    if (scroll) {
-      scroll.scrollTop = 0;
-      scroll.innerHTML = imgs.map(function (im, idx) {
-        return '<figure class="preview-item">' +
-          '<label class="preview-check"><input type="checkbox" class="js-guia-sel" data-idx="' + idx + '" checked> Incluir</label>' +
-          '<img src="' + esc(im.url) + '" alt="' + esc(im.caption || ("Pieza " + (idx + 1))) + '" loading="lazy">' +
-          '<figcaption><span>' + esc(im.caption || ("Pieza " + (idx + 1))) + '</span>' +
-          '<button type="button" class="btn-ghost btn-sm js-guia-dl-one" data-idx="' + idx + '">⬇ Descargar</button></figcaption>' +
-        '</figure>';
-      }).join("");
-    }
+    var thumbs = $("#carThumbs");
+    if (thumbs) thumbs.innerHTML = imgs.map(function (im, idx) {
+      return '<button type="button" class="car-thumb js-car-thumb" data-idx="' + idx + '" title="' + esc(im.caption || ("Pieza " + (idx + 1))) + '"><img src="' + esc(im.url) + '" alt="" loading="lazy"></button>';
+    }).join("");
+    renderCarousel();
     updateSelCount();
     var m = $("#previewModal");
     if (m) m.hidden = false;
@@ -948,9 +961,7 @@
   function downloadSelected(btn) {
     var g = activeGuia; if (!g) return;
     var imgs = guiaImages(g), chosen = [];
-    Array.prototype.forEach.call(document.querySelectorAll(".js-guia-sel"), function (cb) {
-      if (cb.checked) { var idx = +cb.getAttribute("data-idx"); chosen.push({ url: imgs[idx].url, filename: guiaFilename(g, imgs[idx], idx) }); }
-    });
+    for (var i = 0; i < imgs.length; i++) if (guiaSel[i]) chosen.push({ url: imgs[i].url, filename: guiaFilename(g, imgs[i], i) });
     if (!chosen.length) { alert("Selecciona al menos una pieza para descargar."); return; }
     if (chosen.length === 1) { triggerDownload(chosen[0].url, chosen[0].filename); return; }
     zipImages(g, chosen, btn);
@@ -971,21 +982,30 @@
       modal.addEventListener("click", function (e) {
         if (e.target === modal) { closeGuiaPreview(); return; }
         if (e.target.closest(".js-preview-close")) { closeGuiaPreview(); return; }
-        var one = e.target.closest(".js-guia-dl-one");
-        if (one) { var idx = +one.getAttribute("data-idx"); var im = guiaImages(activeGuia)[idx]; if (im) triggerDownload(im.url, guiaFilename(activeGuia, im, idx)); return; }
+        if (e.target.closest(".js-car-prev")) { carIndex--; renderCarousel(); return; }
+        if (e.target.closest(".js-car-next")) { carIndex++; renderCarousel(); return; }
+        var th = e.target.closest(".js-car-thumb");
+        if (th) { carIndex = +th.getAttribute("data-idx"); renderCarousel(); return; }
+        if (e.target.closest(".js-guia-dl-one")) { var im = guiaImages(activeGuia)[carIndex]; if (im) triggerDownload(im.url, guiaFilename(activeGuia, im, carIndex)); return; }
         var sel = e.target.closest(".js-guia-dl-sel");
         if (sel) { downloadSelected(sel); return; }
         var all = e.target.closest(".js-guia-dl-all");
         if (all) { downloadGuia(activeGuia, all); return; }
       });
       modal.addEventListener("change", function (e) {
+        if (e.target.id === "carInclude") { guiaSel[carIndex] = e.target.checked; updateSelCount(); renderCarousel(); return; }
         if (e.target.id === "previewSelectAll") {
           var on = e.target.checked;
-          Array.prototype.forEach.call(document.querySelectorAll(".js-guia-sel"), function (cb) { cb.checked = on; });
+          for (var i = 0; i < guiaSel.length; i++) guiaSel[i] = on;
+          updateSelCount(); renderCarousel();
         }
-        if (e.target.classList.contains("js-guia-sel") || e.target.id === "previewSelectAll") updateSelCount();
       });
-      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && modal && !modal.hidden) closeGuiaPreview(); });
+      document.addEventListener("keydown", function (e) {
+        if (!modal || modal.hidden) return;
+        if (e.key === "Escape") closeGuiaPreview();
+        else if (e.key === "ArrowLeft") { carIndex--; renderCarousel(); }
+        else if (e.key === "ArrowRight") { carIndex++; renderCarousel(); }
+      });
     }
   }
 
