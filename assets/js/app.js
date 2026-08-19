@@ -809,3 +809,78 @@
   loadExplicaciones();  // explicaciones en vivo
   loadOrientaciones();  // orientaciones en vivo
 })();
+
+  // ==========================================
+  // Gallery Preview Logic
+  // ==========================================
+  var previewModal = $("#previewModal");
+  var previewImg = $("#previewImg");
+  var previewCounter = $("#previewCounter");
+  var prevPreviewBtn = $("#prevPreviewBtn");
+  var nextPreviewBtn = $("#nextPreviewBtn");
+  
+  var currentPreviewImages = [];
+  var currentPreviewIndex = 0;
+
+  var rutapracticaImages = [
+    "assets/img/guias/rutapractica/01_Portada.jpg",
+    "assets/img/guias/rutapractica/02_BuscarPersona.jpg",
+    "assets/img/guias/rutapractica/03_Vivienda.jpg",
+    "assets/img/guias/rutapractica/04_RUD.jpg",
+    "assets/img/guias/rutapractica/05_Fallecimiento.jpg",
+    "assets/img/guias/rutapractica/06_ApoyoEmocional.jpg",
+    "assets/img/guias/rutapractica/07_Prepararte.jpg"
+  ];
+
+  function updatePreview() {
+    if (!currentPreviewImages.length) return;
+    previewImg.src = currentPreviewImages[currentPreviewIndex];
+    previewCounter.textContent = (currentPreviewIndex + 1) + " / " + currentPreviewImages.length;
+    prevPreviewBtn.disabled = currentPreviewIndex === 0;
+    nextPreviewBtn.disabled = currentPreviewIndex === currentPreviewImages.length - 1;
+  }
+
+  function openPreview(images) {
+    if (!previewModal) return;
+    currentPreviewImages = images;
+    currentPreviewIndex = 0;
+    updatePreview();
+    previewModal.showModal();
+    document.body.style.overflow = "hidden";
+  }
+
+  if (previewModal) {
+    Array.prototype.forEach.call(document.querySelectorAll(".js-open-preview"), function (btn) {
+      btn.addEventListener("click", function () {
+        openPreview(rutapracticaImages);
+      });
+    });
+
+    byId("#closePreviewModal", "click", function () {
+      previewModal.close();
+      document.body.style.overflow = "";
+    });
+
+    byId("#prevPreviewBtn", "click", function () {
+      if (currentPreviewIndex > 0) {
+        currentPreviewIndex--;
+        updatePreview();
+      }
+    });
+
+    byId("#nextPreviewBtn", "click", function () {
+      if (currentPreviewIndex < currentPreviewImages.length - 1) {
+        currentPreviewIndex++;
+        updatePreview();
+      }
+    });
+
+    // Close on backdrop click
+    previewModal.addEventListener("click", function(e) {
+      if (e.target === previewModal) {
+        previewModal.close();
+        document.body.style.overflow = "";
+      }
+    });
+  }
+
