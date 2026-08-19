@@ -239,12 +239,12 @@
           <p style="color: var(--fg-muted); margin-bottom: 24px;">Descarga estas guías visuales para compartirlas fácilmente en tus redes sociales o grupos de WhatsApp. Si has llegado aquí por medio de redes sociales, debes saber que en esta herramienta puedes encontrar mucha más información, líneas directas y recursos adicionales a los de la pieza gráfica.</p>
           <div class="gallery-grid">
             <div class="gallery-item" style="cursor: default; display: flex; flex-direction: column;">
-              <button class="gallery-preview-btn js-open-preview" type="button" aria-label="Ver vista previa" style="border:none; padding:0; background:transparent; cursor:pointer; width:100%; text-align:center; display:block;">
+              <button class="gallery-preview-btn" type="button" aria-label="Ver vista previa" onclick="openPreviewModal()" style="border:none; padding:0; background:transparent; cursor:pointer; width:100%; text-align:center; display:block;">
                 <img src="assets/img/guias/rutapractica/01_Portada.jpg" alt="Paquete de guías: Ruta práctica" loading="lazy" style="display:block; width:100%; aspect-ratio:4/5; object-fit:cover;">
               </button>
-              <div class="gallery-actions" style="display:flex; border-top:1px solid var(--line); background:var(--surface);">
-                <button type="button" class="js-open-preview" style="flex:1; border-radius:0; border:none; padding:12px 2px; font-size:0.85rem; font-weight:600; border-right:1px solid var(--line); background:transparent; color:var(--fg); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px;">👀 Ver</button>
-                <a href="assets/descargas/Ruta_Practica.zip" download style="flex:1; border-radius:0; text-align:center; padding:12px 2px; text-decoration:none; font-size:0.85rem; font-weight:600; background:transparent; color:var(--fg); display:flex; align-items:center; justify-content:center; gap:4px;">⬇ ZIP</a>
+              <div class="gallery-actions" style="display:grid; grid-template-columns: 1fr 1fr; border-top:1px solid var(--line); background:var(--surface);">
+                <button type="button" onclick="openPreviewModal()" style="border-radius:0; border:none; padding:12px 2px; font-size:0.85rem; font-weight:600; border-right:1px solid var(--line); background:transparent; color:var(--fg); cursor:pointer; display:flex; align-items:center; justify-content:center; gap:4px;">👀 Ver</button>
+                <a href="assets/descargas/Ruta_Practica.zip" download style="border-radius:0; text-align:center; padding:12px 2px; text-decoration:none; font-size:0.85rem; font-weight:600; background:transparent; color:var(--fg); display:flex; align-items:center; justify-content:center; gap:4px;">⬇ ZIP</a>
               </div>
             </div>
             <!-- Lógica futura: Aquí se irán sumando los nuevos paquetes cuando se carguen -->
@@ -401,6 +401,6 @@
   <script src="data/territory.js?v=20260817"></script>
   <script src="data/orientaciones.js?v=20260817"></script>
   <script src="data/comprender.js?v=20260817"></script>
-  <script src="assets/js/app.js?v=20260818-1" defer></script>
+  <script src="assets/js/app.js?v=20260818-2" defer></script>
 </body>
 </html>

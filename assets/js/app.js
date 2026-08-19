@@ -840,22 +840,18 @@
     nextPreviewBtn.disabled = currentPreviewIndex === currentPreviewImages.length - 1;
   }
 
-  function openPreview(images) {
+  window.openPreviewModal = function() {
+    if (!previewModal) previewModal = $("#previewModal");
     if (!previewModal) return;
-    currentPreviewImages = images;
+    currentPreviewImages = rutapracticaImages;
     currentPreviewIndex = 0;
     updatePreview();
     previewModal.showModal();
     document.body.style.overflow = "hidden";
-  }
+  };
 
   if (previewModal) {
-    Array.prototype.forEach.call(document.querySelectorAll(".js-open-preview"), function (btn) {
-      btn.addEventListener("click", function () {
-        openPreview(rutapracticaImages);
-      });
-    });
-
+    // Legacy js-open-preview listeners removed in favor of inline onclick
     if ($("#closePreviewModal")) {
       $("#closePreviewModal").addEventListener("click", function () {
         previewModal.close();
