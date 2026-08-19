@@ -856,24 +856,30 @@
       });
     });
 
-    byId("#closePreviewModal", "click", function () {
-      previewModal.close();
-      document.body.style.overflow = "";
-    });
+    if ($("#closePreviewModal")) {
+      $("#closePreviewModal").addEventListener("click", function () {
+        previewModal.close();
+        document.body.style.overflow = "";
+      });
+    }
 
-    byId("#prevPreviewBtn", "click", function () {
-      if (currentPreviewIndex > 0) {
-        currentPreviewIndex--;
-        updatePreview();
-      }
-    });
+    if ($("#prevPreviewBtn")) {
+      $("#prevPreviewBtn").addEventListener("click", function () {
+        if (currentPreviewIndex > 0) {
+          currentPreviewIndex--;
+          updatePreview();
+        }
+      });
+    }
 
-    byId("#nextPreviewBtn", "click", function () {
-      if (currentPreviewIndex < currentPreviewImages.length - 1) {
-        currentPreviewIndex++;
-        updatePreview();
-      }
-    });
+    if ($("#nextPreviewBtn")) {
+      $("#nextPreviewBtn").addEventListener("click", function () {
+        if (currentPreviewIndex < currentPreviewImages.length - 1) {
+          currentPreviewIndex++;
+          updatePreview();
+        }
+      });
+    }
 
     // Close on backdrop click
     previewModal.addEventListener("click", function(e) {
