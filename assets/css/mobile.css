@@ -1,0 +1,26 @@
+/* Ajustes de experiencia móvil — se carga DESPUÉS de styles.css para reforzar
+   el comportamiento responsive sin tocar el archivo principal. */
+
+/* El contenido del hero debe poder encogerse (evita desborde horizontal). */
+.hero-main { min-width: 0; }
+
+@media (max-width: 900px) {
+  /* Las pestañas se desplazan dentro de su propia franja; no empujan el header. */
+  .site-header .tabs { flex: 1 1 0; min-width: 0; }
+}
+
+@media (max-width: 640px) {
+  /* Header en dos filas: marca + acciones arriba, navegación (pestañas) abajo. */
+  .site-header .wrap { flex-wrap: wrap; gap: 8px 10px; }
+  .site-header .brand { order: 1; }
+  .site-header .header-actions { order: 2; margin-left: auto; }
+  .site-header .tabs { order: 3; flex-basis: 100%; margin: 2px 0 0; }
+  .btn-emergency { padding: 8px 11px; font-size: 12.5px; }
+
+  /* Puertas de recorrido apiladas y a ancho completo. */
+  .doors { grid-template-columns: 1fr; max-width: 100%; }
+  .door { min-height: auto; }
+
+  /* Márgenes de lectura más cómodos y sin cortes. */
+  .hero h1 { max-width: 100%; }
+}
