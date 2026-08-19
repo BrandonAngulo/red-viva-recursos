@@ -841,48 +841,48 @@
   }
 
   window.openPreviewModal = function() {
-    if (!previewModal) previewModal = $("#previewModal");
-    if (!previewModal) return;
+    var m = document.getElementById("previewModal");
+    if (!m) return;
     currentPreviewImages = rutapracticaImages;
     currentPreviewIndex = 0;
     updatePreview();
-    previewModal.showModal();
+    m.style.display = "flex";
     document.body.style.overflow = "hidden";
   };
 
-  if (previewModal) {
-    // Legacy js-open-preview listeners removed in favor of inline onclick
-    if ($("#closePreviewModal")) {
-      $("#closePreviewModal").addEventListener("click", function () {
-        previewModal.close();
-        document.body.style.overflow = "";
-      });
-    }
+  window.closePreviewModal = function() {
+    var m = document.getElementById("previewModal");
+    if (m) m.style.display = "none";
+    document.body.style.overflow = "";
+  };
 
-    if ($("#prevPreviewBtn")) {
-      $("#prevPreviewBtn").addEventListener("click", function () {
-        if (currentPreviewIndex > 0) {
-          currentPreviewIndex--;
-          updatePreview();
+  window.prevPreviewImg = function() {
+    if (currentPreviewIndex > 0) {
+      currentPreviewIndex--;
+      updatePreview();
+    }
+  };
+
+  window.nextPreviewImg = function() {
+    if (currentPreviewIndex < currentPreviewImages.length - 1) {
+      currentPreviewIndex++;
+      updatePreview();
+    }
+  };
+
+  // Legacy event bindings removed
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var m = document.getElementById("previewModal");
+    if (m) {
+      m.addEventListener("click", function(e) {
+        if (e.target === m) {
+          window.closePreviewModal();
         }
       });
     }
-
-    if ($("#nextPreviewBtn")) {
-      $("#nextPreviewBtn").addEventListener("click", function () {
-        if (currentPreviewIndex < currentPreviewImages.length - 1) {
-          currentPreviewIndex++;
-          updatePreview();
-        }
-      });
-    }
-
-    // Close on backdrop click
-    previewModal.addEventListener("click", function(e) {
-      if (e.target === previewModal) {
-        previewModal.close();
-        document.body.style.overflow = "";
-      }
-    });
-  }
+  });
 
