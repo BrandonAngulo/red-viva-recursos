@@ -1011,6 +1011,55 @@
     }
   }
 
+  /* ---------- Veeduría: registro de apoyos ---------- */
+  var APOYOS = [];
+  var APOYO_CATS = [
+    { key: "humanitaria", label: "Ayuda humanitaria y logística" },
+    { key: "economico", label: "Aportes económicos y fondos" },
+    { key: "cooperacion", label: "Cooperación internacional" }
+  ];
+  var APOYO_STATUS = {
+    anunciado: { label: "Anunciado", tone: "warn" },
+    recaudado: { label: "Recaudado", tone: "warn" },
+    desembolsado: { label: "Desembolsado", tone: "ok" },
+    recibido: { label: "Recibido", tone: "ok" },
+    autorizado: { label: "Autorizado", tone: "muted" },
+    reportado: { label: "Reportado", tone: "muted" }
+  };
+  function renderApoyos() {
+    var box = $("#apoyosList"); if (!box) return;
+    if (!APOYOS.length) { box.innerHTML = '<p class="guia-empty">Pronto publicaremos aquí el seguimiento de los apoyos recibidos.</p>'; return; }
+    box.innerHTML = APOYO_CATS.map(function (c) {
+      var items = APOYOS.filter(function (a) { return (a.category || "economico") === c.key; });
+      if (!items.length) return "";
+      return '<section class="apoyo-group"><h3>' + esc(c.label) + ' <span class="apoyo-count">' + items.length + '</span></h3><div class="apoyo-list">' +
+        items.map(function (a) {
+          var st = APOYO_STATUS[a.status] || (a.status ? { label: a.status, tone: "muted" } : null);
+          var badge = st ? '<span class="badge apoyo-badge tone-' + st.tone + '"><span class="tdot" aria-hidden="true"></span>' + esc(st.label) + '</span>' : "";
+          var amount = a.amount ? '<div class="apoyo-amount">' + esc(a.amount) + '</div>' : "";
+          var meta = [];
+          if (a.entity) meta.push(esc(a.entity));
+          if (a.as_of) meta.push("al " + esc(String(a.as_of).slice(0, 10)));
+          var src = a.source_url
+            ? '<a href="' + esc(a.source_url) + '" target="_blank" rel="noopener noreferrer">' + esc(a.source_name || "Fuente") + " ↗</a>"
+            : (a.source_name ? esc(a.source_name) : "");
+          return '<article class="apoyo-card">' +
+            '<div class="apoyo-head"><h4>' + esc(a.title) + '</h4>' + badge + '</div>' +
+            amount +
+            (meta.length ? '<div class="apoyo-meta">' + meta.join(" · ") + '</div>' : "") +
+            (a.note ? '<p class="apoyo-note">' + esc(a.note) + '</p>' : "") +
+            (src ? '<div class="apoyo-src">Fuente: ' + src + '</div>' : "") +
+          '</article>';
+        }).join("") + "</div></section>";
+    }).join("");
+  }
+  function loadApoyos() {
+    renderApoyos();
+    fetchTable("apoyos", "sort_order.asc")
+      .then(function (rows) { if (Array.isArray(rows)) { APOYOS = rows; renderApoyos(); markLiveBadge("#apoyosLive", true); } })
+      .catch(function () { markLiveBadge("#apoyosLive", false); });
+  }
+
   /* ---------- Acceso rápido de "Cómo actuar" ---------- */
   function bindActuarNav() {
     Array.prototype.forEach.call(document.querySelectorAll("[data-scroll]"), function (b) {
@@ -1038,6 +1087,7 @@
   renderGuias();
   bindGuias();
   bindActuarNav();
+  renderApoyos();
   renderSituation(DATA.situation || []);
   route();              // muestra la vista según el hash (o Inicio)
   loadSituation();      // en vivo
@@ -1047,5 +1097,6 @@
   loadExplicaciones();  // explicaciones en vivo
   loadOrientaciones();  // orientaciones en vivo
   loadGuias();          // guías visuales en vivo
+  loadApoyos();         // veeduría: apoyos en vivo
 })();
 

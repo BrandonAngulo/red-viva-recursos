@@ -45,6 +45,16 @@
     { v: "voluntariado", l: "Participar como voluntario" },
   ];
   var GUIA_CATS = ["Actuar según tu situación", "Ayudar / Donar", "Prepararse", "Veeduría y seguimiento", "General"];
+  var APOYO_CAT_OPTS = [
+    { v: "humanitaria", l: "Ayuda humanitaria y logística" },
+    { v: "economico", l: "Aportes económicos y fondos" },
+    { v: "cooperacion", l: "Cooperación internacional" },
+  ];
+  var APOYO_STATUS_OPTS = [
+    { v: "anunciado", l: "Anunciado" }, { v: "recaudado", l: "Recaudado" },
+    { v: "desembolsado", l: "Desembolsado" }, { v: "recibido", l: "Recibido" },
+    { v: "autorizado", l: "Autorizado" }, { v: "reportado", l: "Reportado" },
+  ];
 
   var ENTITIES = [
     { key: "contributions", label: "Propuestas", icon: "📥", table: "contributions", order: "created_at.desc", listCols: ["territory", "organization", "status"], titleField: "territory", special: "contrib",
@@ -121,6 +131,18 @@
         { n: "images", l: "Imágenes del paquete", t: "images" },
         { n: "zip_url", l: "ZIP pre-armado (opcional; si se deja vacío se genera solo al descargar)", t: "text" },
         { n: "cover_url", l: "Portada (opcional; por defecto usa la 1ª imagen)", t: "text" },
+        { n: "is_published", l: "Publicado", t: "bool" }, { n: "sort_order", l: "Orden", t: "int" },
+      ] },
+    { key: "apoyos", label: "Veeduría · Apoyos", icon: "🔎", table: "apoyos", order: "sort_order.asc", listCols: ["title", "category", "status"], titleField: "title",
+      fields: [
+        { n: "category", l: "Categoría", t: "select", o: APOYO_CAT_OPTS },
+        { n: "title", l: "Título (a qué corresponde el apoyo)", t: "text" },
+        { n: "entity", l: "Entidad / donante", t: "text" },
+        { n: "amount", l: "Monto o cantidad (tal como se reporta)", t: "text" },
+        { n: "status", l: "Estado", t: "select", o: APOYO_STATUS_OPTS },
+        { n: "as_of", l: "Fecha del dato", t: "date" },
+        { n: "source_name", l: "Fuente (nombre)", t: "text" }, { n: "source_url", l: "Fuente (URL)", t: "text" },
+        { n: "note", l: "Nota", t: "textarea" },
         { n: "is_published", l: "Publicado", t: "bool" }, { n: "sort_order", l: "Orden", t: "int" },
       ] },
     { key: "admins", label: "Administradores", icon: "👤", table: "admins", order: "created_at.asc", listCols: ["email"], titleField: "email",
@@ -416,7 +438,7 @@
       else if (f.t === "textarea") input = '<textarea id="' + id + '" rows="3">' + esc(val) + "</textarea>";
       else if (f.t === "lines" || f.t === "kv") input = '<textarea id="' + id + '" rows="4">' + esc(val) + "</textarea>";
       else if (f.t === "bool") input = '<input type="checkbox" id="' + id + '"' + (val ? " checked" : "") + ">";
-      else if (f.t === "select") input = '<select id="' + id + '">' + f.o.map(function (o) { return '<option' + (o === val ? " selected" : "") + ">" + esc(o) + "</option>"; }).join("") + "</select>";
+      else if (f.t === "select") input = '<select id="' + id + '">' + f.o.map(function (o) { var ov = typeof o === "object" ? o.v : o, ol = typeof o === "object" ? o.l : o; return '<option value="' + esc(ov) + '"' + (ov === val ? " selected" : "") + ">" + esc(ol) + "</option>"; }).join("") + "</select>";
       else if (f.t === "int" || f.t === "float") input = '<input type="number" id="' + id + '" step="' + (f.t === "float" ? "any" : "1") + '" value="' + esc(val) + '">';
       else if (f.t === "date") input = '<input type="date" id="' + id + '" value="' + esc(val) + '">';
       else input = '<input type="text" id="' + id + '" value="' + esc(val) + '"' + (f.pk && !isNew ? " readonly" : "") + ">";

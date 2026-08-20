@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="assets/css/styles.css?v=20260817-8">
   <link rel="stylesheet" href="assets/css/guias.css?v=20260820-5">
-  <link rel="stylesheet" href="assets/css/actuar.css?v=20260820-6">
+  <link rel="stylesheet" href="assets/css/actuar.css?v=20260820-7">
   <link rel="stylesheet" href="assets/css/mobile.css?v=20260818-1">
 </head>
 <body>
@@ -231,6 +231,7 @@
           <button type="button" class="actuar-chip" data-scroll="actuar-guias"><span aria-hidden="true">🧭</span> Guías por tu situación</button>
           <button type="button" class="actuar-chip" data-scroll="actuar-visuales"><span aria-hidden="true">🖼️</span> Guías visuales</button>
           <button type="button" class="actuar-chip" data-scroll="block-prep"><span aria-hidden="true">🎒</span> Prepárate</button>
+          <button type="button" class="actuar-chip" data-scroll="actuar-veeduria"><span aria-hidden="true">🔎</span> Veeduría</button>
           <button type="button" class="actuar-chip" data-scroll="actuar-aporta"><span aria-hidden="true">➕</span> Proponer recurso</button>
           <button type="button" class="actuar-chip js-open-lineas"><span aria-hidden="true">☎</span> Líneas</button>
           <button type="button" class="actuar-chip" id="openPrintModal"><span aria-hidden="true">🖨️</span> Imprimir / PDF</button>
@@ -276,7 +277,16 @@
           <div class="prep-links" id="prepFormacion"></div>
         </section>
 
-        <!-- 4. Aporta -->
+        <!-- 4. Veeduría ciudadana -->
+        <section class="block actuar-sec" id="actuar-veeduria">
+          <h2>Veeduría ciudadana <span class="live-state" id="apoyosLive" hidden></span></h2>
+          <p class="section-sub">La veeduría permite <b>hacer seguimiento, preguntas y verificación</b> sobre el uso de los recursos públicos y solidarios. Aquí reunimos y actualizamos qué apoyos ha recibido el país y en qué estado están, para seguir sus usos y alcances.</p>
+          <p class="actuar-callout">¿Quieres la versión visual para compartir? <button type="button" class="cta-soft" data-scroll="actuar-visuales">Ver las guías visuales →</button></p>
+          <p class="veed-key"><span aria-hidden="true">🔎</span> <b>Clave de veeduría:</b> no es lo mismo un apoyo <i>anunciado</i>, uno <i>recaudado</i>, uno <i>desembolsado</i> y uno <i>recibido</i>. Revisa el estado de cada uno y contrasta con la fuente antes de compartir o sumar montos.</p>
+          <div id="apoyosList" class="apoyos-groups"></div>
+        </section>
+
+        <!-- 5. Aporta -->
         <section class="block actuar-sec" id="actuar-aporta">
           <h2>Aporta a esta red</h2>
           <p class="muted-foot">¿Conoces un recurso, un punto de acopio o una iniciativa que debería estar aquí? Compártelo con nuestro equipo o explora el directorio completo de recursos digitales.</p>
@@ -446,6 +456,6 @@
   <script src="data/territory.js?v=20260817"></script>
   <script src="data/orientaciones.js?v=20260817"></script>
   <script src="data/comprender.js?v=20260820"></script>
-  <script src="assets/js/app.js?v=20260820-4" defer></script>
+  <script src="assets/js/app.js?v=20260820-5" defer></script>
 </body>
 </html>
