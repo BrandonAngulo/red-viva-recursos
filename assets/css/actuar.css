@@ -115,3 +115,13 @@
   color: var(--fg);
   font-weight: 700;
 }
+
+/* ---------- Prepárate: dos partes claras ---------- */
+.prep-subtitle { font-family: var(--font-serif); font-size: 17px; margin: 24px 0 3px; }
+.prep-sub-desc { margin: 0 0 12px; color: var(--fg-muted); font-size: 13.5px; line-height: 1.5; }
+#prepFormacion.prep-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
+
+/* ---------- Separación visible del footer en modo oscuro ----------
+   El fondo del footer (#0a1512) es casi igual al fondo oscuro de la página,
+   así que se añade un borde superior para delimitarlo (no se nota en claro). */
+.site-footer { border-top: 1px solid var(--line); }

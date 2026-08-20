@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="assets/css/styles.css?v=20260817-8">
   <link rel="stylesheet" href="assets/css/guias.css?v=20260820-5">
-  <link rel="stylesheet" href="assets/css/actuar.css?v=20260820-5">
+  <link rel="stylesheet" href="assets/css/actuar.css?v=20260820-6">
   <link rel="stylesheet" href="assets/css/mobile.css?v=20260818-1">
 </head>
 <body>
@@ -261,12 +261,19 @@
 
         <!-- 3. Prepárate (id block-prep: también lo usa el filtro de impresión) -->
         <section class="block actuar-sec" id="block-prep">
-          <h2>Prepárate: kit, plan familiar y formación</h2>
+          <h2>Prepárate</h2>
+          <p class="section-sub">A diferencia de las guías anteriores —que son para actuar <b>ahora</b>—, esta sección es de <b>preparación</b>: te ayuda a estar listo antes de la próxima réplica o emergencia, y a acceder a formación para tu comunidad.</p>
+
+          <h3 class="prep-subtitle">Estar preparado</h3>
+          <p class="prep-sub-desc">Lo esencial para tener listo en casa y acordar en familia.</p>
           <div class="prep-grid">
             <div class="prep-card"><h3>Kit de emergencia</h3><ul id="prepKit"></ul></div>
             <div class="prep-card"><h3>Plan familiar</h3><ol id="prepPlan"></ol></div>
-            <div class="prep-card"><h3>Formación gratuita</h3><div id="prepFormacion" class="prep-links"></div></div>
           </div>
+
+          <h3 class="prep-subtitle">Acceso a formación gratuita</h3>
+          <p class="prep-sub-desc">Estas capacitaciones <b>no las dicta esta herramienta</b>: buscamos y reunimos aquí formaciones gratuitas de entidades reconocidas para que accedas a ellas directamente. Verifica fechas, cupos y requisitos en cada entidad.</p>
+          <div class="prep-links" id="prepFormacion"></div>
         </section>
 
         <!-- 4. Aporta -->
