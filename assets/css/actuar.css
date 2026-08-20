@@ -60,6 +60,11 @@
   color: var(--fg-muted);
 }
 .actuar-callout .cta-soft { margin: 0; }
+/* En <button>, .cta-soft tomaba el fondo gris por defecto del navegador (poco
+   legible en modo claro). Se hace transparente: pastilla con borde y texto
+   verde legible en ambos temas. */
+.cta-soft { background: transparent; cursor: pointer; }
+.cta-soft:hover { background: color-mix(in srgb, var(--green, #157150) 10%, transparent); }
 
 @media (max-width: 640px) {
   .actuar-nav { gap: 6px; margin-bottom: 22px; }
