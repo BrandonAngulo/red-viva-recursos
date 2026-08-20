@@ -1009,6 +1009,18 @@
     }
   }
 
+  /* ---------- Acceso rápido de "Cómo actuar" ---------- */
+  function bindActuarNav() {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-scroll]"), function (b) {
+      b.addEventListener("click", function () {
+        var t = document.getElementById(b.getAttribute("data-scroll"));
+        if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+    var lin = document.querySelector(".js-open-lineas");
+    if (lin) lin.addEventListener("click", function () { var o = document.getElementById("openLineasModal"); if (o) o.click(); });
+  }
+
   /* ---------- Init ---------- */
   fillStatic();
   bind();
@@ -1023,6 +1035,7 @@
   renderHeroFacts();
   renderGuias();
   bindGuias();
+  bindActuarNav();
   renderSituation(DATA.situation || []);
   route();              // muestra la vista según el hash (o Inicio)
   loadSituation();      // en vivo

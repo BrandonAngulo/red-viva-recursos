@@ -1,0 +1,53 @@
+/* "Cómo actuar" — barra de acceso rápido + layout por secciones.
+   Archivo aislado para no interferir con styles.css. */
+
+.actuar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 30px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.actuar-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--fg);
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, transform .1s;
+}
+.actuar-chip:hover { background: color-mix(in srgb, var(--fg) 8%, transparent); transform: translateY(-1px); }
+.actuar-chip:focus-visible { outline: 2px solid var(--accent, #d7ef5e); outline-offset: 2px; }
+
+/* Compensa el header sticky al saltar a una sección. */
+.actuar-sec { scroll-margin-top: 84px; }
+
+/* Puente entre el acordeón y las guías visuales. */
+.actuar-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 22px;
+  padding: 12px 16px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: .92rem;
+  color: var(--fg-muted);
+}
+.actuar-callout .cta-soft { margin: 0; }
+
+@media (max-width: 640px) {
+  .actuar-nav { gap: 6px; margin-bottom: 22px; }
+  .actuar-chip { font-size: .84rem; padding: 8px 12px; }
+}
