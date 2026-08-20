@@ -61,11 +61,15 @@
   gap: 10px;
   align-items: start;   /* un ítem abierto no estira a su vecino */
 }
-#orientaciones .ori > summary { padding: 12px 14px; gap: 11px; }
+#orientaciones .ori > summary { padding: 12px 14px; gap: 11px; align-items: center; min-height: 56px; }
 #orientaciones .ori-ic { font-size: 20px; }
 #orientaciones .ori-t { font-size: 16px; line-height: 1.25; }
 #orientaciones .ori-q { font-size: 12.5px; }
 #orientaciones .ori-body { padding: 0 14px 14px 45px; }
+/* Colapsado: solo ícono + título → rejilla uniforme y ordenada.
+   La descripción (quePasa) aparece al expandir. */
+#orientaciones .ori:not([open]) .ori-q { display: none; }
+#orientaciones .ori[open] > summary { align-items: flex-start; }
 
 @media (max-width: 640px) {
   #orientaciones { gap: 8px; }
