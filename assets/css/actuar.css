@@ -28,8 +28,22 @@
 .actuar-chip:hover { background: color-mix(in srgb, var(--fg) 8%, transparent); transform: translateY(-1px); }
 .actuar-chip:focus-visible { outline: 2px solid var(--accent, #d7ef5e); outline-offset: 2px; }
 
-/* Compensa el header sticky al saltar a una sección. */
-.actuar-sec { scroll-margin-top: 84px; }
+/* Compensa el header sticky al saltar a una sección + separación clara entre
+   secciones (línea divisoria y espaciado) para que se note dónde empieza cada una. */
+.actuar-sec {
+  scroll-margin-top: 84px;
+  margin-top: 40px;
+  padding-top: 34px;
+  border-top: 1px solid var(--line);
+}
+.actuar-sec:first-of-type { margin-top: 22px; padding-top: 0; border-top: 0; }
+#view-actuar .bottom-blocks { margin-top: 40px; padding-top: 34px; border-top: 1px solid var(--line); }
+/* Encabezado de sección: acento a la izquierda para que "arranque" sea evidente. */
+#view-actuar .actuar-sec > h2 {
+  padding-left: 13px;
+  border-left: 4px solid var(--green, #2ecc8f);
+  line-height: 1.2;
+}
 
 /* Puente entre el acordeón y las guías visuales. */
 .actuar-callout {
