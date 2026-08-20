@@ -31,6 +31,20 @@
   var SEV = ["info", "warning", "critical"];
   var MAPT = ["epicentro", "ciudad", "incendio"];
   var CONTRIB_STATUS = ["pendiente", "en_revision", "publicado", "fusionado", "descartado"];
+  // Vocabularios controlados (evitan errores de digitación que rompen el enlace).
+  var INTENTS_OPTS = [
+    { v: "emergencia", l: "Emergencia inmediata" },
+    { v: "buscar-persona", l: "Buscar o reportar una persona" },
+    { v: "buscar-mascota", l: "Buscar o reportar una mascota" },
+    { v: "ayuda-oficial", l: "Solicitar ayuda oficial" },
+    { v: "reportar-danos", l: "Reportar daños en una vivienda" },
+    { v: "albergue-salud", l: "Albergue, salud o conectividad" },
+    { v: "cifras", l: "Cifras, réplicas y reportes" },
+    { v: "donar", l: "Donar dinero o suministros" },
+    { v: "acopios", l: "Encontrar centros de acopio" },
+    { v: "voluntariado", l: "Participar como voluntario" },
+  ];
+  var GUIA_CATS = ["Actuar según tu situación", "Ayudar / Donar", "Prepararse", "Veeduría y seguimiento", "General"];
 
   var ENTITIES = [
     { key: "contributions", label: "Propuestas", icon: "📥", table: "contributions", order: "created_at.desc", listCols: ["territory", "organization", "status"], titleField: "territory", special: "contrib",
@@ -46,7 +60,7 @@
       fields: [
         { n: "id", l: "ID (slug)", t: "text", pk: true }, { n: "name", l: "Nombre", t: "text" }, { n: "org", l: "Organización", t: "text" },
         { n: "action", l: "Acción principal", t: "text" }, { n: "description", l: "Descripción", t: "textarea" },
-        { n: "intents", l: "Necesidades (una por línea)", t: "lines" }, { n: "type", l: "Tipo", t: "select", o: TYPE_RES },
+        { n: "intents", l: "Necesidades que resuelve (marca las que apliquen)", t: "multiselect", o: INTENTS_OPTS }, { n: "type", l: "Tipo", t: "select", o: TYPE_RES },
         { n: "coverage", l: "Cobertura", t: "text" }, { n: "url", l: "URL", t: "text" },
         { n: "status", l: "Estado", t: "select", o: STATUS_RES }, { n: "verification", l: "Verificación", t: "select", o: VERIF_RES },
         { n: "declared_update", l: "Actualización declarada", t: "text" }, { n: "last_review", l: "Última revisión", t: "date" },
@@ -103,7 +117,7 @@
       fields: [
         { n: "title", l: "Título de la guía", t: "text" },
         { n: "description", l: "Descripción (qué verá y descargará el usuario)", t: "textarea" },
-        { n: "category", l: "Categoría (opcional)", t: "text" },
+        { n: "category", l: "Categoría", t: "select", o: GUIA_CATS },
         { n: "images", l: "Imágenes del paquete", t: "images" },
         { n: "zip_url", l: "ZIP pre-armado (opcional; si se deja vacío se genera solo al descargar)", t: "text" },
         { n: "cover_url", l: "Portada (opcional; por defecto usa la 1ª imagen)", t: "text" },
@@ -392,6 +406,13 @@
       var id = "f_" + f.n;
       var input;
       if (f.t === "images") input = imagesWidgetHtml();
+      else if (f.t === "multiselect") {
+        var selArr = Array.isArray(val) ? val : [];
+        input = '<div class="ge-multi" id="' + id + '">' + f.o.map(function (op) {
+          var ov = typeof op === "object" ? op.v : op, ol = typeof op === "object" ? op.l : op;
+          return '<label class="ge-check"><input type="checkbox" value="' + esc(ov) + '"' + (selArr.indexOf(ov) !== -1 ? " checked" : "") + "> " + esc(ol) + "</label>";
+        }).join("") + "</div>";
+      }
       else if (f.t === "textarea") input = '<textarea id="' + id + '" rows="3">' + esc(val) + "</textarea>";
       else if (f.t === "lines" || f.t === "kv") input = '<textarea id="' + id + '" rows="4">' + esc(val) + "</textarea>";
       else if (f.t === "bool") input = '<input type="checkbox" id="' + id + '"' + (val ? " checked" : "") + ">";
@@ -422,6 +443,11 @@
     var obj = {};
     en.fields.forEach(function (f) {
       if (f.t === "images") { obj[f.n] = guiaImagesState.map(function (im) { return { url: im.url, caption: im.caption || "" }; }); return; }
+      if (f.t === "multiselect") {
+        var box = $("#f_" + f.n), vals = [];
+        if (box) Array.prototype.forEach.call(box.querySelectorAll("input[type=checkbox]"), function (cb) { if (cb.checked) vals.push(cb.value); });
+        obj[f.n] = vals; return;
+      }
       var node = $("#f_" + f.n); if (!node) return;
       var raw = f.t === "bool" ? node.checked : node.value;
       obj[f.n] = fromForm(f, raw);

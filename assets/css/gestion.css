@@ -70,6 +70,9 @@ body.admin { background: var(--bg); }
 .ge-field textarea { resize: vertical; line-height: 1.45; }
 .ge-field.inline input { width: auto; }
 .ge-field input[readonly] { opacity: .7; }
+.ge-multi { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 7px 16px; padding: 4px 0 2px; }
+.ge-check { display: flex; align-items: center; gap: 8px; font-size: .92rem; cursor: pointer; }
+.ge-check input { width: auto; flex: none; }
 .ge-form-actions { display: flex; gap: 10px; margin-top: 8px; }
 .ge-contrib-actions { padding: 12px 0; border-top: 1px dashed var(--line); }
 
