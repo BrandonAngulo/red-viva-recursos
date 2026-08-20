@@ -3,7 +3,7 @@
    Actualizado al 2026-08-15. Migrable a Supabase (tabla timeline / explainer). */
 
 window.CRC_COMPRENDER = {
-  actualizado: "2026-08-15",
+  actualizado: "2026-08-20",
 
   resumen: {
     magnitud: "7.4 Mw",
