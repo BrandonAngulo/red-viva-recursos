@@ -73,3 +73,41 @@
   #orientaciones .ori-ic { font-size: 18px; }
   #orientaciones .ori-t { font-size: 15px; }
 }
+
+/* ---------- Cronología: tarjetas plegables y compactas ----------
+   Un seguimiento de meses no debe alargar el panel: cada día se colapsa
+   (muestra Día + título) y se expande para ver el detalle. */
+.crono-card { padding: 0 !important; margin-bottom: 10px !important; }
+.crono-sum {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+}
+.crono-sum::-webkit-details-marker { display: none; }
+.crono-sum h3 { margin: 0 !important; font-size: 15px !important; line-height: 1.3; }
+.crono-sum::after {
+  content: "+";
+  margin-left: auto;
+  flex: none;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--fg-faint);
+}
+.crono-card[open] .crono-sum::after { content: "–"; }
+.crono-card[open] .crono-sum { border-bottom: 1px solid var(--line); }
+.crono-body { padding: 12px 15px 14px; }
+
+/* ---------- Recurso destacado (misma familia de herramientas) ---------- */
+.card.featured {
+  border-color: color-mix(in srgb, var(--green, #2ecc8f) 55%, var(--line));
+  box-shadow: inset 3px 0 0 var(--green, #2ecc8f), var(--shadow);
+}
+.badge.feat {
+  background: color-mix(in srgb, var(--green, #2ecc8f) 18%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--green, #2ecc8f) 45%, var(--line));
+  color: var(--fg);
+  font-weight: 700;
+}

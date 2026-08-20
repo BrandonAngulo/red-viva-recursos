@@ -127,7 +127,8 @@
     var t = DATA.types[r.type] || { label: r.type };
     var st = DATA.statuses[r.status] || { label: r.status, tone: "muted" };
     var vf = DATA.verifications[r.verification] || { label: r.verification, tone: "muted" };
-    var badges = '<div class="badges">' + badge("type", "", false, t.label, t.help) + badge("verif", vf.tone, true, vf.label, vf.help) + badge("status", st.tone, true, st.label, st.help) + "</div>";
+    var featBadge = r.featured ? '<span class="badge feat" title="Recurso destacado de la misma familia de herramientas">★ Destacado</span>' : "";
+    var badges = '<div class="badges">' + featBadge + badge("type", "", false, t.label, t.help) + badge("verif", vf.tone, true, vf.label, vf.help) + badge("status", st.tone, true, st.label, st.help) + "</div>";
     var meta = '<dl class="meta">' + metaRow("Cobertura", r.coverage) + metaRow("Responsable", r.org) + metaRow("Actualización", r.declaredUpdate) + metaRow("Última revisión", r.lastReview) + "</dl>";
     var alerts = "";
     if (r.warn) alerts += '<p class="alert warn"><span class="ai" aria-hidden="true">⚠️</span><span>' + esc(r.warn) + "</span></p>";
@@ -138,7 +139,7 @@
     var body = ["Recurso: " + r.name, "Enlace: " + r.url, "", "Describe el problema (enlace caído, información desactualizada, dato sensible, etc.):", ""].join(NL);
     var mailto = "mailto:" + encodeURIComponent(DATA.meta.contactEmail) + "?subject=" + encodeURIComponent("Reporte sobre recurso: " + r.name) + "&body=" + encodeURIComponent(body);
     var report = '<a class="report" href="' + mailto + '" title="Reportar un problema con este recurso">Reportar</a>';
-    var c = el("article", { "class": "card" });
+    var c = el("article", { "class": "card" + (r.featured ? " featured" : "") });
     c.innerHTML = badges + "<h3>" + esc(r.name) + "</h3>" + '<p class="action">' + esc(r.action) + "</p>" + '<p class="desc">' + esc(r.description) + "</p>" + meta + alerts + '<div class="card-actions">' + open + report + "</div>";
     return c;
   }
@@ -197,7 +198,7 @@
       intents: Array.isArray(r.intents) ? r.intents : [], type: r.type, coverage: r.coverage, url: r.url,
       status: r.status, verification: r.verification, declaredUpdate: r.declared_update,
       lastReview: r.last_review ? String(r.last_review).slice(0, 10) : "", sensitive: !!r.sensitive,
-      warn: r.warn || undefined, note: r.note || undefined };
+      warn: r.warn || undefined, note: r.note || undefined, featured: !!r.featured };
   }
   function loadLiveResources() {
     fetchTable("digital_resources", "sort_order.asc,name.asc")
@@ -549,7 +550,8 @@
       var items = (d.items || []).map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("");
       var fuentes = (d.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(f.label) + " ↗</a>"; }).join("");
       return '<div class="crono-item"><div class="crono-when"><span class="crono-dia">' + esc(d.dia) + '</span><span class="crono-fecha">' + esc(d.fecha) + "</span></div>" +
-        '<div class="crono-card"><h3>' + esc(d.titulo) + "</h3><ul>" + items + "</ul>" + (d.detalle ? moreBlock([d.detalle]) : "") + (fuentes ? '<p class="crono-src">Fuentes: ' + fuentes + "</p>" : "") + "</div></div>";
+        '<details class="crono-card"><summary class="crono-sum"><h3>' + esc(d.titulo) + "</h3></summary>" +
+        '<div class="crono-body"><ul>' + items + "</ul>" + (d.detalle ? moreBlock([d.detalle]) : "") + (fuentes ? '<p class="crono-src">Fuentes: ' + fuentes + "</p>" : "") + "</div></details></div>";
     }).join("");
   }
 

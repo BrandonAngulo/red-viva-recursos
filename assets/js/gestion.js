@@ -51,6 +51,7 @@
         { n: "status", l: "Estado", t: "select", o: STATUS_RES }, { n: "verification", l: "Verificación", t: "select", o: VERIF_RES },
         { n: "declared_update", l: "Actualización declarada", t: "text" }, { n: "last_review", l: "Última revisión", t: "date" },
         { n: "sensitive", l: "Datos sensibles", t: "bool" }, { n: "warn", l: "Advertencia", t: "textarea" }, { n: "note", l: "Nota", t: "textarea" },
+        { n: "featured", l: "Destacado (misma familia)", t: "bool" },
         { n: "is_published", l: "Publicado", t: "bool" }, { n: "sort_order", l: "Orden", t: "int" },
       ] },
     { key: "situation", label: "Situación", icon: "📊", table: "situation_updates", order: "sort_order.asc", listCols: ["title", "region", "severity"], titleField: "title",
