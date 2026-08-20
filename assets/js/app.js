@@ -545,14 +545,47 @@
       return '<article class="hist-card"><div class="hist-year">' + esc(h.year) + '</div><div class="hist-body"><b>' + esc(h.place) + '</b> <span class="hist-mag">M ' + esc(h.mag) + "</span><p>" + esc(h.note) + "</p></div></article>";
     }).join("");
     var cu = $("#cronoUpdated"); if (cu) cu.textContent = COMP.actualizado ? "Actualizado el " + COMP.actualizado + ". Se ampliará con los días." : "";
-    var cl = $("#cronoList");
-    if (cl) cl.innerHTML = (COMP.cronologia || []).map(function (d) {
-      var items = (d.items || []).map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("");
-      var fuentes = (d.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(f.label) + " ↗</a>"; }).join("");
-      return '<div class="crono-item"><div class="crono-when"><span class="crono-dia">' + esc(d.dia) + '</span><span class="crono-fecha">' + esc(d.fecha) + "</span></div>" +
-        '<details class="crono-card"><summary class="crono-sum"><h3>' + esc(d.titulo) + "</h3></summary>" +
-        '<div class="crono-body"><ul>' + items + "</ul>" + (d.detalle ? moreBlock([d.detalle]) : "") + (fuentes ? '<p class="crono-src">Fuentes: ' + fuentes + "</p>" : "") + "</div></details></div>";
-    }).join("");
+    renderCronologia();
+  }
+
+  /* ---------- Cronología: navegador compacto (rail de días + detalle) ---------- */
+  var cronoActive = -1, cronoUserPicked = false;
+  function renderCronologia() {
+    var box = $("#cronoList"); if (!box) return;
+    var list = COMP.cronologia || [];
+    if (!list.length) { box.innerHTML = ""; return; }
+    if (!cronoUserPicked || cronoActive < 0) cronoActive = list.length - 1; // por defecto, el día más reciente
+    if (cronoActive >= list.length) cronoActive = list.length - 1;
+    if (cronoActive < 0) cronoActive = 0;
+
+    var rail = '<div class="crono-rail" id="cronoRail">' + list.map(function (d, i) {
+      return '<button type="button" class="crono-node' + (i === cronoActive ? " active" : "") + '" data-i="' + i + '">' +
+        '<span class="crono-node-dia">' + esc(d.dia) + '</span><span class="crono-node-fecha">' + esc(d.fecha) + "</span></button>";
+    }).join("") + "</div>";
+
+    var d = list[cronoActive];
+    var items = (d.items || []).map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("");
+    var fuentes = (d.fuentes || []).map(function (f) { return '<a href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(f.label) + " ↗</a>"; }).join("");
+    var detail = '<div class="crono-detail">' +
+      '<div class="crono-detail-head"><span class="crono-detail-when">' + esc(d.dia) + " · " + esc(d.fecha) + "</span>" +
+      '<div class="crono-steps"><button type="button" class="crono-step" data-step="-1" aria-label="Día anterior"' + (cronoActive === 0 ? " disabled" : "") + ">‹</button>" +
+      '<button type="button" class="crono-step" data-step="1" aria-label="Día siguiente"' + (cronoActive === list.length - 1 ? " disabled" : "") + ">›</button></div></div>" +
+      "<h3>" + esc(d.titulo) + "</h3><ul>" + items + "</ul>" +
+      (d.detalle ? '<p class="crono-detalle">' + esc(d.detalle) + "</p>" : "") +
+      (fuentes ? '<p class="crono-src">Fuentes: ' + fuentes + "</p>" : "") + "</div>";
+
+    box.innerHTML = rail + detail;
+
+    function go(i) { cronoActive = Math.max(0, Math.min(list.length - 1, i)); cronoUserPicked = true; renderCronologia(); }
+    Array.prototype.forEach.call(box.querySelectorAll(".crono-node"), function (b) {
+      b.addEventListener("click", function () { go(+b.getAttribute("data-i")); });
+    });
+    Array.prototype.forEach.call(box.querySelectorAll(".crono-step"), function (b) {
+      b.addEventListener("click", function () { go(cronoActive + parseInt(b.getAttribute("data-step"), 10)); });
+    });
+    // Mantén visible el día activo dentro del rail.
+    var activeNode = box.querySelector(".crono-node.active");
+    if (activeNode && activeNode.scrollIntoView) activeNode.scrollIntoView({ block: "nearest", inline: "center" });
   }
 
   function renderHeroFacts() {
