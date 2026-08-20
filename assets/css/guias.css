@@ -87,8 +87,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.guia-actions { display: flex; gap: 8px; margin-top: auto; padding-top: 4px; }
-.guia-actions button { flex: 1 1 0; min-width: 0; padding: 8px 8px; border-radius: 8px; font-size: .82rem; cursor: pointer; }
+.guia-actions { display: flex; gap: 7px; margin-top: auto; padding-top: 4px; }
+.guia-actions button { flex: 1 1 0; min-width: 0; padding: 6px 8px; border-radius: 7px; font-size: .76rem; white-space: nowrap; cursor: pointer; }
 
 @media (max-width: 380px) {
   .guia-card { grid-template-columns: 72px 1fr; gap: 10px; }

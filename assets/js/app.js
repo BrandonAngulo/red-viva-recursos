@@ -865,7 +865,7 @@
           '<h3>' + esc(g.title) + '</h3>' +
           (g.description ? '<p class="guia-desc">' + esc(g.description) + '</p>' : '') +
           '<div class="guia-actions">' +
-            '<button type="button" class="btn-ghost js-guia-preview" data-idx="' + i + '">👁️ Vista previa</button>' +
+            '<button type="button" class="btn-ghost js-guia-preview" data-idx="' + i + '">👁️ Ver</button>' +
             '<button type="button" class="btn-primary js-guia-download" data-idx="' + i + '">⬇ Descargar</button>' +
           '</div>' +
         '</div>' +
