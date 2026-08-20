@@ -792,7 +792,7 @@
   var GUIAS_FALLBACK = [{
     id: "rutapractica",
     title: "Ruta práctica: qué hacer paso a paso",
-    description: "Guía visual de 7 piezas para compartir por WhatsApp e Instagram. Explica cómo buscar a una persona, revisar tu vivienda, registrarte en el RUD, qué hacer ante un fallecimiento, apoyo emocional y cómo prepararte.",
+    description: "Guía práctica para personas damnificadas: te orienta paso a paso para buscar o reportar a un ser querido, revisar si tu vivienda es segura, registrarte en el RUD y acceder a las ayudas del Estado, saber qué hacer ante un fallecimiento, encontrar apoyo emocional y prepararte para las réplicas. Son 7 piezas que además puedes descargar y compartir.",
     cover_url: "assets/img/guias/rutapractica/01_Portada.jpg",
     zip_url: "assets/descargas/Ruta_Practica.zip",
     images: [
