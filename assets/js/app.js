@@ -842,8 +842,9 @@
   }];
   var GUIAS = GUIAS_FALLBACK.slice();
   var activeGuia = null;
-  var carIndex = 0;      // pieza visible en el carrusel
+  var carIndex = 0;      // pieza visible en el carrusel (modal de preview)
   var guiaSel = [];      // selección por pieza (para descarga)
+  var updateGuiasArrows = null; // flechas del carrusel de la galería
 
   function guiaImages(g) { return g && Array.isArray(g.images) ? g.images : []; }
   var pad2 = function (n) { return ("0" + n).slice(-2); };
@@ -851,7 +852,7 @@
   function renderGuias() {
     var grid = $("#guiasGrid");
     if (!grid) return;
-    if (!GUIAS.length) { grid.innerHTML = '<p class="guia-empty">Pronto agregaremos guías visuales para compartir.</p>'; return; }
+    if (!GUIAS.length) { grid.innerHTML = '<p class="guia-empty">Pronto agregaremos guías visuales para compartir.</p>'; if (updateGuiasArrows) updateGuiasArrows(); return; }
     grid.innerHTML = GUIAS.map(function (g, i) {
       var imgs = guiaImages(g);
       var cover = g.cover_url || (imgs[0] && imgs[0].url) || "";
@@ -870,6 +871,7 @@
         '</div>' +
       '</article>';
     }).join("");
+    if (updateGuiasArrows) updateGuiasArrows();
   }
 
   function loadGuias() {
@@ -1011,6 +1013,21 @@
         var dl = e.target.closest(".js-guia-download");
         if (dl) { downloadGuia(GUIAS[+dl.getAttribute("data-idx")], dl); return; }
       });
+      // Carrusel de la galería (navegación horizontal al sumar más guías).
+      var prev = $(".js-guias-prev"), next = $(".js-guias-next");
+      if (prev && next) {
+        updateGuiasArrows = function () {
+          var overflow = grid.scrollWidth > grid.clientWidth + 4;
+          prev.hidden = !overflow || grid.scrollLeft <= 2;
+          next.hidden = !overflow || (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 2);
+        };
+        var step = function () { return Math.max(240, Math.round(grid.clientWidth * 0.82)); };
+        prev.addEventListener("click", function () { grid.scrollBy({ left: -step(), behavior: "smooth" }); });
+        next.addEventListener("click", function () { grid.scrollBy({ left: step(), behavior: "smooth" }); });
+        grid.addEventListener("scroll", function () { updateGuiasArrows(); });
+        window.addEventListener("resize", function () { updateGuiasArrows(); });
+        updateGuiasArrows();
+      }
     }
     var modal = $("#previewModal");
     if (modal) {

@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="assets/css/styles.css?v=20260817-8">
-  <link rel="stylesheet" href="assets/css/guias.css?v=20260820-5">
+  <link rel="stylesheet" href="assets/css/guias.css?v=20260820-6">
   <link rel="stylesheet" href="assets/css/actuar.css?v=20260820-9">
   <link rel="stylesheet" href="assets/css/mobile.css?v=20260818-1">
 </head>
@@ -249,14 +249,18 @@
         <section class="block actuar-sec" id="actuar-visuales" style="margin-top: 40px;">
           <h2>Guías visuales para actuar paso a paso</h2>
           <p style="color: var(--fg-muted); margin-bottom: 24px;">Piezas gráficas que explican, de forma clara, qué hacer tras el terremoto: buscar o reportar a un ser querido, revisar tu vivienda, registrarte en el RUD, apoyo emocional y más. Puedes verlas aquí, descargarlas y también compartirlas por WhatsApp o redes. Si llegaste por medio de una de estas piezas, en esta herramienta encontrarás mucha más información, líneas directas y recursos adicionales.</p>
-          <div class="gallery-grid" id="guiasGrid">
-            <!-- Renderizado por app.js desde Supabase (tabla guias). Fallback sin-JS: -->
-            <noscript>
-              <div class="guia-card">
-                <img src="assets/img/guias/rutapractica/01_Portada.jpg" alt="Ruta práctica" loading="lazy" style="width:100%; border-radius:8px;">
-                <a href="assets/descargas/Ruta_Practica.zip" download class="btn-primary" style="display:block; text-align:center; margin-top:8px;">⬇ Descargar paquete (ZIP)</a>
-              </div>
-            </noscript>
+          <div class="guias-carousel">
+            <button type="button" class="guias-arrow prev js-guias-prev" aria-label="Guías anteriores" hidden>‹</button>
+            <div class="gallery-grid" id="guiasGrid">
+              <!-- Renderizado por app.js desde Supabase (tabla guias). Fallback sin-JS: -->
+              <noscript>
+                <div class="guia-card">
+                  <img src="assets/img/guias/rutapractica/01_Portada.jpg" alt="Ruta práctica" loading="lazy" style="width:100%; border-radius:8px;">
+                  <a href="assets/descargas/Ruta_Practica.zip" download class="btn-primary" style="display:block; text-align:center; margin-top:8px;">⬇ Descargar paquete (ZIP)</a>
+                </div>
+              </noscript>
+            </div>
+            <button type="button" class="guias-arrow next js-guias-next" aria-label="Más guías" hidden>›</button>
           </div>
         </section>
 
@@ -456,6 +460,6 @@
   <script src="data/territory.js?v=20260817"></script>
   <script src="data/orientaciones.js?v=20260817"></script>
   <script src="data/comprender.js?v=20260820"></script>
-  <script src="assets/js/app.js?v=20260820-7" defer></script>
+  <script src="assets/js/app.js?v=20260820-8" defer></script>
 </body>
 </html>

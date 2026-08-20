@@ -486,6 +486,9 @@
   function saveRow(en, row, isNew) {
     var msg = $("#editMsg"); msg.hidden = false; msg.className = "al-msg"; msg.textContent = "Guardando…";
     var obj = collect(en);
+    // Al crear, quita los campos vacíos (null) para que la base use sus valores
+    // por defecto (p. ej. sort_order = 0) y no viole restricciones NOT NULL.
+    if (isNew) { for (var k in obj) { if (obj[k] === null) delete obj[k]; } }
     var q;
     if (isNew) q = sb.from(en.table).insert(obj);
     else {
