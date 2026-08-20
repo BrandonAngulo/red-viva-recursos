@@ -51,3 +51,25 @@
   .actuar-nav { gap: 6px; margin-bottom: 22px; }
   .actuar-chip { font-size: .84rem; padding: 8px 12px; }
 }
+
+/* ---------- Acordeón de orientaciones: mejor uso del espacio ----------
+   En escritorio pasa de una columna a ancho completo (desperdicia espacio)
+   a una rejilla de 2 columnas; contenedores más compactos en general. */
+#orientaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 10px;
+  align-items: start;   /* un ítem abierto no estira a su vecino */
+}
+#orientaciones .ori > summary { padding: 12px 14px; gap: 11px; }
+#orientaciones .ori-ic { font-size: 20px; }
+#orientaciones .ori-t { font-size: 16px; line-height: 1.25; }
+#orientaciones .ori-q { font-size: 12.5px; }
+#orientaciones .ori-body { padding: 0 14px 14px 45px; }
+
+@media (max-width: 640px) {
+  #orientaciones { gap: 8px; }
+  #orientaciones .ori > summary { padding: 11px 13px; gap: 10px; }
+  #orientaciones .ori-ic { font-size: 18px; }
+  #orientaciones .ori-t { font-size: 15px; }
+}

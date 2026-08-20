@@ -823,7 +823,7 @@
       return '<article class="guia-card">' +
         '<button type="button" class="guia-cover js-guia-preview" data-idx="' + i + '" title="Ver vista previa">' +
           (cover ? '<img src="' + esc(cover) + '" alt="' + esc(g.title) + '" loading="lazy">' : '') +
-          '<span class="guia-badge">👁️ Ver ' + imgs.length + ' piezas</span>' +
+          '<span class="guia-badge">👁️ ' + imgs.length + ' piezas</span>' +
         '</button>' +
         '<div class="guia-body">' +
           '<h3>' + esc(g.title) + '</h3>' +
