@@ -145,6 +145,13 @@
         { n: "note", l: "Nota", t: "textarea" },
         { n: "is_published", l: "Publicado", t: "bool" }, { n: "sort_order", l: "Orden", t: "int" },
       ] },
+    { key: "review_queue", label: "Bandeja de revisión", icon: "📥", table: "review_queue", order: "published_at.desc", listCols: ["title", "org", "status"], titleField: "title",
+      fields: [
+        { n: "title", l: "Titular", t: "text" },
+        { n: "org", l: "Medio", t: "text" },
+        { n: "url", l: "Enlace (abrir para verificar)", t: "text" },
+        { n: "status", l: "Estado", t: "select", o: [{ v: "nuevo", l: "Nuevo" }, { v: "usado", l: "Usado" }, { v: "descartado", l: "Descartado" }] },
+      ] },
     { key: "admins", label: "Administradores", icon: "👤", table: "admins", order: "created_at.asc", listCols: ["email"], titleField: "email",
       fields: [{ n: "email", l: "Correo del administrador", t: "text", pk: true }] },
   ];
