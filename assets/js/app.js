@@ -166,7 +166,13 @@
   function renderSituation(list) {
     var box = $("#situationList"); if (!box) return;
     if (!list || !list.length) { box.innerHTML = ""; return; }
-    box.innerHTML = list.map(function (s) {
+    // Orden cronológico: lo más reciente primero (desempate por orden manual).
+    var ordered = list.slice().sort(function (a, b) {
+      var da = a.as_of ? String(a.as_of) : "", db = b.as_of ? String(b.as_of) : "";
+      if (da !== db) return da < db ? 1 : -1;
+      return (a.sort_order || 0) - (b.sort_order || 0);
+    });
+    box.innerHTML = ordered.map(function (s) {
       var sev = s.severity || "info", asOf = s.as_of ? String(s.as_of).slice(0, 10) : "";
       var region = s.region ? '<span class="sit-region">' + esc(s.region) + "</span>" : "";
       var metric = s.metric ? '<div class="sit-metric">' + esc(s.metric) + "</div>" : "";
