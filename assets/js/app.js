@@ -1082,7 +1082,8 @@
     box.innerHTML = APOYO_CATS.map(function (c) {
       var items = APOYOS.filter(function (a) { return (a.category || "economico") === c.key; });
       if (!items.length) return "";
-      return '<section class="apoyo-group"><h3>' + esc(c.label) + ' <span class="apoyo-count">' + items.length + '</span></h3><div class="apoyo-list">' +
+      return '<section class="apoyo-group"><h3>' + esc(c.label) + ' <span class="apoyo-count">' + items.length + '</span></h3>' +
+        '<div class="apoyo-carousel"><button type="button" class="apoyo-arrow prev" aria-label="Anteriores" hidden>‹</button><div class="apoyo-list">' +
         items.map(function (a) {
           var st = APOYO_STATUS[a.status] || (a.status ? { label: a.status, tone: "muted" } : null);
           var badge = st ? '<span class="badge apoyo-badge tone-' + st.tone + '"><span class="tdot" aria-hidden="true"></span>' + esc(st.label) + '</span>' : "";
@@ -1100,8 +1101,27 @@
             (a.note ? '<p class="apoyo-note">' + esc(a.note) + '</p>' : "") +
             (src ? '<div class="apoyo-src">Fuente: ' + src + '</div>' : "") +
           '</article>';
-        }).join("") + "</div></section>";
+        }).join("") + '</div><button type="button" class="apoyo-arrow next" aria-label="Siguientes" hidden>›</button></div></section>';
     }).join("");
+    Array.prototype.forEach.call(box.querySelectorAll(".apoyo-carousel"), attachCarousel);
+  }
+
+  // Carrusel horizontal reutilizable: gestiona las flechas de una pista con scroll.
+  function attachCarousel(carEl) {
+    var track = carEl.querySelector(".apoyo-list");
+    var prev = carEl.querySelector(".apoyo-arrow.prev"), next = carEl.querySelector(".apoyo-arrow.next");
+    if (!track || !prev || !next) return;
+    function update() {
+      var overflow = track.scrollWidth > track.clientWidth + 4;
+      prev.hidden = !overflow || track.scrollLeft <= 2;
+      next.hidden = !overflow || (track.scrollLeft + track.clientWidth >= track.scrollWidth - 2);
+    }
+    var step = function () { return Math.max(240, Math.round(track.clientWidth * 0.82)); };
+    prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: "smooth" }); });
+    next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: "smooth" }); });
+    track.addEventListener("scroll", update);
+    window.addEventListener("resize", update);
+    update();
   }
   function loadApoyos() {
     renderApoyos();
